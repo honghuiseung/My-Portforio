@@ -1,0 +1,38 @@
+﻿#section a,#section a:hover,#section a:visited,#section a:focus,#section a:active{color: #333333;}
+h2{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.center{margin: 0 -150% 0 50%; transform:translate(-50%,0); width:fit-content;}
+
+#bar{width: 100%; height: 5px; background-color: #d9d9d9; position: absolute; top: 140px;}
+
+/* 검색결과 */
+#search_info_recipe_page #section p.head_text,#search_info_ingredient_page #section p.head_text{text-align: justify; margin:20px 10px 45px 10px; float:left; letter-spacing: -0.6px; font-weight: 550; font-size:14px; }
+#search_info_recipe_page #section a.more, #search_info_ingredient_page #section a.more{float:right; color: #888888; height:14px; text-decoration:underline; font-size: 12px; margin:20px 0 45px 0;}
+
+#search_info_recipe_page #header p, #search_info_ingredient_page #header p{width:70%; margin-left:15%; height:100%; margin-top:13px;}
+/* 탭메뉴 */
+#search_info_recipe_page .recipe_tab, #search_info_ingredient_page .recipe_tab{margin: 0 0 15px -50%; clear:left; transform:translate(50%,0);}
+#search_info_recipe_page .recipe_tab ul, #search_info_ingredient_page .recipe_tab ul{width:fit-content;}
+#search_info_recipe_page .recipe_tab li.after, #search_info_ingredient_page .recipe_tab li.after{margin-right: 5px;}
+#search_info_recipe_page .recipe_tab li.after:after, #search_info_ingredient_page .recipe_tab li.after:after{display: block; content:''; width:1px; height: 14px; float:right; background:#888; margin-left: 5px; margin-top:6px;}
+#search_info_recipe_page #section .recipe_tab li a, #search_info_ingredient_page .recipe_tab li a{display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 600; letter-spacing: -0.6px; color: #888888;}
+#search_info_recipe_page #section .recipe_tab li.on a, #search_info_ingredient_page .recipe_tab li.on a{color: #333333;}
+
+/* 컨탠츠 */
+#search_info_recipe_page #section .food_img, #search_info_ingredient_page #section .food_img{width: 48%; height: 100%; float: left;}
+#search_info_recipe_page #section .food_img.fr, #search_info_ingredient_page #section .food_img.fr{float: right;}
+#search_info_recipe_page #section .food_img a, #search_info_ingredient_page #section .food_img a{width: 100%; height: auto; margin-top:20px;}
+#search_info_recipe_page #section .food_img img, #search_info_ingredient_page #section .food_img img{float: left; width: 100%; margin-bottom: 10px;}
+#search_info_recipe_page #section .food_img h2, #search_info_ingredient_page #section .food_img h2{font-size: 14px; font-weight: bold; width: 100%; box-sizing: border-box; padding: 5px 0; float:left; clear:left; margin-bottom: 10px;}
+#search_info_recipe_page #section .food_img_text.last{margin-left: 4%;}
+#search_info_recipe_page #section .star, #search_info_ingredient_page #section .star{float: left; clear:left;}
+#search_info_recipe_page #section .star>svg, #search_info_ingredient_page #section .star>svg{float: left; margin-right:5px; width:14px;}
+#search_info_recipe_page #section .star>span, #search_info_ingredient_page #section .star>span{float: left; line-height: 1.4em;  font-size: 14px;}
+#search_info_recipe_page #section .star span.small, #search_info_ingredient_page #section .star span.small{color:#888888; font-size: 12px;}
+
+
+
+
+
+
+
+

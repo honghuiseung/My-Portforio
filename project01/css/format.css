@@ -1,0 +1,37 @@
+﻿*{margin:0; padding:0;}
+html{overflow-y:scroll;}
+h1{display:none;}
+img{display:block;}
+
+/* 페이지 시작 */
+#wrap{/*height: 이미지 세로길이px;  background:url(../images/배경이미지.png) no-repeat center top; */}
+
+/* header 맨윗줄 */ 
+	#top_nb_wrap{height:40px; background: rgba(0,0,0,0.3);} 
+		#top_nb{height: 40px; line-height:40px; font-size:15px; font-weight:bold; color: #000000;}
+			#top_nb_left{height: 40px; float:left; letter-spacing:-2px; background: rgba(255,255,0,0.3);}
+			#top_nb_left img{height: 40px;}
+			#top_nb_left div{margin-left: -4px;}
+			#top_nb_right{float:right;}
+	
+/* header 두번째줄 */
+	#gnb_wrap{height:122px;  background:rgba(0,255,255,0.3);}
+		#gnb{height:122px;  background:rgba(0,0,255,0.3);}
+				#gnb_left img{width:158px; margin-top:33px;}
+
+/* section 시작 */		
+	/* #section_top_wrap{height:44px; background: rgba(0,255,0,0.3); margin-bottom:10px;}
+		#section_top{height:44px; background: rgba(255,255,0,0.3);
+		} */
+	/* 헤더아래에 경로바가 있으면 주석지우기 */
+
+/* footer 시작 */
+	#footer_wrap{/* background: rgba(0,255,255,0.3) */;}
+		#footer{height: 431px; /* background: rgba(255,255,0,0.3); */}
+
+		
+		
+		
+.fl{float:left;}
+.cl{clear:both;}
+.center{width:1420px; margin:0 auto;}

@@ -1,0 +1,770 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="홍희승"/>
+	<meta name="Keywords" content="홍희승, HongHuiSeung, 포트폴리오, 홍희승 포트폴리오, portfolio, huiseung's portfolio, 프로젝트, Project, 홍 희승, 홍 희 승, 희승 홍, 희승, ghd, gml, tmd, gmltmd, HTML5, CSS3, jQuery, 오라클, Oracle , 반응형웹, 반응형웹 포트폴리오, 학생 포트폴리오"/>
+	<meta name="Description" content="홍희승의 포트폴리오 사이트입니다. 방문해 주셔서 감사합니다." />
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon-precomposed" href="icon01.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon02.png">
+	<title>huiseung's Portfolio.</title>
+	<link rel="stylesheet" href="css/basic.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/colorbox.css" />
+	<script src="js/jquery-1.9.0.min.js"></script>
+	<script src="js/persentage.js"></script>
+	<script src="js/jquery.easing.1.3.min.js"></script>
+	<script src="js/jquery.Floater.js"></script>
+	<script src="js/tool_tip.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		function bookmark(){
+			window.external.AddFavorite("http://revival1226.dothome.co.kr/", "huiseung's Portfolio")
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="menu_wrap" class="clearfix">
+			<p class="m_logo"><a href="#main"><img src="images/logo02.png" alt="logo"/></a></p>
+			<ul id="menu" class="clearfix">
+				<li><a href="#profile">PROFILE</a></li>
+				<li><a href="#hybrid">HYBRID</a></li>
+				<li><a href="#figma">FIGMA</a></li>
+				<li><a href="#jQuery">JQUERY</a></li>
+				<li><a href="#springboot">SPRINGBOOT(JSP)</a></li>
+				<li><a href="#css">CSS</a></li>
+				<li><a href="#git">GITHUB/DIARY</a></li>
+				<li><a href="#epilogue">EPILOGUE</a></li>
+			</ul><!-- #menu end -->
+			<a href="#" class="fav" onclick="bookmark()">FAVORITE</a>
+		</div><!-- #menu_wrap end -->
+	</div><!-- #header end -->
+	<div id="wrap">
+		<div id="contents">
+			<div id="main">
+				<div class="p_logo titlebox">
+					<p class="n_tit"><span class="strong">오</span>늘의 나는 <br/><span class="strong">어</span>제의 <span class="strong">120</span>%</p>
+				</div>
+				<div class="me"><img style="width:700px;" src="images/my_profile.png" alt="내 사진"/></div>
+			</div><!-- #main end -->
+			<div id="profile">
+				<div class="titlebox">
+						<p class="n_tit"><span class="strong">P</span>ROFILE</p>
+					</div>
+				<!-- <div class="scene-1">
+					<img src="" alt="내 사진"/>
+				</div> -->
+				<div class="scene-2">
+					<ul class="profile_slider_wrap clearfix">
+						<li class="profile_slider first fl">
+							<div class="title">Profile</div>
+							<p class="bold">홍희승(Hong Hui Seung)</p>
+							<p>1998. 08. 25</p>
+							<p>huiseung@daum.net</p>
+							<p>경기도 안산시 와동</p>
+						</li>
+						<li class="profile_slider fl">
+							<div class="title">Carrer</div>
+							<p>유한대학교 - VR앱 학과 졸업</p>
+							<p>그린컴퓨터아카데미(디지털컨버전스)<br/>데이터융합자바(JAVA),코틀린(Kotlin)<br/>웹&앱 개발자 양성과정 수료(6개월)</p>
+						</li>
+						<li class="profile_slider fl">
+							<div class="title">Advantage</div>
+							<p>포기하지 않는 끈기와 인내력</p>
+							<p>오늘도 내일도 변함없는 성실함</p>
+							<p>결국은 목표를 이루는 집중력</p>
+							<p>다양한 프로그램을 다루는 적응력</p>
+							<p>배운 것을 잘 사용하는 활용력</p>
+							<p>새로운 것을 발견하는 창의력</p>
+							<p>원만하고 조화로운 인간관계</p>
+						</li>
+					</ul>
+					<ul class="slide_btn_wrap clearfix">
+						<li class="slide_btn fl"></li>
+						<li class="slide_btn fl"></li>
+						<li class="slide_btn fl"></li>
+					</ul>
+				</div>
+				<div class="scene-3">
+					<div class="title">Skill</div>
+					<ul class="my_skill">
+						<li class="skills fl">HTML</li>
+						<li class="skills fl">CSS</li>
+						<li class="skills fl">jQuery</li>
+						<li class="skills fl">Mobile</li>
+						<li class="skills fl">Figma</li>
+						<li class="skills fl">Spring</li>
+						<li class="skills fl">Database</li>
+						<li class="skills fl">JavaScript</li>
+					</ul>
+					<div id="scene-3-content">
+						<div class="charts clearfix">
+							<div class="chart" id="water">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">95</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+							
+							<div class="chart" id="sunshine">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">90</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+							
+							<div class="chart" id="birds">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">90</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+								
+							</div><!-- chart -->
+							
+							<div class="chart" id="woods">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">85</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+							
+							<div class="chart" id="water2">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">90</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+							
+							<div class="chart" id="sunshine2">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">95</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+							
+							<div class="chart" id="birds2">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">80</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+							<div class="chart" id="woods2">
+								<div class="circle-mask-outer left">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="circle-mask-outer right">
+									<div class="circle-mask-inner">
+										<div class="circle-body"></div>
+									</div>
+								</div>
+								<div class="chart-content">
+									<p class="text">
+										<span class="percent-number">85</span>
+										<span class="percent-synbol">%</span>
+									</p>
+								</div>
+							</div><!-- chart -->
+						</div>
+					</div>
+				</div>
+				
+			</div><!-- #profile end -->
+			<div id="hybrid">
+				<div class="titlebox">
+					<div class="number">0<span class="strong">1</span></div>
+					<p class="n_tit"><span class="strong">H</span>YBRID</p>
+				</div>
+				<div class="pop">
+					<div class="popWrap">
+						<div class="popLeft">
+							<div class="popTicket">어플리케이션이용안내<br></div>
+							<div class="popDencare">Q R 코 드<br></div>
+							<div class="popInfo2">안드로이드 기기를 이용하여 QR코드를 읽어주세요.</div>
+						</div>
+						<div class="popRight">
+							<img src="images/harusamki_QR.PNG" alt="qr코드"/>
+							<a class="popBtn">닫기</a>
+						</div>
+					</div>
+				</div>					
+				
+				<div class="mobile_sub_img" >
+					<ul class="mobile_sub_index">
+						<li class="circle"><p class="first"></p><p></p><p></p></li>
+						<li class="title">App Proposal </li>
+						<li class="ms active">&#8544; Splash Screen</li>
+						<li class="ms">&#8545; Onboarding</li>
+						<li class="ms">&#8546; Main</li>
+						<li class="ms">&#8547; Login</li>
+						<li class="ms">&#8548; My Page</li>
+						<li class="ms">&#8549; Recipe</li>
+						<li class="ms">&#8550; Search</li>
+						<li class="ms">&#8551; Map</li>
+						
+					</ul>	
+				</div>
+				
+				<div class="iphone">
+					<div class="iphone_img">
+						<img src="images/iphone2.png" alt="아이폰이미지"/>
+					</div>
+					<div class="iphone_cont">
+						<!-- 슬라이드 넣기 -->
+						<ul class="app_pre_slide">
+							<li class="app_pre_slide1">
+								<a href="#"  onclick="window.open('http://52.79.210.64:8080/','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank">
+									<p><img src="images/figma/splash screen.jpg" alt=""/></p>
+								</a>
+							</li>
+							<li class="app_pre_slide2">
+								<a href="#">
+									<p><img src="images/figma/onboding01.jpg" alt=""/></p>
+									<p><img src="images/figma/onboding02.jpg" alt=""/></p>
+									<p><img src="images/figma/onboding03.jpg" alt=""/></p>
+									<p><img src="images/figma/onboding04.jpg" alt=""/></p>
+								</a>
+							</li>
+							<li class="app_pre_slide3">
+								<a href="#" onclick="window.open('http://52.79.210.64:8080','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank">
+									<p>
+										<img src="images/figma/main_page.jpg" alt=""/>
+										<img src="images/figma/main_page_default.png" alt=""/>
+									</p>
+									<p><img src="images/figma/login_alert.jpg" alt=""/></p></a>
+							</li>
+							<li class="app_pre_slide4">
+								<a href="#" onclick="window.open('http://52.79.210.64:8080/sub/login','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank"><p><img src="images/figma/login_page.jpg" alt=""/></p></a>
+							</li>
+							<li class="app_pre_slide5">
+								<a href="#" onclick="window.open('http://52.79.210.64:8080','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank"><p>
+										<img src="images/figma/my_page.jpg" alt=""/>
+										<img src="images/figma/my_page_default.png" alt=""/>
+									</p>
+									<p>
+										<img src="images/figma/my_pick_page.jpg" alt=""/>
+										<img src="images/figma/my_pick_page_default.png" alt=""/>
+									</p>
+								</a>
+							</li>
+							<li class="app_pre_slide6">
+								<a href="#" onclick="window.open('http://52.79.210.64:8080/sub/recipe','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank"><p><img src="images/figma/recipe_1.jpg" alt=""/></p>
+									<p><img src="images/figma/recipe_2_1.jpg" alt=""/>
+										<img src="images/figma/recipe_page_default.png" alt=""/>
+									</p>
+									<p><img src="images/figma/recipe_2_2.jpg" alt=""/>
+										<img src="images/figma/recipe_page_default.png" alt=""/>
+									</p>
+									<p>
+										<img src="images/figma/recipe_3.jpg" alt=""/>
+										<img src="images/figma/recipe_main_page_default.png" alt=""/>
+									</p>
+									<p>
+										<img src="images/figma/Product_detail_page.jpg" alt=""/>
+										<img src="images/figma/Product_none_default.png" alt=""/>
+									</p>
+									<p><img src="images/figma/review.jpg" alt=""/></p></a>
+							</li>
+							<li class="app_pre_slide7">
+								<a href="#" onclick="window.open('http://52.79.210.64:8080/sub/search','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank">
+									<p>
+										<img src="images/figma/search_main_page.jpg" alt=""/>
+										<img src="images/figma/search_page_dafault.png" alt=""/>
+									</p>
+									<p>
+										<img src="images/figma/search_info_ingredient_page.jpg" alt=""/>
+										<img src="images/figma/search_ingre_page_dafault.png" alt=""/>
+									</p>
+									<p>
+										<img src="images/figma/search_info_recipe_page.jpg" alt=""/>
+										<img src="images/figma/search_recipe_page_default.png" alt=""/>
+									</p>
+								</a>
+							</li>
+							<li class="app_pre_slide8">
+								<a href="#">
+									<p>
+										<img src="images/figma/search_map_page.jpg" alt=""/>
+										<img src="images/figma/search_ingre_page_dafault.png" alt=""/>
+									</p>
+									<p>
+										<img src="images/figma/search_map_page2.jpg" alt=""/>
+										<img src="images/figma/search_ingre_page_dafault.png" alt=""/>
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				
+				<div id="mobile_text">
+					<ul class="mobile_QR clearfix">
+						<li class="fl download showTooltip" title="apk파일을 다운받아 어플을 체험해보세요.">
+							<a href="http://www.hschool.co.kr/test_twenty/01/harusamki.apk" target="_blank">
+							<img src="images/project_team/main_ic.png" alt="모바일 다운로드 이미지">
+							</a>
+						</li>
+						<li class="fl concept showTooltip" title="앱 기획안을 확인해보세요."><a href="images/harusamki.pdf" target="_blank">CONCEPT PROPOSAL</a></li>
+					</ul>
+					<ul class="mobile_text_cont">
+						<li class="textbox">
+							<p>function</p>
+						</li>
+						<li class="description">
+							<ul class="text">
+								<li class="splash_screen page1">
+									<p class="first">로고에는 이 앱의 정체성을 부각시키는 부분에만 색상을 입혀 편의점 어플이라는 점을 사용자의 인상에 남도록 강조했습니다.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="onboarding page2 hidden">
+									<p class="first">이 어플의 핵심기능을 사용자가 쉽게 발견하는데 중점을 두고, 주변화면을 어둡게 하여 사용자의 이목을 끄는데 집중했습니다.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="Main page3 hidden">
+									<p class="first">메인 페이지에서는 레시피를 검색할 수 있는 검색 바, 다양한 이벤트가 있는 메인 배너, 여러 페이지로 이동할 수 있는 카테고리, 그리고 인기레시피들이 보여집니다. </p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="login_page page4 hidden">
+									<p class="first">로그인 없이도 다양한 레시피들을 둘러볼 수 있지만, 더 다양한 기능을 이용해보고 싶으시다면 로그인 해주세요.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="My_page page5 hidden">
+									<p class="first">로그인 이후 내가 활동한 세부내용들을 한눈에 보고 중요기능만을 선택할 수 있습니다. My_pick페이지에서 내가 모은 레시피들을 확인해보세요.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="Recipe_page page6 hidden">
+									<p class="first">어떤 레시피를 골라야 할지 망설여지는 분들을 위해 인기 레시피 카테고리를 모아 정리해 보았습니다.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="Search_page page7 hidden">
+									<p class="first">로그인 없이도 다양한 레시피들을 둘러볼 수 있지만, 더 다양한 기능을 이용해보고 싶으시다면 로그인 해주세요.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+								<li class="Map_page page8 hidden">
+									<p class="first">로그인 없이도 다양한 레시피들을 둘러볼 수 있지만, 더 다양한 기능을 이용해보고 싶으시다면 로그인 해주세요.</p>
+									<p>편의점에서 간단하게 식사를 해결하고자 하는 바쁜 직장인들에게 특별한 한끼를 책임져줄 편의점요리 레시피 어플입니다.</p>
+								</li>
+							</ul>
+							<ul class="page_button">
+								<li class="splash_screen page1">
+									<p>logo</p>
+								</li>
+								<li class="onboarding page2 hidden">
+									<p>main1</p><p>main2</p><p>search</p><p>recipe</p>
+								</li>
+								<li class="Main page3 hidden">
+									<p>main</p><p>login_alert</p>
+								</li>
+								<li class="login_page page4 hidden">
+									<p>login</p>
+								</li>
+								<li class="my_page page5 hidden">
+									<p>my</p> <p>my_pick</p>
+								</li>
+								<li class="recipe_page page6 hidden">
+									<p>menu</p> <p>sub_menu</p> <p>search</p> <p>contents</p> <p>prize</p>
+								</li>
+								<li class="search_page page7 hidden">
+									<p>main</p> <p>search_prize</p> <p>search_recipe</p>
+								</li>
+								<li class="login_page page8 hidden">
+									<p>map</p> <p>popup</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</div><!-- #hybrid end -->
+			<div id="figma">
+				<div class="titlebox">
+						<div class="number">0<span class="strong">2</span></div>
+						<p class="n_tit"><span class="strong">F</span>IGMA</p>
+				</div>
+				<div id="figma_text">
+					<ul class="figma_QR clearfix">
+						<li class="fl download showTooltip" title="apk파일을 다운받아 어플을 체험해보세요.">
+							<a href="https://www.figma.com/file/zdBD4OHfycUXGIr2ZptjBw/First-App?type=design&node-id=0%3A1&mode=dev&t=ChuInHmw5xMkHNfV-1">
+							<img src="images/figmaicon.png" alt="모바일 다운로드 이미지">
+							</a>
+						</li>
+						<li class="fl concept showTooltip" title="앱 기획안을 확인해보세요."><a href="https://www.figma.com/file/zdBD4OHfycUXGIr2ZptjBw/First-App?type=design&node-id=0%3A1&mode=dev&t=ChuInHmw5xMkHNfV-1" target="_blank">CONCEPT PROPOSAL</a></li>
+					</ul>
+					<ul class="figma_text_cont">
+						<li class="textbox">
+							<p>Concept</p>
+							<p class="nf">Epilogue</p>
+						</li>
+						<li class="description">
+							<p class="first">Figma를 이용하여 앱을 만들기 전에 미리 팀원과 함께 프로젝트 디자인을 진행하였습니다. 협업하면서 실시간으로 Prototyping을 잊지 않았고, 앱의 기능이 어떻게 직관적으로 작동할지 최대한 신경 쓰며 디자인하였습니다.</p>
+							<p>디자인 관련 툴을 다루는 것이 서투른 저에게 있어서 가장 팀의 중요성을 깨닫게 해준 프로젝트 였습니다. 팀원의 손의 이끌려서 시작하긴 했지만 앱에 대한 간단한 디자인이나 팀원에게 더 도움이 되는 작업방식을 더 고민하며 제 나름의 노하우를 갖게 되었습니다.</p>
+						</li>
+					</ul>
+				</div>
+				<iframe class="figma_main_img" title="클릭하면 피그마로 이동합니다." src="https://www.figma.com/embed?embed_host=twitter&url=https:&#47;&#47;www.figma.com&#47;proto&#47;zdBD4OHfycUXGIr2ZptjBw&#47;Team-App?node-id=266-1630&amp;scaling=scale-down&amp;page-id=0%3A1&amp;starting-point-node-id=266%3A1630"></iframe>
+			</div><!-- #figma end -->
+			
+			<div id="jQuery">
+				<div class="titlebox">
+					<div class="number">0<span class="strong">3</span></div>
+					<p class="n_tit"><span class="strong">j</span>Query</p>
+				</div>
+				<div class="sub_pg">
+					<div class="gr_subs tooltip" title="JQUERY 프로젝트 : 서브페이지 입니다.">
+						<div class="sub1_wrap">
+							<div class="sub1Tit">sub 01 <span class="deco"></span></div>
+							<a href="project02/sub01/login.html" target="_blank"><img src="images/project_priv/login_page.png" alt=""/></a>
+						</div>
+						<div class="sub2_wrap">
+							<div class="sub2Tit">sub 02 <span class="deco"></span></div>
+							<a href="project02/sub02/board.html" target="_blank"><img src="images/project_priv/board_page.png" alt=""/></a>
+						</div>
+						<div class="sub3_wrap">
+							<div class="sub3Tit">sub 03 <span class="deco"></span></div>
+							<a href="project02/sub04/sub4.html" target="_blank"><img src="images/project_priv/event_page.png" alt=""/></a>
+						</div>
+						<div class="sub4_wrap">
+							<div class="sub4Tit">sub 04 <span class="deco"></span></div>
+							<a href="project02/sub03/info.html" target="_blank"><img src="images/project_priv/info_page.png" alt=""/></a>
+						</div>
+
+					</div>
+				</div>
+				<div class="gr_text">
+					<ul class="gr_text_cont">
+						<li class="textbox">
+							<p>Explanation</p>
+						</li>
+						<li class="description">
+							<ul class="text">
+								<li class="splash_screen page1">
+									<p class="first">기존에 HTML과 CSS로 만들었던 '정부24' 홈페이지에 jQuery기능을 더하는 프로젝트였습니다.</p>
+									<p>디자인에 중점을 두고 코드를 작성했던 지난 프로젝트에서 한 단계 발전하여 화면 속 오브젝트의 움직임을 jQuery를 통해 구현하였습니다. 본래 정부24 홈페이지의 재현성보단 새로운 기능을 적용시키는 데에 중점을 두고 코드를 작성하였습니다. </p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="gr_main_img clearfix">
+					<img src="images/pc.png" alt="pc이미지"/>
+					<div class="pc_img_wrap">
+						<a href="#" onclick="window.open('project2/index.html,'new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank">
+							<img src="images/project_priv/main_page.png" alt=""/>
+							
+						</a>
+					</div>
+				</div>
+				<div class="gr_browser" data-aos="fade-up">
+					<ul class="cf">
+						<li class="ex">
+							<span>9.0+</span>
+							<img src="images/explorer.png" alt=""/>
+						</li>
+						<li class="ch">
+							<span>125+</span>
+							<img src="images/chrome.png" alt=""/>
+						</li>
+						<li class="mz">
+							<span>126+</span>
+							<img src="images/firefox.png" alt=""/>
+						</li>
+						<li class="op">
+							<span>110+</span>
+							<img src="images/opera.png" alt=""/>
+						</li>
+					</ul> 
+				</div>
+			</div><!-- #jQuery end -->
+			<div id="springboot">
+				<div class="titlebox">
+					<div class="number">0<span class="strong">4</span></div>
+					<p class="n_tit"><span class="strong">S</span>pringboot3</p>
+				</div>
+				<div class="sub_pg">
+					<div class="gr_subs tooltip" title="JQUERY 프로젝트 : 서브페이지 입니다.">
+						<div class="sub1_wrap">
+							<div class="sub1Tit">sub 01 <span class="deco"></span></div>
+							<a href="http://52.79.210.64:8070/sub02/board.html" target="_blank"><img src="images/project06/board_page.png" alt=""/></a>
+						</div>
+						<div class="sub3_wrap">
+							<div class="sub3Tit">sub 02 <span class="deco"></span></div>
+							<a href="http://52.79.210.64:8070/board/board_crud" target="_blank"><img src="images/project06/board_cr.png" alt=""/></a>
+						</div>
+						<div class="sub4_wrap">
+							<div class="sub4Tit">sub 03 <span class="deco"></span></div>
+							<a href="http://52.79.210.64:8070/board/board_crud" target="_blank"><img src="images/project06/board_ud.png" alt=""/></a>
+						</div>
+
+					</div>
+				</div>
+				<div class="gr_text">
+					<ul class="gr_text_cont">
+						<li class="textbox">
+							<p>Explanation</p>
+						</li>
+						<li class="description">
+							<ul class="text">
+								<li class="splash_screen page1">
+									<p class="first">지난 jQuery프로젝트에서 한 단계 발전하여 스프링의 MVC 구조인 Model, View, Controller 세가지 구성요소를 활용하여  작업하였습니다.</p>
+									<p class="small">
+									Development environment: 개발환경 <br/>
+									서버정보 AWS(아마존 웹서버) IP주소 : 52.79.210.64 // 포트번호:8070<br/>
+									IDE : Intellij 2023.3.1 // JDK 버젼 17.0.10.7.1 <br/>
+									운영체제 : Linux <br/>
+									호스트명 : ip-172-31-36-8.ap-northeast-2.compute.internal <br/>
+									데이터 베이스 DataBase : MariaDB 10.11 //  DataBase IDE : HeidiSQL ver 11.3.0.6295
+									</p>
+									
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="gr_main_img clearfix">
+					<img src="images/pc.png" alt="pc이미지"/>
+					<div class="pc_img_wrap">
+						<a href="#" onclick="window.open('http://52.79.210.64:8070/','new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank">
+							<img src="images/project_priv/main_page.png" alt=""/>
+							
+						</a>
+					</div>
+				</div>
+				<div class="gr_browser" data-aos="fade-up">
+					<ul class="cf">
+						<li class="ex">
+							<span>9.0+</span>
+							<img src="images/explorer.png" alt=""/>
+						</li>
+						<li class="ch">
+							<span>125+</span>
+							<img src="images/chrome.png" alt=""/>
+						</li>
+						<li class="mz">
+							<span>126+</span>
+							<img src="images/firefox.png" alt=""/>
+						</li>
+						<li class="op">
+							<span>110+</span>
+							<img src="images/opera.png" alt=""/>
+						</li>
+					</ul> 
+				</div>
+			</div>
+			<div id="css">
+				<div class="titlebox">
+					<div class="number">0<span class="strong">5</span></div>
+					<p class="n_tit"><span class="strong">W</span>eb <span class="strong">S</span>tandard</p>
+				</div>
+				<div class="sub_pg">
+					<div class="gr_subs tooltip" title="JQUERY 프로젝트 : 서브페이지 입니다.">
+						<div class="sub1_wrap">
+							<div class="sub1Tit">sub 01 <span class="deco"></span></div>
+							<a href="project01/sub01/login.html" target="_blank"><img src="images/project_priv/login_page.png" alt=""/></a>
+						</div>
+						<div class="sub3_wrap">
+							<div class="sub3Tit">sub 02 <span class="deco"></span></div>
+							<a href="project01/sub02/board.html" target="_blank"><img src="images/project_priv/board_page.png" alt=""/></a>
+						</div>
+						<div class="sub4_wrap">
+							<div class="sub4Tit">sub 03 <span class="deco"></span></div>
+							<a href="project01/sub03/info.html" target="_blank"><img src="images/project_priv/info_page.png" alt=""/></a>
+						</div>
+					</div>
+				</div>
+				<div class="gr_text">
+					<ul class="gr_text_cont">
+						
+						<li class="textbox">
+							<p>Explanation</p>
+						</li>
+						<li class="description">
+							<ul class="text">
+								<li class="splash_screen page1">
+									<p class="first">프로젝트의 뼈대가 되는 html, css를 사용자의 편의에 맞춰 제작했습니다.</p>
+									<p>w3c(웹 표준검사)를 통과하는 웹 어플리케이션을 제작하는 것에 중점을 두고 코드를 작성하였습니다. </p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="gr_main_img clearfix">
+					<img src="images/pc.png" alt="pc이미지"/>
+					<div class="pc_img_wrap">
+						<a href="#" onclick="window.open('project2/index.html,'new','resizable=yes,toolbar=no,location=on,directories=on,top=80,left=200,width=460,height=800,scrollbars=yes');return false" target="_blank">
+							<img src="images/project_priv/main_page.png" alt=""/>
+							
+						</a>
+					</div>
+				</div>
+				<div class="gr_browser" data-aos="fade-up">
+					<ul class="cf">
+						<li class="ex">
+							<span>9.0+</span>
+							<img src="images/explorer.png" alt=""/>
+						</li>
+						<li class="ch">
+							<span>125+</span>
+							<img src="images/chrome.png" alt=""/>
+						</li>
+						<li class="mz">
+							<span>126+</span>
+							<img src="images/firefox.png" alt=""/>
+						</li>
+						<li class="op">
+							<span>110+</span>
+							<img src="images/opera.png" alt=""/>
+						</li>
+					</ul> 
+				</div>
+			</div><!-- #css end -->	
+			<div id="git">
+				<div class="titlebox">
+					<div class="number">0<span class="strong">6</span></div>
+					<p class="n_tit"><span class="strong">G</span>it & <span class="strong">D</span>ariy</p>
+				</div>
+				<div class="git_wrap img_wrap">
+					<a href="https://github.com/honghuiseung" class="git_img tool_tip" title="깃허브 보러가기"><img src="images/git_hub.png" alt="깃허브"/></a><span>git</span>
+				</div>
+				<div class="diary_wrap img_wrap">
+					<a href="http://huiseung1082.dothome.co.kr/diary/" class="diary_img tool_tip" title="다이어리 보러가기"><img src="images/my_diary.png" alt="일기"/></a>
+					<span>diary</span>
+				</div>
+				
+			</div><!-- #git end -->
+			<div id="epilogue">
+				<div class="titlebox">
+					<div class="number">0<span class="strong">7</span></div>
+					<p class="n_tit"><span class="strong">E</span>pilogue</p>
+				</div>
+				<div class="epilogueBox">
+					<div class="epilogueText01">
+						<span>삶은 배움의 연속이다 </span>
+						<p>처음 프로그래머의 꿈을 갖게된 건 대학시절이었다. 프로그래밍 전공을 희망한 동기는 단순히 취업이 잘되서 였으나 수학과 논리를 좋아하는 성격이 잘맞아 프로그래밍에 매력을 느끼고 열중할 수 있었다. 하지만 졸업직후 몸상태가 나빠져 한동한 공백기를 갖고, 어디서부터 프로그래밍을 다시 시작해야할지 고민하던 시기에 가족의 추천으로 학원을 신청하고 수업을 듣게 되었다.</p>
+						<p>시작은 실수가 잦아 동기분들의 발목을 잡아는 것 같아 힘들었지만 다른 학생들도 나름대로의 고충을 가지고 있고, 교수님께서 이전 기수에서 학생들이 겪었던 어려움을 이야기 해주시면서 용기를 얻을 수 있엇다. 또한 팀프로젝트가 시작되면서 서로 부족한 부분을 메워주는 팀원들의 모습을 보면서 많은 점을 느낄 수 있었다. 덕분에 내 옆에 있는 사람들이 경쟁해야 할 대상이 아닌 팀원으로써 받아드려 혼자 분주하게 노력할때보다 더 나은 성과를 낼 수 있었다.</p>
+						<p>6개월간 함께 참고 노력해온 동기들 모두 취업에서 좋은 결과 나왔으면 좋겠고, 그동안 수고 많으셨습니다.</p>
+					</div>
+					<div class="epilogueText02">
+						<span>자바(JAVA) 기반 웹 & 데이터 융합 개발(스프링, 오라클)반</span>
+						<p>하루 8시간 수업에 준비까지 그만해도 정말 힘드셨을텐데 저희가 잘못된 방향으로 나아가지 않도록 정신적으로도 이끌어주신 <span>오윤석 교수</span>님, 항상 최고의 자리에서 본보기가 되어주는 우리반 에이스 <span>서원</span>씨, 가장 부지런하고 성실한 모습으로 언제나 수업 10분전엔 자리에 앉아있는 모습이 존경스러웠던 <span>희주</span>씨, 주말에 알바까지 뛰면서 수업에 차질없이 항상 맡은 바 역할을 다하시는 숨은 능력자 <span>재호</span>씨, 그리고 톡톡튀는 사고방식으로 항상 예상치못한 능력을 보여주면서 의외로 꼼꼼하기까지한 <span>인수</span> 6개월 동안 모두 감사했고 모두 잘되어 나중에 좋은 모습으로 또 봐요~</p>
+					</div>
+					<div class="epilogueImg01 epil_img">
+						<a href="images/Group_Photo1.jpg" class="gallery"><img src="images/Group_Photo1.jpg" style="" alt="안양그린컴퓨터 학원 사진"/></a>
+					</div>
+					<div class="epilogueImg02 epil_img">
+						<a href="images/Group_Photo2.jpg" class="gallery"><img src="images/Group_Photo2.jpg" style="width:400px;" alt="안양그린컴퓨터 학원 사진"/></a>
+					</div>
+				</div>
+			</div>
+		</div><!-- #contents end -->
+	</div><!-- #wrap end -->
+	
+	<div id="floatdiv">
+		<ul>
+			<li><span id="btn01" class="btn tool_tip" title="메인"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn02" class="btn tool_tip" title="프로필"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn03" class="btn tool_tip" title="하이브리드 앱"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn04" class="btn tool_tip" title="피그마"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn05" class="btn tool_tip" title="제이쿼리"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn06" class="btn tool_tip" title="스프링부트"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn07" class="btn tool_tip" title="웹 스탠다드"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn08" class="btn tool_tip" title="깃&일기"><p class="inner_btn fl"></p><p></p></span></li>
+			<li><span id="btn09" class="btn tool_tip" title="에필로그"><p class="inner_btn fl"></p><p></p></span></li>
+		</ul>
+		<p class="block"></p>
+	</div>
+	
+</body>
+</html>
+
+
+
+

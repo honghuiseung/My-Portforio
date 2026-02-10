@@ -1,0 +1,77 @@
+﻿/* body{background: url(../images/main.jpg) no-repeat center top;  /* font-family: 'Henny Penny', system-ul; */}
+
+html{overflow: scroll;}
+*{margin: 0px; padding: 0px;}
+li{list-style: none;}
+a{text-decoration: none;}
+body{font-family: "맑은 고딕", "돋움", sans-serif;}
+img{border:0px;}
+.cf:after{content:''; display: block; clear: both;}
+select{padding: 1px 2px 5px; font-size: 12px; color: #333333; position: relative; top:-1px;}
+input[type="text"]{padding:2px;}
+input[type="button"]{border-style: none; padding: 2px 9px; font-weight: bold; cursor: pointer;}
+
+#wrap{width: 1200px; /* height: 1205px; */ margin: 0px auto;/*  background: #999999; */}
+#mainTop{width: 1130px; height: 260px; margin-bottom: 35px; position: relative; background: url(../images/main_top_img.jpg) no-repeat center bottom;}
+	#mainGnb{float: right; height: 22px; background-color: #d3eecc5; border-radius: 0px 0px 20px 20px; padding-left: 20px; padding-right: 20px;}
+		#mainGnb ul li{float:left;}
+		#mainGnb ul li a{display:block; font-size: 0.7em; padding: 2px 10px; color:#444444;}
+		
+	#mainLogo{margin-top: 31px; margin-left: 32px; float:left;}
+		#mainLogo img{width: 60px; margin-top: -5px;}
+		#mainLogo h1{display: inline; font-size: 1.6em; font-family: 'Henny Penny', cursive; color: #3c9e15; text-shadow: 2px 1px 0px #001966; vertical-align: top;}
+	
+	#mainNav{float:left; width: 750px; height: 53px; margin-top: 16px; margin-left:115px; position:relative; }
+		#mainNav ul li{float:left; padding: 0px 35px 13px;}
+		#mainNav ul li a{display: block; color: #2c6b15; font-weight: bold; padding: 2px 10px;}
+		#mainNav ul li a:hover{color: #3fb912;}
+		#mainNav ul li.active > a{color: #3fb912;}
+		#mainNav ul li ul{position: absolute; top: 34px; height: 22px; line-height: 20px; margin: 0px; padding:0; background-color: #ffffff; display:none;}
+		#mainNav ul li ul.subNav1{left: 40px; width: 534px;}
+		#mainNav ul li ul.subNav2{left: 100px; width: 538px;}
+		#mainNav ul li ul.subNav3{left: 140px; width: 629px;}
+		#mainNav ul li ul.subNav4{right: 48px; width: 558px;}
+		#mainNav ul li ul.subNav5{right: 30px; width: 428px;}
+		#mainNav ul li ul li{float:left; margin: 0px; padding: 0px 5px;}
+		#mainNav ul li:hover ul {display:block;}
+		#mainNav ul li ul li a{color: #21520b; padding: 0px 5px; font-size: 0.85em; letter-spacing: -1px; text-align: center;}
+		#mainNav ul li ul li a:hover{color: #44a816;}
+	
+	#searchBox{clear: both; float:left; position:absolute; left:0px; bottom:0px; width: 1130px; height: 54px; line-height: 54px; font-size: 0.9em; font-family: '돋움' ,sans-serif;  border: 1px solid #5be25; border-radius: 15px; background: #bfd255}
+		#searchBox ul li{float:left; height: 19px;}
+		#searchBox ul li.searchFirstText{padding-left: 16px; padding-right: 21px;}
+		#searchBox ul li.searchFirstText span{color: #ffffff; font-weight: bold; letter-spacing: -2px; padding-right: 6px;}
+		#searchBox ul li.searchFirstText span a{color: #384d00; font-family:Arial, sans-serif;}
+		#searchBox ul li select{width: 110px; margin-right: 7px; padding: 1px 2px 5px; font-size: 12px; position: relative; top: -1px;}
+		#searchBox ul li input[type="text"]{width: 325px; padding: 2px; margin-right: 7px;}
+		#searchBox ul li input[type="button"]{background-color: #768c0a; border-style: none; padding: 2px 9px; font-weight: bold; color: #ffffff; cursor: pointer;}
+		#searchBox ul li.searchLastText{padding-left: 20px; font-family: arial, sans-serif; color: #384d00;}
+		#searchBox ul li.searchLastText a{color:#384d00;}
+		#searchBox ul li.searchLastText .searchWord{font-family: '돋움', sans-serif; font-weight: bold; letter-spacing: -1px;}
+		#searchBox ul li.searchLastText .searchTopText img{padding-left: 10px;}
+		
+
+#footer{width:1130px; height: 97px; margin: 35px; text-align: center; border-top:3px solid #9db626; background: #eeeeee;}
+	#footer ul{width: 610px; height: 32px; margin: 0px auto; margin-top: 14px; background-color: #d3ecc5; border-radius: 15px;}
+	#footer ul li{float:left; font-size: 0.95em; font-weight: bold; letter-spacing: -2px; margin-top: 4px; padding: 0px 12px 3px; border-right: 1px solid #888888;}
+	#footer ul .last{border-right: none;}
+	#footer ul .per a{color: #000000;}
+	#footer ul li a{padding-bottom: 4px; color: #747474;}
+	#footer ul li a span{color: #202020;}
+	#footer p{width: 349px; height: 15px; margin: 0px auto; margin-top: 10px; font-size: 0.8em; font-family: Arial, sans-serif; font-weight: bold; color: #aaaaaa;}
+	#footer p span{color: #505050;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

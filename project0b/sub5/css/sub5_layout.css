@@ -1,0 +1,119 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+#contentsWrap{clear:both; width: 1130px; height: 975px; margin-top: 10px; margin-left:35px; margin-right: 35px;}
+
+#subLeft{float:left; width: 275px; height: 975px; margin-right: 70px;}
+#loginBox{width: 275px; height: 187px; background:#eaf5e7;}
+#loginBox .boxTitle{display: block; color: #3e951e; font-size:1.1em; font-weight: bold; text-align: center; padding-top: 12px; padding-bottom: 10px; letter-spacing: 0.2em;}
+#loginBox p{font-size: 0.9em; margin-left: 70px; padding-bottom: 8px; color: #429e14;}
+#loginBox .bold{color:#2c6b15; font-weight: bold;}
+#loginBox .font{font-size: 0.8em; padding-left: 5px; letter-spacing: 1px;}
+#loginBox .memberInfo{width: 238px; height: 68px; margin-left: 20px; background:#d3ecc5; box-shadow: 2px 2px 0 0 #48bc00;}
+#loginBox .memberInfo ul{padding-top: 11px; margin-left: 19px; height: 57px;}
+#loginBox .memberInfo ul li{width: 90px; float:left; font-size: 0.85em; padding-bottom: 7px;}
+#loginBox .memberInfo ul li .prd{padding-right: 25px;}
+#loginBox .memberInfo ul li .num1{padding-left:10px;}
+#loginBox .memberInfo ul li .num2{padding-left:15px;}
+#loginBox .memberInfo ul li .num3{padding-left:24px;}
+#loginBox .memberInfo ul li .num4{padding-left:10px;}
+#loginBox .memberInfo ul li a{color: #358812; font-weight: bold;}
+#loginBox .memberInfo ul li span a{color: #21520b; letter-spacing: 1px;}
+#loginBox .logoutBottom{width: 222px; height: 42px; margin-top: 4px;; margin-left: 28px;}
+#loginBox .logoutBottom ul{padding-top: 8px;}
+#loginBox .logoutBottom ul li{float:left; letter-spacing: -2px; padding-left: 15px; background: url(../../images/dot.gif)no-repeat 3px 10px}
+#loginBox .logoutBottom ul li.pdr{padding-right: 30px;}
+#loginBox .logoutBottom ul li a{display:block; font-size: 0.9em; color:#258e14; font-weight: bold;}
+
+#leftSideMenu{width: 275px; height: 353px; margin-top: 13px; background-color: #ffffff;}
+#leftSideMenu .introImg{width: 32px; height: 353px; float:left;}
+#leftSideMenu .sideMenu{width: 238px; height: 343px; float:left; border: 5px solid #eaeaea; border-left: none;}
+#leftSideMenu .sideMenu .sideMenuTitle{width: 238px; height: 83px;}
+#leftSideMenu .sideMenu .sideMenuTitle p{font-size: 1.2em; font-weight: bold; margin-left: 40px; letter-spacing: -1px;}
+#leftSideMenu .sideMenu .sideMenuTitle .first{padding-top: 20px; color: #9f9f9f;}
+#leftSideMenu .sideMenu .sideMenuTitle .last{padding-top: 2px; color: #222222;}
+#leftSideMenu .sideMenu .sideMenuList{width: 238px; height: 260px;}
+#leftSideMenu .sideMenu .sideMenuList ul{margin-left: 16px;}
+#leftSideMenu .sideMenu .sideMenuList ul li{width: 186px; padding: 6px 0 6px 24px; border-top: 2px solid #eaeaea; letter-spacing: -2px;}
+#leftSideMenu .sideMenu .sideMenuList ul .active{background: url(../../images/list_right_arrow.gif) no-repeat 2px 12px;}
+#leftSideMenu .sideMenu .sideMenuList ul li a{font-weight: bold; color: #bababa;}
+#leftSideMenu .sideMenu .sideMenuList ul li a:hover{color: #617736;}
+#leftSideMenu .sideMenu .sideMenuList ul .active a{color: #617736;}
+
+
+
+
+#quickMenu{width: 275px; height: 85px; margin-top: 15px; border: 1px solid #eaeaea; border-radius: 15px; background-color:#ffffff;}
+	#quickMenu img{float:left;}
+	#quickMenu .leftArrow{margin-top: 11px; margin-left:1px;}
+	#quickMenu .mg{margin-top:8px;}
+	#quickMenu .bdr{border-right: 1px solid #eaeaea;}
+	#quickMenu .rightArrow{margin-top: 11px;}
+	#quickMenu ul{clear:both; margin-left:31px;}
+	#quickMenu ul li{float:left; font-size: 0.7em; font-family: Arial, sans-serif; font-weight: bold; padding-top: 3px; text-align:center; letter-spacing: -1px;}
+	#quickMenu ul .imgTitle1{width: 70px;}
+	#quickMenu ul .imgTitle2{width: 77px;}
+	#quickMenu ul .imgTitle3{width: 68px;}
+	#quickMenu ul li a{color:#222222; text-shadow: 0 0 2px #888888;}
+	
+#communityBanner1{width: 275px; height: 69px; margin-top: 13px;}
+	#communityBanner1 img{width: 270px; margin-left: 4px;}
+	
+#communityBanner2{width: 275px; height: 70px; margin-top: 9px;}
+	#communityBanner2 img{width: 270px; margin-left: 4px;}
+
+/* 바뀌는부분 */
+#subRight{float:left; width: 775px; height: 975px;}
+	#subRight .location{width: 750px; height:41px; border-bottom: 2px solid #b8c923; }
+	#subRight .location p{text-align: right; padding-top:6px; font-size:0.9em; letter-spacing: -1px; color: #727272;}
+	#subRight .location p img{vertical-align: middle;}
+	#subRight .location p span{color: #617736; font-weight: bold;}
+	#subRight .subContent{width: 750px; height: 822px;}
+	#subRight .subContent .subContentTitle{width: 750px; height: 157px; background:url(../images/txt01.gif)no-repeat bottom;}
+	#subRight .subContent .subContentTitle .contentTitle1{padding-top: 40px; padding-left: 10px; font-size: 1.8em; font-weight: bold; color: #404040; letter-spacing: -1px;}
+	#subRight .subContent .subContentTitle .contentTitle2{padding-top: 10px; padding-left: 10px; font-size: 1.5em; font-weight: bold; font-family: Arial, sans-serif; color: #666666;}
+	#subRight .subContent .contentText{padding-left: 20px; font-size: 0.75em; font-weight: bold; color:#767676; letter-spacing: -1px;}
+	
+#schedule{width:750px; height: 690px;}
+	#schedule .scheduleHeader{width: 750px; height: 35px; border-top: 2px solid #cfcdc1; border-bottom: 3px solid #cfcdc1; background-color: #e6e3db;}
+	#schedule .scheduleHeader p{font-size: 0.95em; font-weight: bold; color:#5e593c; margin-top: 6px; padding-bottom: 2px; margin-left: 305px;}
+	#schedule .scheduleHeader p img{margin: 0px 8px; vertical-align:middle;}
+	#schedule .scheduleDay{width: 748px; height:37px; margin-left: 1px; margin-bottom: 5px;}
+	#schedule .scheduleDay .dayBox{float:left; width: 100px; height: 37px; margin-right:8px;}
+	#schedule .scheduleDay .last{margin-right: 0px;}
+	#schedule .scheduleDay .dayBox p{font-family: Arial, sans-serif; font-size: 0.85em; font-weight:bold; margin-top: 12px; margin-left: 35px; color: #552706;}
+	#schedule .scheduleDay .dayBox .sun{color: #972700;}
+	#schedule .scheduleDay .dayBox .sat{color: #037283;}
+	#schedule .scheduleContent{width: 748px; height: 37px; margin-left: 1px; margin-bottom: 5px;}
+	
+	#schedule .scheduleContent .contentBox{float:left; width: 100px; height: 100px; margin-right:8px; background-color: #f6f6f6; border-radius: 10px;}
+	#schedule .scheduleContent .last{margin-right: 0px}
+	#schedule .scheduleContent .contentBox p{font-size: 0.95em; font-weight: bold; margin-top: 8px; margin:left: 13px; color: #7e7e7e;}
+	#schedule .scheduleContent .contentBox .blue{color: #00a3dc;}
+	#schedule .scheduleContent .contentBox .blue{color: #c92600;}
+	#schedule .scheduleContent .contentBox .holiday{font-size: 0.85em; margin-top: 2px; color: #c44002;}
+	#schedule .scheduleContent .contentBox .special{font-size: 0.85em; margin-top: 2px; color: #b26200;}
+	#schedule .scheduleBottom{width: 750px; height: 105px; background-color: #f9f8f6; border: 1px solid #e5e1d8; border-radius: 10px;}
+	#schedule .scheduleBottom .bottomLeft{float:left; width: 140px; height: 105px;}
+	#schedule .scheduleBottom .bottomRight{float:left; width: 610px; height: 105px;}
+	#schedule .scheduleBottom .bottomLeft p{font-size: 0.95em; font-weight: bold; margin-left:28px; color: #8b4511;}
+	#schedule .scheduleBottom .bottomLeft .first{margin-top:12px;}
+	#schedule .scheduleBottom .bottomLeft .last{margin-left:12px;}
+	#schedule .scheduleBottom .bottomRight p{font-size: 0.9em; font-weight: bold; margin-left:2px; padding-top:2px; color: #6f6d6e;}
+	#schedule .scheduleBottom .bottomRight .first{margin-top:8px; padding-top:0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

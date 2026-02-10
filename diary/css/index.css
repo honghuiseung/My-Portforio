@@ -1,0 +1,14 @@
+﻿/* body{background:red;} */
+*{margin:0; padding:0;}
+h1,h2{margin:20px 0px 20px 20px;}
+h3{margin:20px 0px 20px 20px;}
+	ul {float:left; width:350px; height:480px; border: 2px solid #333333;}
+		ul li{margin:0px 20px 0px 20px; list-style:none; border-bottom:1px dotted #333333; }
+			ul li a{text-decoration:none; color:#000000;}
+	ul.epilogue{width:380px; height:900px;}
+
+.cl{clear:left;}
+.cf:after{content:''; display:block; clear:both;}
+
+	
+#checkList{position:fixed; width:165px; height:200px;  top:50px; right:50px; background-color:#ffffff; padding:30px 20px;border:1px solid #000000;}

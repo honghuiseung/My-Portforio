@@ -1,0 +1,38 @@
+﻿p.bold{font-weight: bold;}
+p.tab{margin-left:10px;}
+p.black{color:#333333;}
+p.gray{color:#666666;}
+p.green{color:#12c39a;}
+.cl{clear:left;}
+
+/* 분리선 */
+#product_detail_page #bar{top:566px;}
+
+#product_detail_page ul.product_cont li span.top20{display:block; margin-top:20px;}
+/* 제품 이미지 */
+#product_detail_page ul.product_cont li{width: 60%;}
+#product_detail_page ul.product_cont img{width: 100%;}
+
+/* 제품이름 */
+#product_detail_page ul.product_cont li.tit{font-size: 18px; font-weight: bold; width: 100%; padding: 5px 0; float:left; clear:left; margin-top: 20px;}
+#product_detail_page ul li.thin_bar{width: 100%; height: 2px; background-color: #d9d9d9; margin:20px 0;}
+
+/* 제품 정보 */
+#product_detail_page ul.product_cont li.txt{font-size: 14px; padding: 5px 0; margin-bottom: 10px; width:100%;}
+#product_detail_page ul.product_cont li.txt>*{font-size: 14px; padding: 5px 0; margin-bottom: 10px;}
+
+
+/* 담기버튼 */
+#product_detail_page ul.product_cont li .push_product_btn{background-color: #12c39a; color: #ffffff; margin-bottom: 25px;}
+
+
+
+
+
+
+
+
+
+
+
+

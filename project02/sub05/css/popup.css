@@ -1,0 +1,36 @@
+﻿*{margin:0; padding:0;}
+.fl{float:left;}
+.cl{clear:left;}
+.fr{float:right;}
+.cf:after{content:''; display: block; clear: both;}
+
+body{background:url(../images/popup.png)no-repeat top center;}
+#popup{width:462px; height: 696px; background-color: #fff;  /* opacity: 0.5; position: relative; left: 50%; top:0%; transform: translate(-53.5%,3%); */ }
+#popup *{letter-spacing:-2px; color:#333333; text-align:left;}
+#popup a{text-decoration:none; color:#00f;}
+#popup img{width: 93px; margin-left: 22px; margin-top: 24px; }
+#popup .contxt, #popup .pop_footer{padding:0px 32px;}
+#popup .contxt{height:478px;}
+#popup .title{width:396px;background-color:#1a6fa6; margin:8px auto 0 auto; padding:16px 0px;}
+#popup .title>h2{color:#fff; text-align:center; letter-spacing:-2.5px;}
+#popup .title>.yellow{color:#fff200;}
+#popup .contxt{border-bottom: 1px solid #666666;}
+#popup p{margin: 3px 0px; font-size:0.9em;}
+#popup p.notice{margin: 5px 0px;}
+#popup p.notice.first{margin-top:15px;}
+#popup li>span{display:block; float:left; width:298px;}
+#popup li span.num{font-size:1.1em;}
+#popup p.last{font-weight:bold;margin-top:30px;}
+#popup .contxt ul li{ font-weight: bold; color:#222222; margin-top:5px; list-style:none;}
+#popup .contxt ul li:before{background-color: #1a6fa6; text-align:center; display: block; width: 90px; border-radius: 10px; color: #fff; float:left; margin-right: 10px; clear:left;}
+#popup .contxt ul li.line1:before{content:'중단일시';}
+#popup .contxt ul li.line2:before{content:'중단사유';}
+#popup .contxt ul li.line3:before{content:'서비스 중단';}
+#popup label{font-weight:bold; font-size:1.1em; line-height:53px; color:#1a6fa6;}
+#popup label:before{content:''; display:block; width:26px; height:26px; border-radius:50%; background-color: #1a6fa6; float:left; margin-top:14px; margin-right:10px;}
+#popup input{display:none;}
+#popup .close{font-weight:bold; font-size:1.1em; line-height:53px; cursor:pointer;}
+#popup .close:before{content:''; display:block; width:22px; height:22px; border-radius:50%; background-color: #fff; float:right; margin-top:14px; margin-left:10px; border:3px solid #333;}
+
+
+

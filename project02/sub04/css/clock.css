@@ -1,0 +1,23 @@
+﻿#clock_wrap{position:relative;}
+#clock{width:550px; height:550px;border-radius: 50%; background-color: #eeeeee; margin:100px auto; border: 10px solid #333333; position: relative; background-color:#fff; overflow:hidden;}
+
+.hour_wrap{line-height:50px; font-size: 1.2em; text-align:center; cursor:default;}
+	.btn{width:150px; height: 50px; margin-right:10px; border-radius: 10px; background: linear-gradient(#eeeeee, #cbcbcb); position:absolute;}
+	.btn:hover{border-radius: 10px; background: linear-gradient(#cbcbcb, #eeeeee);}
+	
+	#change_day_btn{left:220px; top:0;}
+	#change_sunset_btn{right:220px; top:0;}
+	#change_night_btn{left:220px; bottom:0;}
+	#reset_btn{right:220px; bottom:0;}
+.clock_day_bg{width:1160px; height:650px; position:absolute; z-index:2; background:url(../images/back_day.jpg)no-repeat; background-size:1160px;}
+.clock_night_bg{width:1160px; height:650px; position:absolute; z-index:2; background:url(../images/back_night.jpg)no-repeat; background-size:1160px; background-position:0 -700px;}
+.clock_sunset_bg{width:1160px; height:650px; position:absolute; z-index:2; background:url(../images/back_sunset.jpg)no-repeat; background-size:1160px;
+background-position:-300px -100px;}
+.clock_bg{width:650px; height:650px; position:absolute; z-index:1;}
+.hand_sec_wrap{position:absolute; left:50%; top:50%;z-index:300;}
+.hand_min_wrap{position:absolute; left:50%; top:50%;z-index:100;}
+.hand_hour_wrap{position:absolute; left:50%; top:50%;z-index:200;}
+.clock_hand_hour{background-color:#333; width:30px; height: 170px; position: absolute; transform: translate(-50%,-90%);z-index:10;}
+.clock_hand_second{background-color:#cc0000; width:10px; height: 300px; position: absolute; transform: translate(-50%,-97%);z-index:10;}
+.clock_hand_minute{background-color:#444; width:20px; height: 240px; position: absolute; transform: translate(-50%,-95%);z-index:10;}
+.cl_num{font-weight: bold; font-size: 50px;  position: absolute; left:50%; bottom:50%; transform:translate(-50%,50%);z-index:10;}

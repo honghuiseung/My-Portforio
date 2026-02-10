@@ -1,0 +1,100 @@
+﻿/* 페이지 시작 */
+#wrap{height: 1814px; /* background:url(../images/back2.png)no-repeat top center; */}
+
+/* section 시작 */		
+	#section_top_wrap{height:44px; margin-bottom:10px; background-color:#eeeeee;}
+		#section_top{height:44px;
+		 text-align:right; line-height:44px; font-weight:bold; font-size: 0.9em; letter-spacing:-1.5px;}
+	
+
+/* 로그인 */
+		#section_middle{margin-bottom:205px;}
+			#section_title_box{height:162px;;}
+				#section_title{height:59px; margin:0px auto; border-bottom:3px solid #222222;}
+				#section_title h1{display:block; line-height:59px;}
+				#section_title_subtext{margin:33px auto 0; font-size: 0.9em; font-weight:bold; letter-spacing:-2px;}
+				#section_title_subtext .col2{margin-top:4px;}
+				#section_contents_title{height:57px; position:relative;}
+				#section_contents_title .title{margin:0; width:251px; height:53px; border-left:1px solid #999999; border-top:1px solid #999999;  line-height:54px;}
+				#section_contents_title .title5{border-right:1px solid #999999;}
+				#section_contents_title .title5.active{width: 247px; border-right:3px solid #1c5a94; border-right:3px solid #1c5a94; border-top:3px solid #1c5a94;}
+				#section_contents_title .active{width: 247px; border-left:3px solid #1c5a94; border-top:3px solid #1c5a94;}
+				#section_contents_title .title:not(.active){border-bottom:3px solid #1c5a94; background-color:#eeeeee;}
+				#section_contents_title .active + .title{border-left:3px solid #1c5a94;}
+				
+/* 버튼 */
+					.button{width:310px; height:88px; margin-top:106px; background: #1c5a94; margin:28px 0 0 157px; line-height:88px; color:#ffffff; font-size:1.2em; font-weight: bold; text-align:center;}
+/* 탭 공통 속성 */
+					.description .img{background:url(../images/ico_service_notice.png)no-repeat; width:20px; height:20px; background-size:20px; margin-top:3px;}
+					.description h3{margin-left:7px;}
+					.description .first{margin-top:24px;}
+					.description li{font-size:14px;  font-weight:bold; margin-top:8px; float:left; clear:left;}
+					.description{width:557px;}
+					.description>ul>li{margin-left:0px; margin-top:15px;}
+					.description>ul>li:before{content:'';float:left; display:block; width:8px; height:2px; background-color:#222222; margin-right:10px; margin-top:8px;}
+					.description>ul>li>ul>li{list-style-type:disc; margin-left:28px;}
+					.description>ul>li>ol>li{margin-left:18px;}
+					.description>ul>li.no_list_style:before{visibility:hidden;}					
+					.description>ul>li.notice:before{display:none;}					
+/* 탭1 */
+				#tab1{display:none;}
+				#tab1_subcontent1{height:396px; }
+				#tab1_subcontent1 .content_left{width:630px;}
+				#tab1_subcontent1 .img{width:103px; height:120px; margin-top:106px;}
+				#tab1_subcontent1 .button.last{background: #3382e9;}
+					.content_left .img{background:url(../images/ico_spr_login.png)no-repeat; background-size:169px; background-position:-68px 0px; margin-left:258px;}
+					.content_right .img{background:url(../images/ico_spr_login3.png)no-repeat; background-size:106px; margin-left:252px;}
+				#tab1_subcontent1 .content_right .button{margin-left:149px;}
+				#tab1_subcontent1 .content_right{width:630px;}
+				#tab1_subcontent2{height:380px;border-radius:10px; background-color: #f0f5f9;}
+				#tab1_subcontent2 .img1_description{padding-top:31px; padding-left:43px;width:557px;}
+				#tab1_subcontent2 .img2_description{padding-top:31px; padding-left:76px;width:525px;}
+				
+/* 탭2 */
+				#tab2_subcontent2{height:168px;border-radius:10px; background-color: #f0f5f9; margin-top: 50px;}
+				#tab2_subcontent2 .img1_description{padding:31px 0px 31px 43px; padding-left:43px; width:1220px; }
+/* 탭3 */
+				#tab3_subcontent1 .login_wrap{margin-left:50%; margin-top:120px;}
+				#login_form label.labelStyle{width: 80px; display: block; float: left; font-size:1.2em; font-weight: bold; letter-spacing: -1px;}
+				/* 포인트 */
+				#user_ID, #user_PWD{width: 340px; height:40px; border: 1px solid #999999;margin-left:20px; margin-bottom: 5px; padding: 0 20px;  padding-left:10px; font-size:0.95em;}
+				#login{margin-left:-50%;}
+				#btn{clear: both; margin-left: -133px; padding: 10px 0px;}
+				#btn input{width:25px; height:25px;}
+				#btn label{vertical-align: top;}
+				#btn label span{font-size: 0.8em; font-weight:bold; display:block; float:right; margin-top:3px; margin-left:5px;}
+				#tab3_subcontent1 .button{width:470px; margin-left:-50%;}
+				#tab3_subcontent1 .login_last_line{width:470px; margin-top:10px; margin-left:-50%; font-size:0.9em; font-weight:bold;}
+				#tab3_subcontent1 a{line-height:40px;}
+				.division_left a:before{content:''; display:block; float:left; background:url(../images/ico_join.png)no-repeat; background-size:40px; width: 40px; height:40px; border-radius:30px; border:1px solid #3382e9; margin-right:10px;}
+				.division_right a{margin-left:15px;}
+				.division_right a.first:after{content:''; display:inline-block; width:1px; height:13px; background-color:#cccccc; margin-left:15px; margin-top:0px;}
+				
+				#tab3_subcontent2{height:195px;border-radius:10px; background-color: #f0f5f9; margin-top: 50px;}
+				#tab3_subcontent2 .img1_description{padding:31px 0px 31px 43px; padding-left:43px; width:1220px; }
+				.img1_description ul li{margin-top:15px;}
+/* 탭4 */				
+				#tab4_subcontent1 .login_wrap{margin-left:50%; margin-top:120px;}
+				#tab4_subcontent1 img{margin-left:-50px;}
+				#tab4_subcontent1 .button{width:470px; margin-left:-50%;}
+				#tab4_subcontent1 .login_last_line{width:470px; margin-top:10px; margin-left:-50%; font-size:0.9em; font-weight:bold;}
+				#tab4_subcontent1 a{line-height:40px;}
+				#tab4_subcontent2{height:168px;border-radius:10px; background-color: #f0f5f9; margin-top:50px;}
+				#tab4_subcontent2 .img1_description{padding-top:31px; padding-left:43px;width:557px;}
+				#tab4_subcontent2 .img2_description{padding-top:31px; padding-left:76px;width:525px;}
+				
+/* 탭5 */
+				#tab5_subcontent1 .login_wrap{margin-left:50%; margin-top:120px;}
+				#tab5_subcontent1 img{margin-left:-50px;}
+				#tab5_subcontent1 .button{width:470px; margin-left:-50%;}
+				#tab5_subcontent1 .login_last_line{width:470px; margin-top:10px; margin-left:-50%; font-size:0.9em; font-weight:bold;}
+				#tab5_subcontent1 a{line-height:40px;}
+				#tab5_subcontent2{height:225px;border-radius:10px; background-color: #f0f5f9; margin-top: 50px;}
+				#tab5_subcontent2 .img1_description{padding:31px 0px 31px 43px; padding-left:43px; width:1220px; }
+				
+				
+.red{color:#e4173d;}				
+.guide{color:#cccccc;}
+.title{float:left; margin:0; text-align:center; font-size:1.05em; font-weight:bold; letter-spacing:-2px;}			
+.center{width:1420px; margin:0 auto;}
+.center_login{width:1261px; margin:0 auto;}

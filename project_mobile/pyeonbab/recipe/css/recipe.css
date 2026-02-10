@@ -1,0 +1,19 @@
+﻿.recipe_tab{margin: 15px 0;}
+.swiper-slide{width: auto!important;}
+.recipe_tab li{margin-right: 10px;}
+.recipe_tab li a{display: inline-block; padding: 6px 12px; background: #dddddd; font-size: 14px; font-weight: 600; letter-spacing: -0.6px; border-radius: 10px;}
+.recipe_tab li a:hover{background: #ea6231; color: #ffffff;}
+.recipe_tab li.on a{background: #ea6231; color: #ffffff;}
+
+
+.food_img{width: 100%; height: 100%; float: left;}
+.food_img img{float: left; width: 48%; margin-bottom: 1%;}
+.food_img img:first-child{margin-right: 4%; float: left;}
+.food_img_text{width: 48%; float: left; text-align: left; margin-bottom: 3%;}
+.food_img_text>h2{font-size: 0.9em; font-weight: bold; width: 100%; box-sizing: border-box; height: auto; padding: 5px 0;}
+.food_img_text.on{margin-right: 4%;}
+.star{float: left;}
+.star>svg{float: left;}
+.star>span{float: left; line-height: 1.4em;}
+
+a.recipe_img:hover, a.recipe_img:visited{color:#333333;}

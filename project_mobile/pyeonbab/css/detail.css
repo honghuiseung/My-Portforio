@@ -1,0 +1,27 @@
+﻿#flicking_wrapper{width: 160px; height: 237px;padding: 0; overflow: hidden; background-color: #fff; margin: 0 auto; clear: both; }
+#flicking_wrapScroll{position: relative; top: 0; left: 0; width: 480px; height: 124px; float: left;}
+#flicking_wrapScroll ul{list-style: none; position: relative; display: block; margin: 0; padding: 0; top: 0; left: 0; width: 100%; height: 100%;}
+#flicking_wrapScroll li{display: block; float:left; width: 160px; height: 237px;}
+#flicking_wrapScroll li{-webkit-background-size: 160px 237px;}
+#indicator{margin: 6px auto; width: 57px;}
+#indicator li{width: 9px; height: 9px; margin-right: 10px; float: left; background: url(../images/slider_off.png) no-repeat; margin-bottom: 10px; }
+#indicator li.active{background: url(../images/slider_on.png) no-repeat;}
+#indicator li span{display: none;}
+
+/* 플리킹 배너 이미지 주소 영역 */
+#flicking_wrapScroll li:nth-child(1) {background: url(../images/fli_img01.jpg) no-repeat; -webkit-background-size: 160px 237px;}
+#flicking_wrapScroll li:nth-child(2) {background: url(../images/fli_img02.jpg) no-repeat; -webkit-background-size: 160px 237px;}
+#flicking_wrapScroll li:nth-child(3) {background: url(../images/fli_img03.jpg) no-repeat; -webkit-background-size: 160px 237px;}
+/* 
+@media screen and (-webkit-device-pixel-ratio: 2) {
+	#flicking_wrapScroll li:nth-child(1) {background: url("../images/fli_img01x2.jpg")no-repeat;}
+}
+@media screen and (-webkit-device-pixel-ratio: 2) {
+	#flicking_wrapScroll li:nth-child(2) {background: url("../images/fli_img02x2.jpg")no-repeat;}
+}
+@media screen and (-webkit-device-pixel-ratio: 2) {
+	#flicking_wrapScroll li:nth-child(3) {background: url("../images/fli_img03x2.jpg")no-repeat;}
+} 
+*/
+	
+	

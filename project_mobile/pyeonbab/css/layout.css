@@ -1,0 +1,5 @@
+﻿*{box-sizing: content-box;}
+#header{line-height: 64px;}
+#header>.back{top: 18px; background:url(../images/head_icons.svg) no-repeat; background-position: -90px 0; width: 10px; height: 10px; background-size: 150px; background-color: #f6f6f6; border: 0; box-shadow: 0 0 0 rgba(0,0,0,0);}
+#header>.basket{top: 18px; background:url(../images/head_icons.svg) no-repeat; background-position: -35px 0; width: 10px; height: 10px; background-size: 150px; background-color: #f6f6f6; border: 0; box-shadow: 0 0 0 rgba(0,0,0,0);}
+#header>h1{padding: 0; margin: 0; font-size: 1.5em; font-weight: bold;}
