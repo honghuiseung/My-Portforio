@@ -1,0 +1,14 @@
+﻿body, th, td{font: 0.9em '맑은 고딕', sans-serif;}
+#table1{border-collapse: collapse; margin: 20px auto;}
+#table1 caption, #table1 th, #table td{border: 1px solid #000000; padding: 5px 10px;}
+#table1 caption{color: #ffffff; background-color: #666666;}
+#table1 th{background-color: #c5c5c5;}
+#table1 td:first-child{background-color: #999999;}
+#table1 tr:last-child{background-color: #000000; color: #ffffff; text-align: center;}
+
+#table2{border-collapse: collapse; margin: 20px auto;}
+#table2 caption, #table2 th, #table2 td{border: 1px solid #000000; padding: 5px 10px;}
+#table2 caption{color: #ffffff; background-color: #666666;}
+#table2 th{background-color: #c5c5c5;}
+#table2 td:first-child{background-color: #999999;}
+#table2 tr:last-child{background-color: #000000; color: #ffffff; text-align: center;}

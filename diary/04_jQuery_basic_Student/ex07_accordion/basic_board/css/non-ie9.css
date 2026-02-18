@@ -1,0 +1,5 @@
+﻿#search_wrap select{margin-top: 2px;}
+#search_wrap input {margin-top: 2px;}
+#search_wrap button{position: relative; top: 3px;}
+#board .content_wrap{display: block;}
+#board label{cursor: default;}

@@ -1,0 +1,7 @@
+﻿홈페이지를 시작 페이지로 등록하게 만들기
+
+
+[2]
+
+style="cursor:pointer" onclick="this.style.behavior='url(#default#homepage)'; this.setHomePage('http://www.hongsidesign.com');"
+

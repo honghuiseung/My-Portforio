@@ -1,0 +1,49 @@
+﻿<html>
+
+<head>
+<SCRIPT LANGUAGE="JavaScript1.2">
+	function shake_xy(n) {
+	if (window.top.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+				window.top.moveBy(0,i);
+				window.top.moveBy(i,0);
+				window.top.moveBy(0,-i);
+				window.top.moveBy(-i,0);
+		    }
+	      }
+	   }
+	}
+
+	function shake_x(n) {
+	if (window.top.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+				window.top.moveBy(i,0);
+				window.top.moveBy(-i,0);
+		    }
+	      }
+	   }
+	}
+
+	function shake_y(n) {
+	if (window.top.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+				window.top.moveBy(0,i);
+				window.top.moveBy(0,-i);
+		    }
+	      }
+	   }
+	}
+shake_y(10);
+shake_x(10);
+shake_xy(10);
+	//-->
+</script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+</body>
+
+</html>

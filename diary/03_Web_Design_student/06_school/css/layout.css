@@ -1,0 +1,38 @@
+﻿*{margin:0; padding: 0; border: 0; list-style: none; font-family: "맑은 고딕"; color: #333333;}
+a{text-decoration: none; display: block;}
+cf:after{content:''; display:block; clear: both;}
+.hidden{font-size: 0; overflow: hidden; position: absolute; text-indent: -55555em;}
+
+#wrap{width: 1200px; margin: 50px auto; background: #ffffff; font-size: 20px;}
+header{width: 100%; height:100px; background: rgba(255,255,0,0.5);}
+	.top .logo{width: 250px; float:left; height: inherit;}
+	.top .logo img{display: block; width: 200px; margin: 27px auto;}
+	
+	.top .menu{width: 820px; float:right; height: inherit;}
+	.top .menu .nav{float:right; margin-top: 30px;}
+	.top .menu .nav>li{float: left; width: 200px; margin-left: 5px;}
+	.top .menu .nav>li>a{width: 200px; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold; text-align: center; color: #fff; background: #0066ad; transition: all 0.4s;}
+	.top .menu .nav>li>a:hover{background: #30a3f3;}
+	
+.bodyWrap{height: 500px; width: inherit; background: rgba(255,255,0,0.5);}
+	.imgslide{height: 300px; width: 100%; position:relative; overflow:hidden; background: rgba(255,0,0,0.5);}
+	.imgslide>a{position: absolute; top: 0; left: 0;}
+	.imgslide .imgtext{height: 50px; width: 500px; position: absolute; left: 50%; top: 50%; margin: -30px 0 0 -250px; text-align: center; line-height: 50px; color: #ffffff; font-weight: bold; background: rgba(40,40,40,.5);}
+	
+	.contents{height: 200px; width: 100%;}
+	.contents>article{float:left; width: 400px; height: 200px; box-sizing: border-box; padding: 10px; height: 100%;}
+	.contents .tab{background:rgba(255,0,0,0.5);}
+	.contents .banner{background:rgba(0,255,0,0.5);}
+	.contents .shortcut{background:rgba(0,0,255,0.5);}
+	
+.modal{position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0,0,0,0.6); z-index: 99999; display: none;}
+.modal .modal_up{width: 500px; height: 300px; background: #fff; padding: 30px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,50%)}
+
+footer{width: 100%; height: 100px; background:#1884d0;}
+	footer .f_logo{width: 250px; height: inherit; float:left;}
+	footer .site{width: 950px; height: 50px; float:left;}
+	footer .copy{width: 950px; height: 50px; float:left; text-align: center; line-height: 50px;}
+	/* 임시 */
+	footer .f_logo{background:rgba(255,0,0,0.5);}
+	footer .site{background:rgba(0,255,0,0.5);}
+	footer .copy{background:rgba(0,0,255,0.5);}

@@ -1,0 +1,210 @@
+그림을 확대해서 보여주기
+
+1.<head> 태그에 삽입=======================================================================
+
+
+<style type="text/css">
+	#mglass {position:absolute;left:-2000;top:50;}
+	#thumb {position:absolute;left:-2000;top:50;}
+	#large {position:absolute;left:-2000;top:50;}
+	#framegif {position:absolute;left:-2000;top:50;}
+</STYLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var isNav, isIE
+var offsetX, offsetY
+var selectedObj 
+
+var enlargefactor=5
+var largewidth = 455
+var largeheight = 523
+var largeleft = 250    //확대 그림이 보이는 x 위치
+var largetop = 30      //확대 그림이 보이는 y 위치
+
+var thumbwidth = Math.floor(largewidth/enlargefactor)
+var thumbheight = Math.floor(largeheight/enlargefactor)
+var thumbleft = 50    //작은 그림이 보이는 x 위치
+var thumbtop = 30     //작은 그림이 보이는 x 위치
+
+var mglasswidth = 32
+var mglassheight = 32
+var mglassleft = 120  //돋보기 그림이 보이는 x 위치
+var mglasstop = 110   //돋보기 그림이 보이는 x 위치
+
+var difleft= largeleft-thumbleft
+var diftop= largetop-thumbtop
+
+var clippoints
+
+var cliptop = (thumbheight-mglassheight)*enlargefactor
+var clipbottom = cliptop+(mglassheight*enlargefactor)
+var clipleft =(thumbwidth-mglasswidth)*enlargefactor
+var clipright = clipleft+(mglasswidth*enlargefactor)
+
+
+if (parseInt(navigator.appVersion) >= 4) {
+	if (navigator.appName == "Netscape") {
+		isNav = true
+	} else {
+		isIE = true
+	}
+}
+
+function setZIndex(obj, zOrder) {
+	obj.zIndex = zOrder
+}
+
+function shiftTo(obj, x, y) {
+	if (isNav) {
+		obj.moveTo(x,y)
+	} else {
+		obj.pixelLeft = x
+		obj.pixelTop = y
+	}	
+	cliptop = (y-thumbtop)*enlargefactor
+	clipbottom = cliptop+(mglassheight*enlargefactor)
+	clipleft = (x-thumbleft)*enlargefactor
+	clipright = clipleft+(mglasswidth*enlargefactor)
+
+	
+	if (document.all) {
+		clippoints ="rect("+cliptop+" "+clipright+" "+clipbottom+" "+clipleft+")"
+		document.all.large.style.posTop=largetop-cliptop
+		document.all.large.style.posLeft=largeleft-clipleft
+		document.all.large.style.clip=clippoints
+	}
+	if (document.layers) {
+		document.large.top=largetop-cliptop
+		document.large.left=largeleft-clipleft
+		document.large.clip.left = clipleft
+		document.large.clip.right = clipright
+		document.large.clip.top = cliptop
+		document.large.clip.bottom = clipbottom
+	}
+}
+
+function setSelectedElem(evt) {
+	if (isNav) {
+		var testObj
+		var clickX = evt.pageX
+		var clickY = evt.pageY
+		for (var i = document.layers.length - 1; i >= 0; i--) {
+			testObj = document.layers[i]
+			if ((clickX > testObj.left) && 
+				(clickX < testObj.left + testObj.clip.width) && 
+				(clickY > testObj.top) && 
+				(clickY < testObj.top + testObj.clip.height)) {
+					selectedObj = testObj
+					setZIndex(selectedObj, 100)
+					return
+			}
+		}
+	} else {
+		var imgObj = window.event.srcElement
+		if (imgObj.parentElement.id.indexOf("mglass") != -1) {
+			selectedObj = imgObj.parentElement.style
+			setZIndex(selectedObj,100)
+			return
+		}
+	}
+	selectedObj = null
+	return
+}
+
+function dragIt(evt) {
+	if (selectedObj) {
+		if (isNav) {
+			shiftTo(selectedObj, (evt.pageX - offsetX), (evt.pageY - offsetY))
+		} else {
+			shiftTo(selectedObj, (window.event.clientX - offsetX), (window.event.clientY - offsetY))
+			return false
+		}
+	}
+}
+
+function engage(evt) {
+	setSelectedElem(evt)
+	if (selectedObj) {
+		if (isNav) {
+			offsetX = evt.pageX - selectedObj.left
+			offsetY = evt.pageY - selectedObj.top
+		} else {
+			offsetX = window.event.offsetX
+			offsetY = window.event.offsetY
+		}
+	}
+	return false
+}
+
+function release(evt) {
+	if (selectedObj) {
+		setZIndex(selectedObj, 0)
+		selectedObj = null
+	}
+}
+
+function setNavEventCapture() {
+	if (isNav) {
+		document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE | Event.MOUSEUP)
+	}
+}
+
+function init() {
+
+	if (document.layers) {
+		document.large.left=largeleft
+		document.large.top=largetop
+		
+		document.framegif.left=largeleft-3
+		document.framegif.top=largetop-3
+	
+		document.thumb.left=thumbleft
+		document.thumb.top=thumbtop
+	
+		document.mglass.left=mglassleft
+		document.mglass.top=mglasstop
+		
+		document.large.clip.left = 0
+		document.large.clip.right = 0
+		document.large.clip.top = 0
+		document.large.clip.bottom = 0
+		
+		setNavEventCapture()
+	}
+	
+	if (document.all) {
+		document.all.large.style.posLeft=largeleft
+		document.all.large.style.posTop=largetop
+		
+		document.all.framegif.style.posLeft=largeleft-3
+		document.all.framegif.style.posTop=largetop-3
+	
+		document.all.thumb.style.posLeft=thumbleft
+		document.all.thumb.style.posTop=thumbtop
+	
+		document.all.mglass.style.posLeft=mglassleft
+		document.all.mglass.style.posTop=mglasstop
+		document.all.large.style.clip="rect(0 0 0 0)"
+	}
+	
+	document.onmousedown = engage
+	document.onmousemove = dragIt
+	document.onmouseup = release
+}
+// - End of JavaScript - -->
+</SCRIPT>
+
+2.<body> 태그 안에 삽입=======================================================================
+
+onLoad="init()"
+
+
+3.<body> 태그에서 효과를 적용할 위치에 삽입================================================
+
+
+<DIV ID="thumb"><IMG NAME="thumbpic" SRC="girl.jpg" width=80></DIV>
+<DIV ID="framegif"><IMG NAME="framepic" SRC="bar.gif"></DIV>
+<DIV ID="large"><IMG NAME="largepic" SRC="girl.jpg" width=455></DIV>
+<DIV ID="mglass"><IMG NAME="mglasspic" SRC="mglass.gif"></DIV>
+

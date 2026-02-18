@@ -1,0 +1,28 @@
+<html>
+<head>
+<title></title>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName == "Microsoft Internet Explorer") {
+image_directory = "";
+clear = new Image();  clear.src = image_directory + "";
+pic1 = new Image();  pic1.src = image_directory + "mascot1.gif";
+pic2 = new Image();  pic2.src = image_directory + "mascot2.gif";
+}
+function imagechange(imgName) {
+if (navigator.appName == "Microsoft Internet Explorer") {
+document.body.background = eval(imgName + ".src");
+   }
+}
+//-->
+</script>
+</head>
+
+<body background="clear.jpg" name="bg">
+<p align="center">
+<a onmouseover="imagechange('pic1');" onmouseout="imagechange('clear');"><img src="mascot1.gif" border="0"></a>
+<a onmouseover="imagechange('pic2');" onmouseout="imagechange('clear');"><img src="mascot2.gif" border="0"></a>
+</p>
+
+</body>
+
+</html>

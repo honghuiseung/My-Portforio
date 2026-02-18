@@ -1,0 +1,54 @@
+--그룹 함수 (하나의 행으로 밖에는 표현할 수 없는 결과를 내는 함수)
+select deptno, sal, round(sal,3) 반올림 from emp;
+select sum(sal) from emp;
+select sum(sal) as "급여총액",
+       round(avg(sal)) as "급여평균",
+       max(sal) as "최대급여",
+       min(sal) as "최소급여"
+from emp;
+select to_date(max(hiredate),'yy/mm/dd') "가장 늦게 입사" ,to_date(min(hiredate),'yy/mm/dd') "가장 먼저 입사" from emp;
+select sum(comm) as "커미션 총액" from emp;
+select ename max(sal) from emp;  --실행이 안됨 되게 하려면 sub 쿼리문을 배워야 가능
+
+--커미션을 받는 사원들의 수
+select count(comm) as "커미션 받는 사원의 수" from emp;
+
+--사원의 총수를 카운트
+select count(*) as "사원의 총수" from emp;
+
+--직위가 몇 종류
+select count(distinct job) as "직위의 개수" from emp;
+
+--group by 절
+select deptno from emp group by deptno;
+
+--group by를 이용하여 사원테이블에서(emp) 부서별로 급여(sal) 평균(avg) 구하기
+select avg(sal) as "급여 평균" from emp group by deptno;
+select deptno as "부서 번호", avg(sal) as "급여 평균" from emp group by deptno;
+
+--잘못된 예 (group by deptno를 해서 deptno와 숫자는 가능한데 그외에는 불가능하다)
+select deptno , ename , avg(sal) from emp group by deptno;
+
+--소속 부서별 급여 총액과 급여 평균 구하기
+select deptno ,sum(sal) as "급여 총액", avg(sal) as "급여 평균" from emp group by deptno;
+
+--소속 부서별 최대 급여와 최소 급여구하기
+select deptno ,max(sal) as "최대 급여", min(sal) as "최소 급여" from emp group by deptno;
+
+--부서별 사원수와 커미션을 받는 사원수 구하기
+select deptno, count(*) as "부서별 사원수" , count(comm) as "커미션 받는 사원수" from emp group by deptno;
+
+--그룹 결과 제한 : having 절
+select deptno, avg(sal) as "500이상 급여" from emp group by deptno having avg(sal) >= 500;
+-- 최대 급여가 500을 초과하는 부서에 대해서 최대 급여와 최소 급여 구하기
+select deptno, max(sal) "최대 급여", min(sal) "최소 급여" from emp group by deptno having max(sal) > 500;
+
+--사원을 제외하고 급여 총액이 1000 이상인 직급별 급여 총액 구하기
+select job, sum(sal) from emp 
+where job not like '%사원' 
+group by job 
+having sum(sal) >= 1000 
+order by sum(sal);
+
+--최고 급여 평균 출력하기
+select max(avg(sal)) from emp group by deptno;

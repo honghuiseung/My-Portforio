@@ -1,0 +1,5 @@
+﻿body{font: 0.95em '맑은 고딕', sans-serif; margin:40px;}
+div{border: 10px solid #ff6666; outline-style: solid; outline-width: 10px; outline-color: #000000;}
+	p{line-height: 200%; margin: 20px auto; width: 330px; padding: 10px; height: 120px;}
+	.border1{border: 20px solid #ffcc00; outline: dashed 1px #000000;}
+	.border2{border: 20px double #666666; outline: double 10px #000000;}

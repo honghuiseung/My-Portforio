@@ -1,0 +1,50 @@
+CREATE TABLE dept01(--시험 crud delete
+    deptno NUMBER(2),
+    dname VARCHAR2(14),
+    loc VARCHAR2(13)
+);
+DESC dept01;
+INSERT INTO dept01 VALUES(10, '경리부', '서울');
+SELECT * FROM dept01;
+DELETE dept01 WHERE deptno = 30;
+INSERT INTO dept01 (deptno, loc, dname) VALUES(20, '인천', '인사부'); --이 방식으로만 null값을 넣을 수 있음
+INSERT INTO dept01 (deptno, dname) VALUES(30, '인사부');
+INSERT INTO dept01 VAlUES(40, '전산부', NULL); --명시적으로 null값 집어넣기(암묵적)
+INSERT INTO dept01 VAlUES(50, '기획부', '');
+INSERT INTO dept01 VAlUES(60, '생산부', ' ');
+DROP TABLE emp02;
+CREATE TABLE emp02(
+    empno number(4),
+    ename varchar2(10),
+    job varchar2(9),
+    hiredate date,
+    deptno number(2)
+);
+DESC emp02;
+DELETE emp02 WHERE EMPNO = 1003;
+INSERT INTO emp02 VALUES(1001, '김사랑', '사원', '2015/03/01', 20);
+SELECT * FROM emp02;
+INSERT INTO emp02 VALUES(1003, '오지호', '과장', SYSDATE, 30);
+INSERT INTO emp02 VALUES(1002, '한예슬', '대리', TO_DATE('2014, 05, 01', 'YYYY, MM, DD'), 20);
+
+SELECT * FROM dept01;
+UPDATE dept01 SET dname='생산부' WHERE deptno=10; --deptno10을 dname생산부로 변경
+UPDATE dept01 SET dname='생산부2', loc='부산' WHERE deptno=20; --deptno20를 loc부산 dname생산부로 변경
+UPDATE dept01 SET dname='생산부3'; --모두 생산부로 변경
+DELETE dept01 WHERE deptno=10; --where내용대로 삭제
+DELETE dept01; --모두 삭제
+
+SELECT * FROM emp02; --1.있는지 확인
+DROP TABLE emp02; --2.삭제
+CREATE table emp02 AS SELECT * FROM emp; --3.emp를 복사해서 emp02에 넣음
+
+SELECT * FROM emp02;
+DELETE emp02;
+ROLLBACK; --실수로 테이블을 삭제해도 되돌릴 수 있음. 단, 커밋하면 롤백불가능
+
+DELETE emp02 WHERE deptno = 20;
+SELECT * FROM emp02;
+COMMIT;
+ROLLBACK; --커밋하면 롤백불가능
+
+

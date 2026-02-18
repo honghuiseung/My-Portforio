@@ -1,0 +1,51 @@
+
+깜박이는 글자 효과
+
+
+1.<head> 태그에 삽입============================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function setupStrobe() {
+text = "글자가 깜빡거리지요";
+var x=navigator.appVersion;
+y=x.substring(0,4);
+if(y>=4)strobeEffect();
+}
+var isNav=(navigator.appName.indexOf("Netscape")!=-1);
+var colors=new Array(
+"FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF",
+"FFFFFF","F9F9F9","F1F1F1","E9E9E9","E1E1E1","D9D9D9",
+"D1D1D1","C9C9C9","C1C1C1","B9B9B9","B1B1B1","A9A9A9",
+"A1A1A1","999999","919191","898989","818181","797979",
+"717171","696969","616161","595959","515151","494949",
+"414141","393939","313131","292929","212121","191919",
+"111111","090909","000000")
+
+a=0,b=1;
+function strobeEffect() {
+color=colors[a];
+aa="<font color="+color+">" + text + "</font>"  //글자 속성 설정
+if(isNav) {
+document.object1.document.write(aa);
+document.object1.document.close();
+}
+else object1.innerHTML=aa;
+a+=b;
+if (a==38) b-=2;
+if (a==0) b+=2;
+xx=setTimeout("strobeEffect()",1);
+}
+//-->
+</SCRIPT>
+
+2.<body> 태그 안에 입력=========================================================
+
+onLoad="setupStrobe()"
+
+
+
+3.<body> 태그에 삽입============================================================
+
+<div id="object1" style="position:absolute; visibility:show; left:400px; top:100px; z-index:2"></div>  //글자 위치 설정
+

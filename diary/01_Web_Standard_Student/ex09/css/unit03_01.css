@@ -1,0 +1,12 @@
+﻿body{margin: 30px; font: 1.2 Verdana, sans-serif; background-color: #cccccc;}
+h1, ul, li{margin: 0; padding: 0;}
+h1{padding-bottom: 20px; text-align: center; font-size: 2em; color: #ffffff; font-style: italic; text-shadow: 0 0 10px #666666;}
+a{text-decoration: none;}
+#photoBox{margin: 0 auto; width: 330px;}
+#tabNavi{list-style: none; padding-left: 100px;}
+#tabNavi li{float: left; margin-left: 2px;}
+#tabNavi li a{font-size: 0.85em; color: #ff9966; text-align: center; display: block; width:50px; padding: 3px 10px; background-color: #ffffff; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+#tabNavi li a:hover{color: #ffffff;background-color: #ff6633; }
+#tabNavi li.activeS a{color: #ffffff;background-color: #ff6633; }
+#photo{border: 5px solid #ff6633; border-radius: 15px; clear: both; background-color: #ffffff;}
+#photo img{display: block; margin: 0 auto;}

@@ -1,0 +1,38 @@
+<html>
+<head><title>Untitled</title></head>
+<body>
+<br><br><br><br>
+<script language="JavaScript">
+<!--
+var imgsbefore = 0 
+function pcgbar(pcg) {
+var totalbe = imgsbefore + 100
+if (pcg < totalbe) {
+        document.images[pcg].src = "used.gif"
+        newpcg = pcg + 1
+        timerID=setTimeout('pcgbar(newpcg);',50);
+        }
+else if (pcg == totalbe) {
+self.location = 'a.htm' //로딩될 파일 이름
+}
+}
+
+if (document.images) {
+document.write ('<center><b>LODING...</b><br><table border=1 cellspacing=0 cellpadding=2><tr><td>');
+for (var i = 0; i < 100; i++) {
+var scale = 2
+var width= 1 * scale
+  var imgna = new Image()
+  imgna.src = "unused.gif"
+document.write ('<img border=0 src="unused.gif" width="' + width + '" height="20">');
+}
+document.write ('</td></tr></table></center>');
+var startpnt = imgsbefore
+pcgbar(imgsbefore);
+}
+//-->
+</script>
+<br><br><center><a href="a.htm" target="_self">SKIP</a></center> 
+</p>
+</body>
+</html>

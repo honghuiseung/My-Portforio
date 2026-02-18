@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>select 객체의 focus 이벤트</TITLE>
+<STYLE TYPE="text/css">
+<!--
+body {
+	background-attachment: fixed;
+	background-image: url(map.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function loadPage(list) {
+  location.href = list.options[list.selectedIndex].value
+}
+
+// -->
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="#F0F0F0">
+<FORM ALIGN="right">
+<H3>올 가을에 꼭 놀러가고 싶은 곳은?</H3>
+<SELECT NAME="president" onFocus="alert('멋진 휴가 계획 세우세요~')">
+<OPTION VALUE="http://www.microsoft.com/">바다가 보이는 역, 정동진
+<OPTION VALUE="http://home.netscape.com/">단풍을 만나기 위해, 설악산
+<OPTION VALUE="http://home.netscape.com/">자연이 살아있는 제주도
+<OPTION VALUE="http://www.microsoft.com/">차향이 그윽한 보성 차밭
+<OPTION VALUE="http://home.netscape.com/">겨울연가 촬영지, 외도
+</SELECT>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,9 @@
+﻿#book1{width:170px; height: 48px; overflow: hidden; background-color: red; color:#ffffff;
+	transition-property: width;
+	transition-duration: 2s;
+}
+#book2{width:300px; height: 48px; overflow: hidden; background-color: yellow; color:#666666;
+	transition-property: width;
+	transition-duration: 5s;
+}
+#book1:hover, #book2:hover{width: 900px;}

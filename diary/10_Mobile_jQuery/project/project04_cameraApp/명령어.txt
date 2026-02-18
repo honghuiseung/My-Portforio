@@ -1,0 +1,40 @@
+cd  c:\Project
+cordova  create  device  com.example.device  deviceApp
+www 폴더에 build 할 파일을 넣어준다.
+cd  c:\Project\device
+c:\Project\device\cordova platform add android
+
+(장치의 하드웨어/소프트웨어 정보를 제공)
+c:\Project\device\cordova plugin add cordova-plugin-device
+(장치의 진동을 제어)
+c:\Project\device\cordova plugin add cordova-plugin-vibration
+(나침반 센서를 통해 방향 정보 제공)
+c:\Project\device\cordova plugin add cordova-plugin-device-orientation
+(장치의 배터리의 상태 정보를 제공)
+c:\Project\device\cordova plugin add cordova-plugin-battery-status
+(장치의 네트워크의 유/무선망 연결 정보 제공)
+c:\Project\device\cordova plugin add cordova-plugin-network-information
+(장치의 GPS 센서를 통해 위치 정보 제공)
+c:\Project\device\cordova plugin add cordova-plugin-geolocation
+(경고창 제공)
+c:\Project\device\cordova plugin add cordova-plugin-dialogs
+(로그, 오류 정보 제공)
+c:\Project\device\cordova plugin add cordova-plugin-console
+
+기타 플러그인
+(카메라 장치 통해 촬영 및 사진 제공)
+c:\Project\device\cordova plugin add cordova-plugin-camera
+(연락처 정보의 추가/삭제/검색 제공)
+c:\Project\device\cordova plugin add cordova-plugin-contacts
+(모션 센서의 가속도 정보를 제공)
+c:\Project\device\cordova plugin add cordova-plugin-motion
+(파일 읽기/쓰기/이동/복사/삭제 지원)
+c:\Project\device\cordova plugin add cordova-plugin-file
+(미디어 파일 재생/녹음 지원)
+c:\Project\device\cordova plugin add cordova-plugin-media
+(오디오, 이미지, 비디오 정보 일부를 캡쳐(녹음/녹화))
+c:\Project\device\cordova plugin add cordova-plugin-capture
+
+c:\Project\device\cordova plugin list (프로젝트에 설치된 모든 플러그인들의 목록을 표시)
+
+c:\Project\device\cordova plugin remove cordova-plug-device (프로젝트에 설치된 디바이스 플러그인 삭제)

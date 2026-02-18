@@ -1,0 +1,11 @@
+메뉴에 마우스 포인터를 위치하면 소리나게 만들기
+
+
+1.<body> 태그에 삽입============================================================
+
+<center>
+<a href="하이퍼링크 설정" onMouseOver="document.all.music.src='laser.wav'">딩</a><p>
+<a href="하이퍼링크 설정" onMouseOver="document.all.music.src='Chord.wav'">띵</a><p>
+<a href="하이퍼링크 설정" onMouseOver="document.all.music.src='Notify.wav'">띠띵</a><p>
+<bgsound src="#" id=music loop=1 autostart="true">
+</center>

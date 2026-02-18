@@ -1,0 +1,159 @@
+<html>
+<head>
+<title></title>
+</head>
+
+<body>
+<script language="javascript">
+year = window.location.search.substring(6,window.location.search.length);
+onloadstr = (year=="")?" onLoad=document.calendarform.year.focus();":"";
+document.write("<html>\n\n"
+              +"<head><title>Calendar: " + year + "</title></head>\n\n"
+              +"<body bgcolor=#ffffff text=#000000" + onloadstr + ">\n\n"
+              +"<font face=Verdana size=-1>\n\n");
+if(year=="")
+{
+  document.write("<form method=get name=calendarform><blockquote>\n"
+                +"  <b>출력하고 싶은 년도</b> "
+                +"<input type=text name=year size=4>\n"
+                +"</blockquote></form>\n\n");
+}
+else
+{
+  document.write("<table border=0 align=center>\n\n<tr><th><br><br><br>"
+                +"<font face=Verdana size=-1>" + year + "</th></tr>\n\n"
+                +"<tr><td><pre>");
+  leapyear = (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) ?1:0
+  month_length = new Array(12)
+    month_length[0] = 31;
+    month_length[1] = leapyear ? 29 : 28;
+    month_length[2] = 31;
+    month_length[3] = 30;
+    month_length[4] = 31;
+    month_length[5] = 30;
+    month_length[6] = 31;
+    month_length[7] = 31;
+    month_length[8] = 30;
+    month_length[9] = 31;
+    month_length[10] = 30;
+    month_length[11] = 31;
+  month_start_day = new Array(12)
+    start_date = new Date(year,0,1);
+    month_start_day[0] = start_date.getDay();
+    a = 0;
+    while(a<11)
+    {
+      month_start_day[a+1] = (month_start_day[a] + month_length[a]) % 7;
+      a++;
+    }
+   daystr=" S  M  T  W  R  F  S    S  M  T  W  R  F  S    S  M  T  W  R  F  S\n"
+  month_titles = new Array(4)
+  month_titles[0] = "\n       <b>January</b>               "
+                    + "<b>February</b>                 <b>March</b>\n";
+  month_titles[1] = "\n        <b>April</b>                   "
+                    + "<b>May</b>                   <b>June</b>\n";
+  month_titles[2] = "\n        <b>July</b>                  "
+                    + "<b>August</b>                <b>September</b>\n";
+  month_titles[3] = "\n       <b>October</b>               "
+                    + "<b>November</b>               <b>December</b>\n";
+  
+  cur_set = 0;
+  for(cur_set=0; cur_set<4; cur_set++)
+  {
+    cur_date = new Array(3);
+      cur_date[0] = 1;
+      cur_date[1] = 1;
+      cur_date[2] = 1;
+    cur_day = new Array(3);
+      cur_day[0] = month_start_day[(cur_set * 3)];
+      cur_day[1] = month_start_day[(cur_set * 3) + 1];
+      cur_day[2] = month_start_day[(cur_set * 3) + 2];
+    month_done = new Array(3);
+      month_done[0] = 0;
+      month_done[1] = 0;
+      month_done[2] = 0;
+    document.write("\n" + month_titles[cur_set] + daystr);
+  
+    while( (cur_date[0] <= month_length[(cur_set * 3)]) ||
+           (cur_date[1] <= month_length[(cur_set * 3) + 1]) ||
+           (cur_date[2] <= month_length[(cur_set * 3) + 2]) )
+    {
+
+      for(cur_month=0; cur_month<3; cur_month++)
+      {
+  
+
+        if(month_done[cur_month])
+        {
+          document.write("                    ");
+          if(cur_month < 2) { document.write("   "); }
+        }
+        week_flag = 0;
+        while( (! week_flag) &&
+               (cur_date[cur_month] <= month_length[(cur_set * 3)+cur_month]) )
+        {
+
+
+          if(cur_date[cur_month] == 1)
+          {
+            space_str = "";
+            day_ctr = 0;
+            while(day_ctr < cur_day[cur_month])
+            {
+              space_str = space_str + "   ";
+              day_ctr++;
+            }
+            document.write(space_str);
+          }
+  
+   if(cur_date[cur_month] <= 9) { document.write(" "); }
+          document.write(cur_date[cur_month]);
+          if( (cur_day[cur_month] != 6) &&
+              (cur_date[cur_month] != month_length[(cur_set * 3)+cur_month]) )
+            { document.write(" "); }
+  
+  
+          if( (! month_done[cur_month]) &&
+              (cur_date[cur_month] == month_length[(cur_set * 3)+cur_month]) )
+          {
+            space_str = "";
+            day_ctr = cur_day[cur_month];
+            while(day_ctr < 6)
+            {
+              space_str = space_str + "   ";
+              day_ctr++;
+            }
+            if(cur_month < 2) { space_str = space_str + "   "; }
+  
+            if( (cur_month == 2) && (! (month_done[0] && month_done[1]) ) )
+              { space_str = space_str + "\n"; }
+            document.write(space_str);
+            month_done[cur_month] = 1;
+          }
+  
+  
+          cur_date[cur_month]++;
+          cur_day[cur_month]++;
+          if( (cur_day[cur_month] == 7) && (! month_done[cur_month]) )
+          {
+            if(cur_month < 2) { document.write("   "); }
+            cur_day[cur_month] = 0;
+            if(cur_month == 2) { document.write("\n"); }
+            week_flag = 1;
+          }
+        }
+      }
+    }
+  }
+
+
+  document.write("\n</pre></td></tr>\n\n</table>\n\n")
+}
+
+
+document.write("</body>\n\n</html>\n");
+
+// -->
+</script>
+</body>
+</html>

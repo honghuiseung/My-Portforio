@@ -1,0 +1,5 @@
+﻿#box1{background: #ff6699; overflow: hidden; height: 200px;}
+#box2{background: #ffcc99; overflow: auto; height: 200px;}
+#box3{background: #33ccff; overflow-y: scroll; height: 200px;}
+/* 체크리스트에 추가 : 스크롤이 있는 페이지 서브페이지에는 모두 스크롤을 만들어야함*/
+/* html{overflow-y:scroll;} */

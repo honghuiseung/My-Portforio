@@ -1,0 +1,8 @@
+﻿.color{width: 90px; height: 0px; background-color:#666666; text-align: center; padding: 5px; position: relative; z-index:1; opacity:0.5; left: 0px; top: 0px;}
+.color span{position: relative; display:block; top: -93px; z-index:2; color: #ffffff; font-weight: bold;}
+#gallery{list-style:none; clear:both;}
+#gallery li{float: left; border: 2px solid #000000; margin-left: 5px; width: 100px;}
+#gallery li a .color{visibility:hidden;}
+#gallery li a:hover .color{visibility:visible; height: 22px;}
+#gallery li a img{display: block; float:left; width: 100px; height:100px; opacity: 0.3; cursor:pointer;}
+#gallery li a:hover img{opacity: 1;}

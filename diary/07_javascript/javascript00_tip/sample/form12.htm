@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<TITLE> 즐겨찾기 </TITLE>
+</HEAD>
+
+<BODY BACKGROUND="bg37.jpg">
+<H4> 간단하게 즐겨찾기 버튼 추가하기 </H4><BR>
+여러분의 홈페이지에서 버튼 하나만 클릭하면 방문자가 쉽게 즐겨찾기에 추가할 수 있습니다. 아래 소스를 복사한 후 &lt;head&gt;와 &lt;/head&gt; 사이에 삽입합니다.<BR><BR>
+<FORM NAME="source">
+<INPUT TYPE="button" VALUE="소스 전체 선택하기" onClick="source.code.select()"><BR>
+<TEXTAREA NAME="code" COLS="60" ROWS="5" wrap="VIRTUAL">
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+&lt;!--//
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+if (browserName == &quot;Microsoft Internet Explorer&quot; &amp;&amp; browserVer &gt;= 4) {
+   window.external.AddFavorite(location.href, document.title);
+}
+//--&gt;
+&lt;/script&gt;
+</TEXTAREA>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--
+function statusMessageObject() { 
+  this.msg = MESSAGE; 
+  this.out = " "; 
+  this.pos = POSITION; 
+  this.delay = DELAY; 
+  this.i     = 0; 
+} 
+
+var DELAY    = 100 
+// 출력할 내용 설정 
+var MESSAGE  = " 안녕하셔요? " 
+             + "  글자가 " 
+             + " 잘 움직이죠? "; 
+var POSITION = MESSAGE.length; 
+var scroll = new statusMessageObject() 
+
+function scroller() { 
+
+
+  if (scroll.pos >= 0) 
+
+   scroll.out = scroll.msg.substring(scroll.pos,scroll.msg.length) + scroll.out; 
+
+  else scroll.out = scroll.msg.substring(-scroll.pos,scroll.msg.length) 
+
+  window.status = scroll.out 
+
+
+  scroll.out = " " 
+  scroll.pos--; 
+
+
+  if (scroll.pos < -(scroll.msg.length)) { 
+   scroll.pos = POSITION 
+  } 
+  setTimeout ('scroller()',scroll.delay) 
+} 
+// --> 
+</SCRIPT> 
+</head>
+<body onLoad="scroller()"> 
+</body>
+</html>

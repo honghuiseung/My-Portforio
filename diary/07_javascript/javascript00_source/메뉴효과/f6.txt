@@ -1,0 +1,30 @@
+라디오 단추 메뉴 만들기 
+
+
+1.<head> 태그에 삽입============================================================
+
+
+<script language="JavaScript">
+function link1() {
+popupWin = window.open('http://www.naver.com/','_blank','menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=no,width=800,height=480')
+}
+function link2() {
+  popupWin = window.open('http://www.simmani.com','_blank','menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=no,width=800,height=480')
+ }
+function link3() {
+  popupWin = window.open('http://kr.yahoo.com','_blank','menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=no,width=800,height=480')
+ }
+</script>
+
+
+
+2.<body> 태그에서 효과를 적용할 위치에  삽입====================================
+
+
+<div align="center">
+<font face="굴림" size="2" color="blue">
+<form name="link" method="get">
+<input type="radio" name="click" onclick="link1()">NAVER
+<input type="radio" name="click" onclick="link2()">SIMMANI
+<input type="radio" name="click" onclick="link3()">YAHOO
+</form></font></div>

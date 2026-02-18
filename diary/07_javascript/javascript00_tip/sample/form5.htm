@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>text 객체의 프로퍼티</TITLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function checkText(){
+  uText1 = myform.text1.value
+  uText2 = myform.text2.value
+
+  if(uText1 != "" && uText2 != "") {
+      str = "이름: " + uText1 + "\n주소: " + uText2
+      alert(str)
+  }
+  else 
+      alert("다시 입력해 주세요")
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<IMG SRC="flw.gif">
+<FORM NAME="myform">
+<B>이&nbsp;름 : </B><INPUT NAME="text1" TYPE="text" VALUE="" SIZE="20" MAXLENGTH="20">
+<BR><BR>
+<B>주&nbsp;소 : </B><INPUT NAME="text2" TYPE="text" VALUE="" SIZE="20" MAXLENGTH="60">
+<BR><BR>
+<INPUT TYPE="button" NAME="bttn1" VALUE="등록하기" onClick="checkText()">&nbsp;&nbsp;
+<INPUT TYPE="reset" NAME="bttn2" VALUE="다시쓰기">
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>form 객체의 프로퍼티</TITLE>
+<STYLE TYPE="text/css">
+<!--
+td {
+	font-family: "굴림";
+	font-size: 12px;
+}
+-->
+</STYLE>
+</HEAD>
+
+<BODY BACKGROUND="bg_w1.gif">
+<BR>
+<FORM NAME="form1" ACTION="login.asp"  METHOD="post" ENCTYPE="multipart/form-data" TARGET="_self">
+  <TABLE WIDTH="200" HEIGHT="85" BORDER="0" ALIGN="CENTER" CELLPADDING="1" CELLSPACING="0">
+    <TR> 
+      <TD WIDTH="73">아이디</TD>
+      <TD WIDTH="123"><INPUT NAME="id" TYPE="text" SIZE="10" MAXLENGTH="10"></TD>
+    </TR>
+    <TR> 
+      <TD>비밀번호</TD>
+      <TD><INPUT NAME="pwd" TYPE="password" SIZE="10" MAXLENGTH="10"></TD>
+    </TR>
+    <TR> 
+      <TD COLSPAN="2">
+	    <INPUT TYPE="submit" VALUE="로그인"> 
+	    <INPUT TYPE="button" VALUE="회원가입"> 
+      </TD>
+    </TR>
+  </TABLE>
+</FORM>
+<HR>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+document.write("<CENTER>")
+document.write("<B>폼의 NAME : </B>" + document.form1.name + "<BR><BR>")
+document.write("<B>폼의 ACTION : </B>" + document.form1.action + "<BR><BR>")
+document.write("<B>폼의 METHOD: </B>" + document.form1.method + "<BR><BR>")
+document.write("<B>폼의 ENCTYPE: </B>" + document.form1.enctype + "<BR><BR>")
+document.write("<B>폼의 TARGET : </B>" + document.form1.target + "<BR><BR>")
+document.write("</CENTER>")
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

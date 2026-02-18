@@ -1,0 +1,38 @@
+<html>
+<head><title>Untitled</title>
+<script language="JavaScript1.1"> 
+<!-- 
+var img1 = new Image(); 
+img1.src = "01.jpg"; 
+var img2 = new Image(); 
+img2.src = "02.jpg"; 
+var img3 = new Image(); 
+img3.src = "03.jpg"; 
+//--> 
+</script> 
+</head>
+<body bgcolor=white onLoad="init()"> 
+<div style="position: absolute; z-index: 10; top: 50; left: 170;"> 
+<img src="01.jpg" name="blendObj" border=0 style="filter: blendTrans(duration=3)"> 
+</div> 
+<script language="JavaScript"> 
+<!-- 
+var maxLoops = 3; //그림 갯수 입력
+var bInterval = 3;  //그림을 바뀌는 속도
+var count = 2; 
+function init() { 
+blendObj.filters.blendTrans.apply(); 
+document.images.blendObj.src = eval("img"+count+".src"); 
+blendObj.filters.blendTrans.play(); 
+if (count < maxLoops) { 
+count++; 
+} 
+else { 
+count = 1; 
+} 
+setTimeout("init()", bInterval*1000+3000); 
+} 
+//--> 
+</script>
+</body>
+</html>

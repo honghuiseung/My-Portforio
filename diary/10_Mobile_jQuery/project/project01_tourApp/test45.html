@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<style type="text/css">
+		#page2 li img{display: block; padding: 12px 12px;}
+		#page3 li img{display: block; top: 36%;}
+	</style>
+</head>
+<body>
+	<!-- 액션시트 만들기 -->
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<p>기본형 페이지</p>
+			<a href="#dialog1" data-transition="slidedown" data-role="button">액션시트 페이지 1</a>
+			<a href="#dialog2" data-transition="slidedown" data-role="button">액션시트 페이지 2</a>
+		</div>
+		<div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+		</div>
+    </div>
+	<div data-role="dialog" id="dialog1">
+		<div data-role="content">
+			<p>액션시트1</p>
+			<a href="#" data-role="button">선택1</a>
+			<a href="#" data-role="button">선택2</a>
+			<a href="#" data-role="button">선택3</a>
+			<a href="#" data-role="button">선택4</a>
+			<a href="#" data-role="button" data-rel="back">취소</a>
+		</div>
+    </div>
+	<div data-role="dialog" id="dialog2">
+		<div data-role="content">
+			<p>액션시트2</p>
+			<p>삭제하시겠습니끼?</p>
+			<a href="#page1" data-role="button" data-rel="back">예</a>
+			<a href="#dialog1" data-role="button">아니오</a>
+		</div>
+    </div>
+</body>
+</html>

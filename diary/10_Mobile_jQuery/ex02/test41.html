@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<style type="text/css">
+		#page2 li img{display: block; padding: 12px 12px;}
+		#page3 li img{display: block; top: 36%;}
+	</style>
+</head>
+<body>
+	<!-- 검색기능 사용하기 -->
+	<div data-role="page">
+		<div data-role="header">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<p>content영역</p>
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="검색키워드를 입력하세요">
+				<li data-role="listdivider">ㄱ<span class="ui-li-count">1</span></li>
+				<li><a href="#">강</a></li>
+				<li><a href="#">강강술래</a></li>
+				<li><a href="#">가나다</a></li>
+				<li><a href="#">개나리</a></li>
+				<li><a href="#">강아지</a></li>
+				<li><a href="#">가방</a></li>
+				<li><a href="#">가발</a></li>
+				<li><a href="#">가면</a></li>
+				<li data-role="listdivider">ㅂ<span class="ui-li-count">2</span></li>
+				<li><a href="#">바다</a></li>
+				<li><a href="#">바다세</a></li>
+				<li data-role="listdivider">ㅎ<span class="ui-li-count">1</span></li>
+				<li><a href="#">하늘</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+		</div>
+    </div>
+</body>
+</html>

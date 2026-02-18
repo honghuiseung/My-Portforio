@@ -1,0 +1,99 @@
+슬라이딩 메뉴 만들기
+
+1.<head> 태그에 삽입============================================================
+
+<style>
+<!--
+#slidemenubar, #slidemenubar2{
+position:absolute;
+left:-100px;
+top:150px;
+height:150px;
+width:110px;
+border:3px groove black;
+background-color:yellow;
+layer-background-color:yellow;
+font: 12px 굴림;
+line-height:20px;
+}
+
+A {text-decoration:none}
+A:link	   {color:blue}
+A:visited  {color:blue}
+A:hover {color:red}
+BODY {font:13px 굴림}
+-->
+</style>
+<script language="JavaScript">
+
+if (document.all)
+document.write('<div id="slidemenubar2" style="left:-100" onMouseover="pull()" onMouseout="draw()">')
+</script>
+<layer id="slidemenubar" onMouseover="pull()" onMouseout="draw()">
+<script language="JavaScript1.2">
+var sitems=new Array()
+var sitemlinks=new Array()
+
+//메뉴의 목록을 입력.
+sitems[0]="NAVER"
+sitems[1]="SIMMANI"
+sitems[2]="LYCOS"
+
+
+//목록의 하이퍼링크 경로를 입력.
+sitemlinks[0]="http://www.naver.com"
+sitemlinks[1]="http://www.simmani.com"
+sitemlinks[2]="http://www.lycos.co.kr"
+
+
+document.write('<br>'+'<center>'+'MENU'+'</center>'+'<p>')
+for (i=0;i<=sitems.length-1;i++)
+document.write('<center>'+'<a href='+sitemlinks[i]+'>'+sitems[i]+'</a><br>'+'</center>')
+</script>
+</layer>
+<script language="JavaScript1.2">
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers)
+setTimeout("window.onresize=regenerate",400)
+}
+window.onload=regenerate2
+if (document.all){
+document.write('</div>')
+themenu=document.all.slidemenubar2.style
+rightboundary=0
+leftboundary=-100
+}
+else{
+themenu=document.layers.slidemenubar
+rightboundary=100
+leftboundary=10
+}
+function pull(){
+if (window.drawit)
+clearInterval(drawit)
+pullit=setInterval("pullengine()",50)
+}
+function draw(){
+clearInterval(pullit)
+drawit=setInterval("drawengine()",50)
+}
+function pullengine(){
+if (document.all&&themenu.pixelLeft<rightboundary)
+themenu.pixelLeft+=10
+else if(document.layers&&themenu.left<rightboundary)
+themenu.left+=10
+else if (window.pullit)
+clearInterval(pullit)
+}
+function drawengine(){
+if (document.all&&themenu.pixelLeft>leftboundary)
+themenu.pixelLeft-=10
+else if(document.layers&&themenu.left>leftboundary)
+themenu.left-=10
+else if (window.drawit)
+clearInterval(drawit)
+}
+</script>

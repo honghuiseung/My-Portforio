@@ -1,0 +1,69 @@
+﻿body{font-family:"맑은 고딕", "고딕", "굴림";}
+#wrapper{width: 800px; margin: 0 auto;}
+header{width:100%; height: 150px; background:#F46075; background-image: url(../images/nav2.png);background-repeat: no-repeat; background-position:right center;}
+header nav{float:left; width: 70%; margin-top: 50px;}
+nav ul{list-style:none;}
+nav ul li{display: inline; float:left; font-weight:bold; margin: 15px;}
+nav ul li a{color: white; text-decoration:none;}
+footer p{padding: 20px;}
+h2{font-size: 1.5em;}
+h3{font-size: 1em;display:inline;}
+p{line-height: 20px; font-size: 12px;}
+section{float: left; width: 580px; padding: 5px;}
+section article{float:left; width:250px; height:200px; margin: 5px; padding: 10px; border:1px solid #ccc;overflow-y:scroll;}
+aside{float:left; width: 200px; height: auto; margin-top: 80px; border: 1px solid darkgreen; background: #FFC;text-align:center;}
+footer{clear:both; width: 800px; margin-bottom: 0; background:#AAA; color: #666; text-align:center;}
+.at1:hover{background-color:#CF9;border: 1px solid green;}
+.at2:hover{background-color:#a2d0ff;border: 1px solid blue;}
+.at3:hover{background-color:#ebabfe;border: 1px solid purple;}
+.at4:hover{background-color:#FC3	;border: 1px solid red;}
+.at1, .at2, .at3, .at4{
+	-ms-transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+}
+article.at1 > input[type=checkbox]:checked ~ div.check {height:0;}
+
+article.at1 > .check{
+	overflow: hidden; height:220px;
+	-ms-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+article.at2 > input[type=checkbox]:checked ~ div.check {height:0;}
+
+article.at2 > .check{
+	overflow: hidden; height:220px;
+	-ms-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+article.at3 > input[type=checkbox]:checked ~ div.check {height:0;}
+
+article.at3 > .check{
+	overflow: hidden; height:220px;
+	-ms-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+article.at4 > input[type=checkbox]:checked ~ div.check {height:0;}
+
+article.at4 > .check{
+	overflow: hidden; height:220px;
+	-ms-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}

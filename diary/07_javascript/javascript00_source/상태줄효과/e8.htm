@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<script language="JavaScript">
+<!--
+var flasher = false
+function updateTime() {
+	var now = new Date()
+	var theHour = now.getHours()
+	var theMin = now.getMinutes()
+	var theSec = now.getSeconds()
+
+	var theTime = "" + ((theHour > 12) ? theHour - 12 : theHour)
+	theTime += ((theMin < 10) ? ":0" : ":") + theMin
+	theTime += ((theSec < 10) ? ":0" : ":") + theSec
+	theTime += (theHour >= 12) ? " pm" : " am"
+	theTime += ((flasher) ? " " : "*^^*")
+	flasher = !flasher
+	window.status = "현재 시간은 :  " + theTime
+	timerID = setTimeout("updateTime()",1000)
+}
+//-->
+</script>
+</HEAD>
+<BODY onload="updateTime()">
+</body>
+</HTML>

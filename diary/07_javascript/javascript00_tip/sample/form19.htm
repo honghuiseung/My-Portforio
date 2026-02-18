@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>버튼을 클릭해야 이동합니다</TITLE>
+<STYLE TYPE="text/css">
+<!--
+body {
+	background-attachment: fixed;
+	background-image: url(concert.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function loadPage(obj) {
+ location.href = obj.options[obj.selectedIndex].value
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform">
+<H3>연인과 친구와 함께라면 콘서트장으로...</H3>
+<SELECT NAME="concert">
+<OPTION VALUE="http://www.goodconcert.co.kr/">좋은 콘서트
+<OPTION VALUE="http://concertguide.co.kr/">콘서트 가이드
+<OPTION VALUE="http://www.ticketlink.com/">티켓링크
+</SELECT>
+<INPUT TYPE="button" VALUE="GO" onClick="loadPage(myform.concert)">
+</FORM>
+</BODY>
+</HTML>

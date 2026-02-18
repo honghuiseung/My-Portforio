@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Math, String, Array 객체</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+      <h1>Math, String, Array 객체</h1>
+    </div>
+  <div class="article">
+        <h2>JavaScript Math.속성 또는 메소드</h2>
+	</div>
+    
+    <p>&nbsp;</p>
+    <h3>Math 객체</h3>
+    <p>소숫점을 반올림 하거나 최대/최소값 등 특정 공식을 사용해야 할 경우 수학 객체의 메서드를 사용하는 것이 훨씬 편리함</p>  
+  <p>&nbsp;</p>
+  <p>사용예) 자바스크립트는 내부적으로 숫자를 2진수로 계산한다.</p>  
+    
+<pre>
+&lt;body&gt;
+&lt;script&gt;
+    console.log(0.2*6);
+    console.log(((10*0.2)*6)/10);
+    <span class="green">// 실행결과 : 1.2000000000000002  (소숫점 이하 16자리)</span>
+&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>Math.속성 : Math 객체</h3>
+    
+    <p>수학에서 사용하는 특수함수나 특수값을 사용할 수 있게 해준다.<br>
+  특수함수란 지수함수, 삼각함수, 로그함수등을 말한다.  </p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p>E	: 오일러 상수		약 2.718<br>
+          LN10	: 10의 자연 로그 값	약 2.302<br>
+          LN2	: 2의 자연 로그 값	약 0.693<br>
+          LOG10E	: 밑이 10인 E 로그	약 0.434<br>
+          LOG2E	: 밑이 2인 로그		약 1.442<br>
+          PI	: 원주율			약 3.14159<br>
+          SQRT1_2	: 1/2의 제곱근		SQRT{} 약 0.707<br>
+          SQRT2	: 2의 제곱근		SQRT{} 약 1.414    
+        </p>        
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>사용예) 반지름이 5인 원의 체적</p>  
+    
+<pre>
+&lt;body&gt;
+&lt;script&gt;
+<span class="green"></span>    r = 5
+    radia = r*r*Math.PI
+    document.write(radia)
+<span class="green"></span>&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>복잡한 계산을 풀어주는 Math 메소드    </h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+    <p>
+    max(x,y)	: x와 y의 수 중에서 가장 큰 수<br>
+    min(x,y)	: x와 y의 수 중에서 가장 작은 수<br>
+    round(x)	: x를 반올림한다<br>
+    ceil(x)		: x보다 같거나 큰 수 중에서 가장 큰 정수(올림)<br>
+    floor(x)	: x 보다 같거나 작은 수 중에서 가장 적은 정수(버림)<br>
+    random()	: 난수를 발생한다<br>
+    abs(x)		: 절대 값 함수 |x| <br>
+    </p>
+    
+    <p  class="gray">
+    cos(x)		: x의 cosine 값을 구해준다<br>
+    sin(x)		: x의 sine 값을 구한다<br>
+    tan(x)		: x의 tangent를 구한다<br>
+    acos(x)		: cosine의 역함수(arc cosine)<br>
+    asin(x)		: sin의 역함수(arc sin)<br>
+    atan(x)		: tangent의 역함수(arc tan)<br>
+    atan2(x,y)	: tangent의 역함수(arc tan)<br>
+    exp(x)		: x의 지수 함수를 구해준다<br>
+    log(x)		: x의 로그 함수를 구한다<br>
+    pow(x,y)	: 지수 함수 f(x,y) = xy<br>
+    sqrt(x)		: x의 제곱근을 구한다<br>
+    </p>        
+        </td>
+      </tr>
+  </table>
+    
+   <p>&nbsp;</p>
+  <p>사용예) rondom 메소드를 이용해서 원하는 숫자(작은 수에서 큰 수) 사이의 난수값을 도출하는 공식<br>
+    : Math.floor(Math.random()*(큰수-작은수+1))+작은수<br>
+    <span class="gray">예를 들어 101 부터 130 까지의 난수를 생성하고 싶다면, Math.floor(Math.random() * (130-101+1)) +101<br>
+  예를 들어 주사위처럼 1부터 6까지의 난수를 생성하고 싶다면, Math.floor(Math.random() * 6) +1</span></p>
+    <pre>
+&lt;script&gt;
+    var imgNum = Math.floor(Math.random()*3)+1
+    document.write(&quot;&lt;img src='img/img&quot;+imgNum+&quot;.jpg' alt='랜덤이미지' /&gt;&quot;)
+&lt;/script&gt;
+</pre>
+    
+    <p>&nbsp;</p>
+    <p>사용예) Math 메서소드 사용예</p>
+  
+<pre>
+&lt;script&gt;
+    r = 5.15
+    document.write(&quot;x의절대값은&quot;,Math.abs(r),&quot;입니다.&quot;,&quot;&lt;br /&gt;&quot;)
+    document.write(&quot;x는&quot;,Math.floor(r),&quot;이거나 크고&quot;,
+        Math.ceil(r),&quot;이거나 작은 수입니다.&quot;,&quot;&lt;br /&gt;&quot;)
+    document.write(&quot;x와 3 중에&quot;,Math.max(r,3),&quot;이 큽니다.&quot;,&quot;&lt;br /&gt;&quot;)
+    document.write(&quot;x의 제곱근은&quot;,Math.sqrt(r),&quot;입니다.&quot;,&quot;&lt;br /&gt;&quot;)
+&lt;/script&gt;
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+    
+    <div class="article">
+        <h2>JavaScript String 객체 또는 메소드, Array객체 또는 메소드</h2>
+	</div>
+
+    <p>&nbsp;</p>
+  <h3>String(문자열) 객체</h3>
+    <p class="gray">- String객체가 내장 객체 중에서 활용 빈도가 가장 높음</p>
+    <p>&nbsp;</p>
+  <p>보편적인 생성법<br>
+    <span class="gray">- var&nbsp; 변수(인스턴트 네임) = new String(&quot;자바스크립트&quot;)</span></p>
+    <p>간편한 생성법<br>
+      <span class="gray">- var 변수(인스턴스 네임) = &quot;자바스크립트&quot;</span>  </p>
+  <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray"><p class="normal">var theText = &quot;web js hi ciy&quot;</p>
+          <p>          <span class="normal">theText.bold()</span> : 텍스트를 진하게(강조) 표현하여 반환 <br>
+            <span class="normal">theText.link('URL')</span> : 텍스트에 링크를 걸어 반환 <br>
+            <span class="normal">theText.length</span> : 텍스트의 개수를 반환 (13) <br>
+            <span class="normal">theText.toLowerCse()</span> : 영문자를 소문자로 바꿔 반환 <br>
+            <span class="normal">theText.toUpperCase()</span> : 영문자를 대문자로 바꿔 반환 <br>
+            <span class="normal">theText.indexOf(&quot;i&quot;)</span> : 처음부터 &quot;i&quot;를 찾아 최초로 일치하는 인덱스 번호를 반환, 없을 경우 -1을 반환 (8)<br>
+            <span class="normal">theText.lastIndexOf(&quot;i&quot;)</span> : 끝에서부터 &quot;i&quot;를 찾아 최초로 일치하는 인덱스 번호를 반환, 없을 경우 -1을 반환 (11)<br>
+            <span class="normal">theText.charAt(5)</span> : 5번째 인덱스에 저장된 문자 데이터를 반환 (s) <br>
+            <span class="normal">theText.substring(4,6)</span> : 4번부터 6번 인덱스까지의 문자 데이터를 반환 (js) <br>
+            <span class="normal">theText.substr(10,3)</span> : 10번 인덱스부터의 3글자를 반환 (ciy) <br>
+            <span class="normal">theText.replace(&quot;web&quot;,&quot;bye&quot;)</span> : 텍스트 중 &quot;web&quot;을 &quot;bye&quot;로 치환해서 반환 (bye js hi ciy)
+            <br>
+            <span class="normal">theText.slice(7,9)</span> : 7번부터 9번 인덱스까지의 일부만 잘라서 반환 (hi) <br>
+            <span class="normal">theText.contcat(&quot;good&quot;)</span> : 끝에 &quot;good&quot;이라는 문자를 결합하여 반환 (~good)
+          <br>
+          <span class="normal">theText.split(&quot;&quot;)</span> : (공백)을 기준으로 데이터를 분리(콤마) (web,js,hi,ciy)</p></td>
+      </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>사용예)</p>
+
+<pre>
+&lt;script&gt;
+    document.write(&quot;&lt;h3&gt;문자치환&lt;/h3&gt;&quot;)
+    var theText1 = &quot;img2_out.jpg&quot;
+    theText1 = theText1.replace(&quot;out&quot;,&quot;over&quot;)
+    document.write(theText1+&quot;&lt;br /&gt;&quot;)
+
+    document.write(&quot;&lt;h3&gt;문자추출&lt;/h3&gt;&quot;)
+    var theText2 = &quot;img/img10.jpg&quot;
+    <span class="green">//데이터들이 인덱스공간을 각각 저장해서 '/' 앞에는 0번 '/' 뒤는 1번 img10.jpg</span>
+    theText2 = theText2.split(&quot;/&quot;)[1]
+    <span class="green">//3번 인덱스부터 끝까지 10.jpg</span>
+    theText2 = theText2.substring(3)
+    <span class="green">//정수만 남기니깐 10</span>
+    theText2 = parseInt(theText2)
+    document.write(theText2+&quot;&lt;br /&gt;&quot;)
+
+    document.write(&quot;&lt;h3&gt;마지막 문자 추출&lt;/h3&gt;&quot;)
+    var theText3 = &quot;hello javascript&quot;
+    var lastIndex = theText3.length-1
+    theText3 = theText3.charAt(lastIndex)
+    document.write(theText3+&quot;&lt;br /&gt;&quot;)
+
+    document.write(&quot;&lt;h3&gt;특정 문자 포함여부&lt;/h3&gt;&quot;)
+    var theText4 = &quot;tel phone now home&quot;
+    <span class="green">//indexOf 메서드는 찾는 문자가 없을 시 -1이란 값을 반환</span>
+    var findIndex = theText4.indexOf('mobile')
+    if (findIndex&lt;0) {
+         document.write(&quot;찾는 문자가 없습니다.&quot;)
+    } else {
+        document.write(&quot;텍스트에 찾는 문자가 포함 되어있습니다.&quot;)
+    }
+&lt;/script&gt;  </pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Array(배열) 객체</h3>
+<p>- 하나의 변수에 여러 개의 데이터를 저장할수 있으며 각 공간마다 인덱스(Index) 번호가 존재한다.</p>
+
+
+<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td>
+<p><span class="green">// new 연산자를 사용한 배열 객체 생성법<br>
+</span>  var 변수(인스턴스 네임) =&nbsp;new Array()</p>
+<p><span class="green">// 데이터를 5개만 저장할 수 있도록 저장 공간을 두겠다는 뜻</span><br>
+  var 변수(인스턴스 네임) =&nbsp;new Array() 5</p>
+<p><span class="green">// 편리한 방법</span><br>
+  var 변수(인스턴스 네임) =&nbsp;[값1, 값2, 값3, 값4, 값5]</p></td>
+  </tr>
+</table>
+
+
+<p>&nbsp;</p>
+<p>사용예)</p>
+<pre>&lt;script&gt;
+<span class="green"></span><span class="green">    //특정 인덱스에 저장된 데이터 출력</span>
+    var sicgu =&nbsp;new Array() <span class="red">// 주의 배열 변수를 name으로 하지 말것!</span>
+    sicgu[0] =&nbsp;&quot;오문성&quot;
+    sicgu[1] =&nbsp;&quot;오주연&quot;
+    sicgu[2] =&nbsp;&quot;오윤석&quot;
+    sicgu[3] =&nbsp;&quot;오호준&quot;
+    sicgu[4] =&nbsp;&quot;오민정&quot;
+    document.write(sicgu[2]+&quot;&lt;br /&gt;&quot;)
+
+<span class="green">    //오늘의 요일 알아보기</span>
+    var days =&nbsp;new Array(&quot;일&quot;, &quot;월&quot;, &quot;화&quot;, &quot;수&quot;, &quot;목&quot;, &quot;금&quot;, &quot;토&quot;)
+    today = new Date()
+   <span class="green"> //오늘의 요일에 해당하는 값을 반환 일:0~ 토:6</span> 
+    var yoil = days[today.getDay()]
+    document.write(yoil+&quot;요일 &lt;br /&gt;&quot;)
+
+<span class="green">    //전체 재산의 합 구하기</span>
+    var money = [100,100,200,50]
+    var theLen = money.length
+    var total = 0
+    for(var i=0; i&lt;theLen; i++){
+       total = total+money[i]
+    }
+    document.write(total)
+&lt;/script&gt;</pre>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>배열 메서드</h3>
+<p>&nbsp;</p>
+<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td class="gray">
+<p><span class="normal">reverse()</span>&nbsp;: 배열 데이터를 역순으로 반환</p>
+<p> <span class="normal">slice(1,2)</span>&nbsp;:&nbsp;인덱스 번호 1부터 시작하여 2직전의 데이터까지 잘라서 저장</p>
+<p><span class="normal">sort()</span>&nbsp;: 배열 데이터를 알파벳 혹은 0/1/2...의 오름차순으로 정렬&nbsp;</p>
+<p> <span class="normal">join(&quot;구분자&quot;)</span> : 배열 데이터를 구분자로 연결하여 결합&nbsp; &nbsp; </p>
+<p><span class="normal">concat()</span> : 여러 개의 배열 데이터들을 하나로 결합</p>   
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>사용예)</p>
+
+<pre>&lt;script&gt;
+<span class="green"></span>    <span class="green">//배열 데이터 역순 정렬</span>
+    var theFood = [&quot;짬뽕&quot;, &quot;냉면&quot;, &quot;갈비탕&quot;, &quot;돈까스&quot;, &quot;삼겹살&quot;]
+    theFood.reverse()
+    console.log(theFood)
+
+    <span class="green">//배열 데이터 오름차순 정렬</span>
+    var theSubway = [&quot;9호선&quot;,&quot;2호선&quot;,&quot;7호선&quot;,&quot;4호선&quot;,&quot;3호선&quot;]
+    theSubway.sort()
+    console.log(theSubway)
+
+   <span class="green"> //배열 데이터를 결합</span>
+    var Mountain1 = [&quot;남산&quot;,&quot;도봉산&quot;,&quot;관악산&quot;,&quot;청계산&quot;,&quot;북한산&quot;]
+    var Mountain2 = [&quot;설악산&quot;,&quot;지리산&quot;,&quot;한라산&quot;,&quot;속리산&quot;]
+    var joinResult = Mountain1.concat(Mountain2)
+    console.log(joinResult)
+
+   <span class="green"> //원하는 데이터만 선택</span>
+    var theName = [&quot;장준호&quot;,&quot;윤세정&quot;,&quot;홍우현&quot;,&quot;오윤석&quot;,&quot;박경훈&quot;]
+    var result = theName.slice(2,4)
+    console.log(result)
+
+    <span class="green">//구분자 기준으로 데이터를 합칩니다.</span>
+    var theProduct = [&quot;냉장고&quot;,&quot;컴퓨터&quot;,&quot;선풍기&quot;,&quot;밥솥&quot;,&quot;핸드폰&quot;]
+    var joinResult = theProduct.join(&quot;-&quot;)
+    console.log(joinResult)
+&lt;/script&gt;</pre>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>배열 데이터 추가/삭제 메서드</h3>
+<p>&nbsp;</p>
+<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td class="gray">
+<p><span class="normal">shift()</span>&nbsp;:&nbsp;배열에서 첫 인덱스(0)에 저장된 데이터를 삭제</p>
+<p> <span class="normal">pop()</span>&nbsp;: 배열에서 마지막 인덱스에 저장된 데이터를 삭제</p>
+<p><span class="normal">unshift(값)</span> : 배열에서 첫 인덱스(0)에 새 데이터를 중첩하여 추가</p>
+<p> <span class="normal">push(값)</span>&nbsp;: 배열에서 마지막 인덱스에 새 데이터를 중첩하여 추가&nbsp; </p>
+<p><span class="normal">concat()</span>&nbsp;: 여러 개의 배열 데이터들을 하나로 결합</p>    
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>사용예)</p>
+
+<pre>&lt;script&gt;
+<span class="green"></span>    var theSubway = [&quot;2호선&quot;,&quot;9호선&quot;,&quot;7호선&quot;,&quot;4호선&quot;,&quot;3호선&quot;]
+    var newLine1 = &quot;1호선&quot;
+    var newLine2 = &quot;분당선&quot;
+
+    theSubway.shift()  <span class="green">//맨 앞(0번 인덱스)의 데이터 삭제</span>
+    <span class="bold_blue">//</span><span class="green">console.log(theSubway)</span>     <span class="green">//콘솔 하나 씩 실행</span>
+    theSubway.unshift(newLine1)  <span class="green">//맨 앞(0번 인덱스)의 데이터 추가</span>
+    <span class="bold_blue">//</span><span class="green">console.log(theSubway)</span>
+
+    theSubway.pop()  <span class="green">//마지막(4번 인덱스)의 데이터 삭제</span>
+    <span class="bold_blue">//</span><span class="green">console.log(theSubway)</span>
+    theSubway.push(newLine2)  <span class="green">//마지막(4번 인덱스)의 데이터 추가(변경)</span>
+    <span class="bold_blue">//</span><span class="green">console.log(theSubway)</span>
+&lt;/script&gt;</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    
+</div>
+</body>
+</html>

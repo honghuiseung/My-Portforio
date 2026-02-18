@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	
+	
+	
+	
+	
+	<!-- font -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600,700,800,900,900i" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/clock.css" />
+	
+	
+	<script language = "JavaScript">
+		//시계
+		
+		//숫자 자릿수 나누기
+		var x = NaN
+		var y = NaN
+		var z = NaN
+
+		function unit(x){
+			var m = x%10;
+			return m;
+		}; 
+		var tenth = function(y){
+			var m =y /10;
+			m = Math.floor(m)
+			return m;
+		};
+		var twoN = function(z){
+			var m = z%2;
+			return m;
+		};
+			
+		self.setInterval('foo()',100);
+			
+		function foo(){
+		
+			// 숫자 이미지 배열
+			var imgArr = [
+				"img/num/num0.png"
+				,"img/num/num1.png"
+				,"img/num/num2.png"
+				,"img/num/num3.png"
+				,"img/num/num4.png"
+				,"img/num/num5.png"
+				,"img/num/num6.png"
+				,"img/num/num7.png"
+				,"img/num/num8.png"
+				,"img/num/num9.png"
+			];
+			
+			// 미들 이미지 배열
+			var midArr = [
+				"img/day_bg2.png"
+				,"img/day_bg3.png"
+			];
+			
+			// 시간 설정
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			var day = now.getDate();
+			var month = 1+now.getMonth();
+			var timeZone = ""
+						
+			// 시간 장소 설정
+			/*if ($(".active").text() === "Kor") {
+				hours = hours
+			}if else($(".active").text() === "Usa"){
+				hours -= 14
+				
+			}if else($(".active").text() === "Jpn"){
+				hours += 1
+				
+			}if else($(".active").text() === "Chn"){
+				hours += 2
+			};*/
+			
+			// timezone 설정
+			if(hours<=12){
+				timeZone = "AM"
+			}
+			else{
+				timeZone = "PM"
+			};
+			var hour = hours%12
+
+			//시간 실행
+			document.getElementById("monthT").setAttribute("src", imgArr[tenth(month)]);
+			document.getElementById("monthU").setAttribute("src", imgArr[unit(month)]);
+			document.getElementById("dayT").setAttribute("src", imgArr[tenth(day)]);
+			document.getElementById("dayU").setAttribute("src", imgArr[unit(day)]);
+			document.getElementById("hourT").setAttribute("src", imgArr[tenth(hour)]);
+			document.getElementById("hourU").setAttribute("src", imgArr[unit(hour)]);
+			document.getElementById("minT").setAttribute("src", imgArr[tenth(minutes)]);
+			document.getElementById("minU").setAttribute("src", imgArr[unit(minutes)]);
+			document.getElementById("secT").setAttribute("src", imgArr[tenth(seconds)]);
+			document.getElementById("secU").setAttribute("src", imgArr[unit(seconds)]);
+			document.getElementById("middle").setAttribute("src", midArr[twoN(seconds)]);
+			document.getElementById("time_zone").innerText = timeZone ;
+				
+			//위치실행
+			/*
+			
+			var optionL = document.getElementsByClassName("option");
+			optionL.click(function() {
+				// Removes the active class form the other list items
+				optionL.removeClass("active");
+				// Ads the active class to the clicked list item
+				optionL(this).addClass("active");
+			});
+			*/
+			
+		};
+		
+		
+			
+	
+	</script>
+	
+</head>
+<body >
+	
+	
+	
+	<div id="content">
+		<div class="time" onLoad ="foo()">
+			<div class="clock cf">
+				
+				<select name="coutry_select" id="coutry_select" class="fl"  >
+					<option selected value="Korea" ><a href="" class="active option">Kor</a></option>
+					<option value="United States of America"><a href="" class="option">Usa</a></option>
+					<option value="Japan"><a href="" class="option">Jpn</a></option>
+					<option value="China"><a href="" class="option">Chn</a></option>
+				</select>
+				
+				<ul id="date" class="fr">
+					<li class="fl">
+						<img id="monthT" class="fl" src="" alt="" width="13" height="21" />
+						<img id="monthU" class="fl" src="" alt="" width="13" height="21" />
+					</li>
+					<li  class="fl">
+						<img  class="fl" src="img/day_bg1.png" alt="" width="13" height="21" />
+					</li>
+					<li class="fl">
+						<img id="dayT" class="fl" src="" alt="" width="13" height="21" />
+						<img id="dayU" class="fl" src="" alt="" width="13" height="21" />
+					</li>
+				</ul>
+				<p id="time_zone" class="fl"><!-- <span id="pm" >PM</span><span id="am">AM</span> --></p>
+				<ul id="time_t" class="fl">
+					<li id="t_hour" class="fl">
+						<img id="hourT" class="fl" src="" alt="" width="28" height="41" />
+						<img id="hourU" class="fl" src="" alt="" width="28" height="41" />
+					</li>
+					<li class="fl">
+						<img  id="middle" class="fl" src="" alt="" width="7" height="41" />
+					</li>
+					<li id="t_minute" class="fl">
+						<img id="minT" class="fl" src="" alt="" width="28" height="41" />
+						<img id="minU" class="fl" src="" alt="" width="28" height="41" />
+					</li>
+					<li id="t_second" class="fl">
+						<img id="secT" class="fl" src="" alt="" width="20" height="30" />
+						<img id="secU" class="fl" src="" alt="" width="20" height="30" />
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	
+	</div>
+		
+	
+</body>
+</html>

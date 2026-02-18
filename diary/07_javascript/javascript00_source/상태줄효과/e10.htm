@@ -1,0 +1,53 @@
+<html>
+<head>
+<script language="JavaScript"> 
+<!-- 
+bd=new Array(); 
+
+//사라졌다 나타나면서 바뀌는 내용 설정
+bd[0]="  어서오세요..   " 
+bd[1]="  환영합니다!   " 
+bd[2]="  재미있죠?  " 
+bd[3]="  재미 없다구요?   " 
+bd[4]="  내용은 더욱 재미있습니다.   " 
+bd[5]="  자바쉽죠?   " 
+
+a=0 
+i=0 
+rt=false 
+on=false 
+f=0 
+function change() { 
+msg=bd[a] 
+msgl=bd[a].length 
+if(i<msgl) { 
+i++ 
+
+//내용의 일부가 사라지면서 쓰일 내용 설정
+if(!rt) document.title=':::::'+msg.substring(msgl-i,msgl)+':::::' 
+
+//내용의 일부가 나타나면서 쓰일 내용 설정
+else document.title=':::::'+msg.substring(i,msgl)+':::::' 
+
+setTimeout("change()",3) 
+} 
+else { 
+i=0 
+if(rt==false) { 
+   rt=true 
+   setTimeout("change()",2600) 
+} 
+else { 
+rt=false 
+   if(++a>5)a=0 
+   setTimeout("change()",1900) 
+   } 
+} 
+} 
+window.onload=change 
+//--> 
+</script>
+</head>
+<body>
+</body>
+</html>

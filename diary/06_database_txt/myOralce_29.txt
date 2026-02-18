@@ -1,0 +1,16 @@
+--DDL (Data Definition Language) : 생성, 읽기, 변경, 삭제 명령어 (C/R/U/D) {CREATE, DESC, ALTER, DROP}
+--DML (Data Manipulation Language) : INSERT, SELECT, UPDATE, DELETE (C/R/U/D)
+--DCL (Data Control Language) : COMMIT, ROLLBACK, GRANT, REVOKE
+
+DROP TABLE emp01;
+CREATE TABLE emp01(empno number(4), ename varchar2(14), sal number(7,3));
+
+DESC emp01;
+--내용을 변경
+ALTER TABLE emp01 ADD(birth date);
+
+--사원의 이름컬럼의 사이즈를 30으로 변경
+ALTER TABLE emp01 MODIFY ename varchar2(30); 
+
+--삭제
+ALTER TABLE emp01 DROP COLUMN ename;

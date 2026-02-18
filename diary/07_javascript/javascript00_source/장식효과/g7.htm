@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+startday = new Date();
+clockStart = startday.getTime();
+function initStopwatch() { 
+var myTime = new Date(); 
+return((myTime.getTime() - clockStart)/1000); 
+}
+function getSecs() { 
+var tSecs = Math.round(initStopwatch()); 
+var iSecs = tSecs % 60;
+var iMins = Math.round((tSecs-30)/60);   
+var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+document.forms[0].timespent.value = sMins+":"+sSecs;
+window.setTimeout('getSecs()',1000); 
+}
+//-->
+</script>
+</head>
+<body onLoad="window.setTimeout('getSecs()',1)">
+<CENTER>
+<FORM>
+<input size=5 name=timespent>
+</FORM>
+</CENTER>
+</body>
+</html>

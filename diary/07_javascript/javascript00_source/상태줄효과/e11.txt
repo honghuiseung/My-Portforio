@@ -1,0 +1,12 @@
+방문자 이름을 제목 표시줄에 표시하기
+
+1.<head> 태그에 삽입===============================================================
+
+<script language="javascript">
+<!--
+var name = prompt("이름을 적어주세요","")
+document.write("<TITLE>")
+document.write(name,"님의 방문을 환영합니다");
+document.write("</TITLE>")
+//-->
+</script>

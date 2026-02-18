@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>스마트 페이지 링크 처리법</h1>
+        </div>
+        <div data-role="content">
+            <h2>외부 프로그램 링크</h2>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="mailto:ashram7@hanmail.net">이메일 링크</a></li>
+				<li><a href="tel:0255550288" target="_blank">전화번호 링크</a></li>
+				<li><a href="tel:01055550288" target="_blank">SNS 문자 링크</a></li>
+				<li><a href="http://maps.google.com/maps?q=37.496259, 127.028840&h1=ko">위성좌표 링크</a></li>
+				<li><a href="http://maps.google.com/maps?q=대한민국+서울특별시+강남구+강남대로+374&h1=ko">주소 링크</a></li>
+			</ul>
+        </div>
+        <div data-role="footer" class="ui-bar" data-position="fixed">
+            <a href="index.html" data-icon="grid" rel="external">Index</a>
+        </div>
+    </div>
+</body>
+</html>

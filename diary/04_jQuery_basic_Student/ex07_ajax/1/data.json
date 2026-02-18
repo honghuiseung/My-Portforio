@@ -1,0 +1,17 @@
+[
+	{
+		"no": "0001",
+		"name": "Oh Yunseok",
+		"mail": "example1@example.com"
+	},
+	{
+		"no": "0002",
+		"name": "Kim Sarang",
+		"mail": "example2@example.com"
+	},
+	{
+		"no": "0003",
+		"name": "Oh Hyeseong",
+		"mail": "example3@example.com"
+	}
+]

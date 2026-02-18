@@ -1,0 +1,70 @@
+<html>
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript"> 
+          var speed = 100 
+          var pause = 1000 
+          var timerID = null 
+          var bannerRunning = false 
+          var ar = new Array() 
+
+          //출력할 문장 설정 
+          ar[0] = " 안녕하시어요? " 
+          ar[1] = " 이곳에 오신것을 " 
+          ar[2] = " 환영합니다. " 
+          ar[3] = " 앞으로도 많은 관심부탁드립니다. " 
+          ar[4] = " 자바스크립트 열심히 공부하시길 바랍니다... " 
+          var currentMessage = 0 
+          var offset = 0 
+
+          function stopBanner() { 
+          if (bannerRunning) 
+          clearTimeout(timerID) 
+
+          bannerRunning = false 
+          } 
+
+          function startBanner() { 
+
+          stopBanner() 
+
+          showBanner() 
+          } 
+
+          function showBanner() { 
+
+          var text = ar[currentMessage] 
+          if (offset < text.length) { 
+
+          if (text.charAt(offset) == " ") 
+          offset++ 
+          var partialMessage = text.substring(0, offset + 1) 
+
+          window.status = partialMessage 
+
+          offset++  
+
+          timerID = setTimeout("showBanner()", speed) 
+          bannerRunning = true 
+          } else { 
+          offset = 0 
+
+          currentMessage++ 
+
+          if (currentMessage == ar.length) 
+
+          currentMessage = 0 
+
+          timerID = setTimeout("showBanner()", pause) 
+
+          bannerRunning = true 
+          } 
+          } 
+
+          </SCRIPT> 
+</head> 
+
+<body onLoad="startBanner()">
+
+</body>
+</html>

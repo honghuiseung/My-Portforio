@@ -1,0 +1,6 @@
+C:\project\node_modules\cordova-android\bin\templates\project\assets\www
+
+C:\project\node_modules\cordova-android\bin\templates\project\res
+
+C:\project\platforms\android\app\src\main\res
+

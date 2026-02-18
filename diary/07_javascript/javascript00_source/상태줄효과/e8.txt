@@ -1,0 +1,35 @@
+상태 표시줄에 시간 나타내기
+
+1.<head> 태그 안에 삽입===================================================================
+
+<script language="JavaScript">
+<!--
+
+var flasher = false
+
+function updateTime() {
+	var now = new Date()
+	var theHour = now.getHours()
+	var theMin = now.getMinutes()
+	var theSec = now.getSeconds()
+
+	var theTime = "" + ((theHour > 12) ? theHour - 12 : theHour)
+	theTime += ((theMin < 10) ? ":0" : ":") + theMin
+	theTime += ((theSec < 10) ? ":0" : ":") + theSec
+	theTime += (theHour >= 12) ? " pm" : " am"
+
+        //깜빡이는 글의 내용 설정
+	theTime += ((flasher) ? " " : "*^^*")
+
+	flasher = !flasher
+	window.status = "현재 시간은 :  " + theTime
+	timerID = setTimeout("updateTime()",1000)
+}
+
+//-->
+</script>
+
+2.<body> 태그 안에 삽입=======================================================================
+
+onload="updateTime()"
+

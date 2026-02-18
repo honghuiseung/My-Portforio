@@ -1,0 +1,32 @@
+하이퍼링크를 실행하면 새로운 창 멋지게 열리게 만들기
+
+
+1.<head> 태그에 삽입======================================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function expandingWindow(website) {
+var heightspeed = 2; // vertical scrolling speed (higher = slower)
+var widthspeed = 7;  // horizontal scrolling speed (higher = slower)
+var leftdist = 0;    // distance to left edge of window
+var topdist = 0;     // distance to top edge of window
+
+var winwidth = window.screen.availWidth - leftdist;
+var winheight = window.screen.availHeight - topdist;
+var sizer = window.open("","","left=" + leftdist + ",top=" + topdist + ",width=1,height=1,scrollbars=yes");
+for (sizeheight = 1; sizeheight < winheight; sizeheight += heightspeed) {
+sizer.resizeTo("1", sizeheight);
+}
+for (sizewidth = 1; sizewidth < winwidth; sizewidth += widthspeed) {
+sizer.resizeTo(sizewidth, sizeheight);
+}
+sizer.location = website;
+}
+//-->
+</script>
+
+
+2.<body> 태그에서 효과를 적용할 위치에 삽입=========================================================
+
+
+<a href="javascript:;" onClick="expandingWindow('http://www.codmedia.com')">C.O.D 홈페이지로 이동</a>

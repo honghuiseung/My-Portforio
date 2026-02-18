@@ -1,0 +1,38 @@
+﻿.box{width: 100px; height: 100px;}
+.box:nth-child(1){background-color:red;}
+.box:nth-child(2){background-color:green; position: relative; left:200px;}
+/* 포지션 렐러티브는 자기자리는 남기고 이동함 */
+.box:nth-child(3){background-color:blue;}
+
+body > div{width: 400px; height: 500px; border: 3px solid black; position: relative;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

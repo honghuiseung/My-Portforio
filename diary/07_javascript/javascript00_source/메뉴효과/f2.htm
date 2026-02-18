@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+<style>
+#rightMenu {
+	position:absolute; top:0px; left:0px; 
+	width:150px; height:150px; visibility:hidden; padding:10px; 
+	background-color:#FFCC00; layer-background-color:#FFCC00;
+}
+</style>
+<script language="JavaScript1.2">
+function myMenu(e) {
+	if (document.layers && document.rightMenu) { 
+		if (e.which == 1) {
+			if (document.rightMenu.visibility == "hide" || document.rightMenu.visibility == "hidden") { 
+				document.rightMenu.left = e.pageX
+				document.rightMenu.top = e.pageY
+				document.rightMenu.visibility = "visible";
+			}
+			else setTimeout('document.rightMenu.visibility = "hidden"', 10)
+		}
+	}
+	else if (document.all && document.all.rightMenu) {
+		if (event.button == 1) {
+			if(rightMenu.style.visibility == "hidden") {
+				rightMenu.style.posLeft = event.clientX + document.body.scrollLeft 
+				rightMenu.style.posTop = event.clientY + document.body.scrollTop 	
+				rightMenu.style.visibility = "visible";
+			}
+			else 	setTimeout('rightMenu.style.visibility = "hidden";', 10); 
+		}
+	}
+}
+if(document.layers) {
+	document.captureEvents(Event.MOUSEDOWN); 
+	document.onmousedown = myMenu;
+}
+else if(document.all) document.onmouseup = myMenu; 
+</script>
+</head>
+<body>
+<div id=rightMenu>
+<a href="www.youngjin.com">YOUNGJIN</a><p>
+<a href="www.codmedia.com">CODMEDIA</a><p>
+<a href="kr.yahoo.com">YAHOO</a><p>
+<a href="www.naver.com">NAVER</a>
+<br>
+</div>
+</body>
+</html>

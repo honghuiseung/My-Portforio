@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>웹표준 & HTML5에 대한 이해</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	margin: 0;
+	color: #404040;
+	font: 13px/normal "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Gulim, "굴림", Verdana, Arial, "Trebuchet MS";    margin: 0px; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+}
+a:link {
+	color: rgb(64, 64, 64); text-decoration: none;
+}
+a:hover {
+	color: rgb(64, 64, 64); text-decoration: none;
+}
+a:visited {
+	color: rgb(64, 64, 64); text-decoration: none;
+}
+a:active {
+	color: rgb(64, 64, 64); text-decoration: none;
+}
+
+#wrap {
+	width: 640px;
+	margin: auto;
+}
+.box {
+	margin: 10px 0px; 
+	padding: 10px; 
+	border: 1px solid rgb(200, 202, 206); 
+	background-color: rgb(247, 247, 247);
+}
+.blue {
+	color: #009;
+	font-weight: bold;
+}
+h3 {
+	color: #009;
+}
+</style>
+</head>
+<body>
+<DIV id="wrap">
+<div class="box">
+  <p class="blue">질문1. XML 은 기존의 어떤것들과 비슷한건가요? (ASP, PHP, HTML 등등...) 프로그램을 짜는 언어인가요?</p>
+  <p>답변1. XML이라는 것이  HTML의 단점을 보안하기 위하여 나온 언어인 것은 맞지만,    HTML과 비슷하다고 할 수는 없습니다. 굳이 비슷한 것을 찾자면... DB와 비슷하다고 해야할까요?</p>
+  <p>    HTML은 알고 계시겠지만 홈페이지 디자인을 위한 언어입니다.    그렇기 때문에 사용자에게 페이지가 어떻게 보여지는 지가 중요한 관점이기에 데이터 관리는 불가능하죠.    그래서 기존 HTML의 디자인에 데이터 관리를 위한 DB를 사용하기 위하여 프로그래밍화 한 것이 ASP나 JSP, PHP 등입니다. 
+    하지만 XML은 사용자가 데이터 구조를 나타내는 언어입니다.</p>
+  <p>    DB에서 데이터를 가지고 있는 것처럼 XML 문서 자체가 작은 DB역할을 함으로써 데이터 관리가 가능해지는 거죠.    더구나 DB는 2차원적인 데이터만 관리할 수 있다면 XML은 Tag의 구조화가 가능하기에    n차원적인 데이터 관리까지도 가능한 것입니다.</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p class="blue">질문2. 웹표준으로 홈페이지를 제작한다면 XML, XHTML을 같이 쓸 수 있나요?<br>
+    하나만 써야한다면 어떤걸 선택해야하나요? </p>
+  <p>답변2. 대부분의 사람들이 요즘 이슈가 되는 웹표준에 대한 개념을 조금 잘못 이해하는 경우가 많습니다.<br>
+    웹 표준이라는 건 말 그대로 표준에 맞는 코딩을 해야하는 것을 말하는 것입니다.</p>
+  <p>    XML을 사용할지 XHTML을 사용할지는 웹표준 홈페이지를 만드는 것에 대한 선택사항이 될 수 없습니다.<br>
+    다시말해서 XML을 이용한 웹표준 홈페이지도 가능하고, XHTML을 이용한 웹표준 홈페이지도 가능합니다.<br>
+    심지어 HTML만으로 웹표준에 준한 홈페이지 제작도 가능합니다.</p>
+  <p>&nbsp;</p>
+  <p><br>
+  </p>
+  <p class="blue">질문3. XML과 XHTML을 공부한다면 어떤걸 먼저 공부해야하나요? 두 개 모두 해야할까요?<br>
+    XHTML이  XML과 HTML을 혼합시킨거라면 XML은 어떤 경우 사용하게 되는건가요? <br>
+    XHTML 때문에 비중이 떨어지는건가요? </p>
+  <p>답변3. 웹표준 코딩을 위해서는 일단 HTML을 먼저 익히셔야 되고, 
+    XHTML이라는 것은 HTML에서 태그 규칙이 좀 더 엄격해지면서, 
+    사용자 임의로 속성값을 지정하여 사용할 수 있다는 정도만 알고 계셔도 무난합니다.</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p class="blue">질문4. 웹표준으로 레이아웃을 짜고 간단한 텍스트를 각 구역마다 넣었는데요 한글이 깨져보입니다.</p>
+  <p>답변3. meta 태그의 charset=&quot;UTF-8&quot;로 지정했을 경우 이건 해당 문서의 언어를 utf-8 로 인코딩 하라는 것입니다.    그런데 html 태그에 lang=&quot;ko&quot; xml:lang=&quot;ko&quot;로 설정했다면 이건 한글로 표현을 하라는 것인데,    한 문서 내에서 그 문서를 표현하는 방식을 다르게 표현해 놓았을 경우와 마지막 저장 옵션을 ANSI로 했을 경우에 발생하는 문제인데,    요즘은 UTF-8 로 제작을 하는 것이 대세이니 UTF-8로 기본 태그 구조를 표현하고 저장을 UTF-8로 선택하면 문제가 해결됩니다.</p>
+  <p>&lt;!DOCTYPE HTML&gt;<br>
+    &lt;html lang=&quot;ko-KR&quot;&gt;<br>
+    &lt;head&gt;<br>
+  &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+  &nbsp; &nbsp; &nbsp; &lt;title&gt;HTML5 기본 태그 구조&lt;/title&gt;<br>
+  &nbsp; &nbsp; &nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; /&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;</p>
+  <p> 이렇게 쓰고 다른이름으로 저장, 인코딩 방식을 ANSI가 아닌 UTF-8로 선택 한 다음 저장하면 됩니다.<br>
+    드림위버 같은 에디터툴 같은 경우는 저장할때 인코딩 방식을 묻지 않습니다.<br>
+    그건 홈페이지 제작을 할때 먼저 옵션 설정으로 인코딩 방식을 지정해 놓기 때문입니다. <br>
+    이럴때는 메모장으로 해당 문서를 열어서 다른이름으로 저장을 눌러 보세요.</p>
+  <p></p>
+</div>
+</DIV>
+</body>
+</html>

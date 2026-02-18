@@ -1,0 +1,4 @@
+﻿#bookPart{width: 850px; margin: 0 auto; text-align: justify; margin-bottom: 50px; -o-column-count: 3; -o-column-rule: 1px dashed #666666; -o-column-gap: 40px; -ms-column-count: 3; -ms-column-rule: 1px dashed #666666; -ms-column-gap: 40px;-moz-column-count: 3; -moz-column-rule: 1px dashed #666666; -moz-column-gap: 40px;-webkit-column-count: 3; -webkit-column-rule: 1px dashed #666666; -webkit-column-gap: 40px;column-count: 3; column-rule: 1px dashed #666666; column-gap: 40px;}
+#bookImg img{display:block; margin:0 auto;}
+h2{margin:0 auto;}
+/* width값을 반드시 가지고 있어야 함 */

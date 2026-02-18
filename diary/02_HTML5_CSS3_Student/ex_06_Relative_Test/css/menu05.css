@@ -1,0 +1,36 @@
+﻿html{overflow-y:scroll;}
+*{margin:0; padding:0;}
+
+body{font-family: "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Arial, sans-serif;}
+ul, ol, dl, li{list-style:none;}
+img{border: 0; vertical-align: top;}
+a{text-decoration: none; color:#333333;}
+a:link{color:#333333;}
+a:visited{color:#333333;}
+.fl{float:left;}
+.fr{float:right;}
+.cb{clear: both;}
+.cf:after{clear:both; content:''; display: block;}
+
+
+.navWrap{position:relative; background: #ffffff;}
+	#nav{width: 1200px; margin: 0 auto;}
+	#nav>li{float:left; margin: 0 38px;}
+	#nav>li a{display: block; text-decoration: none; line-height: 94px; text-align: center; font-size: 1.2em; font-weight: bold;}
+	#nav>li a:hover{color: #e95a65;}
+	#nav>li:hover>a{color: #e95a65;}
+	#nav li.freesamLogo{float:left; width: 181px; margin: 0; padding: 0;}
+	
+	
+#nav li div{position: absolute; top: 94px; left: 0; width: 100%; display: none; color: #333333; padding: 20px 0; border: 1px solid #cccccc; background#e0e0e0; box-shadow: 0 5px 15px #888888; box-sizing: border-box;}
+	#nav li .onlinestudy li, #nav li .magazine li, #nav li .playground li,#nav li .customer li,#nav li .mypage li,#nav li .parents li{width: 193px; float:left; border-left: 2px groove #efefef; padding: 0px 0px 10px 15px;}
+	#nav li .onlinestudy li img, #nav li .magazine li img,#nav li .mypage li img{float:left; margin: 10px 0 0 10px;}
+	
+	#nav li ul li.menu_tit{width: 163px; border-left: none; padding: 0; padding-right: 55px;}
+	#nav li ul li.m_width{width: 1200px; margin:0 auto;}
+	#nav li:hover .width100{display:block;}
+	#nav li ul li h2{font-size: 1.5em; font-weight: bold; text-align:center; color: #e95a65; padding-top: 2px;}
+	
+	#nav li ul li dl dt a{color:#333333; font-size: 1em; font-weight:bold; line-height:180%;}
+	#nav li ul li h3 a{color:#097a87; font-weight:bold; line-height:200%;}
+	#nav li ul li dl dd a{color:#777777; font-size: 0.8em; font-weight:bold; line-height:170%; background: url(../images/blet.png) no-repeat 0 center; padding-left: 10px;}

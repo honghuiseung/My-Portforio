@@ -1,0 +1,8 @@
+dl{
+	-o-box-shadow: 0px -10px 0px 0px #666666; 
+	-ms-box-shadow: 0px -10px 0px 0px #666666; 
+	-moz-box-shadow: 0px -10px 0px 0px #666666; 
+	-webkit-box-shadow: 0px -10px 0px 0px #666666; 
+	box-shadow: 0px -10px 0px 0px #666666; 
+	/* 밴더프리픽스 : 브라우저에서 만든 코드 */
+}

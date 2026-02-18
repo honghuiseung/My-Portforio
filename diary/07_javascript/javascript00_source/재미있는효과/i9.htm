@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Wheel of links</title>
+<script>
+var count=0
+function dothis(){
+setTimeout("document.wheel.wheel2.selectedIndex =1000",100)
+setTimeout("document.wheel.wheel2.selectedIndex =count",200)
+setTimeout("document.wheel.wheel2.selectedIndex =1000",300)
+setTimeout("document.wheel.wheel2.selectedIndex =count",400)
+setTimeout("document.wheel.wheel2.selectedIndex =1000",500)
+setTimeout("document.wheel.wheel2.selectedIndex =count",600)
+setTimeout("window.location=document.wheel.wheel2.options[document.wheel.wheel2.selectedIndex].value",800)
+}
+
+function animate(){
+var countfinal=Math.round(Math.random()*(document.wheel.wheel2.length-1))
+document.wheel.wheel2.selectedIndex =count
+if (count==countfinal){
+dothis()
+return
+}
+if (count<document.wheel.wheel2.length)
+count++
+else
+count=0
+setTimeout("animate()",50)
+}
+
+</script>
+
+</head>
+<body bgcolor=white>
+<form method="POST" name="wheel">
+<div align="center">
+<center><BR><BR><BR><BR><BR>
+<p>
+<select name="wheel2" size="5">
+<option value="http://www.naver.com">-------NAVER--------</option>
+<option value="http://kr.yahoo.com">-------YAHOO--------</option>
+<option value="http://www.lycos.co.kr">-------LYCOS--------</option>
+<option value="http://www.youngjin.com">-------YOUNGJIN-----</option>
+<option value="http://www.codmedia.com">-------CODMEDIA-----</option>
+</select>
+</p>
+</center>
+</div>
+<div align="center">
+<center>
+<p>
+<input type="button" value="RANDOM" name="B1" onClick="animate()">
+</p>
+</center>
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+그림 저장 못하게 만들기
+
+
+1.<head> 태그에 삽입======================================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function protect(e) {
+alert("홈페이지에 사용된 그림들은 저장할 수 없습니다.");
+return false;
+}
+
+function trap() {
+if(document.images)
+for(i=0;i<document.images.length;i++)
+document.images[i].onmousedown = protect;
+}
+//-->
+</SCRIPT>
+
+
+2.<body> 태그 안에 삽입======================================================================
+
+OnLoad="trap()"

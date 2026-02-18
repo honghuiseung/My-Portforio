@@ -1,0 +1,11 @@
+﻿*{margin:0; padding: 0; border: 0;}
+ul, li{list-style: none;}
+#contentRight{width: 260px; height: 180px; float: left; margin-left: 15px; margin-top: 15px; background: #efefef; border-radius: 4px;}
+#contentRight #animate{width: 260px; height: 180px; float: left; margin-left: 10px;}
+#contentRight #animate:after{content:''; display: block; clear: both;}
+#contentRight #animate li {cursor: pointer; float: left; margin: 0px;}
+	#animate .menu_image {width: 0px; overflow: hidden; float: left;} /* 가로는 width:0 */
+	#contentRight #animate .menu_image a img {margin-left: 5px; width: 150px; padding-top: 16px; float: left;}
+	#contentRight #animate .text_image {padding-left: 0px; padding-top: 12px; float: left;}
+	#contentRight #animate .text_image .on {display: none;}
+	#contentRight #animate .text_image .off img {padding-left: 0px;}

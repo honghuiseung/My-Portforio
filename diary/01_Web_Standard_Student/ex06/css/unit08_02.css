@@ -1,0 +1,4 @@
+﻿h1, h2, h3, h4{color: #ffffff; font-size: 20px; 
+font-family: '맑은 고딕', '돋움', '굴림', 'Times New Roman', Arial, sans-serif; 
+/* 특수문자는 따옴표 위 글씨체는 알아둬야함 'Times New Roman'=='영조체' Arial=='고딕체' sans-serif='고딕체 아무거나' */
+background-color: #0000bb; padding: 10px;}

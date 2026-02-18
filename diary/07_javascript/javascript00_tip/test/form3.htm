@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>form 객체의 프로퍼티</TITLE>
+<STYLE TYPE="text/css">
+<!--
+td {
+	font-family: "굴림";
+	font-size: 12px;
+}
+body {
+	background-attachment: fixed;
+	background-image: url(bg01.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function submitForm(){
+ if(document.form1.id.value != "" && document.form1.comment.value != "") {
+   document.form1.submit()
+   alert("등록했습니다")
+  }
+  else alert("양식을 모두 채워주세요")
+}
+
+function clearForm() {
+   document.form1.reset()
+   alert("입력한 내용을 모두 지웠습니다 \n다시 입력하세요.")
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="form1">
+  <TABLE WIDTH="200" HEIGHT="85" BORDER="0" CELLPADDING="1" CELLSPACING="0" ALIGN="center">
+    <TR> 
+      <TD WIDTH="73">이  름: </TD>
+      <TD WIDTH="123"><INPUT NAME="id" TYPE="text" SIZE="20" MAXLENGTH="10"></TD>
+    </TR>
+    <TR> 
+      <TD>하고 싶은 말:</TD>
+      <TD><TEXTAREA NAME="comment" COLS="20" ROWS="5"></TEXTAREA></TD>
+    </TR>
+    <TR> 
+      <TD>&nbsp;</TD>
+      <TD><INPUT TYPE="button" VALUE="등록" onClick="submitForm()"> 
+	  <INPUT TYPE="button" VALUE="새로 쓰기" onClick="clearForm()"> 
+      </TD>
+    </TR>
+  </TABLE>
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

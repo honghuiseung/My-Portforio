@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>콤보 메뉴 리셋</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function setDefault(obj) {
+  for (var i = 0; i < obj.options.length; ++i) {
+    obj.options[i].selected = obj.options[i].defaultSelected
+  }
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="bg41.gif">
+<FORM NAME="myform">
+<H3> 소장하고 싶은 DVD는? </H3>
+(Ctrl키를 누른 상태로 클릭하면 여러 개 선택할 수 있음)<BR><BR>
+<SELECT NAME="mymenu" SIZE=5 MULTIPLE>
+<OPTION> 뮤지컬 캣츠
+<OPTION> 해리포터와 마법사의 돌 
+<OPTION> 대부(God Father)
+<OPTION> 반지의 제왕
+<OPTION> 그 남자 그 여자의 사정
+</SELECT>
+<BR><BR>
+<INPUT TYPE="button" VALUE="전송" onClick="alert('전송되었습니다')">&nbsp;&nbsp;
+<INPUT TYPE="button" VALUE="다시 선택" onClick="setDefault(myform.mymenu)">
+</FORM>
+</BODY>
+</HTML>

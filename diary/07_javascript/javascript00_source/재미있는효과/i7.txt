@@ -1,0 +1,44 @@
+십자말 퀴즈 만들기 
+
+1.<head> 태그에 삽입=======================================================================
+
+
+<script language=JavaScript>
+function check(right,guess,i) {
+  if(guess.toLowerCase() != right && guess != "") {
+    document.forms[0].elements[i].value="X";
+  }
+}
+</script>
+
+
+2.<body> 태그에서 효과를 적용할 위치에 삽입=================================================
+
+
+<br><br>
+<h2><center>십자말 퀴즈</center></h2>
+<br>
+<form method="get">
+<div align="center">
+<table border="1">
+<tr>
+<td width="35" align="right">1.<input type="text" size="1" onchange='check("쉬",this.value,0)'></td>
+<td width="35" align="right"><font color="red">1.</font><input type="text" size="1" onchange='check("리",this.value,1)'></td>
+<td width="35" align="right">&nbsp</td>
+</tr>
+<tr>
+<td width="35" align="right">&nbsp</td>
+<td width="35" align="right">2.<input type="text" size="1" onchange='check("철",this.value,2)'></td>
+<td width="35" align="right"><input type="text" size="1" onchange='check("수",this.value,3)'></td>
+</tr>
+<tr>
+<td width="35" align="right">&nbsp</td>
+<td width="35" align="right"><input type="text" size="1" onchange='check("진",this.value,4)'></td>
+<td width="35" align="right">&nbsp</td>
+</tr>
+</table>
+</div></form>
+<br><br>
+<p>가로 1 : 한석규가 출영하는 영화로서 한 때 ??? 관상어에 대한 인기가 높았다</p>
+<p>가로 2 : ???와 영희
+<p>세로 1 : 간첩이 서울에 와서 일어나는 헤프닝을 다룬 영화</p>

@@ -1,0 +1,8 @@
+﻿li:first-child{color: pink; background-color: brown; width: 500px; padding: 5px;}
+/* 클래스로 다는게 좋음 */
+li.first-child{color: pink; background-color: brown; width: 500px; padding: 5px;}
+li:last-child{color: orange; background-color: brown; width: 500px; padding: 5px;}
+/* li:second-child{color: orange; background-color: brown; width: 500px; padding: 5px;} 없음 */
+li:nth-child(even){color: brown; background-color: silver;}
+li:nth-child(odd){color: brown; background-color: yellow;}
+li:nth-child(3n+3){color: brown; background-color: red;}

@@ -1,0 +1,11 @@
+﻿*{margin:0; padding:0;}
+#clock{width:650px; height:650px;border-radius: 50%; background-color: #eeeeee; margin:200px auto; border: 10px solid #333333; position: relative; background:url(../images/back_night.jpg)no-repeat; background-size:1160px; background-position:-500px 0; overflow:hidden;}
+
+.circle{width:30px; height:30px; position:absolute; left: 50%; top: 50%; background-color:#333333; transform: translate(-50%,-50%); }
+.hand_sec_wrap{position:absolute; left:50%; top:50%;}
+.hand_min_wrap{position:absolute; left:50%; top:50%;}
+.hand_hour_wrap{position:absolute; left:50%; top:50%;}
+.clock_hand_hour{background-color:#333; width:30px; height: 170px; position: absolute; transform: translate(-50%,-90%);}
+.clock_hand_second{background-color:#dd0000; width:10px; height: 300px; position: absolute; transform: translate(-50%,-97%);}
+.clock_hand_minute{background-color:#444; width:20px; height: 240px; position: absolute; transform: translate(-50%,-95%); }
+.num{font-weight: bold; font-size: 50px;  position: absolute; left:50%; bottom:50%; transform:translate(-50%,50%);}

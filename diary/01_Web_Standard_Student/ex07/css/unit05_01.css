@@ -1,0 +1,6 @@
+﻿body, p{margin:0; padding:0;}
+body{background: url(../images/bg_gray.png) no-repeat #cccccc;}
+div{background: url(../images/circle.png) no-repeat; width: 530px; height: 424px; opacity: 0.8; padding-top: 150px; margin-left: 20px; margin: 0 auto;}
+.textBox{background-color: hsla(0,0%,100%,0.6); padding: 20px; width: 25%;margin:0 auto; border-radius: 20px;}
+.people{padding-top: 130px; color: rgba(255,255,255,0.7);font: 3em 'Arial Black' sans-serif;}
+/* rgba로 opacity속성을 주면 글자에는 적용되지않음(하위 태그에도 적용되기 떄문) */

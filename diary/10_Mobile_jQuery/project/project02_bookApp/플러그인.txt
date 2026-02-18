@@ -1,0 +1,44 @@
+cordova  create  device  com.example.device  deviceApp
+
+cordova platform add android
+
+하드웨어 / 소프트웨어 정보를 제공
+cordova plugin add cordova-plugin-device
+
+핸드폰 진동 관련 플러그인
+cordova plugin add cordova-plugin-vibration
+
+핸드폰 방향 정보 제공 플러그인
+cordova plugin add cordova-plugin-device-orientation
+
+핸드폰 배터리 상태 정보를 제공
+cordova plugin add cordova-plugin-battery-status
+
+핸드폰 유무선 연결 정보 제공
+cordova plugin add cordova-plugin-network-information
+
+핸드폰 GPS 센서를 통해 위치 정보 제공
+cordova plugin add cordova-plugin-geolocation
+
+경고창 제공
+cordova plugin add cordova-plugin-dialogs
+
+로그, 오류 정보 제공
+cordova plugin add cordova-plugin-console
+
+카메라 및 사진 제공
+cordova plugin add cordova-plugin-camera
+
+연락처 정보의 추가,삭제,검색 제공
+cordova plugin add cordova-plugin-contacts
+
+모션센서 가속도 정보 제공(X)
+cordova plugin add cordova-plugin-motion
+
+파일 쓰기, 이동, 복사, 삭제 지원
+cordova plugin add cordova-plugin-file
+
+미디어 파일 재생, 녹음 지원
+cordova plugin add cordova-plugin-media
+
+

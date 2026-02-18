@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>예약 문의</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<h1>예약 문의</h1>
+	<!-- 내용을 입력합니다. -->
+	<form action="#" method="get">
+		<p>
+			작성자
+			<input type="text" name="userName" id="userName"/>
+		</p>
+		<p>
+			비밀번호
+			<input type="password" name="userPWD" id="userPWD"/>
+		</p>
+		<p>
+			email
+			<input type="email" name="userEmail"/>
+		</p>
+		<p>
+			연락처
+			<input type="tel" name="userPhone"/>
+		</p>
+		<p>
+			투숙날짜
+			<input type="date" name="userDate"/>
+		</p>
+		<p>
+			투숙인원
+			<input type="number" name="userNumber"/>
+		</p>
+		<p>
+			제목
+			<input type="text" name="userTitle"/>
+		</p>
+		<p>
+			작성자의 신원을 파악하기 위한 사진을 올려주세요.
+			<input type="file" name="userFile"/>
+		</p>
+		<p>예약하실 객실을 선택하세요.
+			<label for="userRoom1"> <!-- for가 label을 버튼으로 만듦. -->
+				Single
+			</label>
+			<input type="radio" value="Single" id="userRoom1" name="userRoom" checked />
+			/
+			<label for="userRoom2">
+				Double
+			</label>
+			<input type="radio" value="Double" id="userRoom2" name="userRoom" checked />
+			/
+			<label> <!-- for가 필요없음 -->
+				Twin
+				<input type="radio" name="userRoom" value="Twin"/>
+			</label>
+			<input type="image" src="images/btn_gallery.gif" alt="방 둘러보기" name="btn_gallery"/>
+		</p>
+		<p>기타 패키지 옵션을 선택하세요<br/>
+			<label>
+				<input type="checkbox" value="조식" name="userOption1"/>
+				조식
+			</label>
+			/
+			<label>
+				<input type="checkbox" value="바베큐" name="userOption2"/>
+				바베큐
+			</label>
+			/
+			<label>
+				<input type="checkbox" value="픽업 서비스" name="userOption3"/>
+				픽업서비스
+			</label>
+		</p>
+		<p>
+			<input type="submit" value="저장"/>
+			<input type="reset" value="취소"/>
+			<input type="button" value="이전페이지"/>
+		</p>
+	</form>
+	<br/><br/><br/>
+	<p><a href="unit04_01.html">폼태그 더보기</a></p>
+</body>
+</html>

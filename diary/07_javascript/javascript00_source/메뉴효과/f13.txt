@@ -1,0 +1,56 @@
+링크 내용이 변하는 효과 만들기
+
+1.<head> 태그에 삽입============================================================
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function makeArray(q){
+for(i=1 ; i < q ; i++){this[i]=0}}
+w=1;
+howmanysites=4; // 목록 개수 입력 
+
+Sites = new makeArray(howmanysites);
+
+//하이퍼링크 설정 
+
+Sites[1] = "http://www.naver.com~NAVER|네이버 홈페이지";
+Sites[2] = "http://kr.yahoo.com~YAHOO|야후 홈페이지";
+Sites[3] = "http://www.simmani.com~SIMMANI|심마니 홈페이지";
+Sites[4] = "http://www.lycos.co.kr~LYCOS|라이코스 홈페이지";
+
+function showSites() {
+if (w > howmanysites) { w=1; };
+var string=Sites[w] + "";
+var split1=string.indexOf("~");
+var split2=string.indexOf("|");
+var url=string.substring(0,split1);
+var name=string.substring(split1 + 1,split2);
+var word=string.substring(split2 + 1,string.length);
+document.form.url.value=url;
+document.form.name.value=name;
+document.form.word.value=word;
+w+=1;
+window.setTimeout('showSites()',3000);  //변환 속도 설정
+}
+function visitSite() {
+window.location=document.form.url.value;
+}
+//-->
+</SCRIPT>
+
+
+2.<body> 태그에 삽입============================================================
+
+<center>
+<form name=form>
+<table><tr><td align=center>
+<input type=button name=name value="Visit" onClick="visitSite()" size=20>
+<input type=hidden name=url value="">
+<input type=text name=word value="" size=40>
+</td></tr></table>
+</form>
+</center>
+<script>
+showSites();
+</script>

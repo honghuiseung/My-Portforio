@@ -1,0 +1,4 @@
+﻿a[title="조주기능사"]{background-color: #6600cc; color: #ffffff; font-weight: bold;}
+a[title^="제과"]{background-color: #006600; color: #ffffff; font-weight: bold;}
+a[title$="기능사"]{background-color: #cc6600; color: #ffffff; font-weight: bold;}
+a[title*="산업기사"]{background-color: #ff3366; color: #ffffff; font-weight: bold;}

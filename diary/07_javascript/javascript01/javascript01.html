@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript란 무엇인가? 그리고 JavaScript 스크립트 구조와 변수</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+        <h1>JavaScript란? 그리고 JavaScript 스크립트 구조와 변수</h1>
+    </div>
+
+	<div class="article">
+    <h2>JavaScript란 무엇인가?</h2>
+    </div>
+    
+    <p>&nbsp;</p>
+    <h3>자바 스크립트란?</h3>
+	<p>개발자가 만든 문서에 방문자가 방문하여 어떤 동작을 취했을 때, 그 동작에 대응하여 반응이 일어날 수 있도록 해주는 언어</p>
+	<ul>
+		<li class="gray"> 자바스크립트 언어는 컴퓨터와 사람이 함께 알아들을 수 있는 약속된 언어로 웹과 함께 등장한 언어</li>
+	  <li class="gray"> 지금은 자바스크립트가 웹브라우저만 제어하기 위한것만 사용하는 것이 아니라 웹 서버를 동작하기 위한 도구로써 사용되고 이것을 서버 사이드 스크립트라고 함. </li>
+		<li class="gray">대표적인 기술로 JAVA, Python , PHP 등이 있는데 그 중
+		  node.js는 웹브라우저와 웹서버를 함께 사용할 수 있고 자바스크립트로 만들 수 있다는 장점이 있음.</li>
+	</ul>
+	<br />
+	<p>자바스크립트 언어의 특징</p>
+    <ol>
+		<li><span class="gray">인터프린터 언어 (작성된 순서대로 윗줄부터 순차대로 구문 분석, 코드에 문제가 생기면 에러가 발생한 행 전까지 구문 분석하고 에러 발생한 다음 줄부터는 구분 분석 안 함) </span></li>
+		<li><span class="gray"> 클라이언트 스크립트 언어 (서버에서 실행되는 것이 아니라 사용자 컴퓨터에서 실행, 그래서 서버의 부하룰 줄일 수 있음) </span></li>
+		<li><span class="gray"> 객체 기반 언어 (다양한 객체가 존재하며, 그에 해당하는 다양한 기능(메서드)들이 존재)</span></li>
+		<li><span class="gray"> 공개된 언어 (외부로 분리할 수 있으나 완벽히 숨길 수는 없음)</span></li>
+		<li><span class="gray"> 다양한 라이브러리를 활용할 수 있음 (대표적인 라이브러리 언어는 제이쿼리, 자바스크립트로 구현하기 힘든 것들을 쉽게 구현할수 있도록 만들어 놓은 프로그래밍 언어) </span></li>
+    </ol>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+
+	<div class="article">
+    <h2>JavaScript 스크립트 구조와 변수</h2>
+    </div>
+    
+    <p>&nbsp;</p>
+    <h3>JavaScript 기초 문법</h3>
+    <p class="gray">- (;) 세미콜론을 사용할때와 하지 않았을때의 차이점? 자바스크립트는  enter를 사용하면 내용이 끝난것으로 인지하여 (;)을 사용하지 않아도 내용이 끝남. 하지만 특히 jQuery 에서는 한 문장에 여러 개의 문법을 사용할때는 꼭 세미콜론을 사용해야만 문법오류가 나지 않음.</p>
+    <p class="gray">- 유효성 검사시 오류를 막는 CDATA 구문 <br />
+    내부형으로 작성된 스크립트에서 Html 태그를 포함하게 되면 정상 작동은 할지라도 브라우저의 유효성 검사기들은 오류를 지적함. (외부형일떄는 문제 없음) </p>
+    <pre>&lt;script language=&quot;JavaScript&quot;&gt;
+<span class="green">//&lt;![CDATA[</span>
+    document.write(&quot;안녕하세요.&quot;)
+<span class="green">//]]&gt;</span>
+&lt;/script&gt;</pre>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+	
+    <h3>스크립트 구조</h3>
+<pre>&lt;script <span class="underline">language=&quot;JavaScript&quot;</span>&gt;
+    <span class="green">&lt;!--</span>
+    <span class="green">//만든이 : 오윤석</span>
+    <span class="green">/* email : ashram7@hanmail.net
+    homepage : http://www.hschool.co.kr/  */ </span>
+
+    document.write(&quot;안녕하세요.&quot;)
+    document.write(&quot;&lt;br /&gt;&quot;)
+    document.write(&quot;여러분&quot;)
+    <span class="green">//--&gt;</span>
+&lt;/script&gt;
+
+&lt;noscript&gt;
+    &lt;body bgcolor=&quot;green&quot;&gt;
+    &lt;p&gt;당신의 웹브라우저는 자바 스크립트를 지원하지 않네요.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/noscript&gt;</pre>
+
+
+  <p>&nbsp;</p>
+  <p>문제) 다음 태그를 이용하여 자바스크립트로 홈페이지를 꾸며보세요.</p>
+
+<pre>&lt;body style=&quot;margin-top: 50px;&quot;&gt;
+    &lt;div style=&quot;color: #ff6400; text-align: center; margin: 0 auto; width: 720px;&quot;&gt;
+        안녕하세요. 저의 집에 오신 것을 환영합니다.
+        &lt;img src=&quot;images/hello.png&quot; width=&quot;720&quot; height=&quot;720&quot; /&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>변수 정의하기</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p class="normal">
+		변수란? 변하는 데이터(값)를 저장 할 수 있는 메모리 공간</p>
+        <ol>
+          <li>          var은 변수를 선언 (지역 변수)</li>
+          <li>            변수에 저장할 수 있는 데이터형          </li>
+          <ul>
+            <li>문자형 데이터</li>
+            <li>숫자형 데이터</li>
+            <li>논리형 데이터</li>
+            <li>Null & Undefined데이터-null은 데이터를 비우고자 할 때 사용하는 값</li>
+          </ul>
+          <li>            변수명은 영문, 숫자, 일부 특수문자($, _)만 허용</li>
+          <li>            변수명 첫 글자로는 $, _, 영문자만 올수 있음</li>
+          <li>            한글을 사용할 수 없음</li>
+          <li>            의미에 맞는 이름</li>
+          <li>            소문자로 시작</li>
+          <li>            기본 this, with(상수), document, window, screen, location 등등 자바스크립트에서 사용하는 단어(예약어)를 사용할 수 없음</li>
+          <li>            변수를 쓰는 이유는 코드의 재활용성을 높여 줌  (좋은 코드를 작성하는 것에 있어서 가장 중요한 키워드)
+          </li>
+        </ol>
+        </td>
+      </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p><span class="green">// 잘된 사용예</span><br>
+        thing=10<br>
+  document.write(thing)</p>
+    <p>&nbsp;</p>
+    <p><span class="green">// 잘못된 사용예</span><br>
+        this=10<br>
+        document.write(this)</p>        
+        </td>
+      </tr>
+    </table>
+  <p>&nbsp;</p>
+
+
+    <p>&nbsp;</p>
+    <h3>문자변수와 숫자변수 (var은 지역변수임)</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p>var x, y</p>
+        <p>          x = 7+5<br>
+          y = &quot;7&quot;+5<br>
+          document.write(x)<br>
+          document.write(&quot;&lt;br /&gt;&quot;)<br>
+          document.write(y)</p>        
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+
+
+    <p>&nbsp;</p>
+    <h3>10진수로 숫자변수 나타내기</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p>var x, y<br>
+        x=1230000<br>
+        y=1.23E6<br>
+        document.write(x)<br>
+        document.write(&quot;&lt;br /&gt;&quot;)<br>
+        document.write(y)</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+
+
+    <p>&nbsp;</p>
+    <h3>문자변수 나타내기</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p>var x, y, z<br>
+        x=&quot;MY BIRTH DAY&quot;<br>
+        y=&quot;11&quot;<br>
+        z=&quot;월 입니다.&quot;<br>
+        document.write(x)<br>
+        document.write(y)<br>
+        document.write(z)</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    
+
+
+
+    <p>&nbsp;</p>
+    <h3>참, 거짓 변수</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p>a=false<br>
+        document.write(a)</p>
+    <p class="green">// <strong>FALSE</strong>는 <strong>1</strong>, <strong>TRUE</strong> 는 <strong>0</strong></p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+
+
+  <p>&nbsp;</p>
+    <h3>변수가 없다면?</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+            <p>
+                alert(100+10)<br />
+                alert(100+10)/10<br />
+                alert(100+10)/10)-10)<br />
+                alert(100+10)/10)-10)*10)<br />
+                <span class="green">// 100이라는 숫자를 1000으로 변경해야 한다면... </span>
+          </p>   
+     
+            <hr width="95%"/>
+          <p>
+                a=100 <br />
+                a=a+10 <br />
+                alert(a) <br />
+                a=a/10  <br />
+                alert(a) <br />
+                a=a-10 <br />
+                alert(a) <br />
+                a=a*10 <br />
+                alert(a) <br />
+                <span class="green">// 유지보수하기 쉽다.</span> 
+          </p>    
+        </td>
+      </tr>
+    </table>
+
+
+  <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+</body>
+</html>

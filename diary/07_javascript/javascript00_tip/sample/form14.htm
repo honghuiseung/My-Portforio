@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>세가지만 선택하세요</TITLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+
+   max = 3
+   function checkNum(obj) {
+      ch1 = document.form1.check1.checked
+      ch2 = document.form1.check2.checked
+      ch3 = document.form1.check3.checked
+      ch4 = document.form1.check4.checked
+      ch5 = document.form1.check5.checked
+
+      selected = (ch1 ? 1:0) + (ch2 ? 1:0) + (ch3 ? 1:0) + (ch4 ? 1:0) + (ch5 ? 1:0)
+      if (selected > max) {
+         alert("관심 항목은 3개까지만 선택할 수 있습니다.")
+         obj.checked= false
+      }
+  }
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BACKGROUND="bg39.jpg">
+<TABLE WIDTH="250" BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="white" ALIGN="center">
+  <TR>
+    <TD HEIGHT="24" COLSPAN="2" BGCOLOR="#000000"><FONT COLOR="#FFFFFF"><B>관심있는 분야는?</B></FONT></TD>
+  </TR>
+  <TR>
+    <TD><IMG SRC="jwalk2.jpg"></TD>
+    <TD VALIGN="top"><BR>
+    <FORM NAME="form1">
+      <INPUT TYPE="checkbox" NAME="check1" VALUE="1" onClick="checkNum(check1)">게임</INPUT><BR>
+      <INPUT TYPE="checkbox" NAME="check2" VALUE="2" onClick="checkNum(check2)">만화</INPUT><BR>
+      <INPUT TYPE="checkbox" NAME="check3" VALUE="3" onClick="checkNum(check3)">음악</INPUT><BR>
+      <INPUT TYPE="checkbox" NAME="check4" VALUE="4" onClick="checkNum(check4)">영화</INPUT><BR>
+      <INPUT TYPE="checkbox" NAME="check5" VALUE="5" onClick="checkNum(check5)">채팅</INPUT><BR>
+    </FORM>
+    </TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>form 객체의 프로퍼티</TITLE>
+<STYLE TYPE="text/css">
+<!--
+td {
+	font-family: "굴림";
+	font-size: 12px;
+}
+-->
+</STYLE>
+</HEAD>
+
+<BODY BACKGROUND="bg2.gif">
+<FORM NAME="form1" ACTION="" METHOD="post">
+  <TABLE WIDTH="200" BORDER="0" ALIGN="CENTER" CELLPADDING="1" CELLSPACING="0">
+    <TR> 
+      <TD WIDTH="73">아이디</TD>
+      <TD WIDTH="123"><INPUT NAME="id" TYPE="text" SIZE="10" MAXLENGTH="10"></TD>
+    </TR>
+    <TR> 
+      <TD>비밀번호</TD>
+      <TD><INPUT NAME="pwd" TYPE="password" SIZE="10" MAXLENGTH="10"></TD>
+    </TR>
+  </TABLE>
+</FORM>
+<HR>
+<FORM NAME="form2" ACTION="" METHOD="post">
+<TABLE WIDTH="200" BORDER="0" ALIGN="CENTER" CELLPADDING="1" CELLSPACING="0">
+    <TR> 
+      <TD>
+	    <INPUT TYPE="submit" VALUE="로그인"> 
+	    <INPUT TYPE="button" VALUE="회원가입"> 
+      </TD>
+    </TR>
+  </TABLE>
+</FORM>
+<HR>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+document.write("<CENTER>")
+document.write("폼의 이름은 순서대로 <B>" + document.forms[0].name + "과 " + document.forms[1].name + "</B>입니다.<BR><BR>")
+document.write("첫번째 폼의 첫번째 요소의 유형은 <B>" + document.forms[0].elements[0].type + "</B>입니다.<BR><BR>")
+document.write("두번째 폼에 삽입된 요소의 유형은 <B>" + document.forms[1].elements[0].type + ", " + document.forms[1].elements[1].type + "</B>입니다.")
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

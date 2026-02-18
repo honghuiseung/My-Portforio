@@ -1,0 +1,11 @@
+--MINUS
+--그룹 활동하는 가수(group_star) 이름 테이블에서 싱글 활동만 하는 가수(single_star) 이름을 출력 시험에나옴
+SELECT * FROM single_star MINUS SELECT * FROM group_star;
+
+--그룹 활동과 싱글활동을 같이하는 가수이름을 출력
+SELECT * FROM single_star INTERSECT SELECT * FROM group_star;
+
+--UNION 각 쿼리의 결과 합을 반환하는 합집합 (중복불가)
+SELECT * FROM single_star UNION SELECT * FROM group_star;
+
+SELECT * FROM single_star UNION ALL SELECT * FROM group_star;

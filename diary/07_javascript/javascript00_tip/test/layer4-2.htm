@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>레이어 제어하기</TITLE>
+</HEAD>
+<BODY>
+<FORM>
+<A HREF="#" onClick="document.all['bgimg'].style.backgroundImage = 'window2.jpg'">배경 이미지 바꾸기</A>
+</FORM>
+<DIV ID="poem" STYLE="position:absolute; left:30px; top:65px; width:250px; height:300px; z-index:3">
+  <H3>길</H3>
+  <BR>
+길에서 벗어나야 <BR>
+길이었다는 것을 알게 되듯 <BR>
+그대에게서 벗어나 <BR>
+나 <BR>
+그대 사람이었다는 것을 <BR>
+알았네 <BR>
+끝이 보이지 않았지만 <BR>
+다시 가지 않을 수 없었네 <BR>
+가도 가도 막막한 그 길에서 <BR>
+내 영혼은 다 부르텄다 <BR>
+</DIV>
+<DIV ID="bgimg" STYLE="position:absolute; left:10px; top:50px; width:550px; height:330px; z-index:1; background-image: url(window.jpg); layer-background-image: url(window.jpg);"></DIV>
+
+</BODY>
+</HTML>

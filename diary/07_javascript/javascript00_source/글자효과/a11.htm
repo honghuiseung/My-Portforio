@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+<style>
+#theDiv {
+ POSITION : relative;  Z-INDEX : 8; VISIBILITY : visible; ALIGN : center; color:red; font-weight:bolder;}//글자 속성 설정
+</style>
+<script language="JavaScript">
+function nextSize(i,incMethod,textLength)
+{
+if (incMethod == 1) { return (22*Math.abs(Math.sin(i/(textLength/3.14))) );
+}
+if (incMethod == 2) { return (255*Math.abs(Math.cos(i/(textLength/3.14))));
+}
+return(0)
+}
+function sizeCycle(text,method,dis)
+{
+var output = "";
+for (i = 0; i < text.length; i++) {
+size = parseInt(nextSize(i +dis,method,text.length));
+output += "<font style='font-size: "+ size +"pt'>" +text.substring(i,i+1)+ "</font>";
+}
+if (document.all)
+theDiv.innerHTML = output;
+else if (document.getElementById){
+rng = document.createRange();
+el = document.getElementById('theDiv');
+rng.setStartBefore(el);
+htmlFrag = rng.createContextualFragment(output);
+while (el.hasChildNodes()) el.removeChild(el.lastChild);
+el.appendChild(htmlFrag);}
+else if (document.layers){
+document.theDiv.document.write("<font face='Arial'point-size=15>"+output+"</font>");
+document.theDiv.document.close();}
+}
+
+function doWave(n) {
+var theText = '글자가 춤을 춰요!';  //텍스트 입력 
+
+sizeCycle(theText,1,n);
+if (n > theText.length) {
+n=0
+}
+setTimeout("doWave(" + (n+1) + ")", 100);
+}
+</script>
+</head>
+<body onload="doWave(0)">
+<br><br>
+<div ID="theDiv" align="center"></div>
+</body>
+</html>

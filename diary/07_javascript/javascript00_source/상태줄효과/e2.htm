@@ -1,0 +1,53 @@
+<html>
+<head>
+
+<script language="JavaScript"> 
+<!--
+function snapIn(jumpSpaces,position) { 
+//출력할 내용 설정
+  var msg = "Welcome to my homepage!!" 
+  var out = "" 
+  if (killScroll) {return false} 
+  for (var i=0; i<position; i++) 
+    {out += msg.charAt(i)} 
+  for (i=1;i<jumpSpaces;i++) 
+    {out += " "} 
+  out += msg.charAt(position) 
+  window.status = out 
+  if (jumpSpaces <= 1) { 
+    position++ 
+    if (msg.charAt(position) == ' ') 
+      {position++ } 
+    jumpSpaces = 100-position 
+  } else if (jumpSpaces >  3) 
+       {jumpSpaces *= .75} 
+  else 
+    {jumpSpaces--} 
+  if (position != msg.length) { 
+    var cmd = "snapIn(" + jumpSpaces + "," + position + ")"; 
+    scrollID = window.setTimeout(cmd,5); 
+  } else { 
+    scrolling = false 
+    return false 
+  } 
+  return true 
+} 
+function snapSetup() { 
+if (scrolling)   
+  if (!confirm('Re-initialize snapIn?')) 
+   return false   
+   killScroll = true   
+   scrolling = true   
+   var killID = window.setTimeout('killScroll=false',6) 
+   scrollID = window.setTimeout('snapIn(100,0)',10) 
+   return true     
+} 
+var scrollID = Object 
+var scrolling = false 
+var killScroll = false 
+//-->
+</script> 
+</head>
+<body onload="timerONE=window.setTimeout('snapIn(100,0)',10); "> 
+</body>
+</html>

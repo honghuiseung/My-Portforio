@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+<script language="Javascript1.2"> 
+<!--Begin
+var mymessage = "오른 클릭은 정말로 안돼요!";
+function rtclickcheck(keyp){
+ if (navigator.appName == "Netscape" && keyp.which == 3) {
+   alert(mymessage);
+   return false;
+ }
+ if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+   alert(mymessage);
+   return false;
+ }
+}
+document.onmousedown = rtclickcheck
+// End-->
+</script>
+</head>
+<body>
+화면을 오른쪽 클릭해보세요.
+</body>
+</html>

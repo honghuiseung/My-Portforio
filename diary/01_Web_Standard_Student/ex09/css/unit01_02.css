@@ -1,0 +1,13 @@
+﻿nav{border: 1px solid #980c10; background: #d81b21;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff3019+0,cf0404+100;Red+3D */
+background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+#topNav{list-style: none; width: 800px; margin: 0 auto; padding:0px; height: 45px;}
+#topNav li{float: left;}
+#topNav li a{display: block; text-decoration: none; font-size: 1.2em; font-weight: bold; color: #ffffff; text-transform: uppercase; text-shadow: 0 0 5px #666666; padding: 5px 10px 10px 10px; letter-spacing: -1px;}
+#topNav li a:after{content: "/"; font-size: 1.4em; line-height: 1.2em; position: relative; top: 5px;}
+#topNav li a:hover{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+1,ff3019+100,ff3019+100 */
+background: linear-gradient(to bottom,  #cf0404 1%,#ff3019 100%,#ff3019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+/* 메뉴 선택된 느낌줄떄는 그라데이션 반대로 넣기 */

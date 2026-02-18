@@ -1,0 +1,100 @@
+<html>
+<head><title>Untitled</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function setVariables() {
+if (navigator.appName == "Netscape") {
+v = ".top=";
+h = ".left=";
+dS = "document.";
+sD = "";
+y = "window.pageYOffset";
+x = "window.pageXOffset";
+iW = "window.innerWidth";
+iH = "window.innerHeight";
+}
+
+else {
+h = ".pixelLeft=";
+v = ".pixelTop=";
+dS = "";
+sD = ".style";
+y = "document.body.scrollTop";
+x = "document.body.scrollLeft";
+iW = "document.body.clientWidth";
+iH = "document.body.clientHeight";
+}
+xyz = 500;
+innerX = eval(iW) - 115;
+innerY = eval(iH) - 110;
+object = "logo";
+checkLocationA();
+}
+movex = 0;
+movey = 0;
+xdiff = 0;
+ydiff = 0;
+ystart = 0;
+xstart = 0;
+
+function checkLocation() {
+yy = eval(y);
+xx = eval(x);
+ydiff = ystart - yy;
+xdiff = xstart - xx;
+if ((ydiff < (-1)) || (ydiff > (1))) movey = Math.round(ydiff / 10), ystart -= movey;
+if ((xdiff < (-1)) || (xdiff > (1))) movex = Math.round(xdiff / 10), xstart -= movex;
+eval(dS + object + sD + v + (ystart + innerY));
+eval(dS + object + sD + h + (xstart + innerX));
+setTimeout("checkLocation()", 10);
+}
+
+function checkLocationA() {
+ystart = eval(y);
+xstart=eval(x);
+}
+
+function switchLogo(abc) {
+if (abc == "menu") {
+eval(dS + object + sD + v + 0);
+eval(dS + object + sD + h + (-200));
+object = abc;
+}
+else xyz = setTimeout("delayLogo()", 2000)
+}
+
+function delayLogo() {
+eval(dS + object + sD + v + 0);
+eval(dS + object + sD + h + (-200));
+object = 'logo';
+}
+//-->
+</script>
+</head>
+<body OnLoad="setVariables();checkLocation()">
+<div id="logo" style="position:absolute; visibility:show; left:0px; top:-200px; z-index:2">
+<table border=0 cellspacing=10 cellpadding=0 width=100>
+<tr><td>
+<center><br><br><br>
+<A href="javascript:void(0)"; onmouseover="switchLogo('menu')">검색사이트</A></center>
+</td></tr>
+</table>
+</div>
+<div id="menu" style="position:absolute; visibility:show; left:0px; top:-200px; z-index:2">
+<table border=0 cellspacing=10 cellpadding=0 width=100>
+<tr><td>
+<center>
+<a href="http://www.naver.com"; onmouseover="clearTimeout(xyz)"; onmouseout="switchLogo('logo')">NAVER</a></center>
+</td></tr>
+<tr><td>
+<center>
+<a href="http://kr.yahoo.com"; onmouseover="clearTimeout(xyz)"; onmouseout="switchLogo('logo')">YAHOO</a></center>
+</td></tr>
+<tr><td>
+<center>
+<a href="http://www.simmani.com"; onmouseover="clearTimeout(xyz)"; onmouseout="switchLogo('logo')">SIMMANI</a></center>
+</td></tr>
+</table>
+</div>
+</body>
+</html>

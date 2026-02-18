@@ -1,0 +1,5 @@
+﻿li+li{margin-left: 20px; background-color: #ff6600;}
+/* 인접한 동위태그에만 스타일 적용 */
+li~li{margin-left: 20px; background-color: #ff6600;}
+/* 인접하지 않은 동위태그에도 스타일 적용 */
+/* (2주후에)문제로 나옴 */

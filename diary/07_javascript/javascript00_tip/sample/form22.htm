@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>text 프로퍼티와 value 프로퍼티</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var choiceIndex = -1
+
+function showText(obj) {
+  if (choiceIndex == -1) 
+     choiceIndex = obj.selectedIndex
+  opMenu = obj.options[choiceIndex].text
+  opValue = obj.options[choiceIndex].value
+  str = "메뉴명 : " + opMenu  + "\r서버로 넘기는 값 : " + opValue
+  alert(str)
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="bg17.gif">
+<FORM NAME="myform">
+<H3>음악을 즐길 수 있는 사이트</H3>
+<SELECT NAME="ex" onChange="showText(myform.ex)">
+<OPTION VALUE="http://www.bugsmusic.co.kr">벅스뮤직
+<OPTION VALUE="http://www.maxmp3.co.kr">맥스mp3
+<OPTION VALUE="http://www.mymusic.co.kr">마이뮤직
+<OPTION VALUE="http://www.pukii.com">푸키
+</SELECT>
+</FORM>
+</BODY>
+</HTML>

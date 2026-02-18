@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>방명록</TITLE>
+<STYLE TYPE="text/css">
+<!--
+BODY {
+	background-attachment: fixed;
+	background-image: url(bg_w6.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+TD {
+	font-size: 12px;
+}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function checkChars(frm){
+  var maxlength=80 
+  var len = frm.comment.value.length
+  if (len > maxlength){
+    alert("80자 까지만 입력할 수 있습니다")
+    return false
+  }
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="form1" onSubmit="return checkChars(this)">
+  <TABLE WIDTH="352" BORDER="0" ALIGN="CENTER" CELLPADDING="5" CELLSPACING="0">
+    <TR> 
+      <TD WIDTH="79" ALIGN="RIGHT">이름 </TD>
+      <TD WIDTH="282"><INPUT NAME="name" TYPE="text" ID="name" SIZE="20" MAXLENGTH="15"></TD>
+    </TR>
+    <TR> 
+      <TD ALIGN="RIGHT">메일 </TD>
+      <TD><INPUT NAME="mail" TYPE="text" ID="mail" SIZE="20" MAXLENGTH="20"></TD>
+    </TR>
+    <TR> 
+      <TD HEIGHT="91" ALIGN="RIGHT"> 하고 싶은 말 </TD>
+      <TD><TEXTAREA NAME="comment" COLS="20" ROWS="5" ID="comment"></TEXTAREA></TD>
+    </TR>
+    <TR> 
+      <TD HEIGHT="28" COLSPAN="2"><DIV ALIGN="CENTER"> 
+          <INPUT NAME="Submit" TYPE="submit" VALUE="등록하기">
+          &nbsp; 
+          <INPUT TYPE="RESET" NAME="Submit2" VALUE="새로쓰기">
+        </DIV></TD>
+    </TR>
+  </TABLE>
+<P>&nbsp;</P></FORM>
+</BODY>
+</HTML>

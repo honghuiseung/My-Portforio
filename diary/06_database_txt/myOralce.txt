@@ -1,0 +1,30 @@
+SELECT * FROM dept;
+SELECT deptno, dname, loc FROM dept;
+-- Ctrl + Enter : 실행
+
+SELECT * FROM emp;
+--SELECT 필드; col 필드 row 
+
+--empno와 ename필드를 emp테이블에서 출력해라
+SELECT empno, ename FROM emp;
+
+--이름과 월급과 연봉을 출력해라
+SELECT ename, sal, sal*12 FROM emp;
+
+SELECT ename, sal, job, sal*12+comm , comm, deptno FROM emp;
+
+--널 값을 가진 데이터를 NVL 함수로 제대로 계산하기
+SELECT ename, sal, job, NVL(comm, 0) , sal*12+NVL(comm, 0), comm, deptno FROM emp;
+
+--컬럼명 대신에 별칭부여
+SELECT ename, sal*12+NVL(comm, 0) Annsal FROM emp;
+SELECT ename, sal*12+NVL(comm, 0) 연봉 FROM emp;
+SELECT ename, sal*12+NVL(comm, 0) "A n n s a l" FROM emp;
+--Concatenation (컨케터네이션) 연속자, 연결자
+SELECT ename || '의 직급은 ' || job || '입니다.' AS 직급 FROM emp;--큰 따옴표 안 됨.
+SELECT deptno FROM emp;
+SELECT DISTINCT deptno FROM emp;
+
+
+
+

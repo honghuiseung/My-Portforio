@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE> 쿠키를 구워구워~ </TITLE>
+<SCRIPT LANGUAGE="Javascript"> 
+<!-- 
+expireDate = new Date() 
+expireDate.setMonth(expireDate.getMonth()+6) // 6개월간 쿠키 저장하기 
+cookieName = "" 
+if (document.cookie != "") { 
+   cookieName = document.cookie.split("=")[1] 
+} 
+
+function setCookie() { 
+   cookieName = "test"  // 쿠키 이름을 test 로 설정합니다
+   document.cookie = "cookieName="+cookieName+";expires=" + expireDate.toGMTString() 
+} 
+ 
+
+function deletecookie(){ 
+   if (document.cookie != "") { 
+      thisCookie = document.cookie.split("; ") 
+      expireDate = new Date 
+      expireDate.setDate(expireDate.getDate()-1) 
+      for (i=0; i<thisCookie.length; i++) { 
+        cookieName = thisCookie[i].split("=")[1] 
+	document.cookie = "cookieName="+cookieName + ";expires=" + expireDate.toGMTString() 
+      } 
+   } 
+} 
+
+function viewCookie(){
+   if (document.cookie != "") { 
+      thisCookie = document.cookie.split("; ") 
+      for (i=0; i<thisCookie.length; i++) 
+        document.write(thisCookie[i])
+
+      
+   } 
+} 
+//--> 
+</SCRIPT> 
+</HEAD> 
+<BODY BACKGROUND="bg27.gif"> 
+<CENTER> 
+<SCRIPT LANGUAGE="Javascript">         
+<!-- 
+  if (document.cookie != "" )
+    document.write("쿠키가 있습니다."); 
+  else 
+    document.write("쿠키를 만들어 볼까요?"); 
+  document.write("<p>현재 쿠키의 이름은: <font color=red><b>" + cookieName + "</b></font>"); 
+//  --> 
+</SCRIPT>         
+<FORM> 
+<INPUT TYPE="submit" VALUE="쿠키 버리기" onClick="deletecookie();"> 
+<INPUT TYPE="submit" VALUE="쿠키 만들기" onClick="setCookie();"> 
+<INPUT TYPE="submit" value="보여줘" onClick="viewCookie()">
+</FORM>
+</BODY>
+</HTML>
+

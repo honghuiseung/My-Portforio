@@ -1,0 +1,35 @@
+--FRIMARY KEY 제약조건
+CREATE TABLE emp05( 
+empno number(4) CONSTRAINT EMP05_EMPNO_PK PRIMARY KEY, ename varchar2(10) CONSTRAINT EMP05_ENAME_NN NOT NULL, job varchar2(9), deptno number(2));
+INSERT INTO emp05 VALUES(1000, '허준', '사원', 30);
+INSERT INTO emp05 VALUES(1000, '홍길동', '과장', 20);
+INSERT INTO emp05 VALUES(null, '이순신', '부장', 10);
+INSERT INTO emp05 VALUES(5555, '이순신', '부장', 10);
+SELECT * FROM emp05;
+--FOREIGN 제약조건
+INSERT INTO emp (empno,ename, job, deptno) VALUES(1010, '홍길동', '사원', 50);
+CREATE TABLE emp06(
+empno number(4) CONSTRAINT EMP05_EMPNO_PK PRIMARY KEY, ename varchar2(10) CONSTRAINT EMP05_ENAME_NN NOT NULL,
+job varchar2(9), deptno number(2) REFERENCES DEPT(DEPTNO));
+INSERT INTO emp06 VALUES(1010, '홍길동', '사원', 30);
+SELECT * FROM emp06;
+INSERT INTO emp06 VALUES(1011, '홍길동1', '사원', 50);--deptno에 50이 없어서 안들어감 constraint_type으로는 나오지않음
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, r_CONSTRAINT_name, TABLE_NAME FROM USER_CONSTRAINTS WHERE table_name IN('EMP06');--시험문제
+--r_CONSTRAINT_name : 참조한 테이블이름(거꾸로 생각하면 안됨)
+
+--제약조건 살피기
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, r_CONSTRAINT_name, TABLE_NAME FROM USER_CONSTRAINTS WHERE table_name IN('EMP06');
+
+--check 제약조건
+CREATE TABLE emp07(
+    empno number(4) CONSTRAINT EMP07_EMPNO_PK PRIMARY KEY, ename varchar2(10) CONSTRAINT EMP07_ENAME_NN NOT NULL,
+sal number(7, 2) CONSTRAINT EMP07_SAL_CK CHECK(SAL BETWEEN 500 AND 5000),
+gender varchar2(1) CHECK(GENDER IN('M','F'))
+);
+
+
+
+
+
+
+

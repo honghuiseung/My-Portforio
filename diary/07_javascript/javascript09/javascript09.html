@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 내장 함수인 메소드들</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <h1>JavaScript 내장 함수인 메소드들</h1>
+    
+    <div class="article">
+        <h2>내장 함수인 메소드들</h2>
+    </div>
+    <p>&nbsp;</p>    
+    
+    
+  <h3>내장 함수인 메소드들</h3>
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td class="gray">
+	    <p>alert와 confirm, prompt은 원래 window.alert()식으로 표현된다. 
+    그러나 window객체는 window라는 객체를 생략해서 사용하고 있기 때문에 window객체의 메소드보다는 내장함수로 분류해서 사용한다</p>        
+        </td>
+      </tr>
+  </table>
+
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<h3>시간에 따라 명령을 수행하게 해주는 메소드들</h3>
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td class="gray">
+        <p class="normal">setTimeout(a,b)</p>
+        <p> - a : 함수나 명령어<br>
+          - b : 지연 시간 (1/1000초 단위)</p>
+        <p>&nbsp;</p>
+        <p class="normal">          clearTimeout(a) </p>
+        <p>- setTimeout()으로 설정한 내용을 중지한다</p>
+        </td>
+      </tr>
+    </table>
+
+    
+    
+    
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<h3>시간에 따라 반복하여 명령을 수행하는 메소드들</h3>
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td class="gray">
+        <p class="normal">A = setInterval(a,b) </p>
+        <p>- a : 함수나 명령어<br>
+          - b : 지연 시간 (1/1000초 단위)</p>
+        <p>&nbsp;</p>
+        <p class="normal">          clearInterval(A)     </p>
+        <p>- 변수 A에 정의된 setInterval()의 실행을 중지</p>
+        </td>
+      </tr>
+  </table>
+	<p>&nbsp;</p>
+
+    <p>사용예) 시계만들기</p>
+    
+<pre class="gray">
+<span class="normal">다음 내용을 &lt;head&gt;태그 사이에 입력한다.</span>
+
+&lt;head&gt;
+    &lt;title&gt;시계만들기&lt;/title&gt;
+&lt;script&gt;
+<span class="green"></span>    function start_clock() 
+    {
+        var now = new Date()
+        var hours = now.getHours()
+        var minutes = now.getMinutes()
+        var seconds = now.getSeconds()<br>        var date = now.getDate();
+
+        if(seconds &lt; 10) seconds = &quot;0&quot; + seconds
+        if(minutes &lt; 10) minutes = &quot;0&quot; + minutes
+        if(date &lt; 10) date = &quot;0&quot; + date
+        if(hours &lt; 12) minutes = minutes + &quot; A.M &quot;
+            else if(hours &gt;= 12) minutes = minutes + &quot; P.M &quot;
+        if(hours == 0) hours = hours + 12
+            else if(hours &gt; 12) hours = hours - 12
+            
+        var time = hours + &quot;:&quot; + minutes + &quot;:&quot; + seconds
+        document.time_form.clock.value = time
+        setTimeout(&quot;start_clock()&quot;, 100)
+    }
+<span class="green"></span>&lt;/script&gt;
+&lt;/head&gt;
+
+
+<span class="normal">앞에 입력했던 start_clock()함수를 실행하는 이벤트 핸들러를 &lt;body&gt;태그에 삽입한다. </span>
+
+&lt;body background=&quot;images/back4.jpg&quot; <span class="normal">onLoad =&quot;start_clock()&quot;</span>&gt;
+
+
+<span class="normal">다음 소스를 &lt;bady&gt;태그 사이 시계를 삽입할 위치에 입력한다</span>
+
+    &lt;form name = &quot;time_form&quot;&gt;
+        &lt;input name = &quot;clock&quot; size = &quot;12&quot; value = &quot;   TIME  &quot;&gt;
+    &lt;/form&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+    <p>사용예) 그림이 커졌다 작아졌다 변하게 만들기</p>
+    
+<pre class="gray">
+<span class="normal">다음 내용을 &lt;head&gt;태그 사이에 입력</span>
+
+&lt;head&gt;
+&lt;title&gt;크기가 변하는 그림&lt;/title&gt;
+&lt;script&gt; 
+<span class="green"></span>    var b = 1; 
+    var c = true; 
+    var img_width =600;
+    var img_height =413;
+    
+    function fade(){ 
+        if(c == true) b++ 
+        if(b==100) {b-- ; c = false } 
+        if(b==10) {b++; c = true; } 
+        if(c == false) b-- 
+        u.width=img_width + b; 
+        u.height=img_height - b; 
+        setTimeout(&quot;fade()&quot;,50); } 
+<span class="green"></span>&lt;/script&gt;
+&lt;/head&gt;
+
+
+앞에 입력했던 fade()함수를 실행하는 이벤트 핸들러를 &lt;body&gt;태그에 삽입
+onload=&quot;fade()&quot;를 입력 다음 소스를 &lt;bady&gt;태그 사이에 효과를 적용할 그림을 삽입
+효과를 적용할 그림을 선택하기 위해서는 &lt;img&gt; 태그에 'u'라는 name속성을 사용하여 자바스크립트에서 제어
+        <span class="normal">&lt;center&gt;&lt;img src=&quot;images/bt.jpg&quot; name=&quot;u&quot; border=&quot;1&quot;&gt;&lt;/center&gt;</span>
+    
+    &lt;body <span class="normal">onLoad=&quot;fade()&quot;</span>&gt;
+        &lt;center&gt;&lt;img src=&quot;images/bt.jpg&quot; name=&quot;u&quot; border=&quot;1&quot;&gt;&lt;/center&gt;
+    &lt;/body&gt;
+</pre>
+
+
+	<p>&nbsp;</p>
+    <p>사용예) 그림이 순서대로 바뀌는 효과</p>
+	<pre class="gray"><span class="gray">&lt;img src=&quot;fall1.gif name=&quot;shot&quot;&gt; - fall1.gif그림에 shot라는 이름을 설정한다.
+document.shot.complete - 문서에서 shot 이름을 가지고 있는 그림이 전송 완료되었는지 확인
+document.shot.src=&quot;fall&quot;+num+&quot;.gif&quot; - 그림을 fall2, fall3, fall4의 순서대로 바꿔준다.
+setTimeout(&quot;timer()&quot;,2000); - 재귀적 용법으로 2초마다 time()함수를 실행 </span>
+
+<span class="normal">1) 가을동화.html 파일을 불러와 &lt;img&gt; 태그 안에 name 속성을 'shot'로 설정</span>
+    &lt;p style=&quot;text-align: center; margin-top: 150px;&quot;&gt;
+        &lt;img src=&quot;fall1.gif&quot; <span class="normal">name=&quot;shot&quot;</span> style=&quot;border:1px solid #555555;&quot; /&gt;
+    &lt;/p&gt;</p><p><span class="normal">2) 다음 내용을 &lt;head&gt; 태그 사이에 입력</span>
+&lt;head&gt;
+    &lt;title&gt;가을동화&lt;/title&gt;
+    &lt;script&gt;
+        var num = 2
+        function timer () {
+            if(<span class="normal">document.shot.complete</span>) {
+                <span class="normal">document.shot.src = &quot;</span><span class="bold_blue">images/</span><span class="normal">fall&quot; + num + &quot;.gif&quot;</span>
+                num++; if(num &gt; 4) num = 1
+            }
+            <span class="normal">setTimeout(&quot;timer()&quot;, 2000)</span><span class="red"></span>
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+<span class="normal">3) 다음 내용을 &lt;body&gt; 태그 사이에 입력</span>
+&lt;body  style=&quot;background-color: #e89828;&quot;  <span class="normal">onLoad=&quot;timer();&quot;</span>&gt;</pre>	
+
+
+  <p>&nbsp;</p>
+	<p>&nbsp;</p>
+    <h3>윈도우 창 속성을 설정해 주는 window 객체 메소드 </h3>
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td>
+        <p>문서를 프린트해주는 메소드<br>
+    print() : 현재 열려있는 문서를 인쇄한다</p>
+        </td>
+      </tr>
+  </table>
+  <p>&nbsp;</p>
+
+
+	<p>사용예) 비천무.html문서를 불러와 &quot;인쇄하기&quot; 실행 단추에 입력한 내용을 다음과 같이 수정 (크롬에서 확인!)</p>
+<pre class="gray">&lt;input type=&quot;button&quot; value=&quot;인쇄하기&quot; <span class="normal">onClick=&quot;window.print()&quot;</span>&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<h3>윈도우 창 크기를 조절해 주는 메소드들</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+        <p><span class="normal">resizeBy(a,b)</span><br>
+          - a : 변경할 가로 길이(픽셀)<br>
+    - b : 변경할 세로 길이(픽셀)</p>
+        <p>&nbsp;</p>
+        <p>          <span class="normal">resizeTo(a,b)</span><br>
+          - 가로a, 세로b 만큼 창의 크기를 설정<br>
+        </p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+
+    <p>사용예) 창크기를 조절하는 이벤트 핸들러</p>
+    
+<pre class="gray">
+<span class="normal">창 크기를 조절할 버튼을 두개 생성</span>
+
+&lt;body&gt;<br>&lt;form&gt;
+    &lt;input type=&quot;button&quot; value=&quot;축소하기&quot; /&gt;
+    &lt;input type=&quot;button&quot; value=&quot;600*460크기&quot; /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+
+<span class="normal">&quot;축소하기&quot; 버튼에는 resizeBy 핸들러, &quot;600*460크기&quot; 버튼에는 resizeTo 핸들러가 실행되도록 함.</span>
+
+    &lt;input type=&quot;button&quot; value=&quot;축소하기&quot; <span class="normal">onclick=&quot;window.resizeBy(-50,-50)&quot;</span> /&gt;
+    &lt;input type=&quot;button&quot; value=&quot;600*460크기&quot; <span class="normal">onclick=&quot;window.resizeTo(600,460)&quot;</span> /&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<h3>창 위치를 조절해주는 메소드들</h3>
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td class="gray">
+        <p><span class="normal">moveBy (a,b)</span><br>
+          - a : 이동할 가로 길이(픽셀)<br>
+    - b : 이동할 세로 길이(픽셀)</p>
+        <p>&nbsp;</p>
+        <p>          <span class="normal">moveTo (a,b)</span><br>
+          - 화면 왼쪽 상단을 기준으로 창의 위치를 가로 a, 세로 b 만큼 이동</p>
+        </td>
+      </tr>
+  </table>
+	<p>&nbsp;</p>
+
+    <p>사용예) 창위치를 조절할 단추를 두 개 만들 메소드를 적용</p>
+    
+<pre class="gray">&lt;body&gt;
+&lt;form&gt;
+    &lt;input type=&quot;button&quot; value=&quot;오른쪽으로 이동하기&quot; <span class="normal">onclick=&quot;window.moveBy(200,0)&quot;</span> /&gt;
+    &lt;input type=&quot;button&quot; value=&quot;왼쪽 상단에 정렬하기&quot; <span class="normal">onclick=&quot;window.moveTo(0,0)&quot;</span> /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<h3>문서를 스크롤 해주는 메소드들</h3>
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td class="gray">
+        <p><span class="normal">scrollBy (a,b)</span><br>
+          - a : 스크롤할 가로 길이(픽셀)<br>
+          - b : 스크롤할 세로 길이(픽셀)</p>
+        <p>&nbsp;</p>
+        <p>          <span class="normal">scrollTo (a,b)</span><br>
+          - 화면 좌측 상단을 기준으로 가로a 또는 세로b 만큼 윈도우 내용을 스크롤</p>
+        </td>
+      </tr>
+  </table>
+	<p>&nbsp;</p>
+	
+    <p>사용예) 자우림.htm을 불러온 다음 &lt;input&gt; 태그 안에 이벤트 핸들러를 사용해서 버튼을 클릭하면 
+화면 아래로 2500픽셀 만큼 스크롤 하도록 내용을 입력</p>
+<pre class="gray">&lt;input type=&quot;button&quot; value=&quot;문서 스크롤&quot; <span class="normal">onclick=&quot;scrollBy(0,2500)&quot;</span>&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>사용예) 문서를 자연스럽게 스크롤하게 만들기</p>
+	<pre class="gray">자우림.htm을 불러온 다음 &lt;head&gt;태그 사이에 다음 내용을 입력한다.
+    
+&lt;head&gt;
+    &lt;title&gt;자우림&lt;/title&gt;
+    &lt;script&gt;
+        function scr()
+        {
+            <span class="normal">scrollBy(0,10)</span>
+            <span class="normal">setTimeout('scr()',100)</span>
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+  
+다음 내용을 &lt;bady&gt;태그 안에 문서가 열릴 경우에 동작하게 해주는 이벤트 핸들러를 입력한다
+
+&lt;body bgcolor=&quot;#76006c&quot; <span class="normal">onload=&quot;scr()&quot;</span>&gt;
+</pre>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+    
+</div>
+</body>
+</html>

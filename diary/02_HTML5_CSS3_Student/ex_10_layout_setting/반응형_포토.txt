@@ -1,0 +1,30 @@
+1920모니터기준
+
+New Guide Layout
+프로그램 배우는 학생들은 요걸로... (그림이미지 캡쳐 참고)
+포토샵CC > View > New Guides Layout
+
+
+1280_grid@2 : 2560 X 4000 X 144pixel/inch (Column Width 160px*12 / Gutter Width 48px*11 / Margin Width 56 / 결과 : 총 컬럼갯수 12개)
+1280_grid@1 : 1280 X 2000 X 72pixel/inch (Column Width 80px*12 / Gutter Width 24px*11 / Margin Width 28 / 결과 : 총 컬럼갯수 12개)
+
+960_grid@2 : 1920 X 4000 X 144pixel/inch (Column Width 120px*12 / Gutter Width 40px*11 / Margin Width 20 / 결과 : 총 컬럼갯수 12개)
+960_grid@1 : 960 X 2000 X 72pixel/inch (Column Width 60px*12 / Gutter Width 20px*11 / Margin Width 10 / 결과 : 총 컬럼갯수 12개)
+
+768_grid@2 : 1536 X 4000 X 144pixel/inch (Column Width 152px*8 / Gutter Width 32px*7 / Margin Width 48 / 결과 : 총 컬럼갯수 8개)
+768_grid@1 : 768 X 2000 X 72pixel/inch (Column Width 76px*8 / Gutter Width 16px*7 / Margin Width 24 / 결과 : 총 컬럼갯수 8개)
+
+600_grid@2 : 1200 X 3000 X 144pixel/inch (Column Width 110px*8 / Gutter Width 32px*7 / Margin Width 48 / 결과 : 총 컬럼갯수 8개)
+600_grid@1 : 600 X 3000 X 72pixel/inch (Column Width 55px*8 / Gutter Width 16px*7 / Margin Width 24 / 결과 : 총 컬럼갯수 8개)
+
+360_grid@2 : 720 X 4000 X 144pixel/inch (Column Width 140px*4 / Gutter Width 16px*5 / 결과 : 총 컬럼갯수 4개)
+360_grid@1 : 360 X 2000 X 72pixel/inch (Column Width 70px*4 / Gutter Width 16px*5 / 결과 : 총 컬럼갯수 4개)
+
+포토샵 > File > New (Width 1180, Height 3000, 72pixel/inch)
+포토샵 > Edit > Preference > Guides, Grid (100Pixels / 10)  (단축키 : Ctrl+K)
+
+포토샵 > View > New Guides
+포토샵CC > View > New Guides Layout
+포토샵CS6 > Window > Extensions > GuideGuide (Column Width 80px / Gutter Width 20px / 결과 : 총 컬럼갯수 12개)
+포토샵 > Image > Canvas Size (Width 1200으로 수정 : 10px margin을 양옆으로 설정)
+

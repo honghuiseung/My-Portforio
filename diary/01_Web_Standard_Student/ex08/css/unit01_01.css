@@ -1,0 +1,4 @@
+﻿*{margin:0; padding:0;}
+img{border: 2px solid #efefef; box-shadow: 1px 1px 10px #666666;}
+.floatLeft{float:left; margin: 10px 20px 10px 0px;}
+.floatRight{float:right; margin: 10 0px 10px 20px;}

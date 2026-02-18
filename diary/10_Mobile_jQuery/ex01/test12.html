@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+        <div data-role="header" data-add-back-btn="true" data-backbtn="false"> <!-- backbtn은 붙여씀 -->
+		<!-- 두번째 페이지에서 새로고침으로 페이지를 새로 시작해야 다시 첫번째페이지에 왔을떄 백버튼 활성화 -->
+			<a href="#page2" class="ui-btn-right">페이지2</a>
+            <h1>페이지 제목</h1>
+        </div>
+		<div data-role="content">
+			<p>content영역</p>
+			<h1>첫번째 페이지</h1>
+		</div>
+		<div data-role="footer" class="ui-bar">
+			<a href="#page1">페이지1</a>
+			<a href="#page2">페이지2</a>
+		</div>
+    </div>
+	<div data-role="page" id="page2">
+        <div data-role="header" data-add-back-btn="true">
+            <h1>페이지 제목</h1>
+        </div>
+		<div data-role="content">
+			<p>content영역</p>
+			<h1>두번째 페이지</h1>
+		</div>
+		<div data-role="footer" class="ui-bar">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#page1">페이지1</a>
+				<a href="#page2">페이지2</a>
+			</div>
+		</div>
+    </div>	
+</body>
+</html>

@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<TITLE>selectedIndex</TITLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function loadPage(obj) {
+  location.href = obj.options[obj.selectedIndex].value
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="cartoon.jpg">
+<FORM NAME="myform">
+<H3>만화보러 가자</H3>
+<SELECT NAME="media" onChange="loadPage(myform.media)">
+<OPTION VALUE="http://kr.comics.yahoo.com/">야후! 만화
+<OPTION VALUE="http://www.comicplus.com/">코믹플러스
+<OPTION VALUE="http://www.ecomix.co.kr/">이코믹스 만화
+</SELECT>
+</FORM>
+</BODY>
+</HTML>

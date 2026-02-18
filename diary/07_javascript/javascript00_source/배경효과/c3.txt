@@ -1,0 +1,47 @@
+문서를 열 때 마다 랜덤하게 배경 그림이 나타나게 만들기
+
+1.<head> 태그 안에 입력==========================================================
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+today=new Date();
+jran=today.getTime();
+var number = 4;			//랜덤하게 표현할 배경 그림의 개수
+var random_number="";
+var image="";
+var text_color="";
+ia=9301;
+ic=49297;
+im=233280;
+jran = (jran*ia+ic) % im;
+random_number = Math.ceil( (jran/(im*1.0)) *number);
+// Loads the appropriate image and text color based on random number.
+if (random_number==1) {
+text_color="000000";
+image="bg01.gif";
+}
+if (random_number==2) {
+text_color="000000";
+image="bg02.gif";
+}
+if (random_number==3) {
+text_color="000000";
+image="bg03.gif";
+}
+if (random_number==4) {
+text_color="000000";
+image="bg04.gif";
+}
+//-->
+</SCRIPT>
+
+2.<body> 태그 안에 입력==========================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.open();
+document.write("<BODY  BACKGROUND='"+image+"' TEXT='"+text_color+"'>");
+document.write("<CENTER></CENTER>");
+//-->
+</SCRIPT>

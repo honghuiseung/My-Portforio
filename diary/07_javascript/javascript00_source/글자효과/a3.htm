@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<title>제목없음</title>
+<meta name="generator" content="Namo WebEditor v4.0">
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function initArray() {
+this.length = initArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+var ctext = "글자색이바뀌네요!";//글자 입력하기
+var speed = "1000";
+var x = 0;
+var color = new initArray(
+"red","blue","green","black","yellow"//색상 설정하기
+);
+if(navigator.appName == "Netscape") {
+document.write('<layer id="c"><center>'+ctext+'</center></layer><br>');
+}
+if (navigator.appVersion.indexOf("MSIE") != -1){
+document.write('<div id="c"><center>'+ctext+'</center></div>');
+}
+function chcolor(){ 
+if(navigator.appName == "Netscape") {
+document.c.document.write('<center><font color="'+color[x]);
+document.c.document.write('">'+ctext+'</font></center>');
+document.c.document.close();
+}
+else if (navigator.appVersion.indexOf("MSIE") != -1){
+document.all.c.style.color = color[x];
+}
+(x < color.length-1) ? x++ : x = 0;
+}
+setInterval("chcolor()",1000);
+//-->
+</script>
+</body>
+
+</html>

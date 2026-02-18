@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 객체 사용하기</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+      <h1>JavaScript 객체 사용하기</h1>
+    </div>
+
+    <div class="article">
+        <h2>JavaScript 객체 사용하기</h2>
+    </div>
+    <p>&nbsp;</p>
+    
+    <h3>내장 객체 사용하기</h3>
+    <p>자바스크립트는 객체기반(object Based)의 스크립트 언어이다. '객체'란 '특정 기능'을 수행하는 단위체를 말하는데 우리의 평소 생활에서 예를 찾는다면, 평소 전화를 걸거나 받을 때 사용하는 '휴대폰'이나 혹은 어떤 물건을 멀리 보내야 할 때 이를 대행하는 '택배기사'와 '집배원' 등을 모두 '객체'라고 할 수 있다. 이때, 해당 객체가 지닌 각각의 기능을 자바스크립트에서는 '메서드'라는 용어로 정의한다.    </p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+    <p>&nbsp;&nbsp;휴대폰.통화하기()&nbsp;&nbsp;<span class="green">//메서드</span></p>
+    <p>&nbsp;&nbsp;휴대폰.색상&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">//속성</span></p>        
+        </td>
+      </tr>
+  </table>
+    <p>&nbsp;</p>
+    <p>자바스크립트는 항상 객체를 기반으로 기술하고, 객체명 뒤의 점(.)을 경계로 그 객체의 해당하는 메서드(기능) 또는 속성을 기술</p>
+    <p><span class="gray">- 자바스크립트에는 저마다 고유한 기능을 가진 다양한 종류의 객체들이 존재하는데, 크게 '내장 객체', '브라우저 객체','사용자 정의 객체'등이 있으며 '내장객체'는 자바스크립트 내에 내장된 객체로서 Date, Array, Math 등이 있으며, '브라우저 객체(BOM)'는 각 웹 브라우저에서 지원되는 객체로서 window, document(DOM), location 등이 있다.</span><br>
+    </p>    
+  <p>&nbsp;</p>
+  <p>사용예) Date객체 사용하기</p>
+    
+<pre>
+&lt;script&gt;
+    a=new Date()  <span class="green">//객체생성 : now연산자</span>
+    document.write(a)
+&lt;/script&gt;
+</pre>
+
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+    <h3>메소드로 날짜와 시간 표시하기</h3>
+      <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+        <tr>
+          <td><ul>
+            <li>
+            getYear() 년도 (1900년 이후의 년도)</li>
+            <li>              getFullYear() 년도를 구합니다</li>
+            <li>              getMonth() 월을 구합니다</li>
+            <li>              getDate() 일을 구합니다</li>
+            <li>              getDay() 요일을 구합니다</li>
+            <li>              getHours() 시간을 구합니다</li>
+            <li>              getMinutes() 분을 구합니다</li>
+            <li>              getSeconds() 초를 구합니다</li>
+            <li>              getTime() 1900년 1월 1일 이후 시간을 1000분의 1초로 표시</li>
+            <li>              getMilliseconds() 100분의 1초로 표시<br/>
+            </li>
+          </ul></td>
+        </tr>
+      </table>
+  <p>&nbsp;</p>
+  <p>사용예) 오늘 날짜 표시하기</p>
+    
+<pre>
+&lt;script&gt;
+<span class="green"></span>    a=new Date()
+    document.write(&quot;오늘은&quot;,a.getYear(),&quot;년&quot;,a.getMonth()+1,&quot;월&quot;,a.getDate(),&quot;일&quot;,&quot;입니다.&quot;)
+<span class="green"></span>&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+  <p>사용예) 요일 표시하기</p>
+    
+<pre>
+&lt;script&gt;
+<span class="green"></span>    a=new Date()
+    b=a.getDay()
+
+    switch(b)
+    {
+        case 0 : c=&quot;일&quot;
+        break
+
+        case 1 : c=&quot;월&quot;
+        break
+
+        case 2 : c=&quot;화&quot;
+        break
+
+        case 3 : c=&quot;수&quot;
+        break
+
+        case 4 : c=&quot;목&quot;
+        break
+        
+        case 5 : c=&quot;금&quot; 
+        break
+        
+        case 6 : c=&quot;토&quot; 
+        break
+      }
+
+    document.write(&quot;오늘은 &quot;,c,&quot;요일 입니다.&quot;)
+<span class="green"></span>&lt;/script&gt;
+</pre>
+
+
+
+
+  <p>&nbsp;</p>
+    <p>사용예) 특정 날짜 표시하기<br>
+    <span class="gray"> a = new Date(년도,월,일,시간,분,초,1/100초)</span></p>
+    
+<pre>
+&lt;script&gt;
+<span class="green"></span>    a=new Date(1991,11,18,11,32,11,11)
+    document.write(&quot;내가 태어난 날짜는&quot;,a.getMonth(),&quot;월&quot;,a.getDate(),&quot;일&quot;,
+                    a.getHours(),&quot;시&quot;,a.getMinutes(),&quot;분 입니다.&quot;)
+<span class="green"></span>&lt;/script&gt;
+</pre>
+
+
+
+  <p>&nbsp;</p>
+    <p>사용예) 날짜 시간 변경하기</p>
+    
+<pre>
+&lt;script&gt;
+<span class="green"></span>    a=new Date(1991,11,18,11,32,11,11)
+    a.setDate(20)
+    
+    document.write(&quot;내가 태어난 날짜는&quot;,a.getMonth(),&quot;월&quot;,a.getDate(),&quot;일&quot;,
+                    a.getHours(),&quot;시&quot;,a.getMinutes(),&quot;분 입니다.&quot;)
+<span class="green"></span>&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+  <p>사용예) D-Day 표시하기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;MY Birthday&lt;/title&gt;
+    &lt;script&gt;
+        var today = new Date()
+        var birth = new Date(&quot;June 1, 2002&quot;)
+        <span class="green">// Janu Febr Marc Apri May June July Augu Sept Octo Nove Dece</span>
+        var aa = birth.getTime()
+        var bb = today.getTime()
+        var day = Math.ceil((bb-aa)/24/60/60/1000)
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;img src=&quot;images/cup.gif&quot; width=&quot;377&quot; style=&quot;display: block; margin: 0 auto;&quot; /&gt;
+
+    &lt;script&gt;
+        document.write(&quot;&lt;p style='text-align: center;'&gt;&quot;)
+        document.write(&quot;내가 지구상에 태어난지 &quot; + day + &quot;일 지났어요.&quot;)
+        document.write(&quot;&lt;/p&gt;&quot;)
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+<p>&nbsp;</p>
+<h3>Mission01</h3>
+<p>이미지를 이용하여 요일별로 출력되도록 만들어 보세요.</p>
+
+
+
+<p>&nbsp;</p>
+<h3>Mission02</h3>
+<p>Doomsday를 정하고 거꾸로 카운트되는 이미지 시계를 만들어 보세요.</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>  
+  
+</div>
+</body>
+</html>

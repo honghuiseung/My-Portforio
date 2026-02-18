@@ -1,0 +1,6 @@
+﻿nav{height:50px; margin:0 auto; width:800px; /* overflow:hidden; */}
+#logo{float:left; position: relative; top: -10px; left: -50px;}
+#topMenu{float: right; list-style: none; position:relative; top:-30px;}
+#topMenu li{float: left;}
+#topMenu li.liStyle:after{content:"   |   "; white-space: pre;}
+#searchForm{float: left; position: relative; left:20px; top: -5px;}

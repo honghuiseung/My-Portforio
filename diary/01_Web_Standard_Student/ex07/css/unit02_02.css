@@ -1,0 +1,7 @@
+﻿body{font: 0.8em '맑은 고딕', sans-serif; margin: 0px 50px;}
+h1:before{content: open-quote;}
+h1:after{content: '*****' close-quote;}
+p{white-space: pre; counter-increment: myIndex;}
+p:before{content: counter(myIndex, upper-roman); font-size: 2em; color: red;}
+q{quotes: "<<" ">>" "[" "]";}
+.qStyle{quotes: "//" "//"; color: green;}

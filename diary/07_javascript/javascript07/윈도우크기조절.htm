@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>윈도우 크기 조절</title>
+<script>
+function expandingWindow(website) {
+	var winwidth = window.screen.availWidth;
+	var winheight = window.screen.availHeight;
+	var sizer = window.open("","","left=0,top=0,scrollbars=yes");
+
+	for (sizewidth = 1; sizewidth < winwidth; sizewidth += 7) {
+		sizer.resizeTo(sizewidth,winheight);
+	}
+	sizer.location = website;
+}
+</script>
+</head>
+<body>
+<center>
+	<a href="javascript:expandingWindow('http://www.hschool.co.kr')">나의 홈페이지로 이동</a>
+</center>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<script language="javascript"> 
+<!-- 
+function websider(url) { 
+  if (opener.closed) { 
+    root=window.open('','auctRoot','toolbar=yes,directories=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no'); 
+    root.location.href = url; 
+  } else { 
+    opener.location.href = url; 
+    parent.window.close() 
+  } 
+} 
+var hellotext="Welcome to my homepage!!"  //반짝이는 효과 안에 들어갈 내용 설정 
+var thetext="" 
+var step = 0; 
+function anim() 
+{ 
+thetext = hellotext; 
+step++ 
+if (step==4) {step=1} 
+if (step==1) {window.status='▶▶'+thetext+'◀◀'} 
+if (step==2) {window.status='▷▶'+thetext+'◀◁'} 
+if (step==3) {window.status='▶▷'+thetext+'◁◀'} 
+setTimeout("anim()",50); 
+} 
+function right(e) { 
+if (navigator.appName == 'Netscape' && 
+(e.which == 3 || e.which == 2)) 
+return false; 
+else if (navigator.appName == 'Microsoft Internet Explorer' && 
+(event.button == 2 || event.button == 3)) { 
+return false; 
+} 
+return true; 
+} 
+document.onmousedown=right; 
+if (document.layers) window.captureEvents(Event.MOUSEDOWN); 
+window.onmousedown=right; 
+// --> 
+</script> 
+</head> 
+
+<body onload="anim();"> 
+</body>
+</html>

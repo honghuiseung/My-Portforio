@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> 하늘을 본 적이 있나요? </TITLE>
+<STYLE TYPE="text/css">
+<!--
+p {
+	font-size: 12px;
+	color: #000099;
+}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="Javascript"> 
+<!-- 
+function setCookie( name, value, expiredays ) 
+{ 
+  var todayDate = new Date(); 
+  todayDate.setDate(todayDate.getDate() + expiredays); 
+  document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+} 
+
+function closeWin() 
+{ 
+  if ( document.forms[0].Notice.checked ) 
+  setCookie( "Notice", "done" , 1); 
+  self.close(); 
+} 
+// --> 
+</SCRIPT> 
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="white" LINK="white" VLINK="white" ALINK="white">
+<CENTER>
+<BR><BR>
+<IMG SRC="black2.jpg">
+<BR><BR>
+<FORM> 
+  <INPUT TYPE="checkbox" NAME="Notice" VALUE="">하루 동안 안 볼래요
+  <BR><BR>
+  <INPUT TYPE="button" VALUE="닫기" onClick="closeWin()">
+  
+</FORM> 
+</CENTER>
+</HTML>

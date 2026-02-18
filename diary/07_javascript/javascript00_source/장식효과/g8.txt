@@ -1,0 +1,62 @@
+화면을 튕기는 공 만들기
+
+1.<head> 태그에 삽입=======================================================================
+
+<script language="JavaScript" for="body" event="onclick">
+handleClick();
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+var iter = 0;
+var setId = 0;
+var down = true;
+var up = false;
+function handleClick() {
+if (setId != 0)
+window.clearInterval(setId);
+if (ball.style.display == "")
+ball.style.display = "none";
+ball.style.left = event.offsetX - 20;
+ball.style.top = event.offsetY - 20;
+iter = 0;
+ball.style.display = "";
+setId = window.setInterval("return generateGravity();", 20);
+}
+function generateGravity() {
+if ((parseInt(ball.style.top)+iter < ball.offsetParent.offsetHeight - 55) && down) {
+ball.style.top = parseInt(ball.style.top,10) + iter;
+iter++;
+return;
+}
+else {
+if ((parseInt(ball.style.top)< ball.offsetParent.offsetHeight - 55) && down) {
+ball.style.top = ball.offsetParent.offsetHeight - 50;
+return;
+}
+down = false;
+up = true;
+if (iter < 0 && parseInt(ball.style.top) > ball.offsetParent.offsetHeight - 55) {
+window.clearInterval(setId);
+setId = 0;
+}
+if (parseInt(ball.style.top) > 0 && up && iter >= 0) {
+ball.style.top = parseInt(ball.style.top,10) - iter;
+iter--;
+if (iter%3 == 0)
+iter--;
+return;
+}
+down = true;
+up = false;
+   }
+}
+</script>
+
+
+2.<body> 태그 안에 삽입=======================================================================
+
+id="body"
+
+
+3.<body> 태그에서 효과를 적용할 위치에 삽입================================================
+
+<div id="ball" style="display:none; position:absolute; left:10; top:10; height:40; width:40"><img src="ball.gif"></div>

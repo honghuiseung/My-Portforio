@@ -1,0 +1,31 @@
+단추를 누르면 그림이 바뀌게 만들기
+
+1.<head> 태그에 삽입============================================================
+
+<script language="JavaScript"> 
+<!--
+picture1 = new Image()
+picture1.src = "01.jpg" 
+picture11 = new Image()
+picture11.src = "02.jpg" 
+picture111 = new Image()
+picture111.src = "03.jpg" 
+function switchImage(imageName) 
+{mousePosition = document.Iform.Ihide.value 
+if (mousePosition == "111"){var mousePosition = 0} 
+mousePosition = mousePosition + 1  
+imgToAlter = eval(imageName + mousePosition + ".src");  
+document.images[imageName].src = imgToAlter;  
+document.Iform.Ihide.value = mousePosition  } 
+//-->
+</script>
+
+2.<body> 태그에서 효과를 적용할 위치에 삽입===========================
+
+<center>
+<form name="Iform"> 
+<input type="hidden" name="Ihide" value> 
+<img src="01.jpg" name="picture">
+<p><input type="button" value=" -->> " onclick="switchImage('picture')">
+</form> 
+</center>

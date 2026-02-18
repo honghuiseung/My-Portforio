@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>text 객체의 메서드</TITLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function changeFocus(txt){
+  txt.focus()
+} 
+
+function selectText(txt) {
+  txt.select()
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BACKGROUND="bg35.gif" onLoad="myform.text1.focus()">
+<CENTER>
+<BR>
+[<A HREF="#" onClick="changeFocus(myform.text2)">'주소' 필드로 포커스 옮기기</A>]<BR>
+[<A HREF="#" onClick="changeFocus(myform.text1)">'이름' 필드로 포커스 옮기기</A>]<BR>
+[<A HREF="#" onClick="selectText(myform.text2)">'주소' 필드의 텍스트 선택하기</A>]<BR><BR>
+<HR>
+<FORM NAME="myform">
+<B>이&nbsp;름 : </B><INPUT NAME="text1" TYPE="text" VALUE="" SIZE="20" MAXLENGTH="20">
+<BR><BR>
+<B>주&nbsp;소 : </B><INPUT NAME="text2" TYPE="text" VALUE="주소를 입력하세요" SIZE="20" MAXLENGTH="60">
+<BR><BR>
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

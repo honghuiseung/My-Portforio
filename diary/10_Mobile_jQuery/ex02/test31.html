@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		.ui-icon-my-icon:after{
+			background-image:url(images/buttonicon1.png);
+			background-size: 18px 18px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 버튼 영역나누기3 -->
+	<div data-role="page">
+		<div data-role="header">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<p>content영역</p><br/>
+			<ul data-role="listview" data-inset="true" data-count-theme="a">
+				<li><a href="#">리스트1<span class="ui-li-count">5</span></a></li>
+				<li><a href="#">리스트2<span class="ui-li-count">17</span></a></li>
+				<li><a href="#">리스트3<span class="ui-li-count">hot</span></a></li>
+				<li><a href="#">리스트4<span class="ui-li-count">new</span></a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+		</div>
+    </div>
+</body>
+</html>

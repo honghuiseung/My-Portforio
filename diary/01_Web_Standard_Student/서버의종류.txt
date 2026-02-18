@@ -1,0 +1,3 @@
+리눅스       	- PHP 	- MySQL
+윈도우즈   	- ASP 	- MSSQL
+유닉스계열 	- JSP 	- Oracle

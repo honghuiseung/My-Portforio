@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE> 배너 공간 </TITLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function changeBackground(hexNumber) {
+ parent.frames[1].document.bgColor=hexNumber;
+}
+
+function changeText(hexNumber) {
+  parent.frames[1].document.fgColor=hexNumber;
+}
+//-->
+</SCRIPT>
+</HEAD> 
+<BODY> 
+<FORM method="post" name="background">
+  <INPUT type="button" value="red" onclick="changeBackground('#CC0000');changeText('#FFFFFF')"><BR>
+  <INPUT type="button" value="green" onclick="changeBackground('#006600');changeText('#FFFFFF')"><BR>
+  <INPUT type="button" value="yellow" onclick="changeBackground('#FFFF99');changeText('#0000FF')"><BR>
+  <INPUT type="button" value="white" onclick="changeBackground('#FFFFFF');changeText('#000000')"><BR>
+  <INPUT type="button" value="black" onclick="changeBackground('#000000');changeText('#FFFFFF')";><BR>
+  <INPUT type="button" value="blue" onclick="changeBackground('#0000FF');changeText('#FFFF00')">
+</FORM>
+</BODY>
+</HTML>
+

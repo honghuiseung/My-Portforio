@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function protect(e) {
+alert("홈페이지에 사용된 그림들은 저장할 수 없습니다.");
+return false;
+}
+
+function trap() {
+if(document.images)
+for(i=0;i<document.images.length;i++)
+document.images[i].onmousedown = protect;
+}
+//-->
+</SCRIPT>
+
+</head>
+<BODY OnLoad="trap()">
+<center>
+<img src="miche.jpg">
+
+</body>
+</html>

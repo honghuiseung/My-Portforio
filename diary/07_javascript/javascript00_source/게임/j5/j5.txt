@@ -1,0 +1,314 @@
+숫자야구 게임 만들기
+
+
+1.<head> 태그에 삽입=======================================================================
+
+
+<script language="JavaScript">
+var srt=0;
+var one=0;
+var two=0;
+var thr=0;
+var flow=0;
+var strike=0;
+var ball=0;
+var end=0;
+var sec=0;
+var TI=null;
+var runcheck=0;
+
+function Varinit()
+{
+one=0;
+two=0;
+thr=0;
+flow=0;
+strike=0;
+ball=0;
+end=0;
+sec=0;
+document.board.in1_1.value="";
+document.board.in1_2.value="";
+document.board.in1_3.value="";
+document.board.in2_1.value="";
+document.board.in2_2.value="";
+document.board.in2_3.value="";
+document.board.in3_1.value="";
+document.board.in3_2.value="";
+document.board.in3_3.value="";
+document.board.in4_1.value="";
+document.board.in4_2.value="";
+document.board.in4_3.value="";
+document.board.in5_1.value="";
+document.board.in5_2.value="";
+document.board.in5_3.value="";
+document.board.in6_1.value="";
+document.board.in6_2.value="";
+document.board.in6_3.value="";
+document.board.in7_1.value="";
+document.board.in7_2.value="";
+document.board.in7_3.value="";
+document.board.in8_1.value="";
+document.board.in8_2.value="";
+document.board.in8_3.value="";
+document.board.in9_1.value="";
+document.board.in9_2.value="";
+document.board.in9_3.value="";
+document.board.in10_1.value="";
+document.board.in10_2.value="";
+document.board.in10_3.value="";
+
+document.board.strike_1.value="";
+document.board.strike_2.value="";
+document.board.strike_3.value="";
+document.board.strike_4.value="";
+document.board.strike_5.value="";
+document.board.strike_6.value="";
+document.board.strike_7.value="";
+document.board.strike_8.value="";
+document.board.strike_9.value="";
+document.board.strike_10.value="";
+
+document.board.ball_1.value="";
+document.board.ball_2.value="";
+document.board.ball_3.value="";
+document.board.ball_4.value="";
+document.board.ball_5.value="";
+document.board.ball_6.value="";
+document.board.ball_7.value="";
+document.board.ball_8.value="";
+document.board.ball_9.value="";
+document.board.ball_10.value="";
+
+document.board.congraturation.value="";
+}
+
+function Start()
+{
+if (runcheck==0)
+{
+	srt++;
+	runcheck=1;
+	Varinit();
+	Count();
+	Ran_num();
+	window.status="새 게임이 시작되었습니다."
+}
+else { window.status="지금 게임이 실행중입니다. 다시 게임을 하려면 먼저 '게임중지'버튼을 누른 후에 '새게임'버튼을 누르세요." }
+}
+
+function Count()
+{
+if (strike!=3 || (strike!=3 && flow==10))
+{
+TI=setTimeout("Count()",1000);
+sec++;
+document.board.time.value=sec;
+}
+else { clearTimeout(TI); }
+}
+
+function Ran_num()
+{
+var fir=0;
+var sec=0;
+var thi=0;
+var date;
+var now=new Date();
+
+for(rc=0; rc==0; )
+{
+	date=new Date();
+	var ran=date.getSeconds();
+	if (ran<10) { ran=ran+33; }
+	fir=Math.floor(ran*0.9);
+	fir=fir-(Math.floor(fir/10))*10;
+	sec=ran-(Math.floor(ran/10))*10;
+	thi=Math.floor(ran*1.6);
+	thi=thi-(Math.floor(thi/10))*10;
+	if(fir!=sec && fir!=thi && sec!=thi) { rc=1; }
+}
+
+one=fir;
+two=sec;
+thr=thi;
+flow=0;
+// Process(one, two, thr);
+}
+
+
+function inright(in1, in2, in3, sun)
+{
+var allright=false;
+if (srt==0) { alert("'새게임'버튼을 안누르고 시작하셨네요.. '새게임'버튼을 누르고 시작해 주세요..." )}
+else if (flow+1 != sun) { alert("입력한곳을 다시 입력했거나 옳바르지 못한 입력버튼을 눌렀어요.." )}
+else if (in1==in2 || in1==in3 || in2==in3) { alert("같은숫자는 넣을수 없습니다. 숫자를 다르게 입력해야 합니다. 다시 입력하세요" )}
+else if (in1=="" || in2=="" || in3=="") { alert("숫자를 입력하지 않은 곳이 있습니다. 세자리 모두다 입력해야 합니다." )}
+else if (in1>10 || in2>10 || in3>10) { alert("각자리의 숫자가 9를 넘을수 없습니다. 0부터 9까지의 숫자중에 넣어야 합니다." )}
+else if (end==1) { alert("이미 게임을 마쳤습니다. 다시 게임을 하려면 '새게임'버튼을 눌러주세요.." )}
+else
+	{
+	window.status="";
+	flow=sun;
+	allright=true;
+	}
+if (allright) { process(in1, in2, in3); }
+}
+
+function process(input1, input2, input3)
+{
+
+strike=0;
+ball=0;
+
+if (input1==one) { strike++; }
+if (input1==two) { ball++; }
+if (input1==thr) { ball++; }
+if (input2==two) { strike++; }
+if (input2==one) { ball++; }
+if (input2==thr) { ball++; }
+if (input3==thr) { strike++; }
+if (input3==one) { ball++; }
+if (input3==two) { ball++; }
+
+display();
+}
+
+function display()
+{
+if (flow==1)
+	{
+	document.board.strike_1.value=strike;
+	document.board.ball_1.value=ball;
+	}
+else if (flow==2)
+	{
+	document.board.strike_2.value=strike;
+	document.board.ball_2.value=ball;
+	}
+else if (flow==3)
+	{
+	document.board.strike_3.value=strike;
+	document.board.ball_3.value=ball;
+	}
+else if (flow==4)
+	{
+	document.board.strike_4.value=strike;
+	document.board.ball_4.value=ball;
+	}
+else if (flow==5)
+	{
+	document.board.strike_5.value=strike;
+	document.board.ball_5.value=ball;
+	}
+else if (flow==6)
+	{
+	document.board.strike_6.value=strike;
+	document.board.ball_6.value=ball;
+	}
+else if (flow==7)
+	{
+	document.board.strike_7.value=strike;
+	document.board.ball_7.value=ball;
+	}
+else if (flow==8)
+	{
+	document.board.strike_8.value=strike;
+	document.board.ball_8.value=ball;
+	}
+else if (flow==9)
+	{
+	document.board.strike_9.value=strike;
+	document.board.ball_9.value=ball;
+	}
+else
+	{
+	document.board.strike_10.value=strike;
+	document.board.ball_10.value=ball;
+	}
+
+if (strike==3)
+	{
+	document.board.congraturation.value="다시 게임을 하시려면 '새게임'버튼을 눌러 주세요.."+sec+"초 소요"
+	window.status="다시 게임을 하시려면 '새게임'버튼을 눌러 주세요.."
+	alert("축하합니다. "+sec+"초 소요되었습니다.")
+	end=1;
+	runcheck=0;
+	}
+
+if (strike!=3 && flow==10)
+	{
+	window.status="다시 게임을 하시려면 '새게임'을 눌러 주세요."
+	document.board.congraturation.value="정답은"+one+two+thr+"입니다."
+	clearTimeout(TI);
+	alert("맞추지 못했습니다.")
+	runcheck=0;
+	}
+
+}
+
+function Stop()
+{
+clearTimeout(TI);
+runcheck=0;
+window.status="게임을 중지하셨습니다. 다시 게임을 하시려면 '새게임'버튼을 눌러주세요"
+alert("게임을 중지하셨습니다. 다시 게임을 하시려면 '새게임'버튼을 눌러주세요")
+}
+//-->
+</script>
+
+
+2.<body> 태그에 삽입=======================================================================
+
+<center>
+<h2><b>숫 자 야 구</b></h2>
+<p><br>
+
+<form name="board">
+일회. <input type="text" name="in1_1" size=2 value="">  <input type="text" name="in1_2" size=2 value="">  <input type="text" name="in1_3" size=2 value="">
+.... <input type="button" value="입력" name="bu1" onClick="inright(document.board.in1_1.value, document.board.in1_2.value, document.board.in1_3.value, 1)">
+........ <input type="text" size=2 value="" name="strike_1"> 스트라이크 <input type="text" size=2 value="" name="ball_1"> 볼<br>
+
+이회. <input type="text" name="in2_1" size=2 value="">  <input type="text" name="in2_2" size=2 value="">  <input type="text" name="in2_3" size=2 value="">
+.... <input type="button" value="입력" name="bu2" onClick="inright(document.board.in2_1.value, document.board.in2_2.value, document.board.in2_3.value, 2)">
+........ <input type="text" size=2 value="" name="strike_2"> 스트라이크 <input type="text" size=2 value="" name="ball_2"> 볼<br>
+
+삼회. <input type="text" name="in3_1" size=2 value="">  <input type="text" name="in3_2" size=2 value="">  <input type="text" name="in3_3" size=2 value="">
+.... <input type="button" value="입력" name="bu3" onClick="inright(document.board.in3_1.value, document.board.in3_2.value, document.board.in3_3.value, 3)">
+........ <input type="text" size=2 value="" name="strike_3"> 스트라이크 <input type="text" size=2 value="" name="ball_3"> 볼<br>
+
+사회. <input type="text" name="in4_1" size=2 value="">  <input type="text" name="in4_2" size=2 value="">  <input type="text" name="in4_3" size=2 value="">
+.... <input type="button" value="입력" name="bu4" onClick="inright(document.board.in4_1.value, document.board.in4_2.value, document.board.in4_3.value, 4)">
+........ <input type="text" size=2 value="" name="strike_4"> 스트라이크 <input type="text" size=2 value="" name="ball_4"> 볼<br>
+
+오회. <input type="text" name="in5_1" size=2 value="">  <input type="text" name="in5_2" size=2 value="">  <input type="text" name="in5_3" size=2 value="">
+.... <input type="button" value="입력" name="bu5" onClick="inright(document.board.in5_1.value, document.board.in5_2.value, document.board.in5_3.value, 5)">
+........ <input type="text" size=2 value="" name="strike_5"> 스트라이크 <input type="text" size=2 value="" name="ball_5"> 볼<br>
+
+육회. <input type="text" name="in6_1" size=2 value="">  <input type="text" name="in6_2" size=2 value="">  <input type="text" name="in6_3" size=2 value="">
+.... <input type="button" value="입력" name="bu6" onClick="inright(document.board.in6_1.value, document.board.in6_2.value, document.board.in6_3.value, 6)">
+........ <input type="text" size=2 value="" name="strike_6"> 스트라이크 <input type="text" size=2 value="" name="ball_6"> 볼<br>
+
+칠회. <input type="text" name="in7_1" size=2 value="">  <input type="text" name="in7_2" size=2 value="">  <input type="text" name="in7_3" size=2 value="">
+.... <input type="button" value="입력" name="bu7" onClick="inright(document.board.in7_1.value, document.board.in7_2.value, document.board.in7_3.value, 7)">
+........ <input type="text" size=2 value="" name="strike_7"> 스트라이크 <input type="text" size=2 value="" name="ball_7"> 볼<br>
+
+팔회. <input type="text" name="in8_1" size=2 value="">  <input type="text" name="in8_2" size=2 value="">  <input type="text" name="in8_3" size=2 value="">
+.... <input type="button" value="입력" name="bu8" onClick="inright(document.board.in8_1.value, document.board.in8_2.value, document.board.in8_3.value, 8)">
+........ <input type="text" size=2 value="" name="strike_8"> 스트라이크 <input type="text" size=2 value="" name="ball_8"> 볼<br>
+
+구회. <input type="text" name="in9_1" size=2 value="">  <input type="text" name="in9_2" size=2 value="">  <input type="text" name="in9_3" size=2 value="">
+.... <input type="button" value="입력" name="bu9" onClick="inright(document.board.in9_1.value, document.board.in9_2.value, document.board.in9_3.value, 9)">
+........ <input type="text" size=2 value="" name="strike_9"> 스트라이크 <input type="text" size=2 value="" name="ball_9"> 볼<br>
+
+십회. <input type="text" name="in10_1" size=2 value="">  <input type="text" name="in10_2" size=2 value="">  <input type="text" name="in10_3" size=2 value="">
+.... <input type="button" value="입력" name="bu10" onClick="inright(document.board.in10_1.value, document.board.in10_2.value, document.board.in10_3.value, 10)">
+........ <input type="text" size=2 value="" name="strike_10"> 스트라이크 <input type="text" size=2 value="" name="ball_10"> 볼<br>
+<br><br><br>
+Time: <input type="text" name="time" size=3>
+<br><br><br>
+<input type="button" value="새게임" name="new" onClick="Start();">    <input type="button" value="게임중지" onClick="Stop();"><br>
+<br>
+<input type="text" name="congraturation" size=55>
+</form>
+</center>

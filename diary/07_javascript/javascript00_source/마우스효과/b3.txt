@@ -1,0 +1,14 @@
+마우스로 홈페이지 스크롤하게 만들기 
+
+1.<head> 태그에 삽입============================================================
+
+<SCRIPT LANGUAGE="javascript">
+<!--
+window.resizeTo(500,500)
+function move()
+{
+window.scroll(window.event.clientX - 50,window.event.clientY-50)
+}
+document.onmousemove = move
+//-->
+</SCRIPT>

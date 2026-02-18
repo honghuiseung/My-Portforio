@@ -1,0 +1,156 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+defaultStatus="";
+var browser = navigator.appName.substring(0,8);
+var version = parseInt(navigator.appVersion); 
+var javasupport = ((browser == "Netscape") && (version >= 3)) || ((browser == "Microsof") && (version >= 4));
+var AshleyMorrisonsBeautyIsIncredible = "kenroseslightsgame_";
+var numOff = 25;
+
+if (javasupport) {
+var off = new Image();
+var on = new Image();
+off.src = AshleyMorrisonsBeautyIsIncredible + "0.gif";
+on.src = AshleyMorrisonsBeautyIsIncredible + "1.gif";
+var turnItOn = false;
+
+}
+else {alert('Your browser doesn뭪 support the image object\nIt is required to run this program\nI recommend upgrading to Netscape 4.04');}
+
+function main (element) {
+doCurrent(element);
+doTop(element);
+doBottom(element);
+doRight(element);
+doLeft(element);
+document.forms[0].lightsOn.value = 25 - numOff;
+document.forms[0].lightsOff.value = numOff;
+
+if (numOff == 0) {
+  if (confirm('YOU WON!\nDo you want to play again?')) {
+    clearBoard();
+  }
+}
+
+}
+
+
+
+function doCurrent(element) {
+if (document.images[element].src == off.src) {turnItOn = true;}
+if (document.images[element].src == on.src) {turnItOn = false;}
+
+if (turnItOn) {document.images[element].src = on.src; numOff--;}
+else {document.images[element].src = off.src; numOff++;}
+}
+
+
+
+function doTop(element){
+if ((element - 5) >= 0) {
+  if (document.images[element - 5].src == off.src) {turnItOn = true;}
+  if (document.images[element - 5].src == on.src) {turnItOn = false;}
+
+  if (turnItOn) {document.images[element - 5].src = on.src; numOff--;}
+  else {document.images[element - 5].src = off.src; numOff++}
+  }
+}
+
+
+function doBottom(element){
+if ((element + 5) < 25) {
+  if (document.images[element + 5].src == off.src) {turnItOn = true;}
+  if (document.images[element + 5].src == on.src) {turnItOn = false;}
+
+  if (turnItOn) {document.images[element + 5].src = on.src; numOff--;}
+  else {document.images[element + 5].src = off.src; numOff++;}
+  }
+}
+
+function doRight(element){
+if (((element + 1) / 5) != Math.floor((element + 1) / 5)) {
+  if (document.images[element + 1].src == off.src) {turnItOn = true;}
+  if (document.images[element + 1].src == on.src) {turnItOn = false;}
+
+  if (turnItOn) {document.images[element + 1].src = on.src; numOff--;}
+  else {document.images[element + 1].src = off.src; numOff++;}
+  }
+}
+
+function doLeft(element){
+if ((element / 5) != Math.floor(element  / 5)) {
+  if (document.images[element - 1].src == off.src) {turnItOn = true;}
+  if (document.images[element - 1].src == on.src) {turnItOn = false;}
+
+  if (turnItOn) {document.images[element - 1].src = on.src; numOff--;}
+  else {document.images[element - 1].src = off.src; numOff++;}
+  }
+}
+
+function restartGame() {
+if (javasupport){ if (confirm('다시 시작 하겠습니까?')) {clearBoard();}}
+else{}
+}
+
+function clearBoard() {
+for (i = 0; i <=24; i++) {document.images[i].src = off.src;}
+numOff = 25;
+document.forms[0].lightsOn.value = 0;
+document.forms[0].lightsOff.value = 25;
+}
+
+function putEmBack() {
+alert('Please don뭪 cheat!');
+document.forms[0].lightsOn.value = 25 - numOff;
+document.forms[0].lightsOff.value = numOff;
+}
+
+function doNothing () {}
+</SCRIPT></head>
+
+<body bgcolor="black" text="white">
+<center><h2> 촛불 밝히기</h2></center>
+<form name="score" method="get">
+
+<table border="0" cellpadding="0" cellspacing="25" width="100%">
+    <tr>
+        <td width="50%" align="right" rowspan="3"><table border cellpadding="0"
+             cellspacing="1" bordercolor="white">
+                <tr>
+                    <td valign="top"><font color="black"><script language="JavaScript">
+document.writeln('<TR>');
+for (j=0; j <=24; j++) {
+if (javasupport) {jsLink = "main("+j+")";}
+else {jsLink = "doNothing()";}
+
+document.writeln('  <TD><A HREF="javascript:'+jsLink+'"><IMG SRC="'+AshleyMorrisonsBeautyIsIncredible+'0.gif" WIDTH=32 HEIGHT=32 BORDER=0></A></TD>');
+if (((j % 5) == 4)  && (j != 0)) {
+document.writeln('</TR>');
+  if (j != 24) {document.writeln('<TR>');}
+}
+}
+                                                                                                                        </script>
+                        </font></td>
+                </tr>
+            </table></td>
+        <td width="50%" align="left" valign="top"><p><img src="kenroseslightsgame_1.gif"
+             align="bottom" width="16" height="16" border="0"> Lights On<br> 
+            <input type="text" name="lightsOn" value="0" maxlength="4" size="4"
+             onchange="putEmBack()"> </td>
+    </tr>
+    <tr>
+        <td width="50%" align="left"><p><img src="kenroseslightsgame_0.gif" align="bottom"
+             width="16" height="16" border="0"> Lights Off<br> <input type="text"
+             name="lightsOff" value="25" maxlength="4" size="4" onchange="putEmBack()"> 
+            </td>
+    </tr>
+    <tr>
+        <td width="50%" align="left" valign="bottom"><p><input type="button"
+             name="restart" value="Restart" onclick="restartGame();"> </td>
+    </tr>
+</table>
+</form>
+</body>
+
+</html>

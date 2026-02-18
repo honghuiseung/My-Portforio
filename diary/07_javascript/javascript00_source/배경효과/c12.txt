@@ -1,0 +1,34 @@
+선택한 그림을 배경으로 설정하기
+
+
+1.<head> 태그에 삽입============================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName == "Microsoft Internet Explorer") {
+image_directory = "";
+clear = new Image();  clear.src = image_directory + "";
+pic1 = new Image();  pic1.src = image_directory + "mascot1.gif";
+pic2 = new Image();  pic2.src = image_directory + "mascot2.gif";
+}
+function imagechange(imgName) {
+if (navigator.appName == "Microsoft Internet Explorer") {
+document.body.background = eval(imgName + ".src");
+   }
+}
+//-->
+</script>
+
+
+
+2.<body> 태그 안에 삽입============================================================
+
+background="clear.jpg" name="bg"
+
+
+3.<body> 태그에 삽입===============================================================
+
+<p align="center">
+<a href="http://" onmouseover="imagechange('pic1');" onmouseout="imagechange('clear');"><img src="mascot1.gif" border="0"></a>
+<a href="http://" onmouseover="imagechange('pic2');" onmouseout="imagechange('clear');"><img src="mascot2.gif" border="0"></a>
+</p>
+

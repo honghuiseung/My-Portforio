@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>text 객체의 메서드</TITLE>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+function checkValue(element){
+  if(element.value =="") 
+     alert("비밀번호를 입력하세요")
+}
+
+function clearText(txt){
+  if (txt.defaultValue==txt.value)
+        txt.value = ""
+} 
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BACKGROUND="bg35.gif">
+<CENTER>
+<BR><BR>
+사용하고 싶은 아이디와 비밀번호를 입력하세요<BR><BR>
+<FORM NAME="myform">
+<B>아 이 디 : </B>
+<INPUT NAME="id" TYPE="text" SIZE="20" VALUE="아이디를 입력하세요" onFocus="clearText(myform.id)">
+<BR><BR>
+<B>비밀번호 : </B> 
+<INPUT NAME="pw" TYPE="password" SIZE="20" onBlur="checkValue(myform.pw)">
+<BR><BR>
+<INPUT NAME="login" TYPE="submit" VALUE="등록"> 
+</FORM>
+</BODY>
+</HTML>

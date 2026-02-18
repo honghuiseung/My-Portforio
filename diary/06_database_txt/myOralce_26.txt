@@ -1,0 +1,66 @@
+--형 변환 함수
+SELECT SYSDATE, TO_CHAR(SYSDATE, 'YYYY-MM-DD-hh12:mi:ss DAY') FROM DUAL;
+
+--사원들의 입사일을 출력하되 요일까지 출력
+SELECT * FROM emp;
+SELECT ename, hiredate, TO_CHAR(hiredate, 'YYYY-MM-DD DAY') FROM emp;
+
+SELECT SYSDATE, TO_CHAR(SYSDATE, 'YYYY-MM-DD, AM HH:mi:ss') FROM DUAL;
+
+--숫자형을 문자형으로 변환하기
+SELECT SYSDATE, TO_CHAR(1230000), TO_CHAR(1230000, 'L999,999,999') FROM DUAL;
+SELECT SYSDATE, TO_CHAR(123456), TO_CHAR(123456, '999,000,000') FROM DUAL;
+
+--20070402 입사한 사원을 찾기
+SELECT ename, hiredate FROM emp WHERE hiredate = 20070402;
+SELECT ename, hiredate FROM emp WHERE hiredate = TO_DATE(20070402, 'YYYYMMDD');
+
+--특정한 날짜로 부터 오늘까지의 일수
+SELECT TRUNC(SYSDATE - TO_DATE('2001/05/22','YY/MM/DD')) FROM DUAL;
+
+SELECT 20000-10000 FROM DUAL; -- 실행안됨
+SELECT TO_NUMBER('20000', '99999') - TO_NUMBER('10000', '99999') FROM DUAL;
+
+--날짜함수
+
+SELECT TO_CHAR(SYSDATE-1,'YYYY/MM/DD')어제 , TO_CHAR(SYSDATE,'YYYY/MM/DD')오늘, TO_CHAR(SYSDATE+1,'YYYY/MM/DD')내일 FROM DUAL;
+SELECT TO_CHAR(hiredate,'YYYY/MM/DD')입사일 , TO_CHAR(TRUNC(hiredate,'MONTH'),'YYYY/MM/DD')입사일 FROM emp;
+
+--두날짜사이의 기간
+SELECT ename, SYSDATE 오늘, TO_CHAR(hiredate, 'YYYY/MM/DD')입사일, TRUNC(MONTHS_BETWEEN (SYSDATE, hiredate)) 근무달수 FROM emp;
+
+--입사날짜에 6개월 추가
+SELECT TO_CHAR(hiredate, 'YYYY/MM/DD')입사일, TO_CHAR(ADD_MONTHS(hiredate, 6), 'YYYY/MM/DD') 입사6개월후 FROM emp;
+
+--오늘을 기준으로 최초로 도래하는 수요일은 언제인지 알아보기
+SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD')오늘, TO_CHAR(NEXT_DAY(SYSDATE, '수요일'), 'YYYY/MM/DD') 수요일 FROM DUAL;
+
+--입사한 달의 마지막 날 구하기
+SELECT ename, TO_CHAR(hiredate, 'YYYY/MM/DD')입사일, TO_CHAR(LAST_DAY(hiredate), 'YYYY/MM/DD') 마지막날짜 FROM emp;
+
+
+
+--NULL을 다른 값으로 변환하는 NVL함수
+SELECT ename, sal, comm, deptno FROM emp;
+
+--연봉을 계산해서 부서별로 출력
+SELECT ename, sal, comm, sal*12+comm, deptno, NVL(comm, 0), sal*12+NVL(comm, 0) FROM emp ORDER BY deptno;
+
+--(NULL이 아니면 sal*12+comm을 실행하고 NULL이면 sal*12를 실행)
+SELECT ename, sal, comm, NVL2(comm, sal*12+comm, sal*12) FROM emp ORDER BY deptno;
+
+--같을 때 null실행
+SELECT NULLIF('A','A'), NULLIF('A','B') FROM DUAL;
+
+--널이 아닌 첫 번째 인수를 반환하는 함수
+SELECT ename, sal, comm, COALESCE(comm, sal, 0) FROM emp ORDER BY deptno;
+
+--INCODE DECODE
+SELECT ename, deptno, DECODE(deptno, 10, '경리부', 20, '인사과', 30, '영업부', 40, '전산부') AS DNAME FROM emp;
+
+SELECT ename, deptno, CASE WHEN deptno = 10 THEN '경리부' WHEN deptno = 20 THEN '인사과' WHEN deptno = 30 THEN '영업부' WHEN deptno = 40 THEN '전산부' END AS DNAME FROM emp;
+
+
+
+
+

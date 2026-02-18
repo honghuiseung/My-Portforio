@@ -1,0 +1,20 @@
+﻿table{width: 590px;}
+table td div{padding:10px; text-align:center;}
+
+#tbox01{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none;}
+
+#tbox02{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;}
+
+#tbox03{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted;}
+
+#tbox04{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: dashed; border-right-style: dashed; border-bottom-style: dashed; border-left-style: dashed;}
+
+#tbox05{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: double; border-right-style: double; border-bottom-style: double; border-left-style: double;}
+
+#tbox06{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: groove; border-right-style: groove; border-bottom-style: groove; border-left-style: groove;}
+
+#tbox07{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: ridge; border-right-style: ridge; border-bottom-style: ridge; border-left-style: ridge;}
+
+#tbox08{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: inset; border-right-style: inset; border-bottom-style: inset; border-left-style: inset;}
+
+#tbox09{border-top-color: #cccccc; border-right-color: #cccccc; border-bottom-color: #cccccc; border-left-color: #cccccc; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-style: outset; border-right-style: outset; border-bottom-style: outset; border-left-style: outset;}

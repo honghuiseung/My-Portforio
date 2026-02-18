@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>script249</title>
+<style>
+.initial{background-image:url(image1.gif)}
+</style>
+<script>
+if (document.images){
+after=new Image()
+after.src="image2.gif"
+}
+function change2(image){
+var el=event.srcElement
+if (el.tagName=="INPUT"&el.type=="button")
+event.srcElement.style.backgroundImage="url"+"('"+image+"')"
+}
+function jumpto2(url){
+window.location=url
+}
+</script>
+</head>
+<body>
+<center>
+<form onMouseover="change2('image2.gif')" onMouseout="change2('image1.gif')">
+<input type="button" value="PROFILE" class="initial" onClick="jumpto2('1.htm')">
+<input type="button" value="STORY" class="initial" onClick="jumpto2('2.htm')">
+<input type="button" value="SNAP" class="initial" onClick="jumpto2('3.htm')">
+</form>
+</center>
+</body>
+</html>

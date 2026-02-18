@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!-- 중첩 접이식 패널 만들기 -->
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible">
+				<h3>상위 접이식 패널 제목</h3>
+				<p>패널 내용</p>
+				<div data-role="collapsible">
+					<h3>하위 접이식 패널 제목1</h3>
+					<p>패널 내용</p>
+					<div data-role="collapsible">
+						<h3>하위 접이식 패널 제목2</h3>
+						<p>패널 내용</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>footer영역</h4>
+		</div>
+    </div>
+</body>
+</html>

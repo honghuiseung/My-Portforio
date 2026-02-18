@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+
+</head>
+<body>
+<script language="javascript">
+Phrase="글자가 빙빙 돌아요.."
+Balises=""
+Taille=30; // 글자 크기 설정
+Midx=140; // 입체 텍스트의 좌측 위치 지정 
+Decal=0.5; // 글자와 글자사이의 간격을 지정 
+Nb=Phrase.length;
+y=-1000;
+for (x=0;x<Nb;x++){
+Balises=Balises + '<DIV Id=L' + x + ' STYLE="width:5;font-family: Courier New;font-weight:bold;position:absolute;top:150;left:-50;z-index:10">' + Phrase.charAt(x) + '</DIV>' 
+}
+document.write (Balises);
+Time=window.setInterval("Alors()",10); 
+Alpha=5;
+I_Alpha=0.05; // 회전하는 속도 지정 
+function Alors(){
+Alpha=Alpha-I_Alpha;
+for (x=0;x<Nb;x++){
+Alpha1=Alpha+Decal*x;
+Cosine=Math.cos(Alpha1);
+Ob=document.all("L"+x);
+Ob.style.posLeft=Midx+270*Math.sin(Alpha1)+250; // 원의 크기지정과 위치지정 
+Ob.style.zIndex=20*Cosine;
+Ob.style.fontSize=Taille+15*Cosine; // 앞 글자와 뒤의 글자 크기 차이를 설정합니다. 
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>form 객체의 프로퍼티</TITLE>
+<STYLE TYPE="text/css">
+<!--
+td {
+	font-family: "굴림";
+	font-size: 12px;
+}
+-->
+</STYLE>
+</HEAD>
+
+<BODY BACKGROUND="bg_w2.gif">
+<BR>
+<FORM NAME="form1" ACTION="login.asp"  METHOD="post" ENCTYPE="multipart/form-data" TARGET="_self">
+  <TABLE WIDTH="200" HEIGHT="85" BORDER="0" ALIGN="CENTER" CELLPADDING="1" CELLSPACING="0">
+    <TR> 
+      <TD WIDTH="73">아이디</TD>
+      <TD WIDTH="123"><INPUT NAME="id" TYPE="text" SIZE="10" MAXLENGTH="10"></TD>
+    </TR>
+    <TR> 
+      <TD>비밀번호</TD>
+      <TD><INPUT NAME="pwd" TYPE="password" SIZE="10" MAXLENGTH="10"></TD>
+    </TR>
+    <TR> 
+      <TD COLSPAN="2">
+	    <INPUT TYPE="submit" VALUE="로그인"> 
+	    <INPUT TYPE="button" VALUE="회원 가입"> 
+      </TD>
+    </TR>
+  </TABLE>
+</FORM>
+<HR>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+document.write("<CENTER>")
+document.write("첫 번째 요소의 유형은 <B>" + document.form1.elements[0].type + "</B>입니다.<BR><BR>")
+document.write("두 번째 요소의 길이는 <B>" + document.form1.elements[1].size + "</B>입니다.<BR><BR>")
+document.write("세 번째 요소의 유형은 <B>" + document.form1.elements[2].type + "</B>입니다.<BR><BR>")
+document.write("네 번째 요소의 값은 <B>" + document.form1.elements[3].value + "</B>입니다.")
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

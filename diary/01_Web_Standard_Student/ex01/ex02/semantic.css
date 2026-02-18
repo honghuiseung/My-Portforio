@@ -1,0 +1,11 @@
+﻿/* body{background:#ff0000;} */
+header{width:700px; background:#ff0000;}
+section{width:700px; background:#00ff00;}
+	aside{width:100px; background:#ffff00;}
+	article{width:500px; background:#ff00ff;}
+footer{width:700px; background:#0000ff;}
+
+.fl{float: left;}
+.fr{float: right;}
+.cb{clear: both;}
+/* .cb{clear: both | right | left | none;} */

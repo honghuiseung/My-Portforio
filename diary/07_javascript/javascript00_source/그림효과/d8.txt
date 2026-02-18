@@ -1,0 +1,93 @@
+그림 고정하기
+
+1.<head> 태그에 삽입============================================================
+
+<script LANGUAGE=JavaScript> 
+<!-- 
+function change(form) { 
+if (form.url.selectedIndex != 0) 
+parent.location = form.url.options[form.url.selectedIndex].value 
+} 
+var     nAdCornerWidth          = 148; //그림의 가로 길이 
+var     nAdCornerHeight         = 50;  //그림의 세로 길이
+
+var nAdCornerMarginX = 2; 
+var nAdCornerMarginY = 2; 
+
+var nScrollBarWidth = 16; 
+var nScrollBarHeight = 16; 
+
+var isMSIE = 0; 
+var nVersion = 3; 
+
+var nInterval = 200; 
+
+var isLoaded = 0; 
+
+function setup () 
+{ 
+nVersion = parseInt (navigator.appVersion); // chang 
+if (navigator.appName == "Microsoft Internet Explorer") 
+{ 
+isMSIE = 1; 
+if (navigator.userAgent.indexOf ("MSIE 5") != -1) 
+{ 
+nVersion = 5; 
+} 
+} 
+else 
+{ 
+isMSIE = 0; 
+if (nVersion >= 4) 
+{ 
+window.captureEvents (Event.MOUSEMOVE); 
+} 
+} 
+if (nVersion >= 4) 
+{ 
+window.setInterval ("AdCornerMove();", nInterval); 
+} 
+} 
+function AdCornerMove () 
+{ 
+if (isLoaded == 0) 
+{ 
+return; 
+} 
+if (isMSIE) 
+{ 
+nAdCornerOriginX = document.body.clientWidth - idAdCorner.width - nAdCornerMarginX; 
+nAdCornerOriginY = document.body.clientHeight - idAdCorner.height - nAdCornerMarginY; 
+nAdCornerOriginX += document.body.scrollLeft; 
+nAdCornerOriginY += document.body.scrollTop; 
+idAdCorner.style.pixelLeft = nAdCornerOriginX; 
+idAdCorner.style.pixelTop = nAdCornerOriginY; 
+} 
+else 
+{ 
+nAdCornerOriginX = window.innerWidth + window.pageXOffset - nAdCornerWidth - nAdCornerMarginX; 
+nAdCornerOriginY = window.innerHeight + window.pageYOffset - nAdCornerHeight - nAdCornerMarginY; 
+if (window.scrollbars.visible == true) 
+{ 
+nAdCornerOriginX -= nScrollBarWidth; 
+nAdCornerOriginY -= nScrollBarHeight; 
+} 
+document.layers["idAdCorner"].pageX = nAdCornerOriginX; 
+document.layers["idAdCorner"].pageY = nAdCornerOriginY; 
+} 
+} 
+//--> 
+</script> 
+
+1.<body> 태그에 삽입============================================================
+
+<layer name="idAdCorner" zIndex=2 left=300 top=300> 
+<a href="http://www.codmedia.com"> 
+<img id="idAdCorner" border=0 src="bnn01.gif" style="position:absolute;z-index:2;"></a> 
+</layer> 
+<script LANGUAGE="JavaScript"> 
+<!-- 
+window.onload=setup; 
+isLoaded = 1; 
+//--> 
+</script> 

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!-- 버튼식 접이식 패널 만들기 -->
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<form method="get" action="form.jsp">
+				<h1>동아리 회원 가입</h1>
+				<fieldset>
+					<legend>필수 정보</legend>
+					<table>
+						<tr>
+							<td><label for="s_id">학번</label></td>
+							<td><input type="text" name="s_id" id="s_id" disabled data-role="none"/></td>
+						</tr>
+						<tr>
+							<td><label for="s_id">성명</label></td>
+							<td><input name="s_name" id="s_name" disabled data-role="none"/></td>
+						</tr>
+					</table>
+				</fieldset><br/>
+				<fieldset>
+					<legend>부가 정보</legend>
+					전화번호 : <input type="text" name="s_tel" placeholder="999-999-9999" data-role="none"/><br/>
+					가입날짜 : <input type="date" name="s_date" value="2014-11-11" data-role="none"/><br/>
+					성별 : <select data-role="none">
+					<option value="male">남자</option>
+					<option value="female">여자</option>
+					</select><br/>
+					학년 : <input type="radio" name="syear" value="1" data-role="none"/>1학년
+					<input type="radio" name="syear" value="2" data-role="none"/>2학년
+					<input type="radio" name="syear" value="3" checked data-role="none"/>3학년
+					<input type="radio" name="syear" value="2" data-role="none"/>4학년<br/>
+					나이 : <input type="number" name="s_year" min="1" max="100" value="20" data-role="none"/>1학년
+				</fieldset><br/>
+				<input type="submit" value="확인" data-role="none"/>
+				<input type="reset" value="취소" data-role="none"/>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>footer영역</h4>
+		</div>
+    </div>
+</body>
+</html>

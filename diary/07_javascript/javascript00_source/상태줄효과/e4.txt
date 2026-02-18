@@ -1,0 +1,61 @@
+상태 표시줄에 타이핑과 스크롤 글자 효과 만들기
+
+
+1.<head> 태그에 삽입=============================================================
+
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--
+//효과
+var txt_msg = new Array(); 
+txt_msg[0] = "Welcome to my homepage!!"; 
+txt_msg[1] = "My homepasge is best site!!"; 
+txt_msg[2] = "Have a nice day!!"; 
+txt_msg[3] = "Ha!!"; 
+
+
+var q_msg = 3; 
+var msg_num = 0; 
+var msg_len = 0; 
+var msg_scr = 0; 
+var reset_val = 0; 
+t_type = 90; 
+t_disp = 1500; 
+t_scr = 30; 
+t_blank = 70; 
+
+function displays() { 
+        if (msg_num > q_msg) { 
+                msg_num = reset_val; 
+        } 
+msg_len++; 
+window.status = txt_msg[msg_num].substring(reset_val, msg_len); 
+        if (msg_len == txt_msg[msg_num].length) { 
+                timer_disp=window.setTimeout ("removes()", t_disp); 
+        }         
+        else { 
+                timer_type=window.setTimeout ("displays()", t_type); 
+        } 
+} 
+
+function removes() 
+{ 
+msg_scr++; 
+        if (msg_scr > txt_msg[msg_num].length) { 
+                msg_num++;     
+                msg_len = reset_val; 
+                msg_scr = reset_val; 
+                timer_blank=window.setTimeout ("displays()", t_blank) 
+        } 
+        else { 
+                window.status = txt_msg[msg_num].substring(msg_scr, txt_msg[msg_num].length); 
+                timer_scr=window.setTimeout ("removes()", t_scr); 
+        } 
+} 
+//--> 
+</SCRIPT> 
+
+
+2.<body> 태그 안에 입력==========================================================
+
+onload=displays()
+

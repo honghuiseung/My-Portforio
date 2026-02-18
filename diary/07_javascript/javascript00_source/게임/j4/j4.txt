@@ -1,0 +1,62 @@
+Rock, Paper, Scissors (가위바위보)
+
+1.<head> 태그에 삽입=======================================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+function playGame(choice) {
+with (document.game) {
+comp = Math.round((Math.random() * 2) + 1); 
+var choicename;
+if (comp == 1) choicename = "바위";
+if (comp == 2) choicename = "보";
+if (comp == 3) choicename = "가위";
+msg.value = '컴퓨터는' + choicename + '를 냈습니다.';
+
+switch(choice) { // calculates score
+case 1 : // rock
+         if (comp == 1) {  draw.value++; msg.value += '비겼습니다.'; break; }
+         if (comp == 2) {  loss.value++;  msg.value += '당신이 졌습니다.';     break; }
+         if (comp == 3) {  win.value++; msg.value += '당신이 이겼습니다.';      break; }
+case 2 : // paper
+         if (comp == 1) {  win.value++;  msg.value += '당신이 이겼습니다.';      break; }
+         if (comp == 2) {  draw.value++; msg.value += '비겼습니다.'; break; }
+         if (comp == 3) {  loss.value++; msg.value += '당신이 졌습니다.';     break; }
+case 3 : // scissors
+         if (comp == 1) {  loss.value++;  msg.value += '당신이 졌습니다.';     break; }
+         if (comp == 2) {  win.value++; msg.value += '당신이 이겼습니다.';      break; }
+         if (comp == 3) {  draw.value++; msg.value += '비겼습니다.'; break; }
+      }
+      msg.value += '다시 하세요.';
+   }
+}
+//  End -->
+</script>
+</HEAD>
+
+
+
+2.<body> 태그에 삽입=======================================================================
+
+<center>
+<form name=game>
+<table border=1 cellpadding=5>
+<tr>
+<td align=center>가위!바위!보!</td>
+<td align=center><a href="javascript:void(0);" onClick="playGame(1);"><img src="rock.gif" border="0"></a></td>
+<td align=center><a href="javascript:void(0);" onClick="playGame(2);"><img src="paper.gif" border="0"></a></td>
+<td align=center><a href="javascript:void(0);" onClick="playGame(3);"><img src="scissors.gif" border="0"></a></td>
+</tr>
+<tr>
+<td colspan=4 align=center><input type=text name=msg size=50></td>
+</tr>
+<tr>
+<td colspan=4 align=center>
+<input type=text name=win readonly value="0" size="2"> 승
+<input type=text name=loss readonly value="0" size="2"> 패 
+<input type=text name=draw readonly value="0" size="2"> 무
+</td>
+</tr>
+</table>
+</form>
+</center>

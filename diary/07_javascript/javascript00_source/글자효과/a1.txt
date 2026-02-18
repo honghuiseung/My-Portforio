@@ -1,0 +1,47 @@
+
+텍스트 영역 입력 양식에 타이핑 글자 효과 만들기
+
+1.<head> 태그에 삽입=================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var max=0;
+function textlist() {
+max=textlist.arguments.length;
+for (i=0; i<max; i++)
+this[i]=textlist.arguments[i];
+}
+//글상자에 나타나게 할 내용
+tl = new textlist( 
+"글자가 한자씩 타자치듯이 나타납니다.",
+"글자가 모두 나타나면 글자가 모두 사라지고",
+"다시 글자가 나타나지요"
+);
+
+var x = 0; pos = 0;
+var l = tl[0].length;
+function textticker() {
+document.tickform.tickfield.value = tl[x].substring(0, pos) + "_";
+if(pos++ == l) {
+pos = 0; 
+setTimeout("textticker()", 2000); 
+if(++x == max) x = 0; 
+l = tl[x].length;
+} else
+setTimeout("textticker()", 50);
+}
+//-->
+</script>
+
+2.<body> 태그 안에 삽입=================================================
+
+OnLoad="textticker();"
+
+3.<body> 태그에 삽입=================================================
+
+<center>
+<form name=tickform>
+<textarea name=tickfield rows=3 cols=38 style="background-color: black; color: white; cursor: default; font-family: Arial; font-size: 12px" wrap=virtual>글자가 타이핑치듯이 한자씩 나타납니다. </textarea>
+</form>
+</center>
+

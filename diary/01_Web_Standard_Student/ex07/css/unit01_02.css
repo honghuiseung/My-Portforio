@@ -1,0 +1,6 @@
+﻿body{font: 0.95em '맑은 고딕', sans-serif;}
+#box1 h2{word-spacing: 20px; text-align: center; letter-spacing: -1px;}
+#box1 p{letter-spacing: 5px; line-height:200%;}
+#box2 h2{text-transform: uppercase; text-decoration: line-through;}
+#box2 p{text-indent: 10%; text-decoration: underline;}
+/* text-indent : 글자가 왼쪽으로 이동 */

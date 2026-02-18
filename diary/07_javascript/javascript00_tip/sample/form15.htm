@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>Checkbox의 value 프로퍼티</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function displayList(list) {
+  var total = ""
+  for (var i = 0; i < list.length; ++i) {
+     if (list[i].checked)
+        total += list[i].value + "\r"
+   }
+   if (total == "")
+      alert("아무것도 선택하지 않으셨군요!")
+   else
+       alert(total)
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<IMG SRC="top2.jpg"><BR><BR>
+<B>앞으로 더 공부하고 싶은 분야는 무엇입니까?</B>
+<BR>
+<FORM>
+  <INPUT TYPE="checkbox" VALUE="웹 에디터 중급 활용" NAME="computer">웹 에디터 중급 활용 &nbsp;&nbsp;
+  <INPUT TYPE="checkbox" VALUE="HTML 활용" NAME="computer">HTML 활용&nbsp;&nbsp;
+  <INPUT TYPE="checkbox" VALUE="자바스크립트" NAME="computer">자바스크립트<BR>
+  <INPUT TYPE="checkbox" VALUE="CSS" NAME="computer">CSS(스타일시트)&nbsp;&nbsp;
+  <INPUT TYPE="checkbox" VALUE="웹 프로그래밍" NAME="computer">웹 프로그래밍&nbsp;&nbsp;
+  <INPUT TYPE="checkbox" VALUE="플래시" NAME="computer">플래시<BR><BR>
+  <INPUT TYPE="button" VALUE="display list" onClick="displayList(this.form.computer)">
+</FORM>
+</BODY>
+</HTML>

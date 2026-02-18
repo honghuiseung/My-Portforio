@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>필드의 배경색을 바꿔요</TITLE>
+<STYLE TYPE="text/css">
+<!--
+body {
+	background-attachment: fixed;
+	background-image: url(bg01.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+-->
+</STYLE>
+</HEAD>
+
+<BODY>
+<FORM NAME="form1">
+   이  름: <INPUT NAME="id" TYPE="text" SIZE="20" MAXLENGTH="10" onFocus="this.style.backgroundColor='#EBF0F5'" onBlur="this.style.backgroundColor=''">
+   <BR><BR>
+   메 모: <TEXTAREA NAME="comment" COLS="20" ROWS="5" onFocus="this.style.backgroundColor='#EBF0F5'" onBlur="this.style.backgroundColor=''"></TEXTAREA>
+   <BR><BR>
+   <INPUT TYPE="submit" VALUE="등록"> &nbsp;&nbsp;
+   <INPUT TYPE="reset" VALUE="새로쓰기">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

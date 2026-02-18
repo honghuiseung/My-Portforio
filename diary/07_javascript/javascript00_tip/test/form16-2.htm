@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>Checkbox의 value 프로퍼티</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function check(obj) {
+     obj.click()
+}
+
+function uncheck(group) {
+     group.checked="false"
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="form1">
+<INPUT TYPE="button" VALUE="웹 개발 클릭" onClick="check(form1.com[2])">
+<INPUT TYPE="button" VALUE="웹 개발 클릭 해제" onClick="uncheck(form1.com)">
+<BR><BR>
+<INPUT TYPE="radio"> 인터넷 관련 <BR>
+<INPUT TYPE="radio" NAME="com"> IT<BR>
+<INPUT TYPE="radio" NAME="com"> 인터넷 비즈니스<BR>
+<INPUT TYPE="radio" NAME="com"> 웹 개발<BR>
+<INPUT TYPE="radio" NAME="com"> 엔터테인먼트
+</FORM>
+</BODY>
+</HTML>

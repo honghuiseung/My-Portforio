@@ -1,0 +1,5 @@
+﻿#healthBox1 h2{color: #ffffff;font-size:20px; font-family: '맑은 고딕', sans-serif; background-color: #ff0066; padding:5px; width: 50px;}
+/* 자식은 바로 한단계 아래위치 태그, 자손은 아래 태그 전부 */
+#healthBox1 h2{background-color: #ff0000; padding:5px; width: 50px;}
+
+/* 선택자 우선순위 id>>>class>>>tag */

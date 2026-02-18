@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>작은 영상 플러그인 사용</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" media="screen">
+    
+</head>
+<body>
+	<video width="204" height="114" poster="images/video-poster.jpg">
+    <source src="media/coffee_cf.mp4" type="video/mp4">
+    <source src="media/coffee_cf.webm" type="video/ogg">
+  Your browser does not support the video tag.
+	</video>
+
+	<script>
+	$(document).ready(function() {
+		$('video').mediaelementplayer({
+			alwaysShowControls: false,
+			videoVolume: 'horizontal',
+			//features: ['playpause','progress','volume','fullscreen']
+			features: ['','progress','','fullscreen']
+		});
+	});
+	</script>
+
+</body>
+</html>

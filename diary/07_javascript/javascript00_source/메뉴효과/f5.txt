@@ -1,0 +1,41 @@
+표를 사용해서 구성한 메뉴 만들기
+
+
+1.<head> 태그에 삽입============================================================
+
+
+<style>
+a {color:white;text-decoration:none;}
+</style> 
+<script language="Javascript">
+<!--
+function inCell(cell, newcolor) {
+	if (!cell.contains(event.fromElement)) {
+		cell.bgColor = newcolor;
+	}
+}
+
+function outCell(cell, newcolor) {
+	if (!cell.contains(event.toElement)) {
+		cell.bgColor = newcolor;
+	}
+}
+//-->
+</script>
+
+2.<body> 태그에서 효과를 적용할 위치에  삽입====================================
+
+<table border="0" cellpadding="3" cellspacing="1">
+    <tr>
+        <td align="center" width="100" bgcolor="#FF8888" onmouseover="inCell(this, '#FFoo00');" onmouseout="outCell(this, '#ff8888');">
+        <a href="하이퍼링크 설정" target="_top">menu01</a></td>
+    </tr>
+		    <tr>
+        <td align="center" width="100" bgcolor="#FF8888" onmouseover="inCell(this, '#FFoo00');" onmouseout="outCell(this, '#ff8888');">
+        <a href="하이퍼링크 설정" target="_top">menu02</a></td>
+    </tr>
+    <tr>
+        <td align="center" width="100" bgcolor="#FF8888" onmouseover="inCell(this, '#FFoo00');" onmouseout="outCell(this, '#ff8888');">
+        <a href="하이퍼링크 설정" target="_top">menu03</a></td>
+    </tr>
+</table>

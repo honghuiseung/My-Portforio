@@ -1,0 +1,18 @@
+﻿#book1{background: url(../images/snow_book1.png) no-repeat; width:300px; height:193px;
+	transform: rotate(25deg);
+	transform-origin: 20% 40%;
+}
+#book2{background: url(../images/snow_book1.png) no-repeat; width:260px; height:213px;
+	transform: rotate(-15deg);
+	transform-origin: 50% 50%; 
+	/* 회전기준점 50 50이 디폴트값임 */
+}
+
+/* - transform: */
+/* rotate(degree): 회전 */
+/* scale(sx,sy) : 가로, 세로 확대 */
+/* scale-x(sx) : 가로 확대 */
+/* scale-y(sy) : 세로 확대 */
+/* skew(degreeX,degreeY) : x,y축 왜곡 */
+/* skewX(degree) : x축 왜곡 */
+/* skewY(degree) : x축 왜곡 */

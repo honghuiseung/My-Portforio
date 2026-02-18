@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600,700,800,900,900i" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/clock.css" />
+
+	<script language = "JavaScript">
+		//시계
+		
+		//숫자 자릿수 나누기
+		var x = NaN
+		var y = NaN
+		var v = NaN
+		var z = NaN
+
+		function unit(x){
+			var m = x%10;
+			return m;
+		}; 
+		var tenth = function(y){
+			var m =y /10 %10;
+			m = Math.floor(m)
+			return m;
+		};
+		var hund = function(v){
+			var m =v /100;
+			m = Math.floor(m)
+			return m;
+		};
+		var twoN = function(z){
+			var m = z%2;
+			return m;
+		};
+			
+		self.setInterval('clock()',1000);
+			
+			
+			
+		function clock(){
+			// 숫자 이미지 배열
+			var imgArr = [
+				"img/num/num0.png"
+				,"img/num/num1.png"
+				,"img/num/num2.png"
+				,"img/num/num3.png"
+				,"img/num/num4.png"
+				,"img/num/num5.png"
+				,"img/num/num6.png"
+				,"img/num/num7.png"
+				,"img/num/num8.png"
+				,"img/num/num9.png"
+			];
+			
+			// 미들 이미지 배열
+			var midArr = [
+				"img/day_bg2.png"
+				,"img/day_bg3.png"
+			];
+			
+			// 시간 설정
+			var now = new Date();
+			var hour = now.getHours();
+			
+			// 시간 설정_지금시간 Janu Febr Marc Apri May June July Augu Sept Octo Nove Dece			
+			cup = new Date("July 16, 2017");
+			var aa = cup.getTime();			
+			var bb = now.getTime();
+			
+			// 시간 설정_D-day 총시간
+			if( aa <= bb ){			
+				var dMonth = Math.abs(Math.ceil((aa-bb)/30/24/60/60/1000));				
+				var dDay = Math.ceil((aa-bb)/24/60/60/1000);
+				var dHour = Math.ceil((aa-bb)/60/60/1000);
+				var dMinute = Math.ceil((aa-bb)/60/1000);
+				var dSecond = Math.ceil((aa-bb)/1000);
+				ment = "초 지났습니다."		
+			} else {	
+				var dMonth = Math.abs(Math.floor((aa-bb)/30/24/60/60/1000));				
+				var dDay = Math.floor((aa-bb)/24/60/60/1000);
+				var dHour = Math.floor((aa-bb)/60/60/1000);
+				var dMinute = Math.floor((aa-bb)/60/1000);
+				var dSecond = Math.floor((aa-bb)/1000);			
+				ment = "초 남았습니다."
+			};
+
+
+			// 시간 설정_D-day 분할시간
+			var dD = Math.abs(dDay%30)
+			var dH = Math.abs(dHour%24)
+			var dM = Math.abs(dMinute%60)
+			var dS = Math.abs(dSecond%60)
+			
+
+			
+				//시간 실행
+				document.getElementById("monthH").setAttribute("src", imgArr[hund(dMonth)]);
+				document.getElementById("monthT").setAttribute("src", imgArr[tenth(dMonth)]);
+				document.getElementById("monthU").setAttribute("src", imgArr[unit(dMonth)]);
+				document.getElementById("dayT").setAttribute("src", imgArr[tenth(dD)]);
+				document.getElementById("dayU").setAttribute("src", imgArr[unit(dD)]);
+				document.getElementById("hourT").setAttribute("src", imgArr[tenth(dH)]);
+				document.getElementById("hourU").setAttribute("src", imgArr[unit(dH)]);
+				document.getElementById("minT").setAttribute("src", imgArr[tenth(dM)]);
+				document.getElementById("minU").setAttribute("src", imgArr[unit(dM)]);
+				document.getElementById("secT").setAttribute("src", imgArr[tenth(dS)]);
+				document.getElementById("secU").setAttribute("src", imgArr[unit(dS)]);
+				
+				//마지막 말			
+				document.getElementById("endText").innerText = ment ;	
+			};
+	</script>
+</head>
+<body>
+	<div id="content">
+		<div class="time" onLoad ="clock()">
+			<div class="clock cf">	
+				<!-- <p id="startText" class="textarea"> 를 기준으로 D-day를 결정합니다.</p> -->
+				<ul id="date" class="fl">
+					<li class="textarea as fl">D - </li>
+					<li class="fl">
+						<img id="monthH" class="fl" src="" alt="" width="28" height="41" />
+						<img id="monthT" class="fl" src="" alt="" width="28" height="41" />
+						<img id="monthU" class="fl" src="" alt="" width="28" height="41" />
+					</li>
+					<li class="textarea fl">개월</li>
+					<li class="fl">
+						<img id="dayT" class="fl" src="" alt="" width="28" height="41" />
+						<img id="dayU" class="fl" src="" alt="" width="28" height="41" />
+					</li>
+					<li class="textarea fl">일</li>
+				</ul>
+				<p id="time_zone" class="fl"></p>
+				<ul id="time_t" class="fl">
+					<li id="t_hour" class="fl">
+						<img id="hourT" class="fl" src="" alt="" width="28" height="41" />
+						<img id="hourU" class="fl" src="" alt="" width="28" height="41" />
+					</li>
+					<li class="textarea fl">
+						시간
+					</li>
+					<!-- <li class="fl">
+						<img  id="middle" class="fl" src="" alt="" width="7" height="41" />
+					</li> -->
+					<li id="t_minute" class="fl">
+						<img id="minT" class="fl" src="" alt="" width="28" height="41" />
+						<img id="minU" class="fl" src="" alt="" width="28" height="41" />
+					</li>
+					<li class="textarea fl">
+						분
+					</li>
+					<li id="t_second" class="fl">
+						<img id="secT" class="fl" src="" alt="" width="20" height="30" />
+						<img id="secU" class="fl" src="" alt="" width="20" height="30" />
+					</li>
+					<li id="endText" class="textarea fl">. </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

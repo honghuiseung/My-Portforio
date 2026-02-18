@@ -1,0 +1,78 @@
+<html>
+<head><title>Untitled</title>
+<style type="text/css"> 
+#sDiv0 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:Aqua;} 
+#sDiv1 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:red;} 
+#sDiv2 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:blue;} 
+#sDiv3 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:orange;} 
+#sDiv4 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:yellow;} 
+#sDiv5 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:Aqua;} 
+#sDiv6 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:red;} 
+#sDiv7 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:blue;} 
+#sDiv8 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:orange;} 
+#sDiv9 {position:absolute; height:1; width:1; font-family:arial black; font-size:14px; color:yellow;} 
+
+</style> 
+
+<SCRIPT LANGUAGE="JavaScript1.2"> 
+<!--
+var ns=(document.layers); 
+var ie=(document.all); 
+var w3=(document.getElementById && self.innerWidth && (window.pageXOffset>-1)); 
+//my way of making sure the browser will have what I need 
+
+var allDivs      = new Array(10); 
+var documentWidth,documentHeight; 
+
+function initAll(){ 
+        if(!ns && !ie && !w3)        return; 
+
+        for(dNum=0; dNum<10; ++dNum){ 
+                if(ie)                allDivs[dNum]=eval('document.all.sDiv'+dNum+'.style'); 
+                else if(ns)        allDivs[dNum]=eval('document.layers["sDiv'+dNum+'"]'); 
+                else if(w3)        allDivs[dNum]=eval('document.getElementById("sDiv'+dNum+'").style'); 
+                moveTo(dNum,0,0); 
+        }                 
+} 
+
+function moveTo(i,tempx,tempy){ 
+        if (ie){ 
+                documentWidth  =document.body.offsetWidth+document.body.scrollLeft-20; 
+                randomy=Math.floor(Math.random()*document.body.offsetHeight)+document.body.scrollTop-20; 
+        } 
+        else if (ns){ 
+                documentWidth=window.innerWidth+window.pageXOffset-20; 
+                randomy=Math.floor(Math.random()*window.innerHeight)+window.pageYOffset-20; 
+        } 
+        else if (w3){ 
+                documentWidth=self.innerWidth+window.pageXOffset-20; 
+                randomy=Math.floor(Math.random()*self.innerHeight)+window.pageYOffset-20; 
+        } 
+
+        if(tempx>-50){ 
+                tempx-=45; 
+                allDivs[i].left=tempx; 
+                allDivs[i].top =tempy; 
+                setTimeout("moveTo("+i+","+tempx+","+tempy+")",40) 
+        } 
+        else 
+                setTimeout("moveTo("+i+",documentWidth-60,randomy)",2000/i+40); 
+} 
+
+window.onload=initAll 
+//--> 
+</script> 
+</head>
+<body>
+<div id="sDiv0">*</div> 
+<div id="sDiv1">*</div> 
+<div id="sDiv2">*</div> 
+<div id="sDiv3">*</div> 
+<div id="sDiv4">*</div> 
+<div id="sDiv5">*</div> 
+<div id="sDiv6">*</div> 
+<div id="sDiv7">*</div> 
+<div id="sDiv8">*</div> 
+<div id="sDiv9">*</div> 
+</body>
+</html>

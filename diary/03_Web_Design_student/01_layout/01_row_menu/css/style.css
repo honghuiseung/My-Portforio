@@ -1,0 +1,49 @@
+﻿/* 초기화 코드 */
+*{margin:0px; padding:0px;}
+img{border: 0;}
+.cf:after{content:''; display: block; clear: both;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+div{box-sizing: border-box;}
+h1, h2, h3, div{font-size: 16px; font-weight: nomal;}
+
+/* 레이아웃 */
+/* 내용을 추가할때 잘리지않게 생각해서 만들기 */
+#wrap{width: 1200px; margin: 50px auto;}
+#header{width: 1200px; height: 100px; /* 높이값 보통 지정안함 */ position: relative;}
+.logo{width: 250px; height: 100px; float: left; background-color: #eeeeee;}
+.nav{width: 950px; height: 100px; float: right; background-color: #dddddd;}
+
+#banner{width: 1200px; height: 300px; background : #cccccc; }
+#contents{width: 1200px; height: 200px;}
+#contents > div{float: left; width: 400px; height: 200px;}
+#contents > div.content1{background-color: #555555;}
+#contents > div.content2{background-color: #777777;}
+#contents > div.content3{background-color: #999999;}
+
+#footer{width: 1200px; height: 100px;}
+.footer1{float:left; width: 200px; height: 100px; background: #cccccc;}
+.footer2{float:left; width: 800px; height: 100px; background: #dddddd;}
+.footer3{float:left; width: 200px; height: 100px; background: #eeeeee;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

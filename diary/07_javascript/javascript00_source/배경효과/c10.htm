@@ -1,0 +1,75 @@
+<html>
+<HEAD>
+<title></title>
+<style>
+.clsBlue
+{
+LEFT: 0px;
+POSITION: absolute;
+TOP: 0px;
+Z-INDEX: -1
+}
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+ie4 = ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4 ))
+ns4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 4 ))
+
+var FStart = "";
+var BStart = "";
+
+if (ns4) {
+layerRef="document.layers";
+styleRef="";
+} else {
+layerRef="document.all";
+styleRef=".style";
+}       
+
+function movFwd(which, xstart, xfinish, ystart, yfinish, step, speed) {  
+BStart = "";
+if (FStart == "") {
+FStart = xstart;
+}
+if (ie4 || ns4) {
+if (xstart < xfinish) { 
+eval(layerRef + '["' + which +'"]' + styleRef + '.top = ystart');
+eval(layerRef + '["' + which +'"]' + styleRef + '.left = xstart');
+xstart = xstart + step; 
+setTimeout("movFwd('" + which + "', " + xstart + ", " + xfinish + ", " + ystart + ", " + yfinish + ", " + step + ", " + speed + ")", speed);
+} else {
+setTimeout("movBwd('" + which + "', " + xfinish + ", " + FStart+", " + ystart + ", " + yfinish + ", " + step + ", " + speed + ")", speed);
+      }
+   }
+}
+
+function movBwd(which, xstart, xfinish, ystart, yfinish, step, speed) {
+FStart = "";
+if (BStart == "") {
+BStart = xstart;
+}
+if (ie4 || ns4) {
+if (xstart > xfinish) { 
+eval(layerRef + '["' + which +'"]' + styleRef + '.top = ystart');
+eval(layerRef + '["' + which +'"]' + styleRef + '.left = xstart');
+xstart = xstart - step; 
+setTimeout("movBwd('" + which + "', " + xstart + ", " + xfinish + ", " + ystart + ", " + yfinish + ", " + step + ", " + speed + ")", speed);
+} else {
+setTimeout("movFwd('" + which + "', " + xfinish + ", " + BStart + ", " + ystart + ", " + yfinish + ", " + step + ", " + speed + ")", speed);
+      }
+   }
+}
+//-->
+</script>
+</HEAD>
+
+<BODY onLoad="movFwd('bl_grad',-50,800,0,0,1)">
+
+<img src="bd.jpg" border=0 class="clsBlue" id="bl_grad">
+<br><br><br>
+<center>
+<font face="굴림" size="2">배경 그림이 좌우로 왔다갔다 하는 효과입니다.</font><br><br>
+<font face="굴림" size="2">멋지죠.</font><br><br>
+</center>
+</body>
+</html>

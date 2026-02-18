@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 함수 정의하기</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+        <h1>JavaScript 함수 정의하기</h1>
+    </div>
+	<div class="article">    
+        <h2>함수 정의하기</h2>
+    </div>
+    <p>-함수에는 파라메터가 필요한 함수가 있고 필요없는 함수가 있다.<br>
+  -함수를 실행하려면 함수를 정의하고 정의된 함수를 실행해야 한다.</p>
+
+  
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+    <h3>기본형식    </h3>
+  <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td  class="gray">&nbsp;&nbsp;&nbsp;&nbsp;function 함수이름()<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문장<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>사용예) 함수정의하고 사용하기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script&gt;
+        function love()
+        {
+            for(i=1;i&lt;=400;i++)
+            document.write(&quot;사랑해!&quot;)
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        love()
+    &lt;/script&gt; 
+&lt;/body&gt;
+</pre>
+    <p>&nbsp;</p>
+    
+    
+    <p>실전예) 함수 정의와 사용 <br>
+<pre>&lt;script&gt;
+<span class="green"></span>    var num=1
+    function nextGallery(){
+        num++
+        if(num&gt;7) {num=1}
+        document.getElementById(&quot;gallery&quot;).src=&quot;img/img&quot;+num+&quot;.jpg&quot;
+        return false
+    }
+
+    function prevGallery(){
+        num--
+        if(num&lt;1) {num=7}
+        document.getElementById(&quot;gallery&quot;).src=&quot;img/img&quot;+num+&quot;.jpg&quot;
+        return false
+    }
+&lt;/script&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;galleryWrap&quot;&gt;
+        &lt;h1&gt;이미지 넘기기&lt;/h1&gt;
+        &lt;p&gt;
+            &lt;a href=&quot;#prev&quot; onclick=&quot;return <span class="normal">prevGallery();</span>&quot;&gt;&amp;lt; &lt;/a&gt;
+            &lt;img src=&quot;img/img1.jpg&quot; alt=&quot;갤러리&quot; id=&quot;gallery&quot;  width=&quot;300&quot; height=&quot;200&quot; /&gt;
+            &lt;a href=&quot;#next&quot; onclick=&quot;return <span class="normal">nextGallery();</span>&quot;&gt;&amp;gt; &lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</pre>    
+    
+    
+    <p>&nbsp;</p>
+    <p>사용예) 함수의 매개변수 정의와 사용 <br>
+    <span class="gray">- 전달(인자)값이 있는 함수 : 매개 변수와 인자 값(갯수)이 동일하게 나열되어야 정확한 전달이 가능</span></p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script&gt;
+        function add(a,b)
+        {
+            var c  
+            c=a+b
+            document.write(c)
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        m=3
+        n=4
+        document.write(m + &quot;+&quot; + n + &quot;=&quot;)
+        add(m,n)
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>함수에서 변수 사용할 때 주의할점</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>var 변수 : 지역 변수로 정의함<br>
+변수 : 전역 변수로 정의함
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p class="gray">- 함수 외부에 선언하거나 함수 내에서 var 연산자를 붙이지 않고 선언. 외부에서 선언한 경우 var를 붙이지 않아도 실행에는 문제가 없으나 좋지 않은 습관<br>
+    - 지역변수와 전역변수를 구분하는 이유 : 변수의 중복 사용을 막기 위해서... 전역변수와 지역변수의 이름이 같다는 것만으로 오류가 발생하지는 않으며 해당 함수 내에서는 지역변수가 우선 호출되며 프로그램이 복잡해질수록 깔끔한 실행을 위해서는 될 수록 구분해주는 것이 좋음</p>
+    <p>&nbsp;</p>
+    <p>사용예) 지역변수와 전역변수 설정</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script&gt;
+        function sdsd(a,b)
+        {
+            var c=a+b         <span style="color:white;">// 지역변수 선언 c=30, var 지우고 다시 실행</span>
+            document.write(c)
+            document.write(&quot;&lt;br /&gt;&quot;)
+        }
+        
+        function sd()
+        {
+            d=c+2
+            document.write(d)
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        sdsd(10,20)
+
+        document.write(c+1)
+        document.write(&quot;&lt;br /&gt;&quot;)
+        
+        sd()
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+  <p>&nbsp;</p>
+  <p>사용예) 지역변수와 전역변수 사용하기</p>
+<pre>&lt;script&gt; 
+    var i=10
+    var num=20
+
+    function theTest(){
+        var num=i+200
+        alert(num)
+    }
+
+    theTest()
+
+    function theFnc(){
+        document.write(num)
+    }
+
+    theFnc()
+&lt;/script&gt;
+</pre>
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  <div class="article">    
+    <h2>내장함수</h2>
+    </div>
+  <p>&nbsp;</p>
+    
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>- parseInt() : 문자형 데이터를 정수형 데이터로 바꿈(소숫점 없는)<br />
+- parseFloat() : 문자형 데이터를 실수형 데이터로 바꿈<br />
+- String() : 문자형 데이터로 바꿈<br />
+- Number() : 숫자형 데이터로 바꿈<br />
+- Boolean() : 논리형 데이터로 바꿈<br />
+- IsNaN() : 'Not a Number'의 약자로 데이터에 숫자가 아닌 문자를 포함하면 true을 반환<br />
+- eval() : 문자형 데이터를 큰따옴표가 없는 스크립트 코드로 처리 산술 계산</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>alert() 함수</h3>
+    <p>&nbsp;</p>
+    <p>사용예) 메세지 창을 열어주는 alert() 내장함수 사용법</p>
+    
+<pre>
+&lt;script&gt;
+    alert(&quot;저의 집에 오신 것을 환영합니다.&quot;)
+&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>사용예) alert를 응용 퀴즈문제 만들기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt; 퀴즈문제 &lt;/title&gt;
+    &lt;script&gt;
+        function quiz() { alert(&quot;I know what you did last summer.&quot;) }
+    &lt;/script&gt;
+&lt;/head&gt;<br>  <p>&lt;body style=&quot;background-color: black; color: white; margin-top: 50px;&quot;&gt;
+    &lt;p&gt;&lt;img src=&quot;images/quiz.jpg&quot; style=&quot;display: block; margin: 0 auto;&quot;&gt;&lt;/p&gt;
+    &lt;form name=&quot;form1&quot;&gt;
+        &lt;p style=&quot;text-align: center;&quot;&gt;위 영화 제목은
+            &lt;input type=&quot;submit&quot; value=&quot;  ??  &quot; onclick=&quot;quiz()&quot; /&gt; 입니다.<p>        &lt;/p&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>선택대화상자를 만들어 주는 confirm()함수</h3>
+    <p>&nbsp;</p>
+    <p>사용예) 미성년자 출입금지</p>
+<pre>
+&lt;script&gt;
+<span class="green"></span>    haha=confirm(&quot;18세 이상이면 [확인] 단추를 클릭하세요&quot;)
+
+    if(haha==true) location.href=&quot;a.htm&quot;
+    else location.href=&quot;b.htm&quot;
+<span class="green"></span>&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>사용예) 창크기 조절해서 열기 <span class="red">(익스10 O / 파폭 X 다르게 반응)</span></p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt; 창크기조절 &lt;/title&gt;
+    &lt;script&gt;
+        haha=confirm(&quot;해상도가 모바일 (320*568)이면 [확인]단추를 <span class="blue">\n</span>태블릿 (1024*768)이라면[취소]단추를 클릭하세요&quot;)
+
+        if(haha==true) small()
+        else large()
+
+        function small() { window.resizeTo(320, 568) }
+        
+        function large() { window.resizeTo(1024, 768) }
+    &lt;/script&gt;
+    &lt;style&gt;
+        #wrap{position: absolute; top: 50%; left: 50%; margin-top: -100px 0px 0px -100px;
+            width: 200px; height: 200px; background: url(images/polornote.gif) no-repeat;}
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>입력 대화 상자를 만들어 주는 prompt()함수  </h3>
+    <p>&nbsp;</p>
+    <p>사용예) 비밀번호 홈페이지 만들기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt; 비밀번호 &lt;/title&gt;
+    &lt;script&gt;
+        code = prompt(&quot;비밀번호를 입력하세요.&quot;,&quot;&quot;)
+        if (code==&quot;1234&quot;) location.href=&quot;welcome.htm&quot;
+        else  document.write(&quot;비밀번호가 틀렸네요.&quot;)
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+  <p>함수에서 return문의 역할</p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td><span class="gray">- return문 이란? 함수에서 결과값을 되돌려 줄 때 사용. 
+	함수에서  return문이 실행되면 반복문에서 break문과 비슷하게 실행문이 강제로 종료. 즉, 함수 정의문에 실행문으로 return문이 사용되었으면, 함수를 호출했을 때 결과값을 반환하고 진행중이던 실행문을 정지시키고 함수를 강제로 종료.</span></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</div>
+</body>
+</html>

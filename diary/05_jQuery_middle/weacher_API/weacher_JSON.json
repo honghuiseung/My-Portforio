@@ -1,0 +1,150 @@
+﻿var array = [1,2,3,4];
+var stringarray = ['str1', 'str2', 'str3'];
+var array = [{temp:value, temp_min:value},{temp:value, temp_min:value}];
+
+
+{
+	"cod":"200",
+	"message":0,
+	"cnt":40,
+	"list":
+	{
+		"dt":1607482800,
+		"main":{
+			"temp":2.16,
+			"feels_like":-0.97,
+			"temp_min":2.16,
+			"temp_max":3.87,
+			"pressure":1028,
+			"sea_level":1028,
+			"grnd_level":1021,
+			"humidity":59,
+			"temp_kf":-1.71
+		},
+		"weather":[
+			{
+				"id":800,
+				"main":"Clear",
+				"description":"clear sky",
+				"icon":"01d"
+			}
+		],
+		"clouds":{"all":1},
+		"wind":{"speed":0.74,"deg":168},
+		"visibility":10000,
+		"pop":0,
+		"sys":{"pod":"d"},
+		"dt_txt":"2020-12-09 03:00:00"
+	},
+	"list":
+	{
+		"dt":1607482800,
+		"main":{
+			"temp":2.16,
+			"feels_like":-0.97,
+			"temp_min":2.16,
+			"temp_max":3.87,
+			"pressure":1028,
+			"sea_level":1028,
+			"grnd_level":1021,
+			"humidity":59,
+			"temp_kf":-1.71
+		},
+		"weather":[
+			{
+				"id":800,
+				"main":"Clear",
+				"description":"clear sky",
+				"icon":"01d"
+			}
+		],
+		"clouds":{"all":1},
+		"wind":{"speed":0.74,"deg":168},
+		"visibility":10000,
+		"pop":0,
+		"sys":{"pod":"d"},
+		"dt_txt":"2020-12-09 03:00:00"
+	},
+	"city":{
+		"id":1835848,
+		"name":"Seoul",
+		"coord":{"lat":37.5683,"lon":126.9778},
+		"country":"KR",
+		"population":0,
+		"timezone":32400,
+		"sunrise":1607466921,
+		"sunset":1607501628
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+{
+	"coord":{
+		"lon":126.98,
+		"lat":37.57
+	},
+	"weather":[
+		{
+			"id":800,
+			"main":"Clear",
+			"description":"clear sky",
+			"icon":"01d"
+		}
+	],
+	"base":"stations",
+	"main":{
+		"temp":4.3,
+		"feels_like":0.91,
+		"temp_min":4,
+		"temp_max":5,
+		"pressure":1027,
+		"humidity":35
+	},
+	"visibility":10000,
+	"wind":{
+		"speed":0.5,
+		"deg":206
+	},
+	"clouds":{
+		"all":1
+	},
+	"dt":1607485139,
+	"sys":{
+		"type":1,
+		"id":8117,
+		"country":"KR",
+		"sunrise":1607466921,
+		"sunset":1607501627
+	},
+	"timezone":32400,
+	"id":1835848,
+	"name":"Seoul",
+	"cod":200
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>문서 정보를 제어하는 문서 객체(Document Object Model)</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <h1>문서 정보를 제어하는  문서 객체(Document Object Model)</h1>
+    
+    <div class="article">
+        <h2>문서 정보를 제어하는 Document객체</h2>
+    </div>
+    <p>&nbsp;</p>   
+    
+    
+  <h3>문서 정보를 표시해주는 속성들</h3>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p><span class="normal">document.title</span> : 문서의 제목을 표시한다<br>
+          <span class="normal">document.location</span> : 문서의 위치 경로를 표시한다<br>
+	</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+
+    <p>사용예) document 객체 사용예</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt; Test &lt;/title&gt;
+    &lt;script&gt;
+<span class="green"></span>        document.write(&quot;이 홈페이지의 제목은&quot;, document.title,&quot;입니다.&quot;, &quot;&lt;br /&gt;&quot;)
+        document.write(&quot;이 홈페이지의 위치는&quot;, document.location, &quot;입니다.&quot;)
+<span class="green"></span>    &lt;/script&gt;
+&lt;/head&gt;
+</pre>
+
+
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+	<h3>최종 수정 날짜를 표시해주는 속성</h3>
+  <p>사용예) document.lastModified&nbsp;사용예</p>
+    
+<pre class="gray">
+&lt;head&gt;
+    &lt;title&gt;연습&lt;/title&gt;
+    &lt;script&gt;
+        function <span class="normal">modifi()</span>
+        {
+            a=new Date(document.lastModified)
+            x=a.getYear()
+            y=a.getMonth()+1
+            z=a.getDate()
+            document.write(&quot;이 홈페이지의 최종 수정 날짜는&quot;, x, &quot;년&quot;, y, &quot;월&quot;, z, &quot;일입니다.&quot;)
+        }
+<span class="green"></span>    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body <span class="normal">onload=&quot;modifi()&quot;</span>&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  <h3>선택자</h3>
+    <p>id 선택자(getElementById) | 요소 선택자(getElementsByTagName)</p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+    <p><span class="normal">parentNode</span> : 선택된 요소 기준으로 부모 요소를 선택할 때 사용</p>
+    <p><span class="normal">childNodes</span> : 선택된 요소 기준으로 자식 요소를 선택할때 사용</p>
+    <p><span class="normal">children</span> : 선택된 요소 기준으로 자식 요소를 선택할 때 사용</p>
+    <p><span class="normal">firstChild</span> : 선택된 요소 기준으로 첫 번째 자식 요소를 선택할 때 사용</p>
+    <p><span class="normal">lastChild</span> : 선택된 요소 기준으로 마지막 번째 자식 요소를 선택할 때 사용</p>
+    <p><span class="normal">previousSibling</span> : 선택된 요소 기준으로 형제 요소 중 이전 요소를 선택할 때 사용</p>
+    <p><span class="normal">nextSibling</span> : 선택된 요소 기준으로 형제 요소 중 다음 요소를 선택할 때 사용</p>
+    <p><span class="normal">tagName(속성)</span> : 선택된 요소의 태그명를 반환(텍스트 노드의 속성)</p>
+	<p><span class="normal">nodeValue(속성)</span> : 선택된 요소의 텍스트를 반환(텍스트 노드의 속성)</p>
+        
+        </td>
+      </tr>
+  </table>
+    <p>&nbsp;</p>
+  <p>&nbsp;</p>
+	<h3>문서 색상 정보를 제어하는 속성들</h3>
+  <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+  <p><span class="normal">document.bgColor=&quot;색깔&quot;</span>		: 문서의 배경색을 설정<br>
+    <span class="normal">document.fgColor=&quot;색깔&quot;</span>		: 문서의 글자색을 설정<br>
+    <span class="normal">document.linkColor=&quot;색깔&quot;</span>	: 링크가 설정된 글자의 색을 설정<br>
+    <span class="normal">document.alinkColor=&quot;색깔&quot;</span>	: 링크가 실행될 때의 글자색을 설정<br>
+    <span class="normal">document.vlinkColor=&quot;색깔&quot;</span>	: 링크가 실행된 후의 글자의 색을 설정</br>
+  </p>        
+        </td>
+      </tr>
+  </table>
+  <p>&nbsp;</p>
+
+  <p>사용예) 무지개 색으로 배경색 바꾸기</p>
+<pre class="gray">
+&lt;body bgcolor=&quot;#ffcc00&quot;&gt;
+&lt;table align=&quot;right&quot; border cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;500&quot; height=&quot;10&quot;&gt;
+    &lt;tr&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;white&quot; onmouseover=&quot;document.bgColor='white'&quot;&gt;
+            &lt;p align=&quot;center&quot;&gt;&lt;font size=&quot;2&quot;&gt;COLOR&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;red&quot; <span class="normal">onmouseover=&quot;document.bgColor='red'&quot;</span>&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;orange&quot; onmouseover=&quot;document.bgColor='orange'&quot;&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;yellow&quot; onmouseover=&quot;document.bgColor='yellow'&quot;&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;green&quot; onmouseover=&quot;document.bgColor='green'&quot;&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;blue&quot; onmouseover=&quot;document.bgColor='blue'&quot;&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;navy&quot; onmouseover=&quot;document.bgColor='navy'&quot;&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+        &lt;td width=&quot;87&quot; bgcolor=&quot;violet&quot; onmouseover=&quot;document.bgColor='violet'&quot;&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+</pre>
+
+
+	<p>&nbsp;</p>
+  <p>&nbsp;</p>
+	<h3>문서 객체 조작</h3>
+	  <p>- 문서를 새로운 요소를 직접 생성하여 추가, 삭제, 복제하는 방법</p>
+	  <table width="100%" border="1" align="center" cellpadding="5" cellspacing="0">
+	    <tr>
+	      <td rowspan="2">생성</td>
+	      <td>createElement(&quot;요소명&quot;)</td>
+	      <td>새 요소 생성</td>
+        </tr>
+	    <tr>
+	      <td>appendTextNode /createTextNode(&quot;텍스트&quot;)</td>
+	      <td>새 텍스트 생성</td>
+        </tr>
+	    <tr>
+	      <td rowspan="2">추가</td>
+	      <td>선택요소.appendChild(새 요소)</td>
+	      <td>'선택 요소'에 새로운 자식 요소를 추가</td>
+        </tr>
+	    <tr>
+	      <td>선택요소1.insertBefore(새 요소, 선택 요소2)</td>
+	      <td>'선택 요소1'의 자식인 '선택 요소2'&nbsp;앞에 새로운 자식 요소를 추가</td>
+        </tr>
+	    <tr>
+	      <td>교체</td>
+	      <td>선택요소1.replaceChild(새 요소, 선택 요소2)</td>
+	      <td>'선택 요소1'의 자식인 '선택 요소2'를 새 요소로 덮어 씌움</td>
+        </tr>
+	    <tr>
+	      <td>삭제</td>
+	      <td>선택요소1.removeChild(선택 요소2)</td>
+	      <td>'선택 요소1'의 자식인 '선택 요소2'를 삭제</td>
+        </tr>
+	    <tr>
+	      <td>복제</td>
+	      <td>선택요소1.cloneNode(true or false)</td>
+	      <td>'선택 요소'를 복제하여 true인 경우에는 하위 요소까지 모두 복제</td>
+        </tr>
+	    <tr>
+	      <td>속성
+          부여</td>
+	      <td>선택요소.setAttribute(&quot;속성&quot;,&quot;값&quot;)</td>
+	      <td>'선택 요소'에 해당 속성값 부여</td>
+        </tr>
+  </table>
+	  <p>&nbsp;</p>
+    <p>사용예) createElement, setAttribute, appendChild, getElementById, appendChild&nbsp;사용법</p>
+    
+<pre class="gray">
+&lt;head&gt;
+    &lt;script&gt;
+<span class="green"></span>    window.onload=function(){
+   <span class="green">     //요소 객체 생성</span>
+   <span class="green"> </span>    var newPtag=document.createElement(&quot;p&quot;)
+       <span class="green"> </span>var newButton1=document.createElement(&quot;button&quot;)
+   <span class="green"> </span>    var newButton2=document.createElement(&quot;button&quot;)
+       <span class="green"> </span>var text1=document.createTextNode(&quot;버튼1&quot;)
+       <span class="green"> </span>var text2=document.createTextNode(&quot;버튼2&quot;)
+
+ <span class="green">       //속성 생성</span>
+       <span class="green"> </span>newButton1.setAttribute(&quot;id&quot;,&quot;btn1&quot;)
+       <span class="green"> </span>newButton2.setAttribute(&quot;id&quot;,&quot;btn2&quot;)
+
+   <span class="green">     //문서 객체 구조화</span>
+       <span class="green"> </span>newButton1.appendChild(text1)
+       <span class="green"> </span>newButton2.appendChild(text2)
+       <span class="green"> </span>newPtag.appendChild(newButton1)
+       <span class="green"> </span>newPtag.appendChild(newButton2)
+
+   <span class="green">     //선택 요소에 새 요소 추가</span>
+       <span class="green"> </span>var theObj=document.getElementById(&quot;theBox&quot;)
+       <span class="green"> </span>theObj.appendChild(newPtag)
+    }
+<span class="green"></span>    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;theBox&quot;&gt;
+        &lt;h1&gt;요소 생성하기&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</pre>
+
+
+  <p>&nbsp;</p>
+  <p>사용예) insertBefore, removeChild, cloneNOde 사용법</p>
+	<pre class="gray">
+&lt;head&gt;
+    &lt;script&gt;
+<span class="green"></span>    window.onload=function(){<span class="green"></span>
+        var theList=document.getElementById(&quot;theList&quot;)
+        var listAll=theList.getElementsByTagName(&quot;li&quot;)
+
+ <span class="green">       //리스트 1을 복제합니다.</span>
+        var copyList=listAll[3].cloneNode(true)
+
+   <span class="green">     //복제된 리스트1를 리스트2앞으로 삽입합니다.</span>
+        theList.insertBefore(copyList, listAll[0])
+    }
+   <span class="green"> //기존 리스트1을 삭제합니다.</span>
+    theList.removeChild(listAll[4])
+<span class="green"></span>    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;요소 생성하기&lt;/h1&gt;
+    &lt;ul id=&quot;theList&quot;&gt;
+        &lt;li&gt;리스트2&lt;/li&gt;
+        &lt;li&gt;리스트3&lt;/li&gt;
+        &lt;li&gt;리스트4&lt;/li&gt;
+        &lt;li&gt;리스트1&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;</pre>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+</body>
+</html>

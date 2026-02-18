@@ -1,0 +1,66 @@
+배경에 글자가 스크롤되도록 만들기
+
+
+1.<head> 태그 안에 입력==========================================================
+
+<script language="JavaScript">
+<!--
+tt="안녕하세요.<br>저의 홈페이지에 오신 것을<br>환영합니다.<br>여러분의 <br>많은 관심 부탁드립니다."
+function showAlert() {
+if (document.all) {
+y = document.body.clientHeight
+bgticker = document.all.bgtick.style	
+bgticker.posLeft = 0	
+bgticker.posTop = y	
+bgtick.innerHTML=tt	
+document.all.mainbod.style.posLeft = 0	
+document.all.mainbod.style.posTop = 0
+}
+if (document.layers) {
+y=300
+bgticker = document.bgtick
+bgticker.left = 0
+bgticker.top = y
+document.bgtick.document.write("<span style='font-size:40pt;color:AAAAAA'>"+tt+"</span>")
+document.close()
+document.mainbod.left = 0	
+document.mainbod.top = 0
+}
+scroll()
+}
+
+function scroll() {
+if (y > -1200) {
+y=y-2
+if (document.all) {bgticker.posTop = y; document.all.mainbod.style.posTop=0}
+if (document.layers) {bgticker.top = y; document.mainbod.top=0}
+}		
+else {
+if (document.all){y=document.body.clientHeight}
+if (document.layers){y=300}
+}
+var timer = setTimeout('scroll()',20)
+}
+
+//-->
+</script>
+<STYLE>
+.ticker {
+position: absolute;
+top:1200px;
+font-family:gulim;
+font-weight:bold;
+font-size:50px; 
+color:BCD7FF;
+}
+</STYLE>
+
+2.<body> 태그 안에 입력==========================================================
+
+onLoad="showAlert()"
+
+
+3.<body> 태그에 입력=============================================================
+
+<div id="bgtick" class="ticker">&nbsp;</div>
+<div id="mainbod" style="position:absolute; visibility:visible"><br>

@@ -1,0 +1,54 @@
+/* common */
+html{width:100%;height:100%;overflow-y:scroll}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0px;padding:0px;font:inherit;vertical-align:baseline;}
+body{font-size:12px;font-family:Dotum,Arial;color:#74767a;line-height: 120%;}
+a,a:link,a:visited{color:#74767a;text-decoration:none}
+ul,ol{list-style:none}
+address,em{font-style:normal}
+table{border-spacing:0px;border-collapse:collapse;width:100%}
+table,fieldset,th,td,img{border:none}
+td{word-break:break-all}
+img,input,select{vertical-align:middle}
+caption{width:0px;height:0px;line-height:0px;visibility:hidden;overflow:hidden}
+legend{position:absolute;width:0px;height:0px;line-height:0px;visibility:hidden;overflow:hidden}
+hr{display:none;}
+
+
+
+#quickMenu{
+	width: 275px;
+	height: 85px;
+	margin-top: 25px;
+	border: 1px solid #b8c923;
+	border-radius: 15px;
+	background-color: #ffffff;
+}
+	#quickMenu ul{
+		margin-left: 13px;
+	}
+	#quickMenu ul li{
+		width: auto;
+		cursor: pointer; 
+		float: left;
+	}
+	#quickMenu ul li .textImage{
+		/* padding-left:10px; */ 
+		padding-top: 5px; 
+		float: left;
+	}
+	#quickMenu ul li .textImage .on{ 
+		display:none;
+		padding: 0px 5px 0px 0px;
+	}
+	#quickMenu ul li .textImage .off{
+		padding: 0px 5px 0px 0px;
+	}
+	#quickMenu ul li .menuImage{
+		width: 0px; 
+		overflow: hidden; 
+		float: left;
+	}
+	#quickMenu ul li .menuImage a img{
+		width:70px;
+		padding-top: 5px;
+	}

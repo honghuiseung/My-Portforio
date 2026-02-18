@@ -1,0 +1,50 @@
+그림 크기가 자유자재로 변하게 만들기
+
+
+1.<head> 태그에 삽입============================================================
+
+
+<script language="JavaScript"> 
+<!--
+var b = 1; 
+var c = true; 
+
+function fade(){ 
+if(document.all); 
+
+if(c == true) { 
+b++; 
+} 
+if(b==100) { 
+b--; 
+c = false 
+} 
+
+if(b==10) { 
+b++; 
+c = true; 
+} 
+
+if(c == false) { 
+b--; 
+} 
+u.width=600 + b; 
+u.height=342 - b; 
+setTimeout("fade()",50); 
+} 
+-->
+</script>
+
+
+
+2.<body> 태그 안에 삽입============================================================
+
+
+onLoad="fade()"
+
+
+
+3.<body> 태그에서 효과를 적용할 위치에 삽입=========================================
+
+
+<center><img src="michel.jpg" name="u" border="0"></center>

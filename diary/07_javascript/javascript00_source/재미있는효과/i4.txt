@@ -1,0 +1,28 @@
+웹브라우저가 위에 날라들어오는 효과 만들기
+
+
+1.<head> 태그에 삽입==================================================================
+
+<script language="JavaScript">
+<!--
+ function drop(n) {
+    if(self.moveBy){
+        self.moveBy (0,-900);
+    for(i = n; i > 0; i--){
+        self.moveBy(0,3);
+}
+    for(j = 8; j > 0; j--){
+        self.moveBy(0,j);
+        self.moveBy(j,0);
+        self.moveBy(0,-j);
+        self.moveBy(-j,0);
+       }
+   }
+}
+//-->
+</script>
+
+
+2.<body> 태그 안에 삽입======================================================================
+
+onload="drop(300)"

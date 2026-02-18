@@ -1,0 +1,84 @@
+메뉴 설명 글 나타나게 만들기
+
+
+1.<head> 태그에 삽입============================================================
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+messages=new Array(2)
+
+messages[0]="저는 이렇게 살았습니다."
+
+messages[1]="제 인생 이야기"
+
+messages[2]="방명록에 글을 남겨주세요."
+
+var browser;
+
+if (document.all) {
+
+		layerRef='document.all.'
+
+		styleRef='.style.'
+
+		changeMessages=".innerHTML=messages[num]"
+
+		closeit=""
+
+		browser=true
+
+}
+
+else if (document.layers) {
+
+		layerRef='document.layers.'
+
+		styleRef='.'
+
+		changeMessages='.document.write(" <font face=VERDANA color=#000000 size=3 style=text-align:middle;background:#FFFFFF;>  메   뉴   설   명<BR><HR WIDTH=300 ALIGN=MIDDLE NOSHADE><B> "+messages[num]+"</B></font><BR><HR WIDTH=300 ALIGN=MIDDLE NOSHADE>")'
+
+		closeit=".document.close()"
+
+		browser=true
+
+	}
+
+function mover(num){
+
+	if(browser){
+
+		eval(layerRef+'startingMsg'+changeMessages)
+
+		eval(layerRef+'startingMsg'+closeit);
+
+	}
+
+}
+
+function mout(num){
+
+	if(browser){
+
+		eval(layerRef+'startingMsg'+changeMessages);
+
+		eval(layerRef+'startingMsg'+closeit);
+
+	}
+}
+//-->
+</SCRIPT>
+
+
+2.<body> 태그에서 효과를 적용할 위치에  삽입====================================
+
+
+<a href="a.htm" onmouseover="mover(0)">PROFILE</a><P>
+
+<a href="b.htm" onmouseover="mover(1)">STORY</a><P>
+
+<a href="c.htm" onmouseover="mover(2)">GUEST BOOK</a><P>
+
+<div id="startingMsg" style="position:absolute;background:#FFFFFF;TOP:200;left:300;width: 550"></div>
+
+

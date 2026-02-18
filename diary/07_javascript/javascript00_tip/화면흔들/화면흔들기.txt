@@ -1,0 +1,44 @@
+﻿<강좌 - 화면을 흔들어 보자>
+
+1. 아래의 스크립트를 마우스로 복사한후,
+2. 보여지는 문서(html)의 <head>와 </head>태크 사이에 붙여넣기를 하시면 됩니다.
+
+
+	<SCRIPT LANGUAGE="JavaScript1.2">
+	function shake_xy(n) {
+	if (window.top.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+				window.top.moveBy(0,i);
+				window.top.moveBy(i,0);
+				window.top.moveBy(0,-i);
+				window.top.moveBy(-i,0);
+		    }
+	      }
+	   }
+	}
+
+	function shake_x(n) {
+	if (window.top.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+				window.top.moveBy(i,0);
+				window.top.moveBy(-i,0);
+		    }
+	      }
+	   }
+	}
+
+	function shake_y(n) {
+	if (window.top.moveBy) {
+		for (i = 10; i > 0; i--) {
+			for (j = n; j > 0; j--) {
+				window.top.moveBy(0,i);
+				window.top.moveBy(0,-i);
+		    }
+	      }
+	   }
+	}
+
+	//-->
+	</script>

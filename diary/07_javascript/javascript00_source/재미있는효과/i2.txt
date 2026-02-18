@@ -1,0 +1,102 @@
+시험문제 출제하기
+
+1.<head> 태그에 삽입======================================================================
+
+
+<script language="JavaScript">
+<!--
+//####################질문 개수 입력 ##########################
+
+var Total_Question = 3		
+
+var msg = ""
+
+  var Solution = new Array(Total_Question)
+
+//##########################정답 표기##########################
+  
+  Solution[0] = "5 + 1 = 6"
+  Solution[1] = "(3+2)/5 = 5/5 = 1"
+  Solution[2] = "2 * 1 = 2"
+
+//#############################################################
+
+function GetSelectedButton(ButtonGroup)
+{
+  for (var x=0; x < ButtonGroup.length; x++)
+    if (ButtonGroup[x].checked) return x
+  return 0
+} 
+
+function ReportScore(correct)
+{ 
+  var SecWin = 
+      window.open("","","scrollbars,width=300,height=300")
+  var MustHave1 = "<HTML><HEAD><TITLE>당신의 점수</TITLE></HEAD><BODY>"
+  var Percent = "<H2>Score : "+Math.round(correct/Total_Question*100)
+		 + "점</H2><HR>"
+  msg = MustHave1 +Percent + msg  + "</BODY></HTML>"
+  
+  SecWin.document.write(msg)
+  msg = ""  // Clear message
+}
+
+function Grade()
+{
+  var correct = 0
+  var wrong = 0
+  for (number=0; number < Total_Question; number++)
+    {
+      var form = document.forms[number]      // Question #
+      var i = GetSelectedButton(form.q1)
+      if (form.q1[i].value == "1")
+	 { correct++ } 
+	else 
+	 { wrong++
+	   msg += "<H4>Question "+(number+1)+".</H4>"
+		  +Solution[number]+"<BR>"
+	 }
+    }
+    ReportScore(correct)
+}
+//-->
+</script>
+
+
+2.<body> 태그에 삽입======================================================================
+
+
+<table width=400 align="center">
+<H2 align="center">수학 문제</H2><br>
+다음 공식을 계산하세요.
+<HR><BR>
+
+<!--##########################질문 입력########################## //-->
+
+<FORM method="get">
+<B>1.</B> X = 5 + 1<BR><BR>
+<INPUT type="radio" name="q1" value="0" checked>4
+<INPUT type="radio" name="q1" value="0">5 
+<INPUT type="radio" name="q1" value="1">6 
+<BR><HR><BR>
+</FORM>
+
+<FORM method="get">
+<B>2.</B> X = (3 + 2) / 5 <BR><BR>
+<INPUT type="radio" name="q1" value="0" checked>0 
+<INPUT type="radio" name="q1" value="1">1 
+<INPUT type="radio" name="q1" value="0">3 
+<INPUT type="radio" name="q1" value="0">4 
+<BR><HR><BR>
+</FORM>
+
+
+<FORM method="get">
+<B>3.</B> X = 2 * 1<BR><BR>
+<INPUT type="radio" name="q1" value="0" checked>1 
+<INPUT type="radio" name="q1" value="1">2 
+<INPUT type="radio" name="q1" value="0">3
+<BR><HR><BR>
+<INPUT type="button" name="Submit" value=" 채 점 " onclick="Grade()"> </P>
+</FORM>
+</table>

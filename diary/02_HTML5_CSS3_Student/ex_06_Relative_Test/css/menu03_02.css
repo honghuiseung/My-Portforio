@@ -1,0 +1,33 @@
+﻿html{overflow-y:scroll;}
+*{margin:0; padding:0;}
+body{font-family: '맑은 고딕', '돋움', sans-serif;}
+ul, li{list-style: none;}
+a{text-decoration: none;}
+img{border:0;}
+
+.fl{float:left;}
+.fr{float:right;}
+.cb{clear:both;}
+.cf:after{content:''; display: block; clear: both;}
+
+#header{width: 1200px; height: 180px; background: #efefef; margin: 0 auto; overflow: hidden;}
+#headerLnb{position:relative; float: left; left: 50%; top: 100px;}
+#nav{position: relative; left: -50%; float: left; height: 35px;}
+#nav> li{float:left;}
+#nav> li {display:block; padding: 7px 45px; margin-right: 10px; color: #7db9dd; font-size: 1.1em; font-weight: 600; letter-spacing: -0.1em; text-shadow: 1px 1px 1px #dddddd;}
+#nav> li >a.last{margin-right: 0px;}
+#nav> li:hover > a {color: #0059b3;}
+
+
+#nav> li ul {position: absolute; left: 22px; top: 35px; background-color:#7db9bd; display: none;}
+
+#nav> li:hover ul{display:block;}
+#nav> li ul.menu1{left: 22px;}
+#nav> li ul.menu2{left: 109px;}
+#nav> li ul.menu3{left: 77px;}
+#nav> li ul.menu4{left: 145px;}
+#nav> li ul.menu5{left: 284px;}
+
+#nav> li ul li{float: left;}
+#nav> li ul li a{display: block; font-size: 0.9em; padding: 2px 10px 6px; color: #f0eceb;}
+#nav> li ul li a:hover{color:#3a75ad;}

@@ -1,0 +1,23 @@
+﻿<html>
+
+<head>
+<title>월드컵</title>
+<script language="JavaScript">
+     var today = new Date();
+     var cup = new Date("June 1, 2002");
+     var aa = cup.getTime();
+     var bb = today.getTime();
+     var day = Math.ceil((bb-aa)/24/60/60/1000);
+</script>
+</head>
+
+<body>
+<p align="center"><img src="images/cup.gif" width="377" height="286" border="0"></p>
+<script language="JavaScript">
+document.write("<center>")
+document.write("2002년 월드컵이 시작한지 " + day + " 일 지났어요.")
+document.write("</center>")
+</script>
+</body>
+
+</html>

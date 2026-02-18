@@ -1,0 +1,10 @@
+﻿.parent{position: relative; background: #ff0000; height:150px;}
+.child{width:200px; height: 100px; background: #ffff00;}
+.first{background: #00ff00;}
+.last{background: #0000ff; height:150px;}
+.fl{float: left;}
+
+.blank {content: '어쩌구 저쩌구'; display: block; clear: both; visibility:hidden; height:0px;}
+/* .cf:after{content: '어쩌구 저쩌구'; display: block; clear: both; visibility:hidden; height:0px;} */
+/* .cf:after{content: ''; display: block; clear: both;} */
+/* 일기장에 쓰기 */

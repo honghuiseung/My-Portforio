@@ -1,0 +1,65 @@
+화면 하단에 떠있는 스크롤 단추 만들기
+
+1.<head> 태그에 삽입=======================================================================
+
+<style type="text/css">
+#item {position:absolute; visibility:hidden; left:0px}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var isNS=(document.layers);
+var _all=(isNS)? '' : 'all.' ;
+var _style=(isNS)? '' : '.style' ;
+var _visible=(isNS)? 'show' : 'visible';
+var w_x, w_y, item, okscroll=false, godown;
+function init(){
+item=eval('document.'+_all+'item'+_style);
+getwindowsize();
+item.visibility=_visible;
+scrollpage();
+}
+function getwindowsize() {
+w_x=(isNS)? window.innerWidth-5 : document.body.clientWidth;
+w_y=(isNS)? window.innerHeight : document.body.clientHeight;
+(isNS)? item.clip.width=42: item.width=42;
+(isNS)? item.clip.height=20 : item.height=20;
+moveitem();
+}
+function resizeNS() {
+setTimeout('document.location.reload()',400);
+}
+function moveitem() {
+if (isNS) {
+item.moveTo((pageXOffset+w_x-70),(w_y+pageYOffset-50))
+}else{
+item.pixelLeft=document.body.scrollLeft+w_x-70;
+item.pixelTop=w_y+document.body.scrollTop-50;
+   }
+}
+window.onload=init;
+(isNS) ? window.onresize=resizeNS : window.onresize=getwindowsize ;
+function scrollpage() {
+status = '';
+if (okscroll) {
+if (godown) {
+(isNS)? window.scrollBy(0,4) : window.scrollBy(0,4) ;
+} else {
+(isNS)? window.scrollBy(0,-4) : window.scrollBy(0,-4) ;
+   }
+}
+moveitem();
+setTimeout('scrollpage()', 40);
+}
+//-->
+</script>
+
+
+2.<body> 태그에 삽입=======================================================================
+
+<div id="item">
+<a href="javascript:void(0)" onMouseover="okscroll=true; godown=true" 
+onMouseout="okscroll=false"><img src="down.gif" border="0"></a><a href="javascript:void(0)" 
+onMouseover="okscroll=true; godown=false" onMouseout="okscroll=false"><img src="up.gif" 
+border="0"></a>
+</div>

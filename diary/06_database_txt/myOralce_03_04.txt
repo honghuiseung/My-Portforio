@@ -1,0 +1,40 @@
+DDL(정의), DML(CRUD), DCL(제어)
+
+DROP TABLE emp01;
+CREATE TABLE emp01(empno number(4), ename varchar2(14), sal number(7,3));
+
+DESC emp01;
+INSERT INTO emp01 VALUES(1, '오윤석', 1000);
+INSERT INTO emp01 VALUES(2, '이윤석', 1000);
+INSERT INTO emp01 VALUES(3, '삼윤석', 1000);
+SELECT * FROM emp01;
+ROLLBACK;
+COMMIT;
+
+--RENAME
+RENAME emp01 TO emp02;
+DESC emp02;
+SELECT * FROM emp02;
+
+--DROP과 TRUNCATE
+DROP TABLE emp02; --테이블을 삭제
+TRUNCATE TABLE emp02; --레코드를 삭제
+
+INSERT INTO emp02 VALUES(1, '오윤석', 1000);
+INSERT INTO emp02 VALUES(2, '이윤석', 1000);
+INSERT INTO emp02 VALUES(3, '삼윤석', 1000);
+
+--USER_ 데이터 딕셔너리
+SELECT table_name FROM user_tables;
+
+--ALL_TABLE로 테이블에 대한 정보 조회하기
+SELECT owner, table_name FROM all_tables;
+
+--테이블에서 테이블 복제해서 만들기
+CREATE table emp02 AS SELECT * FROM emp01;
+SELECT * FROM emp02;
+SELECT * FROM emp01;
+
+TRUNCATE TABLE emp02;
+
+

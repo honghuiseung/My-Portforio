@@ -1,0 +1,36 @@
+홈페이지 강제 종료하게 만들기 
+
+
+1.<head> 태그에 삽입============================================================
+
+
+<script>
+function startTime(){
+        var time= new Date();
+        hours= time.getHours();
+        mins= time.getMinutes();
+        secs= time.getSeconds();
+        closeTime=hours*3600+mins*60+secs;
+        closeTime+=5;  
+        Timer();
+}
+
+function Timer(){
+        var time= new Date();
+        hours= time.getHours();
+        mins= time.getMinutes();
+        secs= time.getSeconds();
+        curTime=hours*3600+mins*60+secs
+        if (curTime>=closeTime){
+                self.close();}
+        else{
+                window.setTimeout("Timer()",1000)}
+}
+</script>
+
+
+
+2.<body> 태그 안에 삽입============================================================
+
+
+onLoad="startTime();"

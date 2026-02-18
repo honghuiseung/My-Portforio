@@ -1,0 +1,26 @@
+상태 표시줄에 글자 깜박이게 만들기
+
+1.<head> 태그에 삽입=============================================================
+
+<SCRIPT LANGUAGE="JavaScript"> 
+<!-- Begin 
+var message="이곳에 오신것을 환영합니다.. "; //출력할 내용 설정
+var speed=400;           //출력할 내용의 속도 설정
+var visible=0; 
+function Flash() { 
+if (visible == 0) { 
+window.status=message; 
+visible=1; 
+} else { 
+window.status=""; 
+visible=0; 
+} 
+setTimeout('Flash()', speed); 
+} 
+// End --> 
+</SCRIPT> 
+
+2.<body> 태그 안에 입력==========================================================
+
+onLoad="Flash()" 
+

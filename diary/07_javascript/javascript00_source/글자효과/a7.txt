@@ -1,0 +1,56 @@
+글상자에 글 흐르게 만들기
+
+1.<head> 태그에 삽입============================================================
+
+<SCRIPT language="JavaScript">
+
+var max=0;
+
+function textlist()
+{
+        max=textlist.arguments.length;
+        for (i=0; i<max; i++)
+                this[i]=textlist.arguments[i];
+}
+
+tl=new textlist    //글상자에 나타나게 할 내용 입력
+(
+        "안녕하세요. 저의 집에 오신 것을 환영합니다.",
+        "재미있는 영화와 신나는 음악 소개가 듬뿍 들어 있습니다.",
+        "무척 재미있는 시간이 될 것입니다."
+);
+
+var x=0; pos=0;
+var l=tl[0].length;
+
+function textticker() 
+{        
+        document.form1.textfeld.value=tl[x].substring(0,pos)+"_";
+
+        if(pos++==l)
+        {
+                pos=0;
+                setTimeout("textticker()",1000);
+                x++;
+                if(x==max)
+                        x=0;
+                l=tl[x].length;
+        } else
+                setTimeout("textticker()",60);
+
+}
+
+// end -->
+
+
+</SCRIPT>
+
+2.<body> 태그 안에 입력==========================================================
+
+onload="textticker()"
+
+
+3.<body> 태그에서 효과를 적용할 위치에 삽입======================================
+
+<FORM name="form1"><INPUT type=textarea name="textfeld" size="50"></FORM>
+

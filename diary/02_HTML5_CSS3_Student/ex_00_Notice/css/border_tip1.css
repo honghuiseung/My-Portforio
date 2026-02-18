@@ -1,0 +1,27 @@
+﻿.border_tip{width: 500px;position:relative; left:50%; top: 100px; margin-left: -210px; padding: 10px; font: 12px '맑은 고딕', Arial, sans-serif;text-align:justify; color: white; background:darkgreen;}
+
+.border_tip:before{content: ''; position:absolute; bottom: -10px; left: 50%; margin-left:-10px; 
+	border-top: 10px solid red;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.border_tip:after{content: ''; position:absolute; top: -10px; left: 50%; margin-left:-10px; 
+	border-bottom: 10px solid red;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.box1{
+	content: ''; position:absolute; top: 50%; right: -10px; margin-top:-10px; 
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid red;
+	border-top: 10px solid transparent;
+}
+
+.box2{
+	content: ''; position:absolute; top: 50%; left: -10px; margin-top:-10px; 
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid red;
+	border-top: 10px solid transparent;
+}

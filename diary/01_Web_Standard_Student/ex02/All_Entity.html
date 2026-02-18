@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Entities</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	margin: 0;
+	color: #404040;
+	font: 13px/normal "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Gulim, "굴림", Verdana, Arial, "Trebuchet MS";    margin: 0px; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+}
+a:link {
+	color: rgb(0,125,255);
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: rgb(255,0,0);
+	text-decoration: none;
+	font-weight: bold;
+}
+a:visited {
+	color: rgb(0,255,255);
+	text-decoration: none;
+	font-weight: bold;
+}
+a:active {
+	color: rgb(255,125,0);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#wrap {
+	width: 640px;
+	margin: auto;
+}
+.article {
+	width: 640px;
+	color: #333333;
+	line-height: 180%;
+	text-align: left;
+}
+
+.article h2 {
+    background: url("bgArticleH2.png") no-repeat scroll 5px 5px #D0D7DF;
+    border-bottom: 1px solid #C8CACE;
+    border-top: 1px solid #C8CACE;
+	font: 18px/1.6;
+	font-weight: bold;
+    margin: 25px 0px 25px 0px;
+    padding: 10px 49px 10px 50px;
+}
+h3 {
+	color: #009;
+}
+pre {
+	background-image: url(bg_pre.gif);
+}
+.red {
+	color: #F30;
+	font-weight: bold;
+}
+.gray {
+	color: #999;
+}
+.clearfix { 
+	width: 600px; 
+	padding-top: 20px; 
+	padding-right: 20px; 
+	padding-bottom: 20px; 
+	padding-left: 20px; 
+	background-color: rgb(34, 34, 34);
+}
+.clearfix:after{ /* FF, IE8, O, S, etc. */
+  	content: "";
+  	display: block;
+  	clear: both;
+}
+* html .clearfix {
+	height: 1%;
+}
+* + html .clearfix {
+	display: inline-block;
+}
+
+pre {
+	background: url("bg_pre.gif");
+	margin: 10px 0px;
+	padding: 10px;
+	border: 1px solid rgb(200, 202, 206);
+	width: 578px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-family: "돋움체";
+	font-size: 14px;
+	line-height: 180%;
+	font-weight: normal;
+}
+.article .box {
+	margin: 10px 0px; 
+	padding: 10px; 
+	border: 1px solid rgb(200, 202, 206); 
+	background-color: rgb(247, 247, 247);
+}
+
+.box {
+	margin: 10px 0px; 
+	padding: 10px; 
+	border: 1px solid rgb(200, 202, 206); 
+	background-color: rgb(247, 247, 247);
+}
+.underline {
+	text-decoration: line-through;
+}
+.blue {
+	color: #009;
+	font-weight: bold;
+}
+.green {
+	color: #060;
+}
+</style>
+</head>
+<body>
+<DIV id="wrap">
+  <div class="article">
+    <H2>Entities</H2>
+  </div>
+  <H1>Latin-1 엔티티(Entities)</H1>
+  <p>아래 표는 Latin-1(ISO-8859-1)의 8비트 문자를 위한 문자 개체 레퍼런스, 10진수 문자 레퍼런스, 16진수 문자   레퍼런스입니다. 또한 사용중인 브라우저에서 어떻게 나타나는 지를 보여줍니다. 문자와 관련된 자세한 정보는 유니코드 협회(Unicode   Consortium)의 홈페이지에서 볼 수 있습니다.</p>
+  <p>브라우저는 10진수 문자 레퍼런스를 가장 잘 지원합니다. 단, 엑센트가 표시된 문자(10진수 192-214, 216-246,   248-255)는 잘 지원되지 않을 수 있습니다.</p>
+  <p>맥킨토시 브라우저는 14개의 Latin-1 문자를 정확하지 않게 출력할 수 있습니다. 이러한 문자들은 10진수 166, 178, 179,   185, 188, 189, 190, 208, 215, 221, 222, 240, 253, 254입니다. <br>
+  참조: ISO-8859-1   and the Mac platform </p>
+  <BR>
+  <TABLE cellSpacing="1" border="0">
+    <COLGROUP>
+      <COL>
+      <COL>
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+    <THEAD>
+        <TR vAlign="bottom">
+          <TD rowSpan="2"><U>문자</U></TD>
+          <TD rowSpan="2"><U>개체</U></TD>
+          <TD rowSpan="2"><U>10진수</U></TD>
+          <TD rowSpan="2"><U>16진수</U></TD>
+          <TD colSpan="3">브라우저 출력결과</TD>
+        </TR>
+        <TR vAlign="bottom">
+          <TD><U>개체</U></TD>
+          <TD><U>10진수</U></TD>
+          <TD><U>16진수</U></TD>
+        </TR>
+    </THEAD>
+    <TBODY>
+      <TR>
+        <TD scope="row">띄어쓰기 공간</TD>
+        <TD>&amp;nbsp;</TD>
+        <TD>&amp;#160;</TD>
+        <TD>&amp;#xA0;</TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD>&amp;#xA0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">상하반전 느낌표</TD>
+        <TD>&amp;iexcl;</TD>
+        <TD>&amp;#161;</TD>
+        <TD>&amp;#xA1;</TD>
+        <TD>¡</TD>
+        <TD>¡</TD>
+        <TD>&amp;#xA1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">센트(cent) </TD>
+        <TD>&amp;cent;</TD>
+        <TD>&amp;#162;</TD>
+        <TD>&amp;#xA2;</TD>
+        <TD>¢</TD>
+        <TD>¢</TD>
+        <TD>&amp;#xA2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">파운드(pound) </TD>
+        <TD>&amp;pound;</TD>
+        <TD>&amp;#163;</TD>
+        <TD>&amp;#xA3;</TD>
+        <TD>£</TD>
+        <TD>£</TD>
+        <TD>&amp;#xA3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">통화(currency) </TD>
+        <TD>&amp;curren;</TD>
+        <TD>&amp;#164;</TD>
+        <TD>&amp;#xA4;</TD>
+        <TD>¤</TD>
+        <TD>¤</TD>
+        <TD>&amp;#xA4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">엔화(yen) </TD>
+        <TD>&amp;yen;</TD>
+        <TD>&amp;#165;</TD>
+        <TD>&amp;#xA5;</TD>
+        <TD>¥</TD>
+        <TD>¥</TD>
+        <TD>&amp;#xA5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">끊어진 세로 막대기</TD>
+        <TD>&amp;brvbar;</TD>
+        <TD>&amp;#166;</TD>
+        <TD>&amp;#xA6;</TD>
+        <TD>¦</TD>
+        <TD>¦</TD>
+        <TD>&amp;#xA6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">섹션(section) 부호</TD>
+        <TD>&amp;sect;</TD>
+        <TD>&amp;#167;</TD>
+        <TD>&amp;#xA7;</TD>
+        <TD>§</TD>
+        <TD>§</TD>
+        <TD>&amp;#xA7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">분음부호(diaeresis)</TD>
+        <TD>&amp;uml;</TD>
+        <TD>&amp;#168;</TD>
+        <TD>&amp;#xA8;</TD>
+        <TD>¨</TD>
+        <TD>¨</TD>
+        <TD>&amp;#xA8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">저작권(copyright) 부호</TD>
+        <TD>&amp;copy;</TD>
+        <TD>&amp;#169;</TD>
+        <TD>&amp;#xA9;</TD>
+        <TD>©</TD>
+        <TD>©</TD>
+        <TD>&amp;#xA9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">여성 표시자</TD>
+        <TD>&amp;ordf;</TD>
+        <TD>&amp;#170;</TD>
+        <TD>&amp;#xAA;</TD>
+        <TD>ª</TD>
+        <TD>ª</TD>
+        <TD>&amp;#xAA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">이중 꺽음 좌측 인용부호 </TD>
+        <TD>&amp;laquo;</TD>
+        <TD>&amp;#171;</TD>
+        <TD>&amp;#xAB;</TD>
+        <TD>«</TD>
+        <TD>«</TD>
+        <TD>&amp;#xAB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">부호 아님</TD>
+        <TD>&amp;not;</TD>
+        <TD>&amp;#172;</TD>
+        <TD>&amp;#xAC;</TD>
+        <TD>¬</TD>
+        <TD>¬</TD>
+        <TD>&amp;#xAC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">하이픈</TD>
+        <TD>&amp;shy;</TD>
+        <TD>&amp;#173;</TD>
+        <TD>&amp;#xAD;</TD>
+        <TD>­</TD>
+        <TD>­</TD>
+        <TD>&amp;#xAD;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">등록 부호</TD>
+        <TD>&amp;reg;</TD>
+        <TD>&amp;#174;</TD>
+        <TD>&amp;#xAE;</TD>
+        <TD>®</TD>
+        <TD>®</TD>
+        <TD>&amp;#xAE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">윗 줄 </TD>
+        <TD>&amp;macr;</TD>
+        <TD>&amp;#175;</TD>
+        <TD>&amp;#xAF;</TD>
+        <TD>¯</TD>
+        <TD>¯</TD>
+        <TD>&amp;#xAF;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">도(degree) </TD>
+        <TD>&amp;deg;</TD>
+        <TD>&amp;#176;</TD>
+        <TD>&amp;#xB0;</TD>
+        <TD>°</TD>
+        <TD>°</TD>
+        <TD>&amp;#xB0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">플러스 마이너스 부호</TD>
+        <TD>&amp;plusmn;</TD>
+        <TD>&amp;#177;</TD>
+        <TD>&amp;#xB1;</TD>
+        <TD>±</TD>
+        <TD>±</TD>
+        <TD>&amp;#xB1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">윗첨자 2 </TD>
+        <TD>&amp;sup2;</TD>
+        <TD>&amp;#178;</TD>
+        <TD>&amp;#xB2;</TD>
+        <TD>²</TD>
+        <TD>²</TD>
+        <TD>&amp;#xB2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">윗첨자 3 </TD>
+        <TD>&amp;sup3;</TD>
+        <TD>&amp;#179;</TD>
+        <TD>&amp;#xB3;</TD>
+        <TD>³</TD>
+        <TD>³</TD>
+        <TD>&amp;#xB3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">고음 악센트</TD>
+        <TD>&amp;acute;</TD>
+        <TD>&amp;#180;</TD>
+        <TD>&amp;#xB4;</TD>
+        <TD>´</TD>
+        <TD>´</TD>
+        <TD>&amp;#xB4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">마이크로</TD>
+        <TD>&amp;micro;</TD>
+        <TD>&amp;#181;</TD>
+        <TD>&amp;#xB5;</TD>
+        <TD>µ</TD>
+        <TD>µ</TD>
+        <TD>&amp;#xB5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">단락 표시</TD>
+        <TD>&amp;para;</TD>
+        <TD>&amp;#182;</TD>
+        <TD>&amp;#xB6;</TD>
+        <TD>¶</TD>
+        <TD>¶</TD>
+        <TD>&amp;#xB6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">중간점 </TD>
+        <TD>&amp;middot;</TD>
+        <TD>&amp;#183;</TD>
+        <TD>&amp;#xB7;</TD>
+        <TD>·</TD>
+        <TD>·</TD>
+        <TD>&amp;#xB7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">갈고리형 부호</TD>
+        <TD>&amp;cedil;</TD>
+        <TD>&amp;#184;</TD>
+        <TD>&amp;#xB8;</TD>
+        <TD>¸</TD>
+        <TD>¸</TD>
+        <TD>&amp;#xB8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">윗첨자 1 </TD>
+        <TD>&amp;sup1;</TD>
+        <TD>&amp;#185;</TD>
+        <TD>&amp;#xB9;</TD>
+        <TD>¹</TD>
+        <TD>¹</TD>
+        <TD>&amp;#xB9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">남성 표시자</TD>
+        <TD>&amp;ordm;</TD>
+        <TD>&amp;#186;</TD>
+        <TD>&amp;#xBA;</TD>
+        <TD>º</TD>
+        <TD>º</TD>
+        <TD>&amp;#xBA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">이중 꺽음 우측 인용부호</TD>
+        <TD>&amp;raquo;</TD>
+        <TD>&amp;#187;</TD>
+        <TD>&amp;#xBB;</TD>
+        <TD>»</TD>
+        <TD>»</TD>
+        <TD>&amp;#xBB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">1/4</TD>
+        <TD>&amp;frac14;</TD>
+        <TD>&amp;#188;</TD>
+        <TD>&amp;#xBC;</TD>
+        <TD>¼</TD>
+        <TD>¼</TD>
+        <TD>&amp;#xBC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">1/2</TD>
+        <TD>&amp;frac12;</TD>
+        <TD>&amp;#189;</TD>
+        <TD>&amp;#xBD;</TD>
+        <TD>½</TD>
+        <TD>½</TD>
+        <TD>&amp;#xBD;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">3/4</TD>
+        <TD>&amp;frac34;</TD>
+        <TD>&amp;#190;</TD>
+        <TD>&amp;#xBE;</TD>
+        <TD>¾</TD>
+        <TD>¾</TD>
+        <TD>&amp;#xBE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">상하반전 물음표</TD>
+        <TD>&amp;iquest;</TD>
+        <TD>&amp;#191;</TD>
+        <TD>&amp;#xBF;</TD>
+        <TD>¿</TD>
+        <TD>¿</TD>
+        <TD>&amp;#xBF;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 A (저음 악센트)</TD>
+        <TD>&amp;Agrave;</TD>
+        <TD>&amp;#192;</TD>
+        <TD>&amp;#xC0;</TD>
+        <TD>À</TD>
+        <TD>À</TD>
+        <TD>&amp;#xC0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 A (고음 악센트)</TD>
+        <TD>&amp;Aacute;</TD>
+        <TD>&amp;#193;</TD>
+        <TD>&amp;#xC1;</TD>
+        <TD>Á</TD>
+        <TD>Á</TD>
+        <TD>&amp;#xC1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 A (곡절 악센트)</TD>
+        <TD>&amp;Acirc;</TD>
+        <TD>&amp;#194;</TD>
+        <TD>&amp;#xC2;</TD>
+        <TD>Â</TD>
+        <TD>Â</TD>
+        <TD>&amp;#xC2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 A (틸데 악센트)</TD>
+        <TD>&amp;Atilde;</TD>
+        <TD>&amp;#195;</TD>
+        <TD>&amp;#xC3;</TD>
+        <TD>Ã</TD>
+        <TD>Ã</TD>
+        <TD>&amp;#xC3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 A (분음 부호)</TD>
+        <TD>&amp;Auml;</TD>
+        <TD>&amp;#196;</TD>
+        <TD>&amp;#xC4;</TD>
+        <TD>Ä</TD>
+        <TD>Ä</TD>
+        <TD>&amp;#xC4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 A (원 부호)</TD>
+        <TD>&amp;Aring;</TD>
+        <TD>&amp;#197;</TD>
+        <TD>&amp;#xC5;</TD>
+        <TD>Å</TD>
+        <TD>Å</TD>
+        <TD>&amp;#xC5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 AE </TD>
+        <TD>&amp;AElig;</TD>
+        <TD>&amp;#198;</TD>
+        <TD>&amp;#xC6;</TD>
+        <TD>Æ</TD>
+        <TD>Æ</TD>
+        <TD>&amp;#xC6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 C</TD>
+        <TD>&amp;Ccedil;</TD>
+        <TD>&amp;#199;</TD>
+        <TD>&amp;#xC7;</TD>
+        <TD>Ç</TD>
+        <TD>Ç</TD>
+        <TD>&amp;#xC7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 E (저음 악센트)</TD>
+        <TD>&amp;Egrave;</TD>
+        <TD>&amp;#200;</TD>
+        <TD>&amp;#xC8;</TD>
+        <TD>È</TD>
+        <TD>È</TD>
+        <TD>&amp;#xC8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 E (고음 악센트)</TD>
+        <TD>&amp;Eacute;</TD>
+        <TD>&amp;#201;</TD>
+        <TD>&amp;#xC9;</TD>
+        <TD>É</TD>
+        <TD>É</TD>
+        <TD>&amp;#xC9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 E (곡절 악센트)</TD>
+        <TD>&amp;Ecirc;</TD>
+        <TD>&amp;#202;</TD>
+        <TD>&amp;#xCA;</TD>
+        <TD>Ê</TD>
+        <TD>Ê</TD>
+        <TD>&amp;#xCA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 E (분음 부호)</TD>
+        <TD>&amp;Euml;</TD>
+        <TD>&amp;#203;</TD>
+        <TD>&amp;#xCB;</TD>
+        <TD>Ë</TD>
+        <TD>Ë</TD>
+        <TD>&amp;#xCB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 I (저음 악센트)</TD>
+        <TD>&amp;Igrave;</TD>
+        <TD>&amp;#204;</TD>
+        <TD>&amp;#xCC;</TD>
+        <TD>Ì</TD>
+        <TD>Ì</TD>
+        <TD>&amp;#xCC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 I (고음 악센트)</TD>
+        <TD>&amp;Iacute;</TD>
+        <TD>&amp;#205;</TD>
+        <TD>&amp;#xCD;</TD>
+        <TD>Í</TD>
+        <TD>Í</TD>
+        <TD>&amp;#xCD;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 I (곡절 악센트)</TD>
+        <TD>&amp;Icirc;</TD>
+        <TD>&amp;#206;</TD>
+        <TD>&amp;#xCE;</TD>
+        <TD>Î</TD>
+        <TD>Î</TD>
+        <TD>&amp;#xCE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 I (분음 부호)</TD>
+        <TD>&amp;Iuml;</TD>
+        <TD>&amp;#207;</TD>
+        <TD>&amp;#xCF;</TD>
+        <TD>Ï</TD>
+        <TD>Ï</TD>
+        <TD>&amp;#xCF;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 ETH</TD>
+        <TD>&amp;ETH;</TD>
+        <TD>&amp;#208;</TD>
+        <TD>&amp;#xD0;</TD>
+        <TD>Ð</TD>
+        <TD>Ð</TD>
+        <TD>&amp;#xD0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 N (틸데 악센트)</TD>
+        <TD>&amp;Ntilde;</TD>
+        <TD>&amp;#209;</TD>
+        <TD>&amp;#xD1;</TD>
+        <TD>Ñ</TD>
+        <TD>Ñ</TD>
+        <TD>&amp;#xD1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 O (저음 악센트)</TD>
+        <TD>&amp;Ograve;</TD>
+        <TD>&amp;#210;</TD>
+        <TD>&amp;#xD2;</TD>
+        <TD>Ò</TD>
+        <TD>Ò</TD>
+        <TD>&amp;#xD2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 O (고음 악센트)</TD>
+        <TD>&amp;Oacute;</TD>
+        <TD>&amp;#211;</TD>
+        <TD>&amp;#xD3;</TD>
+        <TD>Ó</TD>
+        <TD>Ó</TD>
+        <TD>&amp;#xD3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 O (곡절 악센트)</TD>
+        <TD>&amp;Ocirc;</TD>
+        <TD>&amp;#212;</TD>
+        <TD>&amp;#xD4;</TD>
+        <TD>Ô</TD>
+        <TD>Ô</TD>
+        <TD>&amp;#xD4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 O (틸데 악센트)</TD>
+        <TD>&amp;Otilde;</TD>
+        <TD>&amp;#213;</TD>
+        <TD>&amp;#xD5;</TD>
+        <TD>Õ</TD>
+        <TD>Õ</TD>
+        <TD>&amp;#xD5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 O (분음 부호)</TD>
+        <TD>&amp;Ouml;</TD>
+        <TD>&amp;#214;</TD>
+        <TD>&amp;#xD6;</TD>
+        <TD>Ö</TD>
+        <TD>Ö</TD>
+        <TD>&amp;#xD6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">곱셈 부호</TD>
+        <TD>&amp;times;</TD>
+        <TD>&amp;#215;</TD>
+        <TD>&amp;#xD7;</TD>
+        <TD>×</TD>
+        <TD>×</TD>
+        <TD>&amp;#xD7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 O (슬래쉬)</TD>
+        <TD>&amp;Oslash;</TD>
+        <TD>&amp;#216;</TD>
+        <TD>&amp;#xD8;</TD>
+        <TD>Ø</TD>
+        <TD>Ø</TD>
+        <TD>&amp;#xD8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 U 저음 악센트</TD>
+        <TD>&amp;Ugrave;</TD>
+        <TD>&amp;#217;</TD>
+        <TD>&amp;#xD9;</TD>
+        <TD>Ù</TD>
+        <TD>Ù</TD>
+        <TD>&amp;#xD9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 U (고음 악센트)</TD>
+        <TD>&amp;Uacute;</TD>
+        <TD>&amp;#218;</TD>
+        <TD>&amp;#xDA;</TD>
+        <TD>Ú</TD>
+        <TD>Ú</TD>
+        <TD>&amp;#xDA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 U (곡절 악센트)</TD>
+        <TD>&amp;Ucirc;</TD>
+        <TD>&amp;#219;</TD>
+        <TD>&amp;#xDB;</TD>
+        <TD>Û</TD>
+        <TD>Û</TD>
+        <TD>&amp;#xDB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 U (분음 부호)</TD>
+        <TD>&amp;Uuml;</TD>
+        <TD>&amp;#220;</TD>
+        <TD>&amp;#xDC;</TD>
+        <TD>Ü</TD>
+        <TD>Ü</TD>
+        <TD>&amp;#xDC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 Y (고음 악센트)</TD>
+        <TD>&amp;Yacute;</TD>
+        <TD>&amp;#221;</TD>
+        <TD>&amp;#xDD;</TD>
+        <TD>Ý</TD>
+        <TD>Ý</TD>
+        <TD>&amp;#xDD;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 THORN</TD>
+        <TD>&amp;THORN;</TD>
+        <TD>&amp;#222;</TD>
+        <TD>&amp;#xDE;</TD>
+        <TD>Þ</TD>
+        <TD>Þ</TD>
+        <TD>&amp;#xDE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 ess-zed</TD>
+        <TD>&amp;szlig;</TD>
+        <TD>&amp;#223;</TD>
+        <TD>&amp;#xDF;</TD>
+        <TD>ß</TD>
+        <TD>ß</TD>
+        <TD>&amp;#xDF;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 a (저음 악센트)</TD>
+        <TD>&amp;agrave;</TD>
+        <TD>&amp;#224;</TD>
+        <TD>&amp;#xE0;</TD>
+        <TD>à</TD>
+        <TD>à</TD>
+        <TD>&amp;#xE0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 a (고음 악센트)</TD>
+        <TD>&amp;aacute;</TD>
+        <TD>&amp;#225;</TD>
+        <TD>&amp;#xE1;</TD>
+        <TD>á</TD>
+        <TD>á</TD>
+        <TD>&amp;#xE1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 a (곡절 악센트)</TD>
+        <TD>&amp;acirc;</TD>
+        <TD>&amp;#226;</TD>
+        <TD>&amp;#xE2;</TD>
+        <TD>â</TD>
+        <TD>â</TD>
+        <TD>&amp;#xE2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 a (틸데 악센트)</TD>
+        <TD>&amp;atilde;</TD>
+        <TD>&amp;#227;</TD>
+        <TD>&amp;#xE3;</TD>
+        <TD>ã</TD>
+        <TD>ã</TD>
+        <TD>&amp;#xE3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 a (분음 부호)</TD>
+        <TD>&amp;auml;</TD>
+        <TD>&amp;#228;</TD>
+        <TD>&amp;#xE4;</TD>
+        <TD>ä</TD>
+        <TD>ä</TD>
+        <TD>&amp;#xE4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 a (원 부호) </TD>
+        <TD>&amp;aring;</TD>
+        <TD>&amp;#229;</TD>
+        <TD>&amp;#xE5;</TD>
+        <TD>å</TD>
+        <TD>å</TD>
+        <TD>&amp;#xE5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 ae </TD>
+        <TD>&amp;aelig;</TD>
+        <TD>&amp;#230;</TD>
+        <TD>&amp;#xE6;</TD>
+        <TD>æ</TD>
+        <TD>æ</TD>
+        <TD>&amp;#xE6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 c (갈고리형 부호)</TD>
+        <TD>&amp;ccedil;</TD>
+        <TD>&amp;#231;</TD>
+        <TD>&amp;#xE7;</TD>
+        <TD>ç</TD>
+        <TD>ç</TD>
+        <TD>&amp;#xE7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 e (저음 악센트)</TD>
+        <TD>&amp;egrave;</TD>
+        <TD>&amp;#232;</TD>
+        <TD>&amp;#xE8;</TD>
+        <TD>è</TD>
+        <TD>è</TD>
+        <TD>&amp;#xE8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 e (고음 악센트)</TD>
+        <TD>&amp;eacute;</TD>
+        <TD>&amp;#233;</TD>
+        <TD>&amp;#xE9;</TD>
+        <TD>é</TD>
+        <TD>é</TD>
+        <TD>&amp;#xE9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 e (곡절 악센트)</TD>
+        <TD>&amp;ecirc;</TD>
+        <TD>&amp;#234;</TD>
+        <TD>&amp;#xEA;</TD>
+        <TD>ê</TD>
+        <TD>ê</TD>
+        <TD>&amp;#xEA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 e (분음 부호)</TD>
+        <TD>&amp;euml;</TD>
+        <TD>&amp;#235;</TD>
+        <TD>&amp;#xEB;</TD>
+        <TD>ë</TD>
+        <TD>ë</TD>
+        <TD>&amp;#xEB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 i (저음 악센트)</TD>
+        <TD>&amp;igrave;</TD>
+        <TD>&amp;#236;</TD>
+        <TD>&amp;#xEC;</TD>
+        <TD>ì</TD>
+        <TD>ì</TD>
+        <TD>&amp;#xEC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 i (고음 악센트)</TD>
+        <TD>&amp;iacute;</TD>
+        <TD>&amp;#237;</TD>
+        <TD>&amp;#xED;</TD>
+        <TD>í</TD>
+        <TD>í</TD>
+        <TD>&amp;#xED;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 i (곡절 악센트)</TD>
+        <TD>&amp;icirc;</TD>
+        <TD>&amp;#238;</TD>
+        <TD>&amp;#xEE;</TD>
+        <TD>î</TD>
+        <TD>î</TD>
+        <TD>&amp;#xEE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 i (분음 부호)</TD>
+        <TD>&amp;iuml;</TD>
+        <TD>&amp;#239;</TD>
+        <TD>&amp;#xEF;</TD>
+        <TD>ï</TD>
+        <TD>ï</TD>
+        <TD>&amp;#xEF;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 eth</TD>
+        <TD>&amp;eth;</TD>
+        <TD>&amp;#240;</TD>
+        <TD>&amp;#xF0;</TD>
+        <TD>ð</TD>
+        <TD>ð</TD>
+        <TD>&amp;#xF0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 n (틸데 악센트)</TD>
+        <TD>&amp;ntilde;</TD>
+        <TD>&amp;#241;</TD>
+        <TD>&amp;#xF1;</TD>
+        <TD>ñ</TD>
+        <TD>ñ</TD>
+        <TD>&amp;#xF1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 o (저음 악센트)</TD>
+        <TD>&amp;ograve;</TD>
+        <TD>&amp;#242;</TD>
+        <TD>&amp;#xF2;</TD>
+        <TD>ò</TD>
+        <TD>ò</TD>
+        <TD>&amp;#xF2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 o (고음 악센트)</TD>
+        <TD>&amp;oacute;</TD>
+        <TD>&amp;#243;</TD>
+        <TD>&amp;#xF3;</TD>
+        <TD>ó</TD>
+        <TD>ó</TD>
+        <TD>&amp;#xF3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 o (곡절 악센트)</TD>
+        <TD>&amp;ocirc;</TD>
+        <TD>&amp;#244;</TD>
+        <TD>&amp;#xF4;</TD>
+        <TD>ô</TD>
+        <TD>ô</TD>
+        <TD>&amp;#xF4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 o (틸데 악센트)</TD>
+        <TD>&amp;otilde;</TD>
+        <TD>&amp;#245;</TD>
+        <TD>&amp;#xF5;</TD>
+        <TD>õ</TD>
+        <TD>õ</TD>
+        <TD>&amp;#xF5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 o (분음 부호)</TD>
+        <TD>&amp;ouml;</TD>
+        <TD>&amp;#246;</TD>
+        <TD>&amp;#xF6;</TD>
+        <TD>ö</TD>
+        <TD>ö</TD>
+        <TD>&amp;#xF6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">나눗셈 부호</TD>
+        <TD>&amp;divide;</TD>
+        <TD>&amp;#247;</TD>
+        <TD>&amp;#xF7;</TD>
+        <TD>÷</TD>
+        <TD>÷</TD>
+        <TD>&amp;#xF7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 o (슬래쉬) </TD>
+        <TD>&amp;oslash;</TD>
+        <TD>&amp;#248;</TD>
+        <TD>&amp;#xF8;</TD>
+        <TD>ø</TD>
+        <TD>ø</TD>
+        <TD>&amp;#xF8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 u (저음 악센트)</TD>
+        <TD>&amp;ugrave;</TD>
+        <TD>&amp;#249;</TD>
+        <TD>&amp;#xF9;</TD>
+        <TD>ù</TD>
+        <TD>ù</TD>
+        <TD>&amp;#xF9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 u (고음 악센트)</TD>
+        <TD>&amp;uacute;</TD>
+        <TD>&amp;#250;</TD>
+        <TD>&amp;#xFA;</TD>
+        <TD>ú</TD>
+        <TD>ú</TD>
+        <TD>&amp;#xFA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 u (곡절 악센트)</TD>
+        <TD>&amp;ucirc;</TD>
+        <TD>&amp;#251;</TD>
+        <TD>&amp;#xFB;</TD>
+        <TD>û</TD>
+        <TD>û</TD>
+        <TD>&amp;#xFB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 u (분음 부호)</TD>
+        <TD>&amp;uuml;</TD>
+        <TD>&amp;#252;</TD>
+        <TD>&amp;#xFC;</TD>
+        <TD>ü</TD>
+        <TD>ü</TD>
+        <TD>&amp;#xFC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 y (고음 악센트)</TD>
+        <TD>&amp;yacute;</TD>
+        <TD>&amp;#253;</TD>
+        <TD>&amp;#xFD;</TD>
+        <TD>ý</TD>
+        <TD>ý</TD>
+        <TD>&amp;#xFD;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 thorn</TD>
+        <TD>&amp;thorn;</TD>
+        <TD>&amp;#254;</TD>
+        <TD>&amp;#xFE;</TD>
+        <TD>þ</TD>
+        <TD>þ</TD>
+        <TD>&amp;#xFE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 y (분음 부호)</TD>
+        <TD>&amp;yuml;</TD>
+        <TD>&amp;#255;</TD>
+        <TD>&amp;#xFF;</TD>
+        <TD>ÿ</TD>
+        <TD>ÿ</TD>
+        <TD>&amp;#xFF;</TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+  <p> </p>
+  <H1>심볼 및 그리스 문자 엔티티(Entities)</H1>
+  <p><BR>
+  <TABLE cellSpacing="1" border="0">
+    <COLGROUP>
+      <COL>
+      <COL>
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+    <THEAD>
+        <TR vAlign="bottom">
+          <TD rowSpan="2"><U>문자</U></TD>
+          <TD rowSpan="2"><U>개체</U></TD>
+          <TD rowSpan="2"><U>10진수</U></TD>
+          <TD rowSpan="2"><U>16진수</U></TD>
+          <TD colSpan="3">브라우저 출력결과</TD>
+        </TR>
+        <TR vAlign="bottom">
+          <TD><U>Entity</U></TD>
+          <TD><U>Decimal</U></TD>
+          <TD><U>Hex</U></TD>
+        </TR>
+    </THEAD>
+    <TBODY>
+      <TR>
+        <TD scope="row">라틴 소문자 f ( 함수, 플로린 )</TD>
+        <TD>&amp;fnof;</TD>
+        <TD>&amp;#402;</TD>
+        <TD>&amp;#x192;</TD>
+        <TD>ƒ</TD>
+        <TD>ƒ</TD>
+        <TD>&amp;#x192;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 알파</TD>
+        <TD>&amp;Alpha;</TD>
+        <TD>&amp;#913;</TD>
+        <TD>&amp;#x391;</TD>
+        <TD>Α</TD>
+        <TD>Α</TD>
+        <TD>&amp;#x391;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 베타</TD>
+        <TD>&amp;Beta;</TD>
+        <TD>&amp;#914;</TD>
+        <TD>&amp;#x392;</TD>
+        <TD>Β</TD>
+        <TD>Β</TD>
+        <TD>&amp;#x392;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 감마</TD>
+        <TD>&amp;Gamma;</TD>
+        <TD>&amp;#915;</TD>
+        <TD>&amp;#x393;</TD>
+        <TD>Γ</TD>
+        <TD>Γ</TD>
+        <TD>&amp;#x393;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 델타</TD>
+        <TD>&amp;Delta;</TD>
+        <TD>&amp;#916;</TD>
+        <TD>&amp;#x394;</TD>
+        <TD>Δ</TD>
+        <TD>Δ</TD>
+        <TD>&amp;#x394;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 엡실론</TD>
+        <TD>&amp;Epsilon;</TD>
+        <TD>&amp;#917;</TD>
+        <TD>&amp;#x395;</TD>
+        <TD>Ε</TD>
+        <TD>Ε</TD>
+        <TD>&amp;#x395;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 제타</TD>
+        <TD>&amp;Zeta;</TD>
+        <TD>&amp;#918;</TD>
+        <TD>&amp;#x396;</TD>
+        <TD>Ζ</TD>
+        <TD>Ζ</TD>
+        <TD>&amp;#x396;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 에타</TD>
+        <TD>&amp;Eta;</TD>
+        <TD>&amp;#919;</TD>
+        <TD>&amp;#x397;</TD>
+        <TD>Η</TD>
+        <TD>Η</TD>
+        <TD>&amp;#x397;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 세타</TD>
+        <TD>&amp;Theta;</TD>
+        <TD>&amp;#920;</TD>
+        <TD>&amp;#x398;</TD>
+        <TD>Θ</TD>
+        <TD>Θ</TD>
+        <TD>&amp;#x398;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 아이오타</TD>
+        <TD>&amp;Iota;</TD>
+        <TD>&amp;#921;</TD>
+        <TD>&amp;#x399;</TD>
+        <TD>Ι</TD>
+        <TD>Ι</TD>
+        <TD>&amp;#x399;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 카파</TD>
+        <TD>&amp;Kappa;</TD>
+        <TD>&amp;#922;</TD>
+        <TD>&amp;#x39A;</TD>
+        <TD>Κ</TD>
+        <TD>Κ</TD>
+        <TD>&amp;#x39A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 람다</TD>
+        <TD>&amp;Lambda;</TD>
+        <TD>&amp;#923;</TD>
+        <TD>&amp;#x39B;</TD>
+        <TD>Λ</TD>
+        <TD>Λ</TD>
+        <TD>&amp;#x39B;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 뮤</TD>
+        <TD>&amp;Mu;</TD>
+        <TD>&amp;#924;</TD>
+        <TD>&amp;#x39C;</TD>
+        <TD>Μ</TD>
+        <TD>Μ</TD>
+        <TD>&amp;#x39C;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 뉴</TD>
+        <TD>&amp;Nu;</TD>
+        <TD>&amp;#925;</TD>
+        <TD>&amp;#x39D;</TD>
+        <TD>Ν</TD>
+        <TD>Ν</TD>
+        <TD>&amp;#x39D;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 키</TD>
+        <TD>&amp;Xi;</TD>
+        <TD>&amp;#926;</TD>
+        <TD>&amp;#x39E;</TD>
+        <TD>Ξ</TD>
+        <TD>Ξ</TD>
+        <TD>&amp;#x39E;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 오미크론</TD>
+        <TD>&amp;Omicron;</TD>
+        <TD>&amp;#927;</TD>
+        <TD>&amp;#x39F;</TD>
+        <TD>Ο</TD>
+        <TD>Ο</TD>
+        <TD>&amp;#x39F;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 피</TD>
+        <TD>&amp;Pi;</TD>
+        <TD>&amp;#928;</TD>
+        <TD>&amp;#x3A0;</TD>
+        <TD>Π</TD>
+        <TD>Π</TD>
+        <TD>&amp;#x3A0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 로</TD>
+        <TD>&amp;Rho;</TD>
+        <TD>&amp;#929;</TD>
+        <TD>&amp;#x3A1;</TD>
+        <TD>Ρ</TD>
+        <TD>Ρ</TD>
+        <TD>&amp;#x3A1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 시그마</TD>
+        <TD>&amp;Sigma;</TD>
+        <TD>&amp;#931;</TD>
+        <TD>&amp;#x3A3;</TD>
+        <TD>Σ</TD>
+        <TD>Σ</TD>
+        <TD>&amp;#x3A3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 타우</TD>
+        <TD>&amp;Tau;</TD>
+        <TD>&amp;#932;</TD>
+        <TD>&amp;#x3A4;</TD>
+        <TD>Τ</TD>
+        <TD>Τ</TD>
+        <TD>&amp;#x3A4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 입실론</TD>
+        <TD>&amp;Upsilon;</TD>
+        <TD>&amp;#933;</TD>
+        <TD>&amp;#x3A5;</TD>
+        <TD>Υ</TD>
+        <TD>Υ</TD>
+        <TD>&amp;#x3A5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 파이</TD>
+        <TD>&amp;Phi;</TD>
+        <TD>&amp;#934;</TD>
+        <TD>&amp;#x3A6;</TD>
+        <TD>Φ</TD>
+        <TD>Φ</TD>
+        <TD>&amp;#x3A6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 카이</TD>
+        <TD>&amp;Chi;</TD>
+        <TD>&amp;#935;</TD>
+        <TD>&amp;#x3A7;</TD>
+        <TD>Χ</TD>
+        <TD>Χ</TD>
+        <TD>&amp;#x3A7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 프사이</TD>
+        <TD>&amp;Psi;</TD>
+        <TD>&amp;#936;</TD>
+        <TD>&amp;#x3A8;</TD>
+        <TD>Ψ</TD>
+        <TD>Ψ</TD>
+        <TD>&amp;#x3A8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 대문자 오메가</TD>
+        <TD>&amp;Omega;</TD>
+        <TD>&amp;#937;</TD>
+        <TD>&amp;#x3A9;</TD>
+        <TD>Ω</TD>
+        <TD>Ω</TD>
+        <TD>&amp;#x3A9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 알파</TD>
+        <TD>&amp;alpha;</TD>
+        <TD>&amp;#945;</TD>
+        <TD>&amp;#x3B1;</TD>
+        <TD>α</TD>
+        <TD>α</TD>
+        <TD>&amp;#x3B1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 베타</TD>
+        <TD>&amp;beta;</TD>
+        <TD>&amp;#946;</TD>
+        <TD>&amp;#x3B2;</TD>
+        <TD>β</TD>
+        <TD>β</TD>
+        <TD>&amp;#x3B2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 감마</TD>
+        <TD>&amp;gamma;</TD>
+        <TD>&amp;#947;</TD>
+        <TD>&amp;#x3B3;</TD>
+        <TD>γ</TD>
+        <TD>γ</TD>
+        <TD>&amp;#x3B3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 델타</TD>
+        <TD>&amp;delta;</TD>
+        <TD>&amp;#948;</TD>
+        <TD>&amp;#x3B4;</TD>
+        <TD>δ</TD>
+        <TD>δ</TD>
+        <TD>&amp;#x3B4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 엡실론</TD>
+        <TD>&amp;epsilon;</TD>
+        <TD>&amp;#949;</TD>
+        <TD>&amp;#x3B5;</TD>
+        <TD>ε</TD>
+        <TD>ε</TD>
+        <TD>&amp;#x3B5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 제타</TD>
+        <TD>&amp;zeta;</TD>
+        <TD>&amp;#950;</TD>
+        <TD>&amp;#x3B6;</TD>
+        <TD>ζ</TD>
+        <TD>ζ</TD>
+        <TD>&amp;#x3B6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 에타</TD>
+        <TD>&amp;eta;</TD>
+        <TD>&amp;#951;</TD>
+        <TD>&amp;#x3B7;</TD>
+        <TD>η</TD>
+        <TD>η</TD>
+        <TD>&amp;#x3B7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 세타</TD>
+        <TD>&amp;theta;</TD>
+        <TD>&amp;#952;</TD>
+        <TD>&amp;#x3B8;</TD>
+        <TD>θ</TD>
+        <TD>θ</TD>
+        <TD>&amp;#x3B8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 아이오타</TD>
+        <TD>&amp;iota;</TD>
+        <TD>&amp;#953;</TD>
+        <TD>&amp;#x3B9;</TD>
+        <TD>ι</TD>
+        <TD>ι</TD>
+        <TD>&amp;#x3B9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 카파</TD>
+        <TD>&amp;kappa;</TD>
+        <TD>&amp;#954;</TD>
+        <TD>&amp;#x3BA;</TD>
+        <TD>κ</TD>
+        <TD>κ</TD>
+        <TD>&amp;#x3BA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 람다</TD>
+        <TD>&amp;lambda;</TD>
+        <TD>&amp;#955;</TD>
+        <TD>&amp;#x3BB;</TD>
+        <TD>λ</TD>
+        <TD>λ</TD>
+        <TD>&amp;#x3BB;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 뮤</TD>
+        <TD>&amp;mu;</TD>
+        <TD>&amp;#956;</TD>
+        <TD>&amp;#x3BC;</TD>
+        <TD>μ</TD>
+        <TD>μ</TD>
+        <TD>&amp;#x3BC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 뉴</TD>
+        <TD>&amp;nu;</TD>
+        <TD>&amp;#957;</TD>
+        <TD>&amp;#x3BD;</TD>
+        <TD>ν</TD>
+        <TD>ν</TD>
+        <TD>&amp;#x3BD;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 키</TD>
+        <TD>&amp;xi;</TD>
+        <TD>&amp;#958;</TD>
+        <TD>&amp;#x3BE;</TD>
+        <TD>ξ</TD>
+        <TD>ξ</TD>
+        <TD>&amp;#x3BE;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 오미크론</TD>
+        <TD>&amp;omicron;</TD>
+        <TD>&amp;#959;</TD>
+        <TD>&amp;#x3BF;</TD>
+        <TD>ο</TD>
+        <TD>ο</TD>
+        <TD>&amp;#x3BF;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 파이</TD>
+        <TD>&amp;pi;</TD>
+        <TD>&amp;#960;</TD>
+        <TD>&amp;#x3C0;</TD>
+        <TD>π</TD>
+        <TD>π</TD>
+        <TD>&amp;#x3C0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 로</TD>
+        <TD>&amp;rho;</TD>
+        <TD>&amp;#961;</TD>
+        <TD>&amp;#x3C1;</TD>
+        <TD>ρ</TD>
+        <TD>ρ</TD>
+        <TD>&amp;#x3C1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 시그마 (단어 끝)</TD>
+        <TD>&amp;sigmaf;</TD>
+        <TD>&amp;#962;</TD>
+        <TD>&amp;#x3C2;</TD>
+        <TD>ς</TD>
+        <TD>ς</TD>
+        <TD>&amp;#x3C2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 시그마</TD>
+        <TD>&amp;sigma;</TD>
+        <TD>&amp;#963;</TD>
+        <TD>&amp;#x3C3;</TD>
+        <TD>σ</TD>
+        <TD>σ</TD>
+        <TD>&amp;#x3C3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 타우</TD>
+        <TD>&amp;tau;</TD>
+        <TD>&amp;#964;</TD>
+        <TD>&amp;#x3C4;</TD>
+        <TD>τ</TD>
+        <TD>τ</TD>
+        <TD>&amp;#x3C4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 입실론</TD>
+        <TD>&amp;upsilon;</TD>
+        <TD>&amp;#965;</TD>
+        <TD>&amp;#x3C5;</TD>
+        <TD>υ</TD>
+        <TD>υ</TD>
+        <TD>&amp;#x3C5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 파이</TD>
+        <TD>&amp;phi;</TD>
+        <TD>&amp;#966;</TD>
+        <TD>&amp;#x3C6;</TD>
+        <TD>φ</TD>
+        <TD>φ</TD>
+        <TD>&amp;#x3C6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 키</TD>
+        <TD>&amp;chi;</TD>
+        <TD>&amp;#967;</TD>
+        <TD>&amp;#x3C7;</TD>
+        <TD>χ</TD>
+        <TD>χ</TD>
+        <TD>&amp;#x3C7;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 프사이</TD>
+        <TD>&amp;psi;</TD>
+        <TD>&amp;#968;</TD>
+        <TD>&amp;#x3C8;</TD>
+        <TD>ψ</TD>
+        <TD>ψ</TD>
+        <TD>&amp;#x3C8;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 오메가</TD>
+        <TD>&amp;omega;</TD>
+        <TD>&amp;#969;</TD>
+        <TD>&amp;#x3C9;</TD>
+        <TD>ω</TD>
+        <TD>ω</TD>
+        <TD>&amp;#x3C9;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 소문자 세타 심볼</TD>
+        <TD>&amp;thetasym;</TD>
+        <TD>&amp;#977;</TD>
+        <TD>&amp;#x3D1;</TD>
+        <TD>ϑ</TD>
+        <TD>ϑ</TD>
+        <TD>&amp;#x3D1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 웁실론 고리형 심볼</TD>
+        <TD>&amp;upsih;</TD>
+        <TD>&amp;#978;</TD>
+        <TD>&amp;#x3D2;</TD>
+        <TD>ϒ</TD>
+        <TD>ϒ</TD>
+        <TD>&amp;#x3D2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그리스어 파이 심볼</TD>
+        <TD>&amp;piv;</TD>
+        <TD>&amp;#982;</TD>
+        <TD>&amp;#x3D6;</TD>
+        <TD>ϖ</TD>
+        <TD>ϖ</TD>
+        <TD>&amp;#x3D6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">불렛(bullet) = 검정색 작은 원</TD>
+        <TD>&amp;bull;</TD>
+        <TD>&amp;#8226;</TD>
+        <TD>&amp;#x2022;</TD>
+        <TD>•</TD>
+        <TD>•</TD>
+        <TD>&amp;#x2022;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">수평점</TD>
+        <TD>&amp;hellip;</TD>
+        <TD>&amp;#8230;</TD>
+        <TD>&amp;#x2026;</TD>
+        <TD>…</TD>
+        <TD>…</TD>
+        <TD>&amp;#x2026;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">프라임 (분, 피트)</TD>
+        <TD>&amp;prime;</TD>
+        <TD>&amp;#8242;</TD>
+        <TD>&amp;#x2032;</TD>
+        <TD>′</TD>
+        <TD>′</TD>
+        <TD>&amp;#x2032;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">이중 프라임 (초, 인치)</TD>
+        <TD>&amp;Prime;</TD>
+        <TD>&amp;#8243;</TD>
+        <TD>&amp;#x2033;</TD>
+        <TD>′</TD>
+        <TD>″</TD>
+        <TD>&amp;#x2033;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">윗 선</TD>
+        <TD>&amp;oline;</TD>
+        <TD>&amp;#8254;</TD>
+        <TD>&amp;#x203E;</TD>
+        <TD>‾</TD>
+        <TD>‾</TD>
+        <TD>&amp;#x203E;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">슬래쉬 (분수)</TD>
+        <TD>&amp;frasl;</TD>
+        <TD>&amp;#8260;</TD>
+        <TD>&amp;#x2044;</TD>
+        <TD>⁄</TD>
+        <TD>⁄</TD>
+        <TD>&amp;#x2044;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">대문자 서체 P </TD>
+        <TD>&amp;weierp;</TD>
+        <TD>&amp;#8472;</TD>
+        <TD>&amp;#x2118;</TD>
+        <TD>℘</TD>
+        <TD>℘</TD>
+        <TD>&amp;#x2118;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">대문자 블랙활자 I </TD>
+        <TD>&amp;image;</TD>
+        <TD>&amp;#8465;</TD>
+        <TD>&amp;#x2111;</TD>
+        <TD>ℑ</TD>
+        <TD>ℑ</TD>
+        <TD>&amp;#x2111;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">대문자 블랙활자 R </TD>
+        <TD>&amp;real;</TD>
+        <TD>&amp;#8476;</TD>
+        <TD>&amp;#x211C;</TD>
+        <TD>ℜ</TD>
+        <TD>ℜ</TD>
+        <TD>&amp;#x211C;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">트레이드 마크 (trade mark)</TD>
+        <TD>&amp;trade;</TD>
+        <TD>&amp;#8482;</TD>
+        <TD>&amp;#x2122;</TD>
+        <TD>™</TD>
+        <TD>™</TD>
+        <TD>&amp;#x2122;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">알레프(alef) 심볼</TD>
+        <TD>&amp;alefsym;</TD>
+        <TD>&amp;#8501;</TD>
+        <TD>&amp;#x2135;</TD>
+        <TD>ℵ</TD>
+        <TD>ℵ</TD>
+        <TD>&amp;#x2135;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">좌향 화살표</TD>
+        <TD>&amp;larr;</TD>
+        <TD>&amp;#8592;</TD>
+        <TD>&amp;#x2190;</TD>
+        <TD>←</TD>
+        <TD>←</TD>
+        <TD>&amp;#x2190;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">상향 화살표</TD>
+        <TD>&amp;uarr;</TD>
+        <TD>&amp;#8593;</TD>
+        <TD>&amp;#x2191;</TD>
+        <TD>↑</TD>
+        <TD>↑</TD>
+        <TD>&amp;#x2191;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">우향 화살표</TD>
+        <TD>&amp;rarr;</TD>
+        <TD>&amp;#8594;</TD>
+        <TD>&amp;#x2192;</TD>
+        <TD>→</TD>
+        <TD>→</TD>
+        <TD>&amp;#x2192;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">하향 화살표</TD>
+        <TD>&amp;darr;</TD>
+        <TD>&amp;#8595;</TD>
+        <TD>&amp;#x2193;</TD>
+        <TD>↓</TD>
+        <TD>↓</TD>
+        <TD>&amp;#x2193;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">좌우향 화살표</TD>
+        <TD>&amp;harr;</TD>
+        <TD>&amp;#8596;</TD>
+        <TD>&amp;#x2194;</TD>
+        <TD>↔</TD>
+        <TD>↔</TD>
+        <TD>&amp;#x2194;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">꺽인 화살표</TD>
+        <TD>&amp;crarr;</TD>
+        <TD>&amp;#8629;</TD>
+        <TD>&amp;#x21B5;</TD>
+        <TD>↵</TD>
+        <TD>↵</TD>
+        <TD>&amp;#x21B5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 좌향 화살표</TD>
+        <TD>&amp;lArr;</TD>
+        <TD>&amp;#8656;</TD>
+        <TD>&amp;#x21D0;</TD>
+        <TD>←</TD>
+        <TD>⇐</TD>
+        <TD>&amp;#x21D0;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 상향 화살표</TD>
+        <TD>&amp;uArr;</TD>
+        <TD>&amp;#8657;</TD>
+        <TD>&amp;#x21D1;</TD>
+        <TD>↑</TD>
+        <TD>⇑</TD>
+        <TD>&amp;#x21D1;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 우향 화살표</TD>
+        <TD>&amp;rArr;</TD>
+        <TD>&amp;#8658;</TD>
+        <TD>&amp;#x21D2;</TD>
+        <TD>→</TD>
+        <TD>⇒</TD>
+        <TD>&amp;#x21D2;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 하향 화살표</TD>
+        <TD>&amp;dArr;</TD>
+        <TD>&amp;#8659;</TD>
+        <TD>&amp;#x21D3;</TD>
+        <TD>↓</TD>
+        <TD>⇓</TD>
+        <TD>&amp;#x21D3;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 좌우향 화살표</TD>
+        <TD>&amp;hArr;</TD>
+        <TD>&amp;#8660;</TD>
+        <TD>&amp;#x21D4;</TD>
+        <TD>↔</TD>
+        <TD>⇔</TD>
+        <TD>&amp;#x21D4;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">전체에게</TD>
+        <TD>&amp;forall;</TD>
+        <TD>&amp;#8704;</TD>
+        <TD>&amp;#x2200;</TD>
+        <TD>∀</TD>
+        <TD>∀</TD>
+        <TD>&amp;#x2200;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">부분적 차이</TD>
+        <TD>&amp;part;</TD>
+        <TD>&amp;#8706;</TD>
+        <TD>&amp;#x2202;</TD>
+        <TD>∂</TD>
+        <TD>∂</TD>
+        <TD>&amp;#x2202;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그곳에 있음</TD>
+        <TD>&amp;exist;</TD>
+        <TD>&amp;#8707;</TD>
+        <TD>&amp;#x2203;</TD>
+        <TD>∃</TD>
+        <TD>∃</TD>
+        <TD>&amp;#x2203;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">비었음</TD>
+        <TD>&amp;empty;</TD>
+        <TD>&amp;#8709;</TD>
+        <TD>&amp;#x2205;</TD>
+        <TD>∅</TD>
+        <TD>∅</TD>
+        <TD>&amp;#x2205;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">나블라(nabla)</TD>
+        <TD>&amp;nabla;</TD>
+        <TD>&amp;#8711;</TD>
+        <TD>&amp;#x2207;</TD>
+        <TD>∇</TD>
+        <TD>∇</TD>
+        <TD>&amp;#x2207;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">~ 에 속함</TD>
+        <TD>&amp;isin;</TD>
+        <TD>&amp;#8712;</TD>
+        <TD>&amp;#x2208;</TD>
+        <TD>∈</TD>
+        <TD>∈</TD>
+        <TD>&amp;#x2208;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">~ 에 속하지 않음</TD>
+        <TD>&amp;notin;</TD>
+        <TD>&amp;#8713;</TD>
+        <TD>&amp;#x2209;</TD>
+        <TD>∉</TD>
+        <TD>∉</TD>
+        <TD>&amp;#x2209;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">포함함</TD>
+        <TD>&amp;ni;</TD>
+        <TD>&amp;#8715;</TD>
+        <TD>&amp;#x220B;</TD>
+        <TD>∋</TD>
+        <TD>∋</TD>
+        <TD>&amp;#x220B;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">프로덕트</TD>
+        <TD>&amp;prod;</TD>
+        <TD>&amp;#8719;</TD>
+        <TD>&amp;#x220F;</TD>
+        <TD>∏</TD>
+        <TD>∏</TD>
+        <TD>&amp;#x220F;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">합계</TD>
+        <TD>&amp;sum;</TD>
+        <TD>&amp;#8721;</TD>
+        <TD>&amp;#x2211;</TD>
+        <TD>∑</TD>
+        <TD>∑</TD>
+        <TD>&amp;#x2211;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">뺄셈 부호</TD>
+        <TD>&amp;minus;</TD>
+        <TD>&amp;#8722;</TD>
+        <TD>&amp;#x2212;</TD>
+        <TD>−</TD>
+        <TD>−</TD>
+        <TD>&amp;#x2212;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">애스터리스크(asterisk)</TD>
+        <TD>&amp;lowast;</TD>
+        <TD>&amp;#8727;</TD>
+        <TD>&amp;#x2217;</TD>
+        <TD>∗</TD>
+        <TD>∗</TD>
+        <TD>&amp;#x2217;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">제곱근(square root)</TD>
+        <TD>&amp;radic;</TD>
+        <TD>&amp;#8730;</TD>
+        <TD>&amp;#x221A;</TD>
+        <TD>√</TD>
+        <TD>√</TD>
+        <TD>&amp;#x221A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">~ 에 비례</TD>
+        <TD>&amp;prop;</TD>
+        <TD>&amp;#8733;</TD>
+        <TD>&amp;#x221D;</TD>
+        <TD>∝</TD>
+        <TD>∝</TD>
+        <TD>&amp;#x221D;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">무한</TD>
+        <TD>&amp;infin;</TD>
+        <TD>&amp;#8734;</TD>
+        <TD>&amp;#x221E;</TD>
+        <TD>∞</TD>
+        <TD>∞</TD>
+        <TD>&amp;#x221E;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">각도</TD>
+        <TD>&amp;ang;</TD>
+        <TD>&amp;#8736;</TD>
+        <TD>&amp;#x2220;</TD>
+        <TD>∠</TD>
+        <TD>∠</TD>
+        <TD>&amp;#x2220;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">논리 부호 and </TD>
+        <TD>&amp;and;</TD>
+        <TD>&amp;#8743;</TD>
+        <TD>&amp;#x2227;</TD>
+        <TD>⊥</TD>
+        <TD>∧</TD>
+        <TD>&amp;#x2227;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">논리 부호 or </TD>
+        <TD>&amp;or;</TD>
+        <TD>&amp;#8744;</TD>
+        <TD>&amp;#x2228;</TD>
+        <TD>∨</TD>
+        <TD>∨</TD>
+        <TD>&amp;#x2228;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">교집(cap)</TD>
+        <TD>&amp;cap;</TD>
+        <TD>&amp;#8745;</TD>
+        <TD>&amp;#x2229;</TD>
+        <TD>∩</TD>
+        <TD>∩</TD>
+        <TD>&amp;#x2229;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">합집(cup)</TD>
+        <TD>&amp;cup;</TD>
+        <TD>&amp;#8746;</TD>
+        <TD>&amp;#x222A;</TD>
+        <TD>∪</TD>
+        <TD>∪</TD>
+        <TD>&amp;#x222A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">인테그랄(integral)</TD>
+        <TD>&amp;int;</TD>
+        <TD>&amp;#8747;</TD>
+        <TD>&amp;#x222B;</TD>
+        <TD>∫</TD>
+        <TD>∫</TD>
+        <TD>&amp;#x222B;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">그러므로</TD>
+        <TD>&amp;there4;</TD>
+        <TD>&amp;#8756;</TD>
+        <TD>&amp;#x2234;</TD>
+        <TD>∴</TD>
+        <TD>∴</TD>
+        <TD>&amp;#x2234;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">틸데 연산자</TD>
+        <TD>&amp;sim;</TD>
+        <TD>&amp;#8764;</TD>
+        <TD>&amp;#x223C;</TD>
+        <TD>∼</TD>
+        <TD>∼</TD>
+        <TD>&amp;#x223C;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">대략 같음</TD>
+        <TD>&amp;cong;</TD>
+        <TD>&amp;#8773;</TD>
+        <TD>&amp;#x2245;</TD>
+        <TD>≅</TD>
+        <TD>≅</TD>
+        <TD>&amp;#x2245;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">거의 같음</TD>
+        <TD>&amp;asymp;</TD>
+        <TD>&amp;#8776;</TD>
+        <TD>&amp;#x2248;</TD>
+        <TD>≈</TD>
+        <TD>≈</TD>
+        <TD>&amp;#x2248;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">같지 않음</TD>
+        <TD>&amp;ne;</TD>
+        <TD>&amp;#8800;</TD>
+        <TD>&amp;#x2260;</TD>
+        <TD>≠</TD>
+        <TD>≠</TD>
+        <TD>&amp;#x2260;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">동일함</TD>
+        <TD>&amp;equiv;</TD>
+        <TD>&amp;#8801;</TD>
+        <TD>&amp;#x2261;</TD>
+        <TD>≡</TD>
+        <TD>≡</TD>
+        <TD>&amp;#x2261;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">적거나 같음</TD>
+        <TD>&amp;le;</TD>
+        <TD>&amp;#8804;</TD>
+        <TD>&amp;#x2264;</TD>
+        <TD>≤</TD>
+        <TD>≤</TD>
+        <TD>&amp;#x2264;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">크거나 같음</TD>
+        <TD>&amp;ge;</TD>
+        <TD>&amp;#8805;</TD>
+        <TD>&amp;#x2265;</TD>
+        <TD>≥</TD>
+        <TD>≥</TD>
+        <TD>&amp;#x2265;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">~ 의 부분집합</TD>
+        <TD>&amp;sub;</TD>
+        <TD>&amp;#8834;</TD>
+        <TD>&amp;#x2282;</TD>
+        <TD>⊂</TD>
+        <TD>⊂</TD>
+        <TD>&amp;#x2282;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">~ 의 상위집합</TD>
+        <TD>&amp;sup;</TD>
+        <TD>&amp;#8835;</TD>
+        <TD>&amp;#x2283;</TD>
+        <TD>⊃</TD>
+        <TD>⊃</TD>
+        <TD>&amp;#x2283;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">~ 의 부분집합이 아님</TD>
+        <TD>&amp;nsub;</TD>
+        <TD>&amp;#8836;</TD>
+        <TD>&amp;#x2284;</TD>
+        <TD>⊄</TD>
+        <TD>⊄</TD>
+        <TD>&amp;#x2284;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">부분집합이거나 같음</TD>
+        <TD>&amp;sube;</TD>
+        <TD>&amp;#8838;</TD>
+        <TD>&amp;#x2286;</TD>
+        <TD>⊆</TD>
+        <TD>⊆</TD>
+        <TD>&amp;#x2286;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">상위집합이거나 같음</TD>
+        <TD>&amp;supe;</TD>
+        <TD>&amp;#8839;</TD>
+        <TD>&amp;#x2287;</TD>
+        <TD>⊇</TD>
+        <TD>⊇</TD>
+        <TD>&amp;#x2287;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">원형 덧셈부호(circled plus)</TD>
+        <TD>&amp;oplus;</TD>
+        <TD>&amp;#8853;</TD>
+        <TD>&amp;#x2295;</TD>
+        <TD>⊕</TD>
+        <TD>⊕</TD>
+        <TD>&amp;#x2295;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">원형 곱셉부호(circled times)</TD>
+        <TD>&amp;otimes;</TD>
+        <TD>&amp;#8855;</TD>
+        <TD>&amp;#x2297;</TD>
+        <TD>⊗</TD>
+        <TD>⊗</TD>
+        <TD>&amp;#x2297;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">수직</TD>
+        <TD>&amp;perp;</TD>
+        <TD>&amp;#8869;</TD>
+        <TD>&amp;#x22A5;</TD>
+        <TD>⊥</TD>
+        <TD>⊥</TD>
+        <TD>&amp;#x22A5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">점 연산자</TD>
+        <TD>&amp;sdot;</TD>
+        <TD>&amp;#8901;</TD>
+        <TD>&amp;#x22C5;</TD>
+        <TD>⋅</TD>
+        <TD>⋅</TD>
+        <TD>&amp;#x22C5;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">레프트 실링(left ceiling)</TD>
+        <TD>&amp;lceil;</TD>
+        <TD>&amp;#8968;</TD>
+        <TD>&amp;#x2308;</TD>
+        <TD>⌈</TD>
+        <TD>⌈</TD>
+        <TD>&amp;#x2308;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라이트 실링(right ceiling)</TD>
+        <TD>&amp;rceil;</TD>
+        <TD>&amp;#8969;</TD>
+        <TD>&amp;#x2309;</TD>
+        <TD>⌉</TD>
+        <TD>⌉</TD>
+        <TD>&amp;#x2309;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">레프트 플로어(left floor) = APL downstile</TD>
+        <TD>&amp;lfloor;</TD>
+        <TD>&amp;#8970;</TD>
+        <TD>&amp;#x230A;</TD>
+        <TD>⌊</TD>
+        <TD>⌊</TD>
+        <TD>&amp;#x230A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라이트 플로어(right floor)</TD>
+        <TD>&amp;rfloor;</TD>
+        <TD>&amp;#8971;</TD>
+        <TD>&amp;#x230B;</TD>
+        <TD>⌋</TD>
+        <TD>⌋</TD>
+        <TD>&amp;#x230B;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">좌측 꺽인 괄호</TD>
+        <TD>&amp;lang;</TD>
+        <TD>&amp;#9001;</TD>
+        <TD>&amp;#x2329;</TD>
+        <TD>〈</TD>
+        <TD>〈</TD>
+        <TD>&amp;#x2329;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">우측 꺽인 괄호</TD>
+        <TD>&amp;rang;</TD>
+        <TD>&amp;#9002;</TD>
+        <TD>&amp;#x232A;</TD>
+        <TD>〉</TD>
+        <TD>〉</TD>
+        <TD>&amp;#x232A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">마름모</TD>
+        <TD>&amp;loz;</TD>
+        <TD>&amp;#9674;</TD>
+        <TD>&amp;#x25CA;</TD>
+        <TD>◊</TD>
+        <TD>◊</TD>
+        <TD>&amp;#x25CA;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">블랙 스페이드</TD>
+        <TD>&amp;spades;</TD>
+        <TD>&amp;#9824;</TD>
+        <TD>&amp;#x2660;</TD>
+        <TD>♠</TD>
+        <TD>♠</TD>
+        <TD>&amp;#x2660;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">블랙 클럽</TD>
+        <TD>&amp;clubs;</TD>
+        <TD>&amp;#9827;</TD>
+        <TD>&amp;#x2663;</TD>
+        <TD>♣</TD>
+        <TD>♣</TD>
+        <TD>&amp;#x2663;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">블랙 하트</TD>
+        <TD>&amp;hearts;</TD>
+        <TD>&amp;#9829;</TD>
+        <TD>&amp;#x2665;</TD>
+        <TD>♥</TD>
+        <TD>♥</TD>
+        <TD>&amp;#x2665;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">블랙 다이아몬드</TD>
+        <TD>&amp;diams;</TD>
+        <TD>&amp;#9830;</TD>
+        <TD>&amp;#x2666;</TD>
+        <TD>♦</TD>
+        <TD>♦</TD>
+        <TD>&amp;#x2666;</TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+  </p>
+  <p> </p>
+  <H1>특수 엔티티(Entities)</H1>
+  <BR>
+  <TABLE cellSpacing="1" border="0">
+    <COLGROUP>
+      <COL>
+      <COL>
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+      <COL align="center">
+    <THEAD>
+        <TR vAlign="bottom">
+          <TD rowSpan="2"><U>문자</U></TD>
+          <TD rowSpan="2"><U>개체</U></TD>
+          <TD rowSpan="2"><U>10진수</U></TD>
+          <TD rowSpan="2"><U>16진수</U></TD>
+          <TD colSpan="3">브라우저 출력결과 </TD>
+        </TR>
+        <TR vAlign="bottom">
+          <TD><U>개체</U></TD>
+          <TD><U>10진수</U></TD>
+          <TD><U>16진수</U></TD>
+        </TR>
+    </THEAD>
+    <TBODY>
+      <TR>
+        <TD scope="row">인용부호 (프로그램 인용부호)</TD>
+        <TD>&amp;quot;</TD>
+        <TD>&amp;#34;</TD>
+        <TD>&amp;#x22;</TD>
+        <TD>"</TD>
+        <TD>"</TD>
+        <TD>&amp;#x22;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">앰퍼샌드 (ampersand)</TD>
+        <TD>&amp;amp;</TD>
+        <TD>&amp;#38;</TD>
+        <TD>&amp;#x26;</TD>
+        <TD>&amp;</TD>
+        <TD>&amp;</TD>
+        <TD>&amp;#x26;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">부등호(작음)</TD>
+        <TD>&amp;lt;</TD>
+        <TD>&amp;#60;</TD>
+        <TD>&amp;#x3C;</TD>
+        <TD>&lt;</TD>
+        <TD>&lt;</TD>
+        <TD>&amp;#x3C;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">부등호(큼)</TD>
+        <TD>&amp;gt;</TD>
+        <TD>&amp;#62;</TD>
+        <TD>&amp;#x3E;</TD>
+        <TD>&gt;</TD>
+        <TD>&gt;</TD>
+        <TD>&amp;#x3E;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 OE</TD>
+        <TD>&amp;OElig;</TD>
+        <TD>&amp;#338;</TD>
+        <TD>&amp;#x152;</TD>
+        <TD>Œ</TD>
+        <TD>Œ</TD>
+        <TD>&amp;#x152;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 oe</TD>
+        <TD>&amp;oelig;</TD>
+        <TD>&amp;#339;</TD>
+        <TD>&amp;#x153;</TD>
+        <TD>œ</TD>
+        <TD>œ</TD>
+        <TD>&amp;#x153;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 S (캐론 악센트)</TD>
+        <TD>&amp;Scaron;</TD>
+        <TD>&amp;#352;</TD>
+        <TD>&amp;#x160;</TD>
+        <TD>Š</TD>
+        <TD>Š</TD>
+        <TD>&amp;#x160;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 소문자 s (캐론 악센트)</TD>
+        <TD>&amp;scaron;</TD>
+        <TD>&amp;#353;</TD>
+        <TD>&amp;#x161;</TD>
+        <TD>š</TD>
+        <TD>š</TD>
+        <TD>&amp;#x161;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">라틴 대문자 Y (분음부호)</TD>
+        <TD>&amp;Yuml;</TD>
+        <TD>&amp;#376;</TD>
+        <TD>&amp;#x178;</TD>
+        <TD>ÿ</TD>
+        <TD>Ÿ</TD>
+        <TD>&amp;#x178;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">곡절 악센트</TD>
+        <TD>&amp;circ;</TD>
+        <TD>&amp;#710;</TD>
+        <TD>&amp;#x2C6;</TD>
+        <TD>ˆ</TD>
+        <TD>ˆ</TD>
+        <TD>&amp;#x2C6;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">틸데 악센트</TD>
+        <TD>&amp;tilde;</TD>
+        <TD>&amp;#732;</TD>
+        <TD>&amp;#x2DC;</TD>
+        <TD>˜</TD>
+        <TD>˜</TD>
+        <TD>&amp;#x2DC;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">엔 스페이스</TD>
+        <TD>&amp;ensp;</TD>
+        <TD>&amp;#8194;</TD>
+        <TD>&amp;#x2002;</TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD>&amp;#x2002;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">엠 스페이스</TD>
+        <TD>&amp;emsp;</TD>
+        <TD>&amp;#8195;</TD>
+        <TD>&amp;#x2003;</TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD>&amp;#x2003;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">씬 스페이스</TD>
+        <TD>&amp;thinsp;</TD>
+        <TD>&amp;#8201;</TD>
+        <TD>&amp;#x2009;</TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD>&amp;#x2009;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">비결합자</TD>
+        <TD>&amp;zwnj;</TD>
+        <TD>&amp;#8204;</TD>
+        <TD>&amp;#x200C;</TD>
+        <TD>‌</TD>
+        <TD>‌</TD>
+        <TD>&amp;#x200C;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">결합자</TD>
+        <TD>&amp;zwj;</TD>
+        <TD>&amp;#8205;</TD>
+        <TD>&amp;#x200D;</TD>
+        <TD>‍</TD>
+        <TD>‍</TD>
+        <TD>&amp;#x200D;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">우향 표시</TD>
+        <TD>&amp;lrm;</TD>
+        <TD>&amp;#8206;</TD>
+        <TD>&amp;#x200E;</TD>
+        <TD>‎</TD>
+        <TD>‎</TD>
+        <TD>&amp;#x200E;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">좌향 표시</TD>
+        <TD>&amp;rlm;</TD>
+        <TD>&amp;#8207;</TD>
+        <TD>&amp;#x200F;</TD>
+        <TD>‏</TD>
+        <TD>‏</TD>
+        <TD>&amp;#x200F;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">엔 대시</TD>
+        <TD>&amp;ndash;</TD>
+        <TD>&amp;#8211;</TD>
+        <TD>&amp;#x2013;</TD>
+        <TD>–</TD>
+        <TD>–</TD>
+        <TD>&amp;#x2013;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">엠 대시</TD>
+        <TD>&amp;mdash;</TD>
+        <TD>&amp;#8212;</TD>
+        <TD>&amp;#x2014;</TD>
+        <TD>—</TD>
+        <TD>—</TD>
+        <TD>&amp;#x2014;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">작은 따옴표 (좌)</TD>
+        <TD>&amp;lsquo;</TD>
+        <TD>&amp;#8216;</TD>
+        <TD>&amp;#x2018;</TD>
+        <TD>‘</TD>
+        <TD>‘</TD>
+        <TD>&amp;#x2018;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">작은 따옴표 (우)</TD>
+        <TD>&amp;rsquo;</TD>
+        <TD>&amp;#8217;</TD>
+        <TD>&amp;#x2019;</TD>
+        <TD>’</TD>
+        <TD>’</TD>
+        <TD>&amp;#x2019;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">낮은 인용부호 (소)</TD>
+        <TD>&amp;sbquo;</TD>
+        <TD>&amp;#8218;</TD>
+        <TD>&amp;#x201A;</TD>
+        <TD>‚</TD>
+        <TD>‚</TD>
+        <TD>&amp;#x201A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 따옴표 (좌)</TD>
+        <TD>&amp;ldquo;</TD>
+        <TD>&amp;#8220;</TD>
+        <TD>&amp;#x201C;</TD>
+        <TD>“</TD>
+        <TD>“</TD>
+        <TD>&amp;#x201C;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">큰 따옴표 (우)</TD>
+        <TD>&amp;rdquo;</TD>
+        <TD>&amp;#8221;</TD>
+        <TD>&amp;#x201D;</TD>
+        <TD>”</TD>
+        <TD>”</TD>
+        <TD>&amp;#x201D;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">낮은 인용부호 (대)</TD>
+        <TD>&amp;bdquo;</TD>
+        <TD>&amp;#8222;</TD>
+        <TD>&amp;#x201E;</TD>
+        <TD>„</TD>
+        <TD>„</TD>
+        <TD>&amp;#x201E;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">대거(dagger)</TD>
+        <TD>&amp;dagger;</TD>
+        <TD>&amp;#8224;</TD>
+        <TD>&amp;#x2020;</TD>
+        <TD>†</TD>
+        <TD>†</TD>
+        <TD>&amp;#x2020;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">이중 대거(double dagger)</TD>
+        <TD>&amp;Dagger;</TD>
+        <TD>&amp;#8225;</TD>
+        <TD>&amp;#x2021;</TD>
+        <TD>†</TD>
+        <TD>‡</TD>
+        <TD>&amp;#x2021;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">퍼밀 부호 (per mille sign)</TD>
+        <TD>&amp;permil;</TD>
+        <TD>&amp;#8240;</TD>
+        <TD>&amp;#x2030;</TD>
+        <TD>‰</TD>
+        <TD>‰</TD>
+        <TD>&amp;#x2030;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">좌측 꺽음 인용부호</TD>
+        <TD>&amp;lsaquo;</TD>
+        <TD>&amp;#8249;</TD>
+        <TD>&amp;#x2039;</TD>
+        <TD>‹</TD>
+        <TD>‹</TD>
+        <TD>&amp;#x2039;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">우측 꺽음 인용부호</TD>
+        <TD>&amp;rsaquo;</TD>
+        <TD>&amp;#8250;</TD>
+        <TD>&amp;#x203A;</TD>
+        <TD>›</TD>
+        <TD>›</TD>
+        <TD>&amp;#x203A;</TD>
+      </TR>
+      <TR>
+        <TD scope="row">유로화</TD>
+        <TD>&amp;euro;</TD>
+        <TD>&amp;#8364;</TD>
+        <TD>&amp;#x20AC;</TD>
+        <TD>€</TD>
+        <TD>€</TD>
+        <TD>&amp;#x20AC;</TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+  <p> </p>
+
+</DIV>
+</body>
+</html>

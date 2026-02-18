@@ -1,0 +1,15 @@
+
+낮과 밤에 따라 배경색 바뀌게 만들기
+
+1.<body> 태그에 삽입============================================================
+
+<SCRIPT language="JavaScript">
+<!--
+var current= new Date()
+var day_night=current.getHours()
+if (day_night<=12)
+document.write("<img src='day.gif'>")
+else
+document.write("<img src='night.gif'>")
+//-->
+</SCRIPT>

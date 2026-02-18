@@ -1,0 +1,9 @@
+﻿body dl, dt, dd, p, ul, li{margin:0; padding:0;}
+body{font:0.75em "맑은 고딕", 돋움, arial; color:#fff; background:#000 url(../images/bg_event.png)no-repeat center 35px; min-width:485px; min-height:551px;}
+header h1, header h2, header h3{display:none;}
+
+nav{background-color: #ff6634; border-bottom:2px solid #fff; height:40px;}
+nav ul{list-style:none;padding:10px;text-align:center;}
+nav ul li{display:inline;}
+nav ul li a{color:black; text-decoration:none; font-size:1.1em; padding:10px 5px;}
+nav ul li a:hover{background-color:#000000; color:#ffffff; border-radius:10px;}

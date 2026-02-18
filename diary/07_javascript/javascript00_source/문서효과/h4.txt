@@ -1,0 +1,20 @@
+오른쪽 클릭 못하게 만들기
+
+1.<head> 태그에 삽입================================================
+
+<script language="Javascript1.2"> 
+<!--
+var mymessage = "오른 클릭은 정말로 안돼요!"; //메시지 창에 나타나게 할 내용 입력
+function rtclickcheck(keyp){
+ if (navigator.appName == "Netscape" && keyp.which == 3) {
+   alert(mymessage);
+   return false;
+ }
+ if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+   alert(mymessage);
+   return false;
+ }
+}
+document.onmousedown = rtclickcheck
+//-->
+</script>

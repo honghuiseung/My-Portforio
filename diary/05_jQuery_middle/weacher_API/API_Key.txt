@@ -1,0 +1,5 @@
+778c1e6867ed4fe3f47a6254b2321c87
+
+http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=778c1e6867ed4fe3f47a6254b2321c87&units=metric
+
+api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}

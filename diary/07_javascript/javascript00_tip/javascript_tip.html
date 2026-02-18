@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 실전예제 Tip</title>
+<meta content="charset=utf-8">
+<style>
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+body { margin: 0; color: #000000; font: 14px/normal 'Nanum Gothic', "Malgun Gothic", "맑은 고딕", DotumChe, "돋움체", Verdana, Arial,  sans-serif;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+
+#wrap { width: 900px; margin: auto;}
+.article { width: 900px; color: #333333; line-height: 180%;}
+.article h2 { background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 { color: #000099;}
+pre { margin: 10px 0px; padding: 0px; border: 1px solid rgb(200, 202, 206);  width: 898px; overflow-x: auto; overflow-y: hidden; font-family: "돋움체"; font-size: 14px; line-height: 180%; font-weight: normal;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099; font-weight: bold;}
+.green { color: #008800;}
+.red { color: #cc0000; font-weight: bold;}
+.gray { color: #888888;}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="article">
+	  <H2>JavaScript 실전예제</H2>
+	</div>
+  <h3>입력할 텍스트 필드 안에 자동으로 커서 위치시키기 (<a href="sample/form6.htm" target="_blank">sample/form6.htm</a>)</h3>
+  <pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;TITLE&gt;text 객체의 메서드&lt;/TITLE&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY BACKGROUND=&quot;bg34.gif&quot; <span class="red">onLoad=&quot;myform.id.focus()&quot;</span>&gt;
+    &lt;center&gt;
+    &lt;IMG SRC=&quot;top.gif&quot; WIDTH=&quot;500&quot; HEIGHT=&quot;20&quot;&gt;&lt;BR&gt;
+    &lt;FORM NAME=&quot;myform&quot;&gt;
+    &lt;B&gt;아 이 디 : &lt;/B&gt;
+    &lt;INPUT NAME=&quot;id&quot; TYPE=&quot;text&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;20&quot; /&gt;
+    &lt;BR&gt;&lt;BR&gt;
+    &lt;B&gt;비밀번호 : &lt;/B&gt; 
+    &lt;INPUT NAME=&quot;pw&quot; TYPE=&quot;password&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;10&quot;&gt;
+    &lt;BR&gt;&lt;BR&gt;
+    &lt;INPUT NAME=&quot;login&quot; TYPE=&quot;submit&quot; VALUE=&quot;로그인&quot; /&gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp;
+    &lt;INPUT NAME=&quot;cancel&quot; TYPE=&quot;button&quot; VALUE=&quot;취소&quot; /&gt;
+    &lt;/FORM&gt;&lt;BR&gt;
+    &lt;IMG SRC=&quot;top.gif&quot; WIDTH=&quot;500&quot; HEIGHT=&quot;20&quot; /&gt;
+    &lt;/center&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+  </pre>
+  <p>&nbsp;</p>
+
+
+  <h3>숫자만 입력할 수 있는 텍스트 필드 만들기 (<a href="sample/form8.htm" target="_blank">sample/form8.htm</a>)</h3>
+  <pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;TITLE&gt;숫자가 아니면 안돼요&lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+<span class="blue">function isNumber(txt){
+    uPhone = txt.value
+    if(isNaN(uPhone)) {
+        alert(&quot;'전화번호' 필드에는 숫자만 입력해 주세요.&quot;)
+        txt.value = &quot;&quot; 
+        </span><span class="green">//txt.focus()</span><span class="blue">
+    }
+    else alert(&quot;등록되었습니다.&quot;)
+} </span>
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY BACKGROUND=&quot;bg34.gif&quot; <span class="blue">onLoad=&quot;myform.id.focus()&quot;</span>&gt;
+    &lt;BR&gt;
+    &lt;FONT COLOR=&quot;red&quot;&gt;
+        ※ 전화번호는 하이픈(-)을 빼고 지역번호를 포함한 숫자만 입력해 주세요.
+    &lt;/FONT&gt;
+    &lt;BR&gt;&lt;BR&gt;
+    &lt;IMG SRC=&quot;bottom.gif&quot;&gt;
+    &lt;FORM NAME=&quot;myform&quot;&gt;
+    &lt;B&gt;전화번호 : &lt;/B&gt; 
+    &lt;INPUT NAME=&quot;phone&quot; TYPE=&quot;text&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;20&quot; /&gt;&amp;nbsp;&amp;nbsp;
+    &lt;INPUT NAME=&quot;bttn1&quot; TYPE=&quot;submit&quot; VALUE=&quot;등록&quot;  <span class="red">onClick=&quot;isNumber(myform.phone)&quot;</span> /&gt;  
+    &lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>
+  
+  <h3>비밀번호의 입력 범위 설정하기 (<a href="sample/form10.htm" target="_blank">sample/form10.htm</a>)</h3>
+  <pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;TITLE&gt;입력 글자 길이 제한하기&lt;/TITLE&gt;
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;
+<span class="green">&lt;!--</span>
+    td {
+    font-family: &quot;굴림&quot;;
+    font-size: 12px;
+    }
+<span class="green">--&gt;</span>
+&lt;/STYLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+<span class="blue">function checkLen(myPwd){
+    len = myPwd.value.length
+    if(len &lt; 4 || len &gt; 8) {
+        alert(&quot;비밀번호는 4자 이상 8자 이하로 입력하세요.&quot;)
+        return false
+    }
+    else 
+        return true
+    }</span>
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+  
+&lt;BODY BACKGROUND=&quot;bg_w1.gif&quot; <span class="red">onLoad=&quot;form1.id.focus()&quot;</span>&gt;
+  &lt;BR&gt;
+  &lt;FORM NAME=&quot;form1&quot;&gt;
+  &lt;TABLE WIDTH=&quot;200&quot; HEIGHT=&quot;85&quot; BORDER=&quot;0&quot; ALIGN=&quot;CENTER&quot; CELLPADDING=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt;
+  &lt;TR&gt; 
+  &lt;TD WIDTH=&quot;73&quot;&gt;아이디&lt;/TD&gt;
+  &lt;TD WIDTH=&quot;123&quot;&gt;&lt;INPUT NAME=&quot;id&quot; TYPE=&quot;text&quot; SIZE=&quot;10&quot; MAXLENGTH=&quot;10&quot;&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD&gt;비밀번호&lt;/TD&gt;
+  &lt;TD&gt;&lt;INPUT NAME=&quot;pwd&quot; TYPE=&quot;password&quot; SIZE=&quot;10&quot; MAXLENGTH=&quot;10&quot;&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt;
+  &lt;TD COLSPAN=&quot;2&quot;&gt;&lt;FONT COLOR=&quot;red&quot;&gt;비밀번호는 4자 이상 8자 이하로&lt;/FONT&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD COLSPAN=&quot;2&quot;&gt;
+  &lt;INPUT TYPE=&quot;submit&quot; VALUE=&quot;등록&quot; <span class="red">onClick=&quot;checkLen(form1.pwd)&quot;</span> /&gt; 
+  &lt;INPUT TYPE=&quot;reset&quot; VALUE=&quot;다시쓰기&quot; /&gt; 
+  &lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;/TABLE&gt;
+  &lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>
+
+
+<h3>세 개 항목만 선택할 수 있는 체크박스 기능 만들기 (<a href="sample/form14.htm" target="_blank">sample/form14.htm</a>)</h3>
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;TITLE&gt;세가지만 선택하세요&lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+max = 3
+function checkNum(obj) {
+    ch1 = document.form1.check1.checked
+    ch2 = document.form1.check2.checked
+    ch3 = document.form1.check3.checked
+    ch4 = document.form1.check4.checked
+    ch5 = document.form1.check5.checked
+
+selected = (ch1 ? 1:0) + (ch2 ? 1:0) + (ch3 ? 1:0) + (ch4 ? 1:0) + (ch5 ? 1:0)
+    <span class="green">// check1 박스에 체크되었다면 ch1은 true이므로 1이 됩니다.</span>
+    if (selected &gt; max) {
+        alert(&quot;관심 항목은 3개까지만 선택할 수 있습니다.&quot;)
+        <span class="blue">obj.checked= false</span>
+        <span class="green">// 체크를 지웁니다.</span>
+    }
+}
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+  
+&lt;BODY BACKGROUND=&quot;bg39.jpg&quot;&gt;
+&lt;TABLE WIDTH=&quot;250&quot; BORDER=&quot;0&quot; CELLSPACING=&quot;0&quot; CELLPADDING=&quot;0&quot; BGCOLOR=&quot;white&quot; ALIGN=&quot;center&quot;&gt;
+  &lt;TR&gt;
+  &lt;TD HEIGHT=&quot;24&quot; COLSPAN=&quot;2&quot; BGCOLOR=&quot;#000000&quot;&gt;&lt;FONT COLOR=&quot;#FFFFFF&quot;&gt;&lt;B&gt;관심있는 분야는?&lt;/B&gt;&lt;/FONT&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt;
+  &lt;TD&gt;&lt;IMG SRC=&quot;jwalk2.jpg&quot;&gt;&lt;/TD&gt;
+  &lt;TD VALIGN=&quot;top&quot;&gt;&lt;BR&gt;
+  &lt;FORM NAME=&quot;form1&quot;&gt;
+  &lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;check1&quot; VALUE=&quot;1&quot; <span class="red">onClick=&quot;checkNum(check1)&quot;</span>&gt;
+    게임&lt;/INPUT&gt;&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;check2&quot; VALUE=&quot;2&quot; <span class="red">onClick=&quot;checkNum(check2)&quot;</span>&gt;
+    만화&lt;/INPUT&gt;&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;check3&quot; VALUE=&quot;3&quot; <span class="red">onClick=&quot;checkNum(check3)&quot;</span>&gt;
+    음악&lt;/INPUT&gt;&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;check4&quot; VALUE=&quot;4&quot; <span class="red">onClick=&quot;checkNum(check4)&quot;</span>&gt;
+    영화&lt;/INPUT&gt;&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;check5&quot; VALUE=&quot;5&quot; <span class="red">onClick=&quot;checkNum(check5)&quot;</span>&gt;
+    채팅&lt;/INPUT&gt;&lt;BR&gt;
+  &lt;/FORM&gt;
+  &lt;/TD&gt;
+  &lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+<h3>라디오 버튼을 이용한 객관식 문제 만들기 (<a href="sample/form17.htm" target="_blank">sample/form17.htm</a>)</h3>
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt;radio 객체&lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+<span class="blue">function checkSolution(obj) {
+  if(obj[1].checked == true) alert(&quot;짝짝짝!!!\r정답입니다&quot;)
+    else alert(&quot;틀렸습니다. \r정답은 [롤플레잉 게임]입니다.&quot;)
+}</span>
+<span class="green">// --&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+  
+&lt;BODY BACKGROUND=&quot;bg40.gif&quot;&gt;
+  &lt;IMG SRC=&quot;top3.jpg&quot; BORDER=&quot;1&quot;&gt;
+  &lt;BR&gt;
+  &lt;FORM NAME=&quot;form1&quot;&gt;
+  &lt;H4&gt;정해진 역할을 수행하는 게임 장르는?&lt;/H4&gt;
+  &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;sol&quot; VALUE=&quot;1&quot;&gt; 시뮬레이션 게임&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;sol&quot; VALUE=&quot;2&quot;&gt; 롤플레잉 게임&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;sol&quot; VALUE=&quot;3&quot;&gt; 아케이드 게임&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;sol&quot; VALUE=&quot;4&quot;&gt; 스포츠 게임&lt;BR&gt;&lt;BR&gt;
+  &lt;INPUT TYPE=&quot;button&quot; VALUE=&quot;정답 확인&quot; <span class="red">onClick=&quot;checkSolution(form1.sol)&quot;</span>&gt;
+  &lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+<h3>콤보 메뉴를 선택했을 때 웹 페이지 이동하기 (<a href="sample/form18.htm" target="_blank">sample/form18.htm</a>)</h3>
+<pre>&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;TITLE&gt;selectedIndex&lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+<span class="blue">function loadPage(obj) {
+    location.href = obj.options[obj.selectedIndex].value
+    </span><span class="green">// 새창에서 뜨게 하기</span><span class="blue"> 
+    </span><span class="green">// </span><span class="blue">window.open(obj.options[obj.selectedIndex].value)
+}</span>
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY BACKGROUND=&quot;cartoon.jpg&quot;&gt;
+  &lt;FORM NAME=&quot;myform&quot;&gt;
+  &lt;H3&gt;만화보러 가자&lt;/H3&gt;
+  &lt;SELECT NAME=&quot;media&quot; <span class="red">onChange=&quot;loadPage(myform.media)&quot;</span>&gt;
+  &lt;OPTION VALUE=&quot;http://kr.comics.yahoo.com/&quot; /&gt;야후! 만화
+  &lt;OPTION VALUE=&quot;http://www.comicplus.com/&quot; /&gt;코믹플러스
+  &lt;OPTION VALUE=&quot;http://www.ecomix.co.kr/&quot; /&gt;이코믹스 만화
+  &lt;/SELECT&gt;
+  &lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+
+<h3>콤보 메뉴 선택 후, 이동 버튼 눌러 페이지 이동하기 (<a href="sample/form19.htm" target="_blank">sample/form19.htm</a>)</h3>
+
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+	&lt;TITLE&gt;버튼을 클릭해야 이동합니다&lt;/TITLE&gt;
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;
+<span class="green">&lt;!--</span>
+body {
+	background-attachment: fixed;
+    background-image: url(concert.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+<span class="green">--&gt;</span>
+&lt;/STYLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+<span class="blue">function loadPage(obj) {
+	location.href = obj.options[obj.selectedIndex].value
+}</span>
+<span class="green">// --&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+         
+&lt;BODY&gt;
+&lt;FORM NAME=&quot;myform&quot;&gt;
+    &lt;H3&gt;연인과 친구와 함께라면 콘서트장으로...&lt;/H3&gt;
+    &lt;SELECT NAME=&quot;concert&quot;&gt;
+	<span class="green">// onChange 이벤트 핸드러를 사용하지 않았습니다.</span>
+         &lt;OPTION VALUE=&quot;http://www.goodconcert.co.kr/&quot; /&gt;좋은 콘서트
+         &lt;OPTION VALUE=&quot;http://concertguide.co.kr/&quot; /&gt;콘서트 가이드
+         &lt;OPTION VALUE=&quot;http://www.ticketlink.com/&quot; /&gt;티켓링크
+	&lt;/SELECT&gt;
+    &lt;INPUT TYPE=&quot;button&quot; VALUE=&quot;GO&quot; <span class="red">onClick=&quot;loadPage(myform.concert)&quot;</span> /&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+<h3>하고 싶은 말 필드의 글자수 제한 스크립트 작성해보세요. (<a href="sample/guest2.htm" target="_blank">sample/guest2.htm</a>)</h3>
+
+<pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt;하고 싶은 말&lt;/TITLE&gt;
+  &lt;META HTTP-EQUIV=&quot;Content-Type&quot; CONTENT=&quot;text/html; charset=euc-kr&quot; /&gt;
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;
+<span class="green">&lt;!--</span>
+  body {
+    background-attachment: fixed;
+    background-image: url(bg_w6.gif);
+    background-repeat: repeat-y;
+    background-position: left top;
+  }
+  td {
+    font-size: 12px;
+  }
+<span class="green">--&gt;</span>
+&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY&gt;
+&lt;FORM NAME=&quot;form1&quot; METHOD=&quot;post&quot; ACTION=&quot;&quot;&gt;
+  &lt;TABLE WIDTH=&quot;352&quot; BORDER=&quot;0&quot; ALIGN=&quot;CENTER&quot; CELLPADDING=&quot;5&quot; CELLSPACING=&quot;0&quot;&gt;
+  &lt;TR&gt; 
+  &lt;TD WIDTH=&quot;79&quot;&gt;&lt;DIV ALIGN=&quot;RIGHT&quot;&gt;이름 &lt;/DIV&gt;&lt;/TD&gt;
+  &lt;TD WIDTH=&quot;282&quot;&gt;&lt;INPUT NAME=&quot;name&quot; TYPE=&quot;text&quot; ID=&quot;name&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;15&quot;&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD&gt;&lt;DIV ALIGN=&quot;RIGHT&quot;&gt;메일 &lt;/DIV&gt;&lt;/TD&gt;
+  &lt;TD&gt;&lt;INPUT NAME=&quot;mail&quot; TYPE=&quot;text&quot; ID=&quot;mail&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;20&quot;&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD HEIGHT=&quot;91&quot;&gt; &lt;DIV ALIGN=&quot;RIGHT&quot;&gt;하고 싶은 말 &lt;/DIV&gt;&lt;/TD&gt;
+  &lt;TD&gt;&lt;TEXTAREA NAME=&quot;comment&quot; COLS=&quot;20&quot; ROWS=&quot;5&quot; ID=&quot;comment&quot;&gt;&lt;/TEXTAREA&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD HEIGHT=&quot;28&quot; COLSPAN=&quot;2&quot;&gt;&lt;DIV ALIGN=&quot;CENTER&quot;&gt; 
+  &lt;INPUT TYPE=&quot;submit&quot; NAME=&quot;Submit&quot; VALUE=&quot;등록하기 &quot;&gt;
+  &amp;nbsp; 
+  &lt;INPUT TYPE=&quot;RESET&quot; NAME=&quot;Submit2&quot; VALUE=&quot;새로쓰기&quot;&gt;
+  &lt;/DIV&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;/TABLE&gt;
+  &lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+
+<span class="red">힌트 : 텍스트 영역 필드를 관리하는 textarea 객체의 lenght 프로퍼티를 이용합니다.</span>
+
+
+
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt;방명록&lt;/TITLE&gt;
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;
+<span class="green">&lt;!--</span>
+  BODY {
+    background-attachment: fixed;
+    background-image: url(bg_w6.gif);
+    background-repeat: repeat-y;
+    background-position: left top;
+  }
+  TD {
+  font-size: 12px;
+  }
+<span class="green">--&gt;</span>
+&lt;/STYLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+<span class="blue">function checkChars(frm){
+  var maxlength=80 
+  var len = frm.comment.value.length
+  if (len &gt; maxlength){
+    alert(&quot;80자 까지만 입력할 수 있습니다&quot;)
+    return false
+  }
+}</span>
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+  
+&lt;BODY&gt;
+&lt;FORM NAME=&quot;form1&quot; <span class="blue">onSubmit=&quot;return checkChars(this)&quot;</span>&gt;
+  &lt;TABLE WIDTH=&quot;352&quot; BORDER=&quot;0&quot; ALIGN=&quot;CENTER&quot; CELLPADDING=&quot;5&quot; CELLSPACING=&quot;0&quot;&gt;
+  &lt;TR&gt; 
+  &lt;TD WIDTH=&quot;79&quot; ALIGN=&quot;RIGHT&quot;&gt;이름 &lt;/TD&gt;
+  &lt;TD WIDTH=&quot;282&quot;&gt;&lt;INPUT NAME=&quot;name&quot; TYPE=&quot;text&quot; ID=&quot;name&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;15&quot;&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD ALIGN=&quot;RIGHT&quot;&gt;메일 &lt;/TD&gt;
+  &lt;TD&gt;&lt;INPUT NAME=&quot;mail&quot; TYPE=&quot;text&quot; ID=&quot;mail&quot; SIZE=&quot;20&quot; MAXLENGTH=&quot;20&quot;&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD HEIGHT=&quot;91&quot; ALIGN=&quot;RIGHT&quot;&gt; 하고 싶은 말 &lt;/TD&gt;
+  &lt;TD&gt;&lt;TEXTAREA NAME=&quot;comment&quot; COLS=&quot;20&quot; ROWS=&quot;5&quot; ID=&quot;comment&quot;&gt;&lt;/TEXTAREA&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;TR&gt; 
+  &lt;TD HEIGHT=&quot;28&quot; COLSPAN=&quot;2&quot;&gt;&lt;DIV ALIGN=&quot;CENTER&quot;&gt; 
+  &lt;INPUT NAME=&quot;Submit&quot; TYPE=&quot;submit&quot; VALUE=&quot;등록하기&quot;&gt;
+  &amp;nbsp; 
+  &lt;INPUT TYPE=&quot;RESET&quot; NAME=&quot;Submit2&quot; VALUE=&quot;새로쓰기&quot;&gt;
+  &lt;/DIV&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;/TABLE&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+
+
+<h3>쿠키 생성과 삭제 실습하기(<a href="sample/cookies1.htm" target="_blank">sample/cookies1.htm</a>)</h3>
+
+<p>윈도우XP의 경우 C:\Documents and Settiongs\사용자이름\Cookies 폴더에 있음</p>
+<p><strong>쿠키 폴더 </strong>(윈도우7의 경우)<br>
+  C:\Users\사용자이름\AppData\Roaming\Microsoft\Windows\Cookies<br>
+  C:\Users\사용자이름\AppData\Roaming\Microsoft\Windows\Cookies\Low
+</p>
+<p><strong>인터넷 임시파일 폴더</strong><strong> </strong>(윈도우7의 경우)<br>
+  C:\Users\사용자이름\AppData\Local\Microsoft\Windows\Temporary Internet Files<br>
+  C:\Users\사용자이름\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5
+</p>
+<p><img src="folder1.jpg" width="458" height="448" alt="폴더옵션"></p>
+
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt; 쿠키를 구워구워~ &lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt; 
+<span class="green">&lt;!-- </span>
+  expireDate = new Date() 
+  expireDate.setMonth(expireDate.getMonth()+6) <span class="green">// 6개월간 쿠키 저장하기 </span>
+  cookieName = &quot;&quot; 
+  if (document.cookie != &quot;&quot;) { 
+  cookieName = document.cookie.split(&quot;=&quot;)[1] 
+  } 
+  
+function setCookie() { 
+  cookieName = &quot;test&quot;  <span class="green">// 쿠키 이름을 test 로 설정합니다</span>
+  document.cookie = &quot;cookieName=&quot;+cookieName+&quot;;expires=&quot; + expireDate.toGMTString() 
+} 
+
+function deletecookie(){ 
+  if (document.cookie != &quot;&quot;) { 
+    thisCookie = document.cookie.split(&quot;; &quot;) 
+    expireDate = new Date 
+    expireDate.setDate(expireDate.getDate()-1) 
+    for (i=0; i&lt;thisCookie.length; i++) { 
+      cookieName = thisCookie[i].split(&quot;=&quot;)[1] 
+      document.cookie = &quot;cookieName=&quot;+cookieName + &quot;;expires=&quot; + expireDate.toGMTString() 
+    } 
+  } 
+}
+
+function viewCookie(){
+  if (document.cookie != &quot;&quot;) { 
+  thisCookie = document.cookie.split(&quot;; &quot;) 
+  for (i=0; i&lt;thisCookie.length; i++) 
+    document.write(thisCookie[i])
+  } 
+} 
+<span class="green">//--&gt; </span>
+&lt;/SCRIPT&gt; 
+&lt;/HEAD&gt; 
+&lt;BODY BACKGROUND=&quot;bg27.gif&quot;&gt; 
+  &lt;CENTER&gt; 
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt; 
+<span class="green">&lt;!-- </span>
+  if (document.cookie != &quot;&quot; )
+    document.write(&quot;쿠키가 있습니다.&quot;); 
+  else 
+    document.write(&quot;쿠키를 만들어 볼까요?&quot;); 
+    document.write(&quot;&lt;p&gt;현재 쿠키의 이름은: &lt;font color=red&gt;&lt;b&gt;&quot; + cookieName + &quot;&lt;/b&gt;&lt;/font&gt;&quot;); 
+<span class="green">//  --&gt; </span>
+&lt;/SCRIPT&gt; 
+
+&lt;FORM&gt; 
+  &lt;INPUT TYPE=&quot;submit&quot; VALUE=&quot;쿠키 버리기&quot; <span class="red">onClick=&quot;deletecookie();&quot;</span> /&gt; 
+  &lt;INPUT TYPE=&quot;submit&quot; VALUE=&quot;쿠키 만들기&quot; <span class="red">onClick=&quot;setCookie();&quot;</span> /&gt; 
+  &lt;INPUT TYPE=&quot;submit&quot; value=&quot;보여줘&quot; <span class="red">onClick=&quot;viewCookie()&quot;</span> /&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+<h3>사용자 방문 횟수 계산하기(<a href="sample/cookies2.htm" target="_blank">sample/cookies2.htm</a>)</h3>
+
+<p>사용자의 쿠기 정보를 사용자 시스템에 저장해 두었다가 사용자가 다시 페이지를 방문하면 쿠기 정보를 읽어들여서 count를 1씩 증가시키는 소스입니다.</p>
+
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt; 사용자 방문 횟수 계산하기 &lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt; 
+<span class="green">&lt;!-- </span>
+  function GetCookie (name) { 
+  var arg = name + &quot;=&quot;; 
+  var alen = arg.length; 
+  var clen = document.cookie.length; 
+  var i = 0; 
+  while (i &lt; clen) {
+  var j = i + alen; 
+  if (document.cookie.substring(i, j) == arg) 
+  return getCookieVal (j); 
+  i = document.cookie.indexOf(&quot; &quot;, i) + 1; 
+  if (i == 0) break; 
+  } 
+  return null;
+}
+
+function SetCookie (name, value) { 
+  var argv = SetCookie.arguments; 
+  var argc = SetCookie.arguments.length; 
+  var expires = (argc &gt; 2) ? argv[2] : null; 
+  var path = (argc &gt; 3) ? argv[3] : null; 
+  var domain = (argc &gt; 4) ? argv[4] : null; 
+  var secure = (argc &gt; 5) ? argv[5] : false; 
+  document.cookie = name + &quot;=&quot; + escape (value) + ((expires == null) ? &quot;&quot; : (&quot;; expires=&quot; + expires.toGMTString())) + ((path == null) ? &quot;&quot; : (&quot;; path=&quot; + path)) +  ((domain == null) ? &quot;&quot; : (&quot;; domain=&quot; + domain)) +  ((secure == true) ? &quot;; secure&quot; : &quot;&quot;);
+}
+
+function DeleteCookie (name) { 
+  var exp = new Date(); 
+  exp.setTime (exp.getTime() - 1); 
+  var cval = GetCookie (name); 
+  document.cookie = name + &quot;=&quot; + cval + &quot;; expires=&quot; + exp.toGMTString();
+}
+
+var expDays = 30;
+  var exp = new Date(); 
+  exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+
+function amt(){
+  var count = GetCookie('count')
+  if(count == null) {
+  SetCookie('count','1')
+  return 1
+  }
+  else {
+  var newcount = parseInt(count) + 1;
+  DeleteCookie('count')
+  SetCookie('count',newcount,exp)
+  return count
+  }
+}
+
+function getCookieVal(offset) {
+  var endstr = document.cookie.indexOf (&quot;;&quot;, offset);
+  if (endstr == -1)
+  endstr = document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt; 
+&lt;/HEAD&gt; 
+
+&lt;BODY BGCOLOR=&quot;#F5ECE3&quot;&gt; 
+  &lt;CENTER&gt; 
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt; 
+<span class="green">&lt;!-- </span>
+  document.write(&quot;당신은 이 사이트에 &lt;b&gt;&quot; + amt() + &quot;&lt;/b&gt; 번째 방문하셨군요.&quot;)
+<span class="green">//--&gt; </span>
+&lt;/SCRIPT&gt; 
+  &lt;BR&gt;&lt;BR&gt;&lt;IMG SRC=&quot;frame.jpg&quot;&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+
+
+<h3>팝업창, 오늘은 다시 열지 않기(<a href="sample/cookies3.htm" target="_blank">sample/cookies3.htm</a>)(<a href="sample/new_pop.htm" target="_blank">sample/new_pop.htm</a>)</h3>
+
+<p>쿠키 정보는 팝업 창뿐만 아니라 팝업 창의 메인 창에도 들어가야 합니다. 여기에서는 메인 창을 cookies3.htm이라 하고, 팝업 창은 new_pop.htm이라고 했습니다.</p>
+
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt; 팝업 창 오늘은 다시 안볼래요 &lt;/TITLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt; 
+<span class="green">&lt;!-- </span>
+function setCookie( name, value, expiredays ) 
+{ 
+  var todayDate = new Date(); 
+  todayDate.setDate( todayDate.getDate() + expiredays ); 
+  document.cookie = name + &quot;=&quot; + escape( value ) + &quot;; path=/; expires=&quot; + todayDate.toGMTString() + &quot;;&quot; 
+} 
+
+function getCookie( name ) 
+{ 
+  var nameOfCookie = name + &quot;=&quot;; 
+  var x = 0; 
+  while ( x &lt;= document.cookie.length ) 
+  { 
+    var y = (x+nameOfCookie.length); 
+    if ( document.cookie.substring( x, y ) == nameOfCookie ) { 
+      if ( (endOfCookie=document.cookie.indexOf( &quot;;&quot;, y )) == -1 ) 
+        endOfCookie = document.cookie.length; 
+      return unescape( document.cookie.substring( y, endOfCookie ) ); 
+    } 
+    x = document.cookie.indexOf( &quot; &quot;, x ) + 1; 
+    if ( x == 0 ) 
+      break; 
+  } 
+  return &quot;&quot;; 
+} <span class="green">// function getCookie</span>
+  
+if ( getCookie( &quot;Notice&quot; ) != &quot;done&quot; ) 
+{ 
+  noticeWindow  = window.open('new_pop.htm','notice','width=300,height=300,top=100,left=80'); 
+  noticeWindow.opener = self; 
+} 
+<span class="green">//--&gt;</span>
+&lt;/SCRIPT&gt; 
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;
+<span class="green">&lt;!--</span>
+  p {
+  font-size: 12px;
+  color: #000099;
+  }
+<span class="green">--&gt;</span>
+&lt;/STYLE&gt;
+&lt;/HEAD&gt; 
+&lt;BODY BACKGROUND=&quot;bg17.gif&quot;&gt;
+  &lt;TABLE WIDTH=&quot;400&quot; BORDER=&quot;0&quot; BGCOLOR=&quot;#FFFFFF&quot; ALIGN=&quot;center&quot;&gt;
+  &lt;TR&gt;
+  &lt;TD WIDTH=&quot;240&quot;&gt;
+  &lt;IMG SRC=&quot;song1.jpg&quot; WIDTH=&quot;219&quot; HEIGHT=&quot;294&quot;&gt;
+  &lt;/TD&gt;
+  &lt;TD WIDTH=&quot;160&quot;&gt;
+  &lt;P&gt;나무 그늘 아래 &lt;/P&gt;
+  &lt;P&gt;나비와 함께 앉아있다&lt;/P&gt;
+  &lt;P&gt;이것도 전생의 인연&lt;/P&gt;
+  &lt;P&gt;- 이싸 - &lt;/P&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;/TABLE&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt; 하늘을 본 적이 있나요? &lt;/TITLE&gt;
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;
+<span class="green">&lt;!--</span>
+  p {
+  font-size: 12px;
+  color: #000099;
+  }
+<span class="green">--&gt;</span>
+&lt;/STYLE&gt;
+&lt;SCRIPT LANGUAGE=&quot;Javascript&quot;&gt; 
+<span class="green">&lt;!-- </span>
+function setCookie( name, value, expiredays ) 
+{ 
+  var todayDate = new Date(); 
+  todayDate.setDate(todayDate.getDate() + expiredays); 
+  document.cookie = name + &quot;=&quot; + escape(value) + &quot;; path=/; expires=&quot; + todayDate.toGMTString() + &quot;;&quot; 
+} 
+  
+function closeWin() 
+{ 
+  if ( document.forms[0].Notice.checked ) 
+  setCookie( &quot;Notice&quot;, &quot;done&quot; , 1); 
+  self.close(); 
+} 
+<span class="green">//--&gt; </span>
+&lt;/SCRIPT&gt; 
+&lt;/HEAD&gt;<br>
+&lt;BODY BGCOLOR=&quot;#000000&quot; TEXT=&quot;white&quot; LINK=&quot;white&quot; VLINK=&quot;white&quot; ALINK=&quot;white&quot;&gt;
+  &lt;CENTER&gt;
+  &lt;BR&gt;&lt;BR&gt;
+  &lt;IMG SRC=&quot;black2.jpg&quot;&gt;
+  &lt;BR&gt;&lt;BR&gt;
+  &lt;FORM&gt; 
+    &lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;Notice&quot; VALUE=&quot;&quot;&gt;하루 동안 안 볼래요
+    &lt;BR&gt;&lt;BR&gt;
+    &lt;INPUT TYPE=&quot;button&quot; VALUE=&quot;닫기&quot; onClick=&quot;closeWin()&quot;&gt;
+  &lt;/FORM&gt; 
+  &lt;/CENTER&gt;
+&lt;/HTML&gt;
+</pre>
+<p>&nbsp;</p>  
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+<TITLE>Color Center</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+// Boolean variable specified if alert should be displayed if cookie exceeds 4KB
+var caution = false
+deleteCookie("slot")
+// name - name of the cookie
+// value - value of the cookie
+// [expires] - expiration date of the cookie (defaults to end of current session)
+// [path] - path for which the cookie is valid (defaults to path of calling document)
+// [domain] - domain for which the cookie is valid (defaults to domain of calling document)
+// [secure] - Boolean value indicating if the cookie transmission requires a secure transmission
+// * an argument defaults when it is assigned null as a placeholder 
+// * a null placeholder is not required for trailing omitted arguments
+function setCookie(name, value, expires, path, domain, secure) {
+ var curCookie = name + "=" + escape(value) +  ((expires) ? "; expires=" + expires.toGMTString() : "") +  ((path) ? "; path=" + path : "") +  ((domain) ? "; domain=" + domain : "") +  ((secure) ? "; secure" : "")
+ if (!caution || (name + "=" + escape(value)).length <= 4000)
+  document.cookie = curCookie
+ else
+  if (confirm("Cookie exceeds 4KB and will be cut!"))
+   document.cookie = curCookie
+}
+
+// name - name of the desired cookie
+// * return string containing value of specified cookie or null if cookie does not exist
+function getCookie(name) {
+ var prefix = name + "="
+ var cookieStartIndex = document.cookie.indexOf(prefix)
+ if (cookieStartIndex == ?1)
+  return null
+ var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex+ prefix.length)
+ if (cookieEndIndex == ?1)
+  cookieEndIndex = document.cookie.length
+ return unescape(document.cookie.substring(cookieStartIndex+ prefix.length, cookieEndIndex))
+}
+// name - name of the cookie
+// [path] - path of the cookie (must be same as path used to create cookie)
+// [domain] - domain of the cookie (must be same as domain used to create cookie)
+// * path and domain default if assigned null or omitted if no explicit argument proceeds
+function deleteCookie(name, path, domain) {
+ if (getCookie(name)) {
+  document.cookie = name + "=" +  ((path) ? "; path=" + path : "") +  ((domain) ? "; domain=" + domain : "") +  "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+ }
+}
+
+// date - any instance of the Date object
+// * you should hand all instances of the Date object to this function for "repairs"
+// * this function is taken from Chapter 14, Time and Date in JavaScript, in "Learn Advanced JavaScript Programming"
+function fixDate(date) {
+ var base = new Date(0)
+ var skew = base.getTime()
+ if (skew > 0)
+  date.setTime(date.getTime() ? skew)
+}
+
+// updates the R, G, and B text fields (invoked as a method)
+function display() {
+ frames[0].document.forms[0].red.value = this.r
+ frames[0].document.forms[0].green.value = this.g
+ frames[0].document.forms[0].blue.value = this.b
+}
+// constructs an attribute
+function makeAttribute(r, g, b) {
+ this.r = r + ""
+ this.g = g + ""
+ this.b = b + ""
+ this.display = display
+}
+
+// create instances for all attributes
+var link = new makeAttribute("00", "00", "00") // black
+var alink = new makeAttribute("00", "00", "00") // black
+var vlink = new makeAttribute("00", "00", "00") // black
+var text = new makeAttribute("00", "00", "00") // black
+var bgcolor = new makeAttribute("FF", "FF", "FF") // white
+
+// invoked when user selects a color from swatches
+function select(r, g, b) {
+ // assign string reflecting selected attribute ("text", "bgcolor", etc.)
+ var attribute = curAttribute()
+
+ // assign new descriptors
+ eval(attribute).r = r
+ eval(attribute).g = g
+ eval(attribute).b = b
+
+ // display new descriptors in R, G, and B text fields
+ eval(attribute).display()
+
+ // update main frame
+ update()
+}
+
+// return string reflecting selected attribute ("text", "bgcolor", etc.)
+function curAttribute() {
+ var list = frames[0].document.forms[0].attribute
+ return list.options[list.selectedIndex].value
+}
+
+// returns <BODY> tag (excluding ">" and "<") reflecting all selections
+function bodyDefinition() {
+ var str = 'BODY '
+ str += 'BGCOLOR="#' + bgcolor.r + bgcolor.g + bgcolor.b + '" '
+ str += 'LINK="#' + link.r + link.g + link.b + '" '
+ str += 'ALINK="#' + alink.r + alink.g + alink.b + '" '
+ str += 'VLINK="#' + vlink.r + vlink.g + vlink.b + '" '
+ str += 'TEXT="#' + text.r + text.g + text.b + '"'
+ return str
+}
+
+// update main window
+function update() {
+ var bodyDef = bodyDefinition()
+ var result = ""
+ result += '<HTML><HEAD><TITLE>Main</TITLE></HEAD>'
+ result += '<' + bodyDef + '>'
+ result += '<CENTER>'
+ result += 'Text <B>Text</B><HR WIDTH=50%>'
+ result += '<FONT COLOR="#' + link.r + link.g + link.b + '">Link<B>Link</B><HR WIDTH=50%></FONT>'
+ result += '<FONT COLOR="#' + alink.r + alink.g + alink.b + '">Alink<B>Alink</B><HR WIDTH=50%></FONT>'
+ result += '<FONT COLOR="#' + vlink.r + vlink.g + vlink.b + '">Vlink<B>Vlink</B><HR WIDTH=50%></FONT>'
+ result += '<BR><FONT SIZE=2><' + bodyDef + '></FONT>'
+ result += '</CENTER></BODY></HTML>'
+
+ // assign document object of main frame to local variable
+ var doc = frames[2].document
+
+ // close data stream to document
+ doc.close()
+
+ // open new data stream to document (text/html)
+ doc.open('text/html')
+
+ // print HTML content
+ doc.write(result)
+
+ // close data stream to document
+ doc.close()
+}
+
+// stores all selections as a cookie
+function save() {
+ var slot = link.r + link.g + link.b +alink.r + alink.g + alink.b +vlink.r + vlink.g + vlink.b +text.r + text.g + text.b +bgcolor.r + bgcolor.g + bgcolor.b
+ var now = new Date()
+ fixDate(now)
+ now.setTime(now.getTime() + 31 * 24 * 60 * 60 * 1000) // one month
+ setCookie("slot", slot, now)
+}
+
+// load values from cookie (concatenation order in save() matters!)
+function load() {
+ var slot = getCookie("slot")
+ if (slot != null) {
+  link.r = slot.substring(0, 2)
+  link.g = slot.substring(2, 4)
+  link.b = slot.substring(4, 6)
+  alink.r = slot.substring(6, 8)
+  alink.g = slot.substring(8, 10)
+  alink.b = slot.substring(10, 12)
+  vlink.r = slot.substring(12, 14)
+  vlink.g = slot.substring(14, 16)
+  vlink.b = slot.substring(16, 18)
+  text.r = slot.substring(18, 20)
+  text.g = slot.substring(20, 22)
+  text.b = slot.substring(22, 24)
+  bgcolor.r = slot.substring(24, 26)
+  bgcolor.g = slot.substring(26, 28)
+  bgcolor.b = slot.substring(28, 30)
+  eval(curAttribute()).display()
+  update()
+ }
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+<FRAMESET
+ ROWS="50, *"
+ BORDER="0"
+ FRAMEBORDER="no"
+ FRAMESPACING="0"
+ BORDERCOLOR="#ffffff">
+ <FRAME
+  NAME="control"
+  SRC="ex26-2a.htm"
+  NORESIZE
+  SCROLLING="no">
+ <FRAMESET
+  COLS="80, *"
+  BORDER="0"
+  FRAMEBORDER="no"
+  FRAMESPACING="0"
+  BORDERCOLOR="#ffffff">
+  <FRAME
+   NAME="swatches"
+   SRC="ex26-2b.htm"
+   NORESIZE
+   SCROLLING="no">
+  <FRAME
+   NAME="main"
+   SRC="ex26-2c.htm"
+   NORESIZE>
+ </FRAMESET>
+</FRAMESET>
+<NOFRAMES>Please download a frames-capable browser!</NOFRAMES>
+</HTML>

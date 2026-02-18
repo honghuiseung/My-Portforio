@@ -1,0 +1,26 @@
+단추를 클릭하면 배경색이 깜박거리게 만들기
+
+1.<head> 태그에 삽입============================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function blinkit(){
+intrvl=0;
+tm=3
+for(nTimes=0;nTimes<tm;nTimes++){
+intrvl += 200;
+setTimeout("document.bgColor='#FF9900';",intrvl);
+intrvl += 200;
+setTimeout("document.bgColor='#FFFFFF';",intrvl);
+   }
+}
+//-->
+</SCRIPT>
+
+2.<body> 태그에 삽입============================================================
+
+<CENTER>
+<FORM>
+<INPUT TYPE="BUTTON" VALUE="Blink" onClick="blinkit()">
+</FORM>
+<center>

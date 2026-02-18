@@ -1,0 +1,18 @@
+﻿#memberBox{color: #606060; border: 1px solid #b7b7b7; text-align: center; background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff, #ededed);
+	background: -webkit-gradient(linear, left top, left bottom, from (#ffffff),to (#ededed));
+	width:400px;
+	padding:20px;
+	margin:50px auto;
+	/* 웹표준x 쓰지x */
+}
+.btnOrange{cursor:pointer; text-align:center; font-size: 1.5em; padding: 0.5em 2em 0.55em; text-shadow: 0 1px 1px rgba(0,0,0,0.3); border-radius: 0.8em;box-shadow: 0 1px 2px rgba(0,0,0,.2);color: #fef4e9; border: 1px solid #da7c0c; background: #f78d1d;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#feccb1+0,f17432+50,ea5507+51,fb955e+100;Red+Gloss+%232 */
+background: linear-gradient(to bottom,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.btnOrange:hover{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fb955e+-1,fb955e+0,fb955e+1,f17432+50,ea5507+51,feccb1+100 */
+background: linear-gradient(to bottom,  #fb955e -1%,#fb955e 0%,#fb955e 1%,#f17432 50%,#ea5507 51%,#feccb1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+/* 손모양이 안나오게함 */

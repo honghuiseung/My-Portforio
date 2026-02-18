@@ -1,0 +1,33 @@
+Ctrl + E
+
+Ctrl + Shift + A
+
+Ctrl + Shift + Q (주석)
+
+
+<기본사용>
+
+P
+
+html:5
+
+link
+
+link:css
+
+link:favicon
+
+
+
+
+<젠코딩 활용>
+
+div#header>h1+p
+
+div#page-wrap>div#header+div#contents+div#footer
+
+div.article*3+div.aside
+
+div#footer>h3+address
+
+div#page-wrap>(div#header>h1+p.slogan)+(div#contents>div.article*3+div.aside)+(div#footer>h3+address)

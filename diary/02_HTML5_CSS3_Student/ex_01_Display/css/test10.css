@@ -1,0 +1,5 @@
+﻿#header{width: 1000px; height: 500px; background: yellow; margin:0 auto;}
+.box1{width: 100px; height:100px; background: #ff0000; margin-bottom: 100px;}
+.box2{width: 100px; height:100px; background: #00ff00; margin-top:100px;}
+.box3{width: 100px; height:100px; background: #0000ff;}
+/* 마진통합현상 margin-top과 bottom이 겹치면 둘중하나가 가려짐 */

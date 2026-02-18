@@ -1,0 +1,23 @@
+﻿@font-face {
+	font-family: 'YouandiModernTR';
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/YouandiModernTR.eot);
+	src: url(../fonts/YouandiModernTR.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/YouandiModernTR.woff) format('woff'),
+         url(../fonts/YouandiModernTR.ttf) format('opentype');
+}
+*{margin:0; padding:0; border:0;}
+body{background:url(../images/bg.jpg) no-repeat center top; font-family:"YouandiModernTR", "돋움체", Arial, sans-serif;}
+ul, li{list-style:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cb{ clear:both;}
+.cf:after{ content:''; display:block; clear:both;}
+
+#countwrap{width:800px; margin:0 auto; margin-top:250px; text-align:center; border:3px solid #818181; padding-bottom:10px;}
+	#countwrap h2{color:#ffffff; text-align:center; font-size:36px; line-height:200%;}
+	#countwrap .counter{display:inline-block;}
+		.counter ul li{margin-left:10px;}
+		.counter ul li.firstli{margin-left:0px;}
+		.counter ul li p{color:#ffffff; text-align:center;}

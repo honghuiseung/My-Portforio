@@ -1,0 +1,5 @@
+﻿body{font: 0.95em '맑은 고딕', sans-serif; margin: 30px;}
+div{border-radius: 20px; border: 15px solid #ff0033; background-color: #6d6d6d;}
+	p{background-color: #ffffff; line-height: 200%; margin: 40px; padding: 15px;}
+	.round1{border-radius: 40px 0px; border: 15px solid #ff9933;}
+	.round2{border-radius: 40px 0px; border: 15px solid #ff9933;}

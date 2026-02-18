@@ -1,0 +1,51 @@
+--DUAL 이중 테이블
+--1일이 몇 분인지 계산
+24*60;
+SELECT 24*60 FROM emp;
+SELECT 24*60 FROM DUAL;
+--하나의 결과값만 얻을 수 있음
+SELECT * FROM DUAL;
+SELECT sysdate FROM DUAL;
+
+-- 숫자 함수
+SELECT -10, ABS(-10) FROM DUAL;
+SELECT 34.5678, FLOOR(34.5678) FROM DUAL;
+SELECT 34.5678, ROUND(34.5678) FROM DUAL;
+SELECT 34.5678, ROUND(34.5678, 2) FROM DUAL;
+SELECT 34.5678, ROUND(34.5678, -1) FROM DUAL;
+-- floor 버림 cell 올림
+
+SELECT 34.5678, TRUNC(34.5678, 2) FROM DUAL;
+SELECT MOD(27, 2), MOD(27, 5), MOD(27, 7) FROM DUAL;
+
+--변환함수
+SELECT 'Welcome to Oracle',
+    UPPER('Welcome to Oracle'),
+    LOWER('Welcome to Oracle'),
+    INITCAP('Welcome to Oracle')
+FROM DUAL;
+--영문자와 한글이 길이를 구하는거
+SELECT LENGTH('Oracle'), LENGTH('오라클')
+FROM DUAL;
+SELECT LENGTHB('Oracle'), LENGTHB('오라클')
+FROM DUAL;
+
+--문자 조작 함수
+SELECT SUBSTR('Welcome to Oracle', 12, 3)FROM DUAL;
+SELECT SUBSTR('Welcome to Oracle', -6, 6)FROM DUAL;
+SELECT SUBSTR('Welcome to Oracle', 3, 4), SUBSTRB('Welcome to Oracle', 3, 4)FROM DUAL;
+SELECT SUBSTR('웰컴투 오라클', 3, 4), SUBSTRB('웰컴투 오라클', 3, 4)FROM DUAL;
+SELECT INSTR('WELCOME TO ORACLE', 'O') FROM DUAL;
+SELECT INSTR('WELCOME TO ORACLE', 'O', 6, 2) FROM DUAL; --(,,6번째문자부터 확인,2번째문자의 위치를 출력)
+SELECT INSTR('데이터베이스', '이', 4, 1), INSTRB('데이터베이스', '이', 4, 1) FROM DUAL;
+SELECT INSTR('데이터베이스데이터베이스', '이', 7, 1), INSTRB('데이터베이스데이터베이스', '이', 4, 2) FROM DUAL;
+SELECT LPAD('데이터베이스', 20, '#') FROM DUAL;
+SELECT RPAD('데이터베이스', 20, '#') FROM DUAL;
+
+
+
+
+
+
+
+

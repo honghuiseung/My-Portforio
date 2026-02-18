@@ -1,0 +1,31 @@
+글자가 스크롤되는 효과 만들기 
+
+
+1.<body> 태그에 효과를 적용할 위치에 삽입==================================
+
+
+<center>
+<table border=0 valign=bottom>
+<tr>
+<td><IMG SRC="blank.gif"
+        NAME="holdspace" ID="holdspace"
+        WIDTH="400" HEIGHT="20"
+        STYLE="visibility:hidden;position:relative;">
+</td>
+</tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+
+if (navigator.appVersion.indexOf("MSIE 4.0; Macintosh;") == -1) {
+  with (document) {
+    write("<SCRIPT LANGUAGE='JavaScript1.2' SRC='bannerconfig1.js'>");
+    write("<\/SCRIPT>");
+    write("<SCRIPT LANGUAGE='JavaScript1.2' SRC='banner1.js'>");
+    write("<\/SCRIPT>");
+  }
+}
+
+//-->
+</SCRIPT>

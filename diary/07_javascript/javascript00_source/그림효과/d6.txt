@@ -1,0 +1,48 @@
+그림이 화면을 돌아다니게 만들기
+
+
+1.<head> 태그에 삽입============================================================
+
+
+<SCRIPT LANGUAGE="JavaScript"> 
+<!-- 
+function showaddservice() {         
+if (document.all) {
+a=screen.width-150
+b=screen.height-350 
+document.all.addservice.style.posTop=randomposition(b) 
+document.all.addservice.style.posLeft=randomposition(a) 
+document.all.addservice.style.visibility="visible" 
+} 
+if (document.layers) {
+c=window.innerWidth
+d=window.innerHeight 
+document.addservice.top=randomposition(d) 
+document.addservice.left=randomposition(c) 
+document.addservice.visibility="visible" 
+} 
+var timer =setTimeout("hideaddservice()",2500) 
+} 
+
+function hideaddservice() {         
+        if (document.all) {document.all.addservice.style.visibility="hidden"} 
+        if (document.layers) {document.addservice.visibility="hidden"} 
+        var timer =setTimeout("showaddservice()",400) 
+} 
+
+function randomposition(range) {                 
+        return Math.floor(range*Math.random()) 
+} 
+//--> 
+</SCRIPT> 
+
+2.<body> 태그 안에 삽입============================================================
+
+
+onLoad="showaddservice()"
+
+
+3.<body> 태그에서 효과를 적용할 위치에 입력=========================================
+
+<div id="addservice" style="position:absolute;visibility:hidden"><a href="javascript:history.back()"><img src="fly.gif" border=0></a></div>
+

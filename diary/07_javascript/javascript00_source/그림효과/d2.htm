@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Untitled</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var interval = 2.5; // 그림이 바뀌는 속도
+var random_display = 1; //그림 랜덤하게 표시하려면 1,순서대로 표시하려면 0을 입력 
+interval *= 1000;
+
+var image_index = 0;
+image_list = new Array();
+image_list[image_index++] = new imageItem("01.jpg");
+image_list[image_index++] = new imageItem("02.jpg");
+image_list[image_index++] = new imageItem("03.jpg");
+image_list[image_index++] = new imageItem("04.jpg");
+var number_of_image = image_list.length;
+function imageItem(image_location) {
+this.image_item = new Image();
+this.image_item.src = image_location;
+}
+function get_ImageItemLocation(imageObj) {
+return(imageObj.image_item.src)
+}
+function generate(x, y) {
+var range = y - x + 1;
+return Math.floor(Math.random() * range) + x;
+}
+function getNextImage() {
+if (random_display) {
+image_index = generate(0, number_of_image-1);
+}
+else {
+image_index = (image_index+1) % number_of_image;
+}
+var new_image = get_ImageItemLocation(image_list[image_index]);
+return(new_image);
+}
+function rotateImage(place) {
+var new_image = getNextImage();
+document[place].src = new_image;
+var recur_call = "rotateImage('"+place+"')";
+setTimeout(recur_call, interval);
+}
+//-->
+</script>
+</head>
+<body OnLoad="rotateImage('rImage')">
+<center>
+<img name="rImage" src="01.jpg">
+</center>
+</body>
+</html>

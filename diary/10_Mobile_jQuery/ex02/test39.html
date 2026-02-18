@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<style type="text/css">
+		#page2 li img{display: block; padding: 12px 12px;}
+		#page3 li img{display: block; top: 36%;}
+	</style>
+</head>
+<body>
+	<!-- 테이블 만들기 -->
+	<div data-role="page">
+		<div data-role="header" data-add-back-btn="true">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<table class="ui-responsive table-stripe" id="my-table1" data-mode="columntoggle" data-role="table">
+				<thead>
+					<tr>
+						<th data-priority="2">학년</th>
+						<th>이름</th>
+						<th data-priority="3">성별</th>
+						<th data-priority="1">성적</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th> <td>홍길동</td> <td>남</td> <td>94</td>
+					</tr>
+					<tr>
+						<th>4</th> <td>신나라</td> <td>여</td> <td>77</td>
+					</tr>
+					<tr>
+						<th>3</th> <td>홍미미</td> <td>여</td> <td>88</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+		</div>
+    </div>
+</body>
+</html>

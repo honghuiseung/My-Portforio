@@ -1,0 +1,18 @@
+﻿$(function(){
+	$('.tab>li:first-child').click(function(){
+		$('.board').show();
+		$('.gallery').hide();
+		$(this).find('a').css('color','yellow');
+		$('.tab>li:last-child>a').css('color','white');
+	});
+	$('.tab>li:last-child').click(function(){
+		$('.board').hide();
+		$('.gallery').show();
+		$(this).find('a').css('color','yellow');
+		$('.tab>li:first-child>a').css('color','white');
+	});
+	$('.pop').show();
+	$('.pop_box>button').click(function(){
+		$('.pop').hide();
+	});
+});

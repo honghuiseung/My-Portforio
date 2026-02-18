@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio.</title>
+	<style>
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+	*{margin: 0; padding: 0; border: 0;}
+	.cf:after{content: ""; display: block; clear: both;}	
+	ul, li{list-style: none;}
+	body,ul,li {margin: 0; padding: 0; font-size: 12px; font-family: "맑은 고딕", sans-serif;}
+	a {text-decoration: none; color: #ffffff;}
+
+	#wrap {position: relative; margin: 0 auto; width: 1200px; min-width:1000px;}
+	#header {width: 1200px; height: 70px; position: fixed; left: 50%; margin-left: -600px; top: 35px; z-index: 1000;}
+	
+	#menuWrap {width: 1200px; height: 50px; position:relative; left: 0px; top: 10px; background: #001355; opacity: 0.85; border-radius: 10px;}
+	#menuWrap .fav{position: absolute; top: 2px; right: 20px; display: block; padding: 0 4px; font-weight: bold; background-color: #ffffff; color: #26376f; border-radius: 2px;}
+	#menu {position: absolute; left: 0px; top: 0px; width: 1200px;}
+	#menu li {float: left; padding: 0px 14px;}
+	#menu .mLogo {padding-left: 40px; margin-top: -15px;}
+	#menu li a {display: block; padding: 2px 4px; line-height: 42px; font-size: 1.5em; font-weight: bold; text-align: center; color: #9d9d9d; opacity: 1;}
+	#menu li a:hover {color: #ffffff;}
+	#menu .on a{color: #ffffff; text-shadow: 0 0 20px #ffffff;}
+	#menu .mLogo a {padding: 0px 4px; opacity: 1;}
+	
+	</style>
+	<script>
+		function bookmark(){
+			window.external.AddFavorite("http://ashram7.dothome.co.kr/", "My Portfolio")
+		}
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div id="menuWrap">
+			<ul id="menu" class="cf">
+				<li class="mLogo"><a href="#main"><img src="images/logo02.png" alt="logo" /></a></li>
+				<li><a href="#profile">PROFILE</a></li>
+				<li><a href="#mobile">MOBILE</a></li>
+				<li><a href="#adaptive01">ADAPTIVEⅠ</a></li>
+				<li><a href="#jQuery">JQUERY</a></li>
+				<li><a href="#css">WEB STD</a></li>
+				<li><a href="#shopping">SHOPPING</a></li>
+				<li><a href="#graphic">2D GRAPHIC</a></li>
+				<li><a href="#epilogue">EPILOGUE</a></li>
+			</ul> <!-- #menu end -->
+			<a href="#" onclick="bookmark()" class="fav">FAVORITE</a>
+		</div> <!-- #menu_wrap end -->
+	</div> <!-- #header end -->
+</div><!-- id="wrap" -->
+</body>
+</html>
+
+
+
+

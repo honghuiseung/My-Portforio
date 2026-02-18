@@ -1,0 +1,7 @@
+﻿/* position: absolute; position: relative; position:fixed; */
+#titlePage{position: absolute; top: -20px; left: 0px;}
+#book1{background:url(../images/bg_sm01.png) no-repeat; position: absolute; top:50%; left:50%; margin-top:-75px; margin-left:-171px; z-index: 1;}
+/* z-index:숫자가 클수록 위로 */
+#book2{background:url(../images/bg_sm02.png) no-repeat; position: absolute; top:50%; right:50%; margin-top:-75px; margin-right:-171px;}
+#book3{background:url(../images/bg_sm03.png) no-repeat; position: absolute; bottom:50%; right:50%; margin-bottom:-75px; margin-right:-171px;}
+#book4{background:url(../images/bg_sm04.png) no-repeat; position: absolute; bottom:50%; left:50%; margin-bottom:-75px; margin-left:-171px;}

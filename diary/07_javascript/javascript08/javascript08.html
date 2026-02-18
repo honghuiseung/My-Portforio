@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Window 객체와 메소드</title>
+<meta content="charset=utf-8">
+<style type="text/css">
+body { margin: 0; color: #000000; font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; margin: 0px; text-align: justify;}
+table th, table td{font: 14px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; color: #333333; text-align: justify;}
+table th{text-align: center;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+.mp{margin: 0; padding: 0; text-align: center;}
+#wrap {	width: 900px; margin: auto;}
+#float{position: fixed; float: left; top: 5px; right: 100px; z-index: 100; border: 1px inset #efefef; font-size: 12px; color: #999999; padding: 5px;}
+#float > ul{margin: 0; padding: 0;}
+#float li{margin: 0; padding: 0; list-style:none; }
+.article {width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 {background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 {color: #009;}
+pre {margin: 10px 0px; padding: 0px 5px; border: 1px solid rgb(200, 202, 206);  width: 888px; overflow-x: auto; overflow-y: hidden; font: 16px/1.6  'Courier New', "Malgun Gothic", "맑은 고딕", DotumChe, Verdana, Arial, "Trebuchet MS"; text-align: justify;}
+p{text-align: justify;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099;}
+.bold_blue { color: #000099; font-weight: bold;}
+.green { color: #227722;}
+.red { color: #cc0000;}
+.gray { color: #888888;}
+.normal{ color: #000000; font-weight: bold;}
+hr{ color: #888888;}
+.bggray{background-color: #efefef;}
+</style>
+</head>
+<body>
+<DIV id="wrap">
+    <h1>JavaScript Window 객체와 메소드</h1>
+    
+  <div class="article">
+        <h2>최상위 계층구조 Window객체 사용하기</h2>
+    </div>
+    
+    
+    <p>&nbsp;</p>    
+    <h3>브라우저 객체(Browser Object Model)</h3>
+  <p>- 브라우저 창에 포함된 모든 객체 요소들</p>
+
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+            <p><span class="normal">document</span> : 문서 객체이며, 하위에 form, cookite, images 등이 존재<br>
+              <span class="normal">navigator</span> : 브라우저에 대한 정보를 제공하는 객체<br>
+              <span class="normal">location</span> : 위치(url)관련 정보를 제공하는 객체<br>
+              <span class="normal">screen</span> : 스크린(모니터)에 대한 정보를 제공하는 객체<br>
+          <span class="normal">history</span> : 인터넷 방문 기록에 대한 정보를 제공하는 객체</p>        
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+  
+    <h3>window 객체 </h3>
+
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+        <p><span class="normal">open(&quot;경로&quot;, &quot;창이름&quot;, &quot;옵션&quot;)</span> : 새로운 문서를 열 때 사용<br>
+          <span class="normal">alert(&quot;문자&quot;)</span> : 경고창을 열 때 사용<br>
+  <span class="normal">prompt(&quot;질문&quot;, &quot;기본응답&quot;)</span> : 질문 / 응답 창을 열 때 사용<br>
+  <span class="normal">confirm(&quot;질문&quot;)</span> : 확인 / 취소창을 열 때 사용<br>
+  <span class="normal">setTimeout(실행문, 간격시간)</span> : 해당 간격시간 뒤에 실행문을 한 번만 수행<br>
+ <span class="normal">setInterval(실행문, 간격시간)</span> : 해당 간격으로 실행문을 반복적으로 수행</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    
+    <h3>Window 객체에서 사용할 수 있는 이벤트 핸들러</h3>
+
+	<table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+	  <tr>
+	    <td class="gray">
+        <p><span class="normal">onblur</span> : 웹 브라우저에서 커서가 사라졌을 경우<br>
+	      <span class="normal">ondragdrop</span> : 웹 브라우저에서 객체를 드래그했을 경우<br>
+	      <span class="normal">onerror</span> : 웹 브라우저에서 문서를 읽던 중 에러가 발생했을 경우<br>
+	      <span class="normal">onfocus</span> : 웹 브라우저에서 커서가 있을 경우<br>
+	      <span class="normal">onload</span> : 문서를 읽었을 경우<br>
+	      <span class="normal">onmove</span> : 윈도우를 움직였을 경우<br>
+	      <span class="normal">onresize</span> : 윈도우의 창 크기가 바뀌었을 경우<br>
+	      <span class="normal">onunload</span> : 웹 브라우저에서 열린 문서에서 떠났을 경우</p>
+        </td>
+      </tr>
+  </table>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+    
+    
+	<h3>location </h3>
+  <p>- 브라우저의 현재 URL 주소값에 대한 정보를 제공</p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+        <p><span class="normal">location.hash</span> : 주소창에 URL에서 # 뒤에 오는 문자열을 반환<br>
+          <span class="normal">location.host</span> : 주소창에 URL에서 도메인명을 반환<br>
+          <span class="normal">location.hostname</span> : 주소창에 URL에서 도메인명을 반환<br>
+          <span class="normal">location.href</span> : 주소창에 URL에서 전체 정보를반환<br>
+          <span class="normal">location.pathname</span> : 주소창에 URL에서 메인명 다음에 오는 경로를 반환<br>
+          <span class="normal">location.port</span> : 주소창에 URL에서 포트번호을 반환<br>
+          <span class="normal">location.protocol</span> : 주소창에 URL에서 프로토콜을 반환</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+
+  <h3>화면 정보를 가져오는 Screen 객체 사용하기</h3>
+
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+        <p><span class="normal">availHeight</span> : 인터페이스를 제외한 실제 화면의 높이를 픽셀 크기로 표시해준다<br>
+          <span class="normal">availWidth</span> : 인터페이스를 제외한 실제 화면의 너비를 픽셀 크기로 표시해준다<br>
+      <span class="normal">colorDepth</span> : 컴퓨터에서 사용하는 컬러 수를 표시해준다<br>
+      <span class="normal">hight</span> : 컴퓨터에서 사용하는 화면의 높이를 픽셀 크기로 표시해준다<br>
+      <span class="normal">width</span> : 컴퓨터에서 사용하고 있는 화면의 너비를 픽셀 크기로 표시한다<br>
+      <span class="normal">pixelDepth</span> : 하나의 픽셀당 비트 수를 표시한다</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>사용예) 자신의 컴퓨터 화면해상도 알아내기</p>
+<pre>&lt;script&gt;
+<span class="green"></span>    document.write(&quot;화면의 실제 높이&quot;, screen.availHeight, &quot;&lt;br /&gt;&quot;)
+    document.write(&quot;화면의 실제 너비&quot;, screen.availWidth, &quot;&lt;br /&gt;&quot;)
+    document.write(&quot;화면의 너비&quot;, screen.width, &quot;&lt;br /&gt;&quot;)
+    document.write(&quot;화면의 높이&quot;, screen.height, &quot;&lt;br /&gt;&quot;)
+    document.write(&quot;화면 색상수&quot;, screen.colorDepth, &quot;&lt;br /&gt;&quot;)
+    document.write(&quot;픽셀당 비트수&quot;, screen.pixelDepth)
+<span class="green"></span>&lt;/script&gt;
+</pre>
+  <p>&nbsp;</p>
+  <p>사용예) 해상도 비교</p>
+
+
+<pre>&lt;head&gt;
+    &lt;title&gt;해상도 비교&lt;/title&gt;
+    &lt;script&gt;
+<span class="green"></span>        a=screen.width
+        if (a &lt; 1600) {
+            alert(&quot;당신의 컴퓨터 해상도는&quot; +screen.width+ &quot;*&quot; +screen.height+
+                  &quot;입니다. \n이 홈페이지는 1600*900 해상도에서 잘보입니다.&quot;)
+        }
+        else { 
+            alert(&quot;당신의 컴퓨터 해상도는&quot; +screen.width+ &quot;*&quot; +screen.height+ &quot;입니다.&quot;)
+        }
+<span class="green"></span>    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body style=&quot;background-color: #ff9326;&quot;&gt;
+    &lt;img src=&quot;images/girl.png&quot; width=&quot;1400&quot; style=&quot;display: block; margin: 0 auto;&quot; /&gt;
+&lt;/body&gt;
+</pre>
+    <p>&nbsp;</p>    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>    
+
+    
+    <div class="article">
+      <h2>Window 객체 메소드 사용하기</h2>
+    </div>
+    
+    
+    <p>&nbsp;</p>    
+  <h3>윈도우 창을 열어주는 open() 메소드</h3>
+    <p>- window.open(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>    
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>
+        <p>- a: 열리게 할 문서의 파일 이름<br>
+        - b: 열리게 할 문서의 타겟 이름<br>
+        - c: 새롭게 열릴 창의 속성</p>
+
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <h3>창 속성 설정에 관련된 세번째 매개 변수</h3>
+
+  <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+        <p><span class="normal">toolbar		yes/no</span> : 툴바 메뉴를 보이게 할 지를 설정<br>
+	      <span class="normal">location	yes/no</span> : 주소 표시줄을 보이게 할 지를 설정<br>
+	  <span class="normal">directories	yes/no</span> : 연결 표시줄을 보이게 할 지를 설정<br>
+	  <span class="normal">status		yes/no</span> : 상태 표시줄을 보이게 할 지를 설정<br>
+	  <span class="normal">menubar		yes/no</span> : 메뉴를 보이게 할 지를 설정<br>
+	  <span class="normal">scrollbars	yes/no</span> : 스크롤 바를 보이게 할 지를 설정<br>
+	  <span class="normal">resizable	yes/no</span> : 창 크기 조절을 허용할 지를 설정<br>
+	  <span class="normal">copyhistory	yes/no</span> : 히스토리 정보를 저장할 지를 설정<br>
+	  <span class="normal">width</span> : 픽셀	창의 가로 길이를 설정<br>
+	  <span class="normal">height</span> : 픽셀	창의 세로 길이를 설정 </p>
+        </td>
+      </tr>
+  </table>
+  <p>    
+  <p>사용예) 윈도우 창 열기<br>
+    
+  <pre class="gray">
+&lt;body background=&quot;images/back4.jpg&quot; style=&quot;padding-top: 100px;&quot;&gt;
+    &lt;p style=&quot;text-align: center;&quot;&gt;
+        &lt;img src=&quot;images/logo.gif&quot; width=&quot;364&quot; height=&quot;78&quot; border=&quot;0&quot; /&gt;
+    &lt;/p&gt;
+    &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+    &lt;p style=&quot;color: white; text-align: center; font-weight: bold;&quot;&gt;
+        | movie | animation | music | guest book |
+    &lt;/p&gt;
+&lt;/body&gt;
+
+
+위의 홈페이지 &lt;head&gt; 태그 사이에 다음 내용을 입력
+
+&lt;head&gt;
+    &lt;title&gt;lets go&lt;/title&gt;
+    &lt;script&gt;
+	    <span class="normal">window.open(&quot;news.htm&quot;, &quot;&quot;, &quot;&quot;)</span>
+    &lt;/script&gt;
+&lt;/head&gt;	
+
+
+다시 open() 메소드에 resizable 속성을 사용하여 창 크기를 조절할 수 있도록 내용을 수정
+	  <span class="normal">window.open(&quot;news.htm&quot;, &quot;&quot;, &quot;resizable=yes&quot;)</span>
+      
+다시 open() 메소드에 toolbar 속성을 사용하여 표준 단추 메뉴가 보이도록 설정
+	  <span class="normal">window.open(&quot;news.htm&quot;, &quot;&quot;, &quot;resizable=no, toolbar=yes&quot;)</span>
+
+다시 open() 메소드에 width와 height 속성을 사용하여 창 크기를 조절
+	  <span class="normal">window.open(&quot;news.htm&quot;, &quot;&quot;, &quot;resizable=no, toolbar=no, width=400, height=400&quot;)</span></pre>
+
+
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<h3>창을 닫아주는 close() 메소드</h3>
+	<p>- window.close() 또는 self.close() 현재 열려 있는 창을 닫아 준다</p>
+	<p>&nbsp;</p>
+	<p>사용예) 창을 닫아주는 close() 메소드</p>
+    
+  <pre class="gray">
+news.htm 문서에서 &lt;input&gt; 태그 안에 단추를 클릭하면 창을 닫아 주도록 내용을 입력
+
+&lt;input type=&quot;submit&quot; value=&quot; 창&amp;nbsp;&amp;nbsp;닫&amp;nbsp;&amp;nbsp;기 &quot; <span class="normal">onclick=&quot;window.close()&quot;</span> /&gt;</pre>
+
+    <p>&nbsp;</p>
+    <p>사용예) 부모창에서 자식창을 컨트롤 하기</p>
+    
+<pre>아래의 html 소스를 복사하여 붙여서 문서 내용을 확인
+
+<span class="gray">&lt;body leftmargin=&quot;0&quot; topmargin=&quot;0&quot; background=&quot;images/beda.gif&quot;&gt;
+    &lt;p align=&quot;left&quot;&gt;
+        &lt;img src=&quot;images/logo_shop.gif&quot; width=&quot;738&quot; height=&quot;204&quot; border=&quot;0&quot;&gt;
+    &lt;/p&gt;
+	&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;2&quot; width=&quot;500&quot;&gt;
+        &lt;tr&gt;
+            &lt;td width=&quot;267&quot; rowspan=&quot;2&quot;&gt;
+                &lt;p align=&quot;right&quot;&gt;&amp;nbsp;
+                    &lt;img src=&quot;images/cm.gif&quot; width=&quot;145&quot; height=&quot;149&quot; border=&quot;0&quot;&gt;&lt;br /&gt;
+                &lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td width=&quot;227&quot; height=&quot;15&quot; bgcolor=&quot;navy&quot;&gt;
+                &lt;p align=&quot;center&quot;&gt;
+                &lt;font color=&quot;white&quot;&gt;video camera&lt;/font&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td width=&quot;227&quot; height=&quot;75&quot;&gt;
+                &lt;p&gt;&lt;FONT face=&quot;굴림체&quot; color=&quot;silver&quot; size=&quot;2&quot;&gt;
+                &amp;nbsp;&amp;nbsp;●2.5인치 액정 모니터&lt;br&gt;&amp;nbsp;&amp;nbsp;
+                ●고화질  컬러뷰파인더&lt;br&gt;&amp;nbsp;&amp;nbsp;●재생 줌 기능&lt;br&gt;&amp;nbsp;&amp;nbsp;
+                ●장시간 쵤용 가능&lt;/font&gt;&lt;font color=&quot;white&quot; size=&quot;2&quot;&gt;&lt;br&gt;&lt;/font&gt;
+                &lt;p align=&quot;center&quot;&gt;
+                &lt;input type=&quot;submit&quot; value=&quot; 그 림 확 대 &quot;&gt; 
+                &lt;input type=&quot;submit&quot; value=&quot; 창&amp;nbsp;&amp;nbsp;닫&amp;nbsp;&amp;nbsp;기 &quot;&gt;
+                &lt;font color=&quot;white&quot; size=&quot;2&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td width=&quot;496&quot; colspan=&quot;2&quot;&gt;
+                &lt;p align=&quot;right&quot;&gt;&amp;nbsp;&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p align=&quot;left&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/body&gt;</span>
+
+
+
+다음 내용을 &lt;head&gt; 태그 사이에 입력
+
+<span class="gray">&lt;head&gt;
+    &lt;title&gt;shopping mall&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;script&gt;
+        function mkwin() {</span>
+            <span class="normal">camwin=window.open(&quot;cam.htm&quot;,&quot;&quot;,&quot;toolbar=no, width=400, height=400&quot;)</span>
+        <span class="gray">}
+
+        function closewin() {</span>
+            <span class="normal">camwin.close()</span>
+        <span class="gray">}
+    &lt;/script&gt;
+&lt;/head&gt;</span>
+
+
+
+다음 내용을 &lt;input&gt;에 추가
+
+<span class="gray">&lt;input type=&quot;submit&quot; value=&quot; 그 림 확 대 &quot;</span>  <span class="normal">onclick=&quot;mkwin()&quot;</span><span class="gray"> /&gt; 
+&lt;input type=&quot;submit&quot; value=&quot; 창&amp;nbsp;&amp;nbsp;닫&amp;nbsp;&amp;nbsp;기 &quot;  </span><span class="normal">onclick=&quot;closewin()&quot;</span><span class="gray"> /&gt;</span></pre>
+	<p>&nbsp;</p>
+	<p>&nbsp; </p>
+    
+    
+  <h3>history</h3>
+    <p>-&nbsp;브라우저로 방문한 페이지들의 정보를 제공하며, 메서드를 사용하여 '이전' 및 '다음'과 같은 페이지 이동을 위한 버튼을 만들 수도 있다.</p>
+    <table width="95%" border="1" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td class="gray">
+	<p><span class="normal">go(값)</span> : 값 만큼 다음 또는 이전 페이지로 이동</p>
+	<p><span class="normal">back()</span> : 이전 페이지로 이동</p>
+    
+    
+    <p><span class="normal">forward()</span> : 다음 페이지로 이동</p>        
+        </td>
+      </tr>
+    </table>
+  <p>&nbsp;</p>
+
+	<pre class="gray">
+<span class="normal">ex1.html로 저장</span>
+&lt;body&gt;
+    &lt;h1&gt; 첫번째 페이지 &lt;/h1&gt;
+    &lt;a href=&quot;ex2.html&quot;&gt;두번째페이지로 이동&lt;/a&gt;
+&lt;body&gt;
+
+
+<span class="normal">ex2.html로 저장</span>
+&lt;body&gt;
+    &lt;h1&gt; 두번째 페이지 &lt;/h1&gt;
+    &lt;p&gt;&lt;a href=&quot;ex3.html&quot;&gt;세번째페이지로 이동&lt;/a&gt;&lt;p&gt;
+    &lt;input type=&quot;button&quot; value=&quot;이전페이지로 이동&quot; onclick=&quot;history.back();&quot; /&gt;
+    &lt;input type=&quot;button&quot; value=&quot;다음페이지로 이동&quot; onclick=&quot;history.go(1);&quot; /&gt;
+    &lt;input type=&quot;button&quot; value=&quot;forward버튼&quot; onclick=&quot;history.forward();&quot; /&gt;
+&lt;body&gt;
+
+
+<span class="normal">ex3.html로 저장</span>
+&lt;body&gt;
+    &lt;h1&gt; 세번째 페이지 &lt;/h1&gt;
+    &lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;이전페이지로 이동&quot; onclick=&quot;history.go(-1);&quot; /&gt;&lt;p&gt;
+    &lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;첫페이지로 이동&quot; onclick=&quot;history.go(-2);&quot; /&gt;&lt;p&gt; 
+&lt;body&gt;</pre>
+
+
+	<p>&nbsp; </p>
+	<p>&nbsp; </p>
+</div>
+</body>
+</html>

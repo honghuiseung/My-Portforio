@@ -1,0 +1,12 @@
+﻿*{margin: 0; padding: 0; border:0;}
+.animation_canvas{/* overflow: hidden; */ position: relative; width: 600px; height: 400px;}
+.slider_panel{width: 3000px; position: relative;}
+.slider_img{float:left; width: 600px; height: 400px;}
+.slider_text_panel{position: absolute; top: 150px; left: 50px;}
+.slider_text{position: absolute; width: 250px; height: 150px; color: white; font-weight: bold; text-align: justify;}
+.control_panel{position: absolute; top: 380px; left: 50%; margin-left: -38px; height: 15px; overflow: hidden;}
+.control_button{width: 15px; height: 46px; position: relative; float:left; cursor: pointer; background: url(../images/point_button.png);}
+.control_button:hover{top: -16px;}
+.control_button.active{top: -31px;}
+
+

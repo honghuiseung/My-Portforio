@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Chango);
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  
+}
+#wrap {
+	width: 770px;
+    height: 560px;
+	margin: auto;
+    border: 0;
+	margin: 0;
+}
+
+#menu_wrap {
+	width: 770px;
+    height: 210px;
+	float: left;
+    border: 0;
+	margin: 0;
+}
+
+#menu_bar {
+	width: 140px;
+	height: 210px;
+	background: #fff;
+	float: left;
+	border: 0;
+	margin: 0;
+	padding: 0;	
+}
+
+#middle_wrap {
+    width: 630px;
+	height: 210px;
+
+	float: left;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#middle_wrap_2 {
+    width: 770px;
+	height: 210px;
+	background: #0f0;
+	float: left;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.line_middle {
+    width: 630px;
+	height: 70px;
+
+	float: left;
+	border: 0;
+	margin: 0;
+}
+.line_middle_2 {
+    width: 770px;
+	height: 70px;
+
+	float: left;
+	border: 0;
+	margin: 0;
+}
+
+.box_70_1 {
+	width: 70px;
+	height: 70px;
+	background: #ffff99;
+	float: left;
+	border: 0;
+	margin:0;
+}
+.box_70_2 {
+	width: 70px;
+	height: 70px;
+	background: #ffcc00;
+	float: left;
+	border: 0;
+	margin:0;
+}
+
+.box_70_3 {
+	width: 70px;
+	height: 70px;
+	background: #ff9900;
+	float: left;
+	border: 0;
+	margin:0;
+}
+
+.box_70_4 {
+	width: 210px;
+	height: 70px;
+	background: #ff9900;
+	float: left;
+	border: 0;
+	margin: 0;
+	text-align: center;
+	font-size: 20pt;
+	color: #fff;
+	font-family: 'chango', bold;
+}
+.box_70_5 {
+	width: 70px;
+	height: 70px;
+	float: left;
+	border: 0;
+	margin:0;
+}
+#sidebar ul {
+	list-style:none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#sidebar ul li {
+	list-style:none;
+	border: 0;
+	margin: 0;
+	padding: 0;	
+}
+
+#sidebar ul li img{
+	display: inline;
+	list-style:none;
+	float: left;
+	border: 0;
+	padding: 0;
+	clear: both;
+}
+

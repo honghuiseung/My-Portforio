@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE> 팝업 창 오늘은 다시 안볼래요 </TITLE>
+<SCRIPT LANGUAGE="Javascript"> 
+<!-- 
+
+function setCookie( name, value, expiredays ) 
+{ 
+  var todayDate = new Date(); 
+  todayDate.setDate( todayDate.getDate() + expiredays ); 
+  document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+} 
+
+function getCookie( name ) 
+{ 
+   var nameOfCookie = name + "="; 
+   var x = 0; 
+   while ( x <= document.cookie.length ) 
+   { 
+        var y = (x+nameOfCookie.length); 
+        if ( document.cookie.substring( x, y ) == nameOfCookie ) { 
+               if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                   endOfCookie = document.cookie.length; 
+                return unescape( document.cookie.substring( y, endOfCookie ) ); 
+        } 
+        x = document.cookie.indexOf( " ", x ) + 1; 
+        if ( x == 0 ) 
+            break; 
+    } 
+    return ""; 
+}
+ 
+if ( getCookie( "Notice" ) != "done" ) 
+{ 
+    noticeWindow  = window.open('new_pop.htm','notice','width=300,height=300,top=100,left=80'); 
+    noticeWindow.opener = self; 
+} 
+//-->
+</SCRIPT> 
+<STYLE TYPE="text/css">
+<!--
+p {
+	font-size: 12px;
+	color: #000099;
+}
+-->
+</STYLE>
+</HEAD> 
+<BODY BACKGROUND="bg17.gif">
+<TABLE WIDTH="400" BORDER="0" BGCOLOR="#FFFFFF" ALIGN="center">
+  <TR>
+    <TD WIDTH="240">
+      <IMG SRC="song1.jpg" WIDTH="219" HEIGHT="294">
+    </TD>
+    <TD WIDTH="160">
+      <P>나무 그늘 아래 </P>
+      <P>나비와 함께 앉아있다</P>
+      <P>이것도 전생의 인연</P>
+      <P>- 이싸 - </P></TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>
+

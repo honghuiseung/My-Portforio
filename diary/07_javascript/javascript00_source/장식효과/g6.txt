@@ -1,0 +1,103 @@
+홈페이지에 머문 시간 표시하기
+
+
+1.<head> 태그에 삽입=======================================================================
+
+
+<SCRIPT LANGUAGE="JavaScript"> 
+
+<!--  Begin 
+var onHours = " "; 
+var onMinutes = " "; 
+var onSeconds = " "; 
+var offHours = 0; 
+var offMinutes = 0; 
+var offSeconds = 0; 
+var logSeconds = 0; 
+var logMinutes = 0; 
+var logHours = 0; 
+var OnTimeValue = " "; 
+var OffTimeValue = " "; 
+var PageTimeValue = " "; 
+
+function getLogonTime() { 
+var now = new Date(); 
+var ampm = (now.getHours() >= 12) ? " P.M." : " A.M." 
+var Hours = now.getHours(); 
+Hours = ((Hours > 12) ? Hours - 12 : Hours); 
+var Minutes = ((now.getMinutes() < 10) ? ":0" : ":") + now.getMinutes(); 
+var Seconds = ((now.getSeconds() < 10) ? ":0" : ":") + now.getSeconds(); 
+OnTimeValue =(" " 
++ Hours 
++ Minutes 
++ Seconds 
++ " " 
++ ampm); 
+onHours = now.getHours(); 
+onMinutes = now.getMinutes(); 
+onSeconds = now.getSeconds();   
+} 
+function getLogoffTime() { 
+var now = new Date(); 
+var ampm = (now.getHours() >= 12) ? " P.M." : " A.M." 
+var Hours = now.getHours(); 
+Hours = ((Hours > 12) ? Hours - 12 : Hours); 
+var Minutes = ((now.getMinutes() < 10) ? ":0" : ":") + now.getMinutes(); 
+var Seconds = ((now.getSeconds() < 10) ? ":0" : ":") + now.getSeconds(); 
+OffTimeValue =(" " 
++ Hours 
++ Minutes 
++ Seconds 
++ " " 
++ ampm); 
+offHours = now.getHours(); 
+offMinutes = now.getMinutes(); 
+offSeconds = now.getSeconds(); 
+timer(); 
+} 
+function timer() { 
+if (offSeconds >= onSeconds) { 
+logSeconds = offSeconds - onSeconds; } 
+else { 
+offMinutes -= 1; 
+logSeconds = (offSeconds + 60) - onSeconds;       
+} 
+if (offMinutes >= onMinutes) { 
+logMinutes = offMinutes - onMinutes; } 
+else { 
+offHours -= 1; 
+logMinutes = (offMinutes + 60) - onMinutes; 
+} 
+logHours = offHours - onHours; 
+logHours =  ((logHours < 10) ? "0" : ":") + logHours; 
+logMinutes = ((logMinutes < 10) ? ":0" : ":") + logMinutes; 
+logSeconds = ((logSeconds < 10) ? ":0" : ":") +logSeconds; 
+PageTimeValue =(" " 
++ logHours 
++ logMinutes 
++ logSeconds); 
+displayTimes(); 
+} 
+function displayTimes() { 
+alert("\n로그인 시간 : " +OnTimeValue+"\n\n로그아웃 시간 : "+OffTimeValue+"\n\n머문시간 : " + PageTimeValue); 
+} 
+// End --> 
+</SCRIPT> 
+
+
+2.<body> 태그 안에 삽입====================================================================
+
+
+onLoad="getLogonTime()"
+
+
+
+3.<body> 태그에서 효과를 적용할 위치에 삽입================================================
+
+
+<CENTER> 
+<FORM> 
+<INPUT TYPE="button" value="로그인/로그아웃/머문시간 확인" onClick="getLogoffTime()"> 
+</FORM> 
+</CENTER>
+

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!-- 블록 버튼 스타일 5개 제한 -->
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>header영역</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a"><!-- 블록스타일은 그리드+1까지 ex)b면 a~c까지 -->
+				<div class="ui-block-a">블록1</div><!-- 화면을 꽉채움 -->
+				<div class="ui-block-b">블록2</div>
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<button>버튼1</button>
+				</div>
+				<div class="ui-block-b">
+					<button>버튼2</button>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+            <h4>footer 영역</h4>
+		</div>
+    </div>
+</body>
+</html>

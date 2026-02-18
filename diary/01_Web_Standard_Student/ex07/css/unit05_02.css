@@ -1,0 +1,4 @@
+﻿body{font-family: '맑은 고딕', '돋움'; Arial, sans-serif; margin: 0 50px; padding:20px; min-height: 400px; border-top: 15px solid #000000; box-shadow: 10px 10px 3px rgba(0,0,0,.5);}
+h1{text-align: center; width: 400px; padding: 10px 20px; margin: 10px auto; background:#ffcc33; border-radius: 20px 0px; text-shadow: 7px 7px 7px #000000; box-shadow: 10px 10px 0px #ff0066; }
+div{width: 377px; height: 231px; margin: 20px auto; background: url(../images/frame_being.png) no-repeat; border-radius: 25px; box-shadow: 5px 5px 40px #666666;}
+	p{padding-top: 45px; width: 80%; margin: 20px auto;}

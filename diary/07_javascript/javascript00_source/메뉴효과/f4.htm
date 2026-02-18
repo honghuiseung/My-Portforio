@@ -1,0 +1,50 @@
+<html>
+<head><title>Untitled</title>
+<SCRIPT LANGUAGE="JavaScript">
+function clickHandler() {
+  var targetId, srcElement, targetElement;
+  srcElement = window.event.srcElement;
+  if (srcElement.className == "Outline") {
+     targetId = srcElement.id + "d";
+     targetElement = document.all(targetId);
+     if (targetElement.style.display == "none") {
+        targetElement.style.display = "";
+        srcElement.src = "folder1.gif";
+     } else {
+        targetElement.style.display = "none";
+        srcElement.src = "folder.gif";
+     }
+  }
+}
+document.onclick = clickHandler;
+</SCRIPT>
+</head>
+<body>
+<DIV ID="Out0">
+  <IMG SRC="folder.gif" ID="Out1" CLASS="Outline" STYLE="cursor: hand" WIDTH="16" HEIGHT="16">&nbsp;메뉴1_1<BR>
+
+<DIV ID="Out1d" STYLE="display:None">
+    &nbsp;&nbsp;<IMG SRC="folder.gif" ID="Out2" CLASS="Outline" STYLE="cursor: hand" WIDTH="16" HEIGHT="16">&nbsp;메뉴1_2<BR>
+
+<DIV ID="Out2d" STYLE="display:None">
+       &nbsp;&nbsp;&nbsp;&nbsp;<IMG SRC="folder2.gif" WIDTH="20" HEIGHT="15">&nbsp;<a href="menu_1.1.1.htm">메뉴1_3</a><BR>
+       &nbsp;&nbsp;&nbsp;&nbsp;<IMG SRC="folder2.gif" WIDTH="20" HEIGHT="15">&nbsp;<a href="menu_1.1.2.htm">메뉴1_3</a><BR>
+</DIV>
+</div>
+</div>
+
+
+<DIV ID="oout0">
+  <IMG SRC="folder.gif" ID="oout1" CLASS="Outline" STYLE="cursor: hand" WIDTH="16" HEIGHT="16">&nbsp;메뉴2_1<BR>
+
+<DIV ID="oout1d" STYLE="display:None">
+    &nbsp;&nbsp;<IMG SRC="folder.gif" ID="oout2" CLASS="Outline" STYLE="cursor: hand" WIDTH="16" HEIGHT="16">&nbsp;메뉴2_2<BR>
+
+<DIV ID="oout2d" STYLE="display:None">
+       &nbsp;&nbsp;&nbsp;&nbsp;<IMG SRC="folder2.gif" WIDTH="20" HEIGHT="15">&nbsp;<a href="menu_1.2.1.htm">메뉴2_3</a><BR>
+       &nbsp;&nbsp;&nbsp;&nbsp;<IMG SRC="folder2.gif" WIDTH="20" HEIGHT="15">&nbsp;<a href="menu_1.2.2.htm">메뉴2_3</a><BR>
+</DIV>
+</DIV>
+</DIV>
+</body>
+</html>

@@ -1,0 +1,37 @@
+방문 시간을 타이머로 표시하기
+
+1.<head> 태그에 삽입=======================================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+startday = new Date();
+clockStart = startday.getTime();
+function initStopwatch() { 
+var myTime = new Date(); 
+return((myTime.getTime() - clockStart)/1000); 
+}
+function getSecs() { 
+var tSecs = Math.round(initStopwatch()); 
+var iSecs = tSecs % 60;
+var iMins = Math.round((tSecs-30)/60);   
+var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+document.forms[0].timespent.value = sMins+":"+sSecs;
+window.setTimeout('getSecs()',1000); 
+}
+//-->
+</script>
+
+
+2.<body> 태그 안에 삽입=======================================================================
+
+onLoad="window.setTimeout('getSecs()',1)"
+
+
+3.<body> 태그에서 효과를 적용할 위치에 삽입================================================
+
+<CENTER>
+<FORM>
+<input size=5 name=timespent>
+</FORM>
+</CENTER>

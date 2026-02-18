@@ -1,0 +1,58 @@
+<html>
+<head><title>Untitled</title>
+<SCRIPT> 
+function cpscalc(myform){
+   var bytes = 0
+   var trans = 0 
+ bytes = myform.dimensione.value * ((myform.unita.options[0].selected == true) + ( (myform.unita.options[1].selected == true)*1024) + ((myform.unita.options[2].selected == true) * 1024*1024))
+ trans = myform.velocita.value / ( (myform.unitaV.options[0].selected == true) + ( (myform.unitaV.options[1].selected == true) * 8))
+ myform.result.value =  getmin(Math.round(bytes/trans))
+}
+
+function getmin(sec){
+   var ore = 0
+   var minuti = 0
+   var secondi = 0
+   var tempo = " "
+ if(sec<1) return ("less than a second")
+   ore = Math.floor (sec/3600)
+   minuti =  Math.floor((sec - (ore * 3600))/60)
+   secondi = Math.floor (sec - ((ore*3600) + (minuti * 60)))
+ if(sec > 86400) return ("more than a day")
+  else if(sec  >=  3600) tempo = "Hours: " + ore + "  minutes: " + minuti + "  seconds: " + secondi
+  else if( sec< 3600 & sec >=60) tempo = "Minutes: " + minuti + "  seconds: " + secondi
+  else tempo = "Seconds: " + secondi 
+    return(tempo)
+}
+</SCRIPT>
+</head>
+<body>
+<CENTER>
+<TABLE BORDER=4>
+<TD > 
+<FORM NAME="myform">
+<B>파일 크기</B><br>
+<INPUT TYPE="TEXT" NAME="dimensione" VALUE="1" onChange="cpscalc(this.form)" >  
+<SELECT NAME="unita" onChange="cpscalc(this.form)">
+<OPTION>Byte
+<OPTION SELECTED>Kb
+<OPTION>Mb
+</SELECT><p> 
+<B>인터넷 속도</B><br> 
+<INPUT TYPE="TEXT" NAME="velocita" VALUE="28800" onChange="cpscalc(this.form)"> 
+<SELECT NAME="unitaV" onChange="cpscalc(this.form)" >
+<OPTION>Cps
+<OPTION SELECTED>Bps
+</SELECT><p> 
+<B>전송 속도</B><br>
+<INPUT TYPE="TEXT" NAME="result" VALUE="  " SIZE=40 >
+</FORM>
+</TD> 
+</TABLE>
+</CENTER> 
+<SCRIPT> 
+document.forms[0].dimensione.focus()
+document.forms[0].dimensione.select()
+</SCRIPT>
+</body>
+</html>

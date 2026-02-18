@@ -1,0 +1,5 @@
+﻿*{margin: 0; padding:0; border:0;}
+body, th, td{color: #404040; font: 13px/1.6 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', Verdana, Arial, sans-serif;}
+#menu_bar ul, #menu_bar li {list-style:none;}
+#menu_bar a{display: block; padding: 10px 30px 10px 30px; margin-bottom: 1px; background-color:#292929; color: #888888; font: 12px Verdana; text-transform: uppercase; float: left; clear:left; text-decoration: none;}
+#menu_bar a:hover{padding-left: 25px; border-left: 5px solid #86b300; color:#ffffff;}

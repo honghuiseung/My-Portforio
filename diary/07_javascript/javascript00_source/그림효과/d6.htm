@@ -1,0 +1,42 @@
+<html>
+<head><title>Untitled</title>
+<SCRIPT LANGUAGE="JavaScript"> 
+<!-- 
+function showaddservice() {         
+if (document.all) {
+a=screen.width-150
+b=screen.height-350 
+document.all.addservice.style.posTop=randomposition(b) 
+document.all.addservice.style.posLeft=randomposition(a) 
+document.all.addservice.style.visibility="visible" 
+} 
+if (document.layers) {
+c=window.innerWidth
+d=window.innerHeight 
+document.addservice.top=randomposition(d) 
+document.addservice.left=randomposition(c) 
+document.addservice.visibility="visible" 
+} 
+var timer =setTimeout("hideaddservice()",2500) 
+} 
+
+function hideaddservice() {         
+        if (document.all) {document.all.addservice.style.visibility="hidden"} 
+        if (document.layers) {document.addservice.visibility="hidden"} 
+        var timer =setTimeout("showaddservice()",400) 
+} 
+
+function randomposition(range) {                 
+        return Math.floor(range*Math.random()) 
+} 
+//--> 
+</SCRIPT> 
+
+</head>
+<BODY onLoad="showaddservice()"> 
+
+<div id="addservice" style="position:absolute;visibility:hidden"><a href="javascript:history.back()"><img src="fly.gif" border=0></a></div>
+
+
+</body>
+</html>

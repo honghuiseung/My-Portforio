@@ -1,0 +1,54 @@
+--NOT NULL : NULL값을 허용하지 않는다.
+--UNIQUE : 중복된 값을 허용하지 않는다. 항상 유일한 값을 갖도록 한다.
+--FRIMARY KEY : NULL값을 허용하지 않고, 중복된 값을 허용하지 않는다.
+--              NOU NULL 조건과 UNIQUE 조건을 결합한 형태이다.
+--FOREIGN KEY : 참조되는 테이블에서 컬럼의 값이 존재하면 허용한다.
+--CHECK : 저장 가능한 데이터 값의 조건을 지정하여 설정한 값만을 허용한다.
+
+--CONSTRAINT_TYPE (제약조건)
+--P    PRIMARY KEY
+--R    FOREIGN KEY
+--     (REFERENCE INTEGRITY 참조 무결성)
+--U    UNIQUE
+--C    CHECK, NOT NULL
+
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME FROM USER_CONSTRAINTS;
+
+DROP TABLE emp01;
+CREATE TABLE emp01(empno number(4), ename varchar2(10), job varchar2(9), deptno number(2)); -- varchar2 - 자동으로 숫자가 늘어남
+INSERT INTO emp01 VALUES(null, null, '사원', 30);
+SELECT * FROM emp01;
+DESC emp01;
+
+DROP TABLE emp02;
+CREATE TABLE emp02(empno number(4), ename varchar2(10) NOT NULL, job varchar2(9) NOT NULL, deptno number(2));
+INSERT INTO emp02 VALUES(1000, '허준', '사원', 30);
+SELECT * FROM emp02;
+DESC emp02;
+
+DROP TABLE emp03;
+CREATE TABLE emp03(empno number(4) UNIQUE, ename varchar2(10) NOT NULL, job varchar2(9), deptno number(2));
+SELECT * FROM emp03;
+DESC emp03;
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME FROM USER_CONSTRAINTS WHERE table_name='emp03';
+INSERT INTO emp03 VALUES(1000, '허준', '사원', 30);
+INSERT INTO emp03 VALUES(2000, '홍길동', '사원', 20);
+INSERT INTO emp03 VALUES(1000, '홍길동', '사원', 20);
+INSERT INTO emp03 VALUES(null, '안중근', '과장', 20);
+--UNIQUE NOT NULL
+
+DROP TABLE emp04;
+CREATE TABLE emp04(empno number(4) CONSTRAINT EMP04_EMPNO_UK UNIQUE, ename varchar2(10) CONSTRAINT EMP04_EMPNO_NN NOT NULL, job varchar2(9), deptno number(2));
+SELECT constraint_name, constraint_type, table_name FROM user_constraints WHERE table_name IN('EMP04');
+INSERT INTO emp04 VALUES(1000, '허준', '사원', 30);
+INSERT INTO emp04 VALUES(2000, '홍길동', '사원', 20);
+SELECT * FROM emp04;
+DESC emp04;
+
+DROP TABLE emp05;
+CREATE TABLE emp05(empno number(4) CONSTRAINT ENP05_EMPNO_UK UNIQUE, ename varchar2(10) CONSTRAINT EMP05_EMPNO_NN NOT NULL, job varchar2(9), deptno number(2));
+SELECT constraint_name, constraint_type, table_name FROM user_constraints WHERE table_name IN('EMP05');
+INSERT INTO emp05 VALUES(1000, '허준', '사원', 30);
+INSERT INTO emp05 VALUES(2000, '홍길동', '사원' 20);
+SELECT * FROM emp04;
+DESC emp05;

@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>쿠키</TITLE>
+<SCRIPT language="JavaScript">
+<!--
+var never = new Date()
+never.setTime(never.getTime() + 2000*24*60*60*1000);  // expiresday를 최대한으로
+
+function SetCookie(name, value) {
+  document.cookie = name + "=" + escape(value) + "; expires=" + never.toGMTString()
+}
+
+function GetCookie(name) {
+  var result = null;
+  var myCookie = " " + document.cookie + ";";
+  var searchName = " " + name + "=";
+  var startOfCookie = myCookie.indexOf(searchName);
+  var endOfCookie;
+  if (startOfCookie != -1) {
+    startOfCookie += searchName.length; 
+    endOfCookie = myCookie.indexOf(";", startOfCookie);
+    result = unescape(myCookie.substring(startOfCookie, endOfCookie));
+  }
+  return result;
+}
+
+var defaultString = "이름을 입력하세요";
+var user_name = GetCookie("user_name");
+if (user_name == null) {
+  repeat = true;
+  while (repeat) {
+    if ((user_name == null) || (user_name == defaultString))
+      user_name = prompt("\r\n이름을 적어 주세요", defaultString);
+    if ((user_name != null) && (user_name != defaultString))
+      SetCookie('user_name', user_name);
+    repeat = false;
+    if (GetCookie("user_name") == null)
+      repeat = confirm("이름을 입력하지 않으면 " + "계속 이 창이 뜰 것입니다." + "\n이름을 입력하세요");
+  }
+}
+if ((user_name != null) && (user_name != defaultString)) {
+  document.write("<H2 align=center>안녕하세요 <font color=blue>"+user_name+"</font>님! 환영 합니다</H2>");
+} 
+else {
+  document.write("<H2 align=center>어서오세요, 홈페이지를 찾아 주셔서 감사합니다</H2>");
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<IMG SRC="frame.jpg">
+</BODY>
+</HTML>

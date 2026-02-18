@@ -1,0 +1,21 @@
+﻿body{background: url(../images/pattern.png);}
+h1 span{display: none;}
+.btn{background-color:#000000; color:ffffff; border: none;}
+div{text-align:right;}
+
+@media screen and (min-width:320px) and (max-width:799px) {
+    h1{background:url(../images/mediaQuery1.png) no-repeat center top; height: 295px;}
+	.btn{border-radius: 5px; padding: 5px 10px; font-size: 1.1em;}
+}
+
+@media screen and (min-width:800px) and (max-width:1024px) {
+    h1{background:url(../images/mediaQuery2.png) no-repeat center top; height: 512px;}
+	.btn{border-radius: 15px; padding: 10px 40px; font-size: 2em;}
+}
+
+@media screen and (min-width:1025px){
+    h1{background:url(../images/mediaQuery3.png) no-repeat center top; height: 700px;}
+	.btn{border-radius: 15px; padding: 20px 60px; font-size: 2em;}
+}
+/* 매크로>>num4 */
+/* 컨트롤 쉬프트 m */

@@ -1,0 +1,28 @@
+풀다운 메뉴 만들기
+
+1.<head> 태그에 삽입============================================================
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function formHandler(form){
+var URL = document.form.site.options[document.form.site.selectedIndex].value;
+window.location.href = URL;
+}
+//-->
+</SCRIPT>
+
+2.<body> 태그에서 효과를 적용할 위치에  삽입====================================
+
+<center>
+<form name="form">
+<select name="site" size=1>
+<option value="">Go to....
+<option value="http://kr.yahoo.com">YAHOO
+<option value="http://www.naver.com">NAVER
+<option value="http://www.simmani.com">SIMMANI
+<option value="http://www.hanmir.com">HANMIR
+<option value="http://www.empas.com">EMPAS
+</select>
+<input type=button value="Go!" onClick="javascript:formHandler(this)">
+</form>
+</center>

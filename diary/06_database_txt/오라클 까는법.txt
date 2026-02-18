@@ -1,0 +1,36 @@
+암호 ay2111!!
+다운받아도 안보임
+오늘 바로 설치하기
+
+오라클 마스터 권한으로 실행하는 방법
+C:\Users\GR804 >sqlplus / as sysdba
+
+tester1이라는 id의 pw 1234
+SQL>create user tester1 identified by 1234;
+
+사용자 생성 확인
+SQL>select username from dba_users where username like '%TESTER%';
+
+역할, 권한 부여하기
+SQL>grant connect, resource to tester1;
+한번만 실행하기
+
+tester1으로 사용자를 전환하기
+SQL>conn tester1/1234
+
+사용자 전환 확인
+SQL>show uesr;
+
+oracle설치
+
+자동화...체크표시 해제후 확인
+우측상단 +버튼선택
+접속이름은 상관없음
+
+도구>환경설정>utf-8
+
+환경설정>코드편집기>글꼴
+
+
+
+

@@ -1,0 +1,104 @@
+<html>
+<head><title>Untitled</title>
+<style type="text/css">
+#item {position:absolute; visibility:hidden; left:0px}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var isNS=(document.layers);
+var _all=(isNS)? '' : 'all.' ;
+var _style=(isNS)? '' : '.style' ;
+var _visible=(isNS)? 'show' : 'visible';
+var w_x, w_y, item, okscroll=false, godown;
+function init(){
+item=eval('document.'+_all+'item'+_style);
+getwindowsize();
+item.visibility=_visible;
+scrollpage();
+}
+function getwindowsize() {
+w_x=(isNS)? window.innerWidth-5 : document.body.clientWidth;
+w_y=(isNS)? window.innerHeight : document.body.clientHeight;
+(isNS)? item.clip.width=42: item.width=42;
+(isNS)? item.clip.height=20 : item.height=20;
+moveitem();
+}
+function resizeNS() {
+setTimeout('document.location.reload()',400);
+}
+function moveitem() {
+if (isNS) {
+item.moveTo((pageXOffset+w_x-70),(w_y+pageYOffset-50))
+}else{
+item.pixelLeft=document.body.scrollLeft+w_x-70;
+item.pixelTop=w_y+document.body.scrollTop-50;
+   }
+}
+window.onload=init;
+(isNS) ? window.onresize=resizeNS : window.onresize=getwindowsize ;
+function scrollpage() {
+status = '';
+if (okscroll) {
+if (godown) {
+(isNS)? window.scrollBy(0,4) : window.scrollBy(0,4) ;
+} else {
+(isNS)? window.scrollBy(0,-4) : window.scrollBy(0,-4) ;
+   }
+}
+moveitem();
+setTimeout('scrollpage()', 40);
+}
+//-->
+</script>
+
+</head>
+<body>
+<div id="item">
+<a href="javascript:void(0)" onMouseover="okscroll=true; godown=true" 
+onMouseout="okscroll=false"><img src="down.gif" border="0"></a><a href="javascript:void(0)" 
+onMouseover="okscroll=true; godown=false" onMouseout="okscroll=false"><img src="up.gif" 
+border="0"></a>
+</div>
+
+
+<ul>
+<p><font face="굴림체" size="2"><font face="Arial" size="2" color="green"><sup>THREE COLORS</sup><font size="4" color="red"><b> R E D</b></font></font></font></p>
+
+<p><font face="굴림체" size="2"><b>감독 : 크쥐쉬토프 키에슬로프스키<br>
+주연 : 이렌느 야콥</b></font></p>
+
+<p><font face="굴림체" size="2">발렌틴은 제네바 대학 학생이며 패션모델로 활동한다. 그녀의 이웃에는 오귀스트라는 
+법대생이 살고 있는데 두 사람은 빈번하게 지나치면서도 서로의 존재를 인식하지 못한다.
+어느날 패션쇼를 마치고 귀가하던 중 발렌틴은 개를 치는 교통사고를 내게 되고 개의 목에
+달린 인식표의 주소지로 찾아가지만 개 주인인 노인은 냉담한 반응을 보이는데.....
+개를 치료하여 다시 찾아갔을때 발렌틴은 우연히 노인의 집에 들어갔다가 노인이 남의 집
+전화를 도청하는 기벽이 있다는 걸 알게 되고 혐오감을 느낀다. 게다가 노인은 법적 도덕성에
+대해 심한 회의를 느끼고 1년전에 조기 은퇴한 법관이라는 사실을 알고는 더욱 놀라게 된다.
+그러면서 점점 그녀는 노판사를 이해하게 되고......</font></p>
+<p><font face="굴림체" size="2">노판사는 점차 자신의 삶에 대한 책임감을회복하게 되고 발렌틴의 따뜻한 손길을 감싸는데..... 그리고 우연한 만남들이 실은 얼마나 의
+미가 큰 필연적 만남이 될 수 있는가 하는 것을 발렌틴에게 일깨워 준다. 발렌틴은 패션쇼를 
+치르러 가던중 조난 사고를 당하게 되고 구조대에 의해 구조되는 모습이 TV에 방영된다. 그모습
+을 보던 노판사는 조용히 미소를 짓고......</font></p>
+<p><font face="굴림체" size="2">예술 영화의 거장으로 자리 잡고 있는 크쥐쉬토프 
+키에슬로프스키 감독의 세 가지색 시리즈 중의 한편. 프랑스 국기의 색깔이기도 한 <u>블루, 
+레드, 화이트</u>는 각각자유,박애, 평등을 나타낸다.색깔이 주는 느낌만큼이나 따뜻한 영화로
+이렌느 야곱연기가 영화의 분위기와 잘 어울어지면서 아름다운 영상들이 보여지는 작품이다.</font></p>
+<font face="굴림체" size="2"><br>
+</font><p><font face="굴림체" size="2"><font face="Arial" size="2" color="green"><sup>THREE COLORS</sup><font size="4" color="gray"><b> W H I T E</b></font></font></font></p>
+<p><font face="굴림체" size="2"><b>감독 : 크쥐쉬토프 키에슬로프스키<br>
+주연 : 줄리 델피</b></font></p>
+<p><font face="굴림체" size="2">키에슬로프스키 감독의 '세가지 색 시리즈' 가운데 &lt;화이트&gt;의 테마는 평등이다. 
+냉적 장벽이 무너진 후 유럽의 통합을 둘러싼 갈등과 어려움을 남녀간의 동등한 사랑의 문제를 통해 접근하고 있다. 
+프랑스 여자 도미니크는 폴란드 출신 미용사인 남편 카롤에 대한 성적 욕구불만을 이유로 이혼에서 승소한다. 모든 것을 잃고 천신만고 끝에 폴란드로 돌아간 카롤은 도미니크를 되찾겠다는 일념으로 급속히 자본주의화되는 조국의 상황을 이용해 밀매업으로 거부가 된다. 남녀의 성적 갈등을 다룬 코미디를 통해 불평등한 국제정세 속에서 평등을 갈망하는 안쓰러운 노력을 읽을 수 있으나 설정이나 전개가 다소 남성 중심적이라는 비판도 받았다는 점을 덧붙인다.</font></p> 
+<font face="굴림체" size="2"><br>
+</font><p><font face="굴림체" size="2"><font face="Arial" size="2" color="green"><sup>THREE COLORS</sup><font size="4" color="blue"><b> B L U E</b></font></font></font></p>
+<p><font face="굴림체" size="2"><b>감독 : 크쥐쉬토프 키에슬로프스키<br>
+주연 : 줄리엣 비노쉬</b></font></p>
+<p><font face="굴림체" size="2">키에슬로프스키의 세가지 연작중 첫번째. 자유, 평등, 박애라는 프랑스혁명의 모토로 만들어졌는데 블루는 자유에 관한 것이다. 
+자동차 사고로 유명한 작곡가인 남편과 딸을 동시에 잃어버린 줄리는 절망속에서 살아간다. 그녀는 자살을 시도하지만 뜻대로 되지 않는다. 
+홀로 살아가는 그녀의 삶속에 과거와 현재에 그녀와 연관을 맺고 있는 사람들이 그녀의 삶에 계속 끼어들고 그녀의 남편이 남기고 간 음악은 그녀의 상처를 치유하고 사람들의 삶 속으로 다시 그녀를 끌어들인다.</font></p> 
+
+</ul>
+</body>
+</html>

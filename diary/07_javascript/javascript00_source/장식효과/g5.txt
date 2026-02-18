@@ -1,0 +1,28 @@
+제목 표시줄에 시계를 달자
+
+
+1.<head> 태그에 삽입=======================================================================
+
+
+<SCRIPT LANGUAGE="JavaScript"> 
+<!-- Begin 
+var clocktext, timeday; 
+var pagetitle = document.title; 
+function scroll() { 
+today = new Date(); 
+sec = today.getSeconds(); 
+hr = today.getHours(); 
+min = today.getMinutes(); 
+if (hr < 12) { timeday = " AM"; } 
+else { timeday = " PM"; } 
+if (hr > 12) hr = hr - 12; 
+if (hr <= 9) hr = "0" + hr; 
+if (min <= 9) min = "0" + min; 
+if (sec <= 9) sec = "0" + sec; 
+var clocktext = " - " + hr + ":" + min + ":" + sec + timeday; 
+clocktimer = setTimeout("scroll()", 1000); 
+document.title = pagetitle + clocktext; 
+} 
+if (document.all) scroll(); 
+//  End --> 
+</script>
